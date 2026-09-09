@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+node_modules/
+.vercel
+*.log
+dist/
+
+# Client-supplied brief, brand guide, inspo and font sources. Kept out of the public
+# preview repo (font licences unconfirmed, unreleased brand work). Remove this line
+# only once the repo is private or the client has cleared it.
+Guide & References/

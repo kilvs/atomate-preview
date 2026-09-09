@@ -1,0 +1,485 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ATOmate — Fast | Simple | Secure ATO document automation</title>
+  <meta name="description" content="Fast | Simple | Secure ATO document automation for accounting practices.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#021F35">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="ATOmate — Fast | Simple | Secure ATO document automation">
+  <meta property="og:description" content="Fast | Simple | Secure ATO document automation for accounting practices.">
+  <!-- og:image needs an absolute URL; set on the Webflow site once the domain is known -->
+  <meta property="og:image" content="assets/img/brand/og-image.jpg">
+  <link rel="icon" href="assets/img/brand/favicon.jpg">
+  <link rel="apple-touch-icon" href="assets/img/brand/webclip.jpg">
+  <link rel="preload" href="assets/fonts/gilroy-extrabold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/GalanoGrotesqueRegular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div class="page-wrapper">
+
+  <!-- Navbar: fixed, transparent over the hero, .is-solid after it (Gate 04 §1) -->
+  <header class="navbar_component" id="siteNav">
+    <div class="padding-global"><div class="container-large">
+      <div class="navbar_shell">
+        <a class="navbar_logo-link" href="#">
+          <img class="navbar_logo is-white" src="assets/img/brand/atomate-white.svg" alt="ATOmate — Powered by BAW" width="833" height="233">
+          <img class="navbar_logo is-colour" src="assets/img/brand/atomate-logo.svg" alt="" aria-hidden="true" width="833" height="233">
+        </a>
+        <button class="navbar_menu-button" type="button" aria-expanded="false" aria-controls="navbarMenu" aria-label="Menu">
+          <svg class="navbar_icon-open" viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h14M3 10h14M3 14h14"/></svg>
+          <svg class="navbar_icon-close" viewBox="0 0 20 20" aria-hidden="true" focusable="false" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 5l10 10M15 5L5 15"/></svg>
+        </button>
+        <div class="navbar_menu" id="navbarMenu">
+          <nav class="navbar_nav-wrap" aria-label="Primary">
+            <ul class="navbar_nav" role="list">
+              <li class="navbar_nav_item"><a class="navbar_link" href="#">Features</a></li>
+              <li class="navbar_nav_item"><a class="navbar_link" href="#">How it works</a></li>
+              <li class="navbar_nav_item"><a class="navbar_link" href="#">Integrations</a></li>
+              <li class="navbar_nav_item"><a class="navbar_link" href="#">Security</a></li>
+              <li class="navbar_nav_item"><a class="navbar_link" href="#">Insights</a></li>
+            </ul>
+          </nav>
+          <div class="navbar_actions"><div class="button-group"><a href="#" class="button is-white">Book discovery meeting</a></div></div>
+        </div>
+      </div>
+    </div></div>
+  </header>
+
+  <main id="main" class="main-wrapper">
+
+  <!-- 1. NIGHT: hero + 1b stats (one navy ground, so one section) -->
+  <section class="section-home_hero background-stage-night">
+    <div class="home_hero_sky" aria-hidden="true"></div>
+    <div class="home_hero_stage">
+      <div class="home_hero_arrow-wrap" aria-hidden="true">
+        <svg class="home_hero_arrow" viewBox="0 0 1440 640" preserveAspectRatio="xMidYMax meet" fill="none" aria-hidden="true" focusable="false">
+          <path d="M-40 700 L1000 100" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <path d="M120 700 L1160 100" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <path d="M280 700 L1320 100" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+          <path id="heroLine" d="M40 620 L520 620 L1330 152" stroke="rgba(255,255,255,.9)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+          <path id="heroHead" d="M1324 144 L1352 152 L1324 160 L1330 152 Z" fill="#EB6405" transform="rotate(-30 1330 152)"/>
+          <circle id="heroDot" cx="40" cy="620" r="5" fill="#fff"/>
+        </svg>
+        <span class="home_hero_label is-start">Overnight</span>
+        <span class="home_hero_label is-end">Next-day approval</span>
+      </div>
+      <div class="padding-global"><div class="container-large">
+        <div class="home_hero_layout">
+          <div class="home_hero_content" data-load-animate data-animate-type="fade-up" data-animate-stagger="0.12" data-animate-delay="0.2">
+            <h1 class="home_hero_title">Reduce manual ATO document processing by <span class="text-color-highlight">90%</span></h1>
+            <p class="home_hero_description text-size-large">Fast, simple, secure ATO document processing for accountants</p>
+            <div class="button-group"><a href="#" class="button is-white">Book discovery meeting</a></div>
+          </div>
+        </div>
+      </div></div>
+    </div>
+    <div class="padding-global"><div class="container-large">
+      <div class="home_hero_stats-wrap">
+        <div class="home_hero_stats" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.08">
+          <div class="home_hero_stat"><span class="home_hero_stat_number" data-countup data-countup-value="2000" data-countup-suffix="+">2,000+</span><span class="home_hero_stat_label">practices</span></div>
+          <div class="home_hero_stat"><span class="home_hero_stat_number is-orange" data-countup data-countup-value="90" data-countup-suffix="%">90%</span><span class="home_hero_stat_label">less manual processing</span></div>
+          <div class="home_hero_stat is-dim"><span class="home_hero_stat_number">00%</span><span class="home_hero_stat_label">Lorem ipsum dolor</span></div>
+          <div class="home_hero_stat is-dim"><span class="home_hero_stat_number">00%</span><span class="home_hero_stat_label">Lorem ipsum dolor</span></div>
+          <div class="home_hero_stat is-dim"><span class="home_hero_stat_number">00%</span><span class="home_hero_stat_label">Lorem ipsum dolor</span></div>
+        </div>
+      </div>
+    </div></div>
+  </section>
+
+  <!-- 2. DAY: integrations -->
+  <section class="section-home_integrations background-stage-day">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large is-short-bottom">
+      <div class="home_integrations_content">
+        <div class="component_section-header" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <h2>ATOmate works with the tools your team already uses</h2>
+          <p class="component_section-header_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <div class="home_integrations_tabs" role="tablist" aria-label="Integration categories">
+          <button class="home_integrations_tab is-active" type="button" role="tab" id="tab-pms" aria-selected="true" aria-controls="panel-pms" data-tab="panel-pms">Practice management</button>
+          <button class="home_integrations_tab" type="button" role="tab" id="tab-dms" aria-selected="false" aria-controls="panel-dms" data-tab="panel-dms" tabindex="-1">Document management</button>
+          <button class="home_integrations_tab" type="button" role="tab" id="tab-smsf" aria-selected="false" aria-controls="panel-smsf" data-tab="panel-smsf" tabindex="-1">SMSF</button>
+        </div>
+        <div class="home_integrations_panel" id="panel-pms" role="tabpanel" aria-labelledby="tab-pms" tabindex="0">
+          <ul class="home_integrations_list" role="list" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.05">
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/logo-myob.svg" alt="MYOB" width="459" height="192" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo is-large" src="assets/img/partners/logo-xero.svg" alt="Xero" width="193" height="192" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/logo-wolters-kluwer.png" alt="Wolters Kluwer CCH iFirm" width="444" height="107" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/logo-lodgeit.svg" alt="LodgeiT" width="1014" height="281" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/logo-aps.png" alt="APS" width="314" height="160" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/logo-access-elite.svg" alt="Access Elite" width="390" height="85" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/logo-access-handisoft.svg" alt="Access HandiSoft" width="516" height="85" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/logo-access-practice.svg" alt="Access Practice" width="460" height="66" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/logo-kloud-connect.svg" alt="Kloud Connect" width="1128" height="161" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/logo-class.png" alt="Class" width="430" height="117" loading="lazy"></li>
+          </ul>
+        </div>
+        <div class="home_integrations_panel" id="panel-dms" role="tabpanel" aria-labelledby="tab-dms" tabindex="0" hidden>
+          <ul class="home_integrations_list" role="list">
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/box-01.svg" alt="Box" width="339" height="192" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/dropbox-01.svg" alt="Dropbox" width="893" height="192" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/fyi-01.svg" alt="FYI" width="193" height="192" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/google-drive-01.svg" alt="Google Drive" width="197" height="192" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/hownow-01.svg" alt="HowNow" width="396" height="93" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/iManage-01.svg" alt="iManage" width="360" height="93" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/network-folders-01.svg" alt="Network folders" width="384" height="93" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/nimbus-01.svg" alt="Nimbus" width="388" height="192" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/one-drive-01.svg" alt="OneDrive" width="267" height="192" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/share-point-01.svg" alt="SharePoint" width="433" height="86" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/suite-files-01.svg" alt="SuiteFiles" width="517" height="93" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/virtual-cabinet-01.svg" alt="Virtual Cabinet" width="295" height="93" loading="lazy"></li>
+          </ul>
+        </div>
+        <div class="home_integrations_panel" id="panel-smsf" role="tabpanel" aria-labelledby="tab-smsf" tabindex="0" hidden>
+          <ul class="home_integrations_list" role="list">
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/bgl-01.svg" alt="BGL" width="193" height="192" loading="lazy"></li>
+            <li class="home_integrations_item"><img class="home_integrations_logo" src="assets/img/partners/class-01.svg" alt="Class" width="460" height="139" loading="lazy"></li>
+          </ul>
+        </div>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 3. Comparison: night beside day -->
+  <section class="section-home_comparison">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large is-tight-top">
+      <div class="home_comparison_content">
+        <div class="component_section-header" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <h2>Reduce ATO document processing time by 90%</h2>
+          <p class="component_section-header_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
+        </div>
+        <div class="home_comparison_grid" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.15">
+          <span class="home_comparison_arrow" aria-hidden="true"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          <div class="home_comparison_card is-night">
+            <h3 class="home_comparison_title">Without ATOmate</h3>
+            <ul class="home_comparison_list" role="list">
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></span><span>Time-consuming, error-prone manual processing</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></span><span>Missed PAYG instalment notices and other ATO correspondence</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></span><span>Manual TFN redaction and PRN protection</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></span><span>Manual filing with no audit trail</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></span><span>Admin team stretched thin</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M3 3l6 6M9 3l-6 6"/></svg></span><span>Delayed documents. Frustrated clients.</span></li>
+            </ul>
+          </div>
+          <div class="home_comparison_card is-day">
+            <h3 class="home_comparison_title">With ATOmate</h3>
+            <ul class="home_comparison_list" role="list">
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Automatic ATO document processing from capture to filing</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>All ATO documents captured automatically overnight</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Automatic TFN redaction and PRN protection</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Automatic filing with a complete audit trail</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>More capacity to improve client relationships</span></li>
+              <li class="home_comparison_item"><span class="component_tick" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Timely delivery, better client experience</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 4. How ATOmate works (original main-draft block, kept as is) -->
+  <section class="section-home_process background-stage-day">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large is-short-top">
+      <div class="home_process_content">
+        <div class="component_section-header" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <h2>How ATOmate works</h2>
+          <p class="component_section-header_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt.</p>
+        </div>
+        <div class="home_process_frame" data-scroll-animate data-animate-type="fade-up">
+          <button class="home_process_step is-current" type="button" data-step="0" aria-pressed="true" aria-controls="home-process-panel"><span class="home_process_step_icon" aria-hidden="true"><svg class="icon-stroke" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M9 20v-6h6v6"/></svg></span><span class="home_process_step_title">Capture &amp; identify</span></button>
+          <button class="home_process_step" type="button" data-step="1" aria-pressed="false" aria-controls="home-process-panel"><span class="home_process_step_icon" aria-hidden="true"><svg class="icon-stroke" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="4" y="4" width="16" height="16"/><path d="M8 12l3 3 5-6"/></svg></span><span class="home_process_step_title">Verify</span></button>
+          <button class="home_process_step is-tint" type="button" data-step="2" aria-pressed="false" aria-controls="home-process-panel"><span class="home_process_step_icon" aria-hidden="true"><svg class="icon-stroke" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="5" y="11" width="14" height="10"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span><span class="home_process_step_title">Protect</span></button>
+          <button class="home_process_step" type="button" data-step="3" aria-pressed="false" aria-controls="home-process-panel"><span class="home_process_step_icon" aria-hidden="true"><svg class="icon-stroke" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M4 7h10M4 12h16M4 17h7"/><path d="M16 5l2 2 4-4"/></svg></span><span class="home_process_step_title">Review &amp; approve</span></button>
+          <button class="home_process_step is-tint" type="button" data-step="4" aria-pressed="false" aria-controls="home-process-panel"><span class="home_process_step_icon" aria-hidden="true"><svg class="icon-stroke" width="24" height="24" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="3" y="6" width="18" height="12"/><path d="M3 8l9 6 9-6"/></svg></span><span class="home_process_step_title">Communicate &amp; archive</span></button>
+          <div class="home_process_panel" id="home-process-panel" aria-live="polite">
+            <h3 class="home_process_panel_title heading-style-h4" id="stepTitle">Capture &amp; identify</h3>
+            <p class="home_process_panel_description" data-step-body="0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+            <p class="home_process_panel_description" data-step-body="1" hidden>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit.</p>
+            <p class="home_process_panel_description" data-step-body="2" hidden>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.</p>
+            <p class="home_process_panel_description" data-step-body="3" hidden>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis.</p>
+            <p class="home_process_panel_description" data-step-body="4" hidden>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae.</p>
+            <svg class="home_process_panel_arrow" viewBox="0 0 104 60" fill="none" aria-hidden="true" focusable="false"><defs><marker id="ah3" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="16" markerHeight="16" markerUnits="userSpaceOnUse" orient="auto"><path d="M0 1 L11 6 L0 11 L3 6 Z" fill="#EB6405"/></marker></defs><path d="M2 58 L40 58 L92 28" stroke="#ffffff" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#ah3)"/></svg>
+          </div>
+        </div>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 5. NIGHT: overnight processing -->
+  <section class="section-home_overnight background-stage-night">
+    <img class="home_overnight_mark" src="assets/img/brand/atomate-mark-white.svg" alt="" aria-hidden="true" width="170" height="159" loading="lazy">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large">
+      <div class="home_overnight_content" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.15">
+        <div class="home_overnight_copy">
+          <h2>Overnight processing. Next-day approval.</h2>
+          <p class="home_overnight_description text-size-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <ul class="component_checklist is-light" role="list">
+            <li class="component_checklist_item"><span class="component_tick is-glass" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Lorem ipsum dolor sit amet consectetur</span></li>
+            <li class="component_checklist_item"><span class="component_tick is-glass" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Lorem ipsum dolor sit amet consectetur</span></li>
+            <li class="component_checklist_item"><span class="component_tick is-glass" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Lorem ipsum dolor sit amet consectetur</span></li>
+          </ul>
+          <div class="button-group"><a href="#" class="button is-ghost-light">Book discovery meeting</a></div>
+        </div>
+        <div class="component_ui">
+          <div class="component_ui_header"><span>Overnight queue</span><span class="component_chip">Overnight</span></div>
+          <div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>PAYG instalment notice</span><span class="component_chip is-done">Captured</span></div>
+          <div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>Notice of assessment</span><span class="component_chip is-done">Verified</span></div>
+          <div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>Activity statement</span><span class="component_chip is-done">TFN redacted</span></div>
+          <div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>Statement of account</span><span class="component_chip">Ready for approval</span></div>
+          <div class="component_ui_row is-footer"><span class="text-size-tiny text-color-muted">Next morning</span><span class="button is-small">Approve all</span></div>
+        </div>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 6. DAY: review less -->
+  <section class="section-home_review background-stage-day">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large">
+      <div class="home_review_content">
+        <div class="component_section-header" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <h2>Review less. Approve faster. Your rules.</h2>
+          <p class="component_section-header_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
+        </div>
+        <ul class="home_review_list" role="list" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <li class="home_review_item"><div class="component_skeleton" aria-hidden="true"><span class="component_skeleton_bar is-highlight is-short"></span><span class="component_skeleton_bar"></span><span class="component_skeleton_bar"></span><span class="component_skeleton_bar is-short"></span></div><h3>Lorem ipsum dolor sit</h3><p class="home_review_item_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+          <li class="home_review_item"><div class="component_skeleton" aria-hidden="true"><span class="component_skeleton_bar is-highlight is-short"></span><span class="component_skeleton_bar"></span><span class="component_skeleton_bar"></span><span class="component_skeleton_bar is-short"></span></div><h3>Lorem ipsum dolor sit</h3><p class="home_review_item_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+          <li class="home_review_item is-navy"><div class="component_skeleton" aria-hidden="true"><span class="component_skeleton_bar is-highlight is-short"></span><span class="component_skeleton_bar"></span><span class="component_skeleton_bar"></span><span class="component_skeleton_bar is-short"></span></div><h3>Lorem ipsum dolor sit</h3><p class="home_review_item_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></li>
+        </ul>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 7. Filing -->
+  <section class="section-home_filing">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large is-tight-top">
+      <div class="home_filing_content" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.15">
+        <div class="home_filing_copy">
+          <h2>Automatically matched, filed and tracked</h2>
+          <p class="home_filing_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="button-group"><a href="#" class="button is-ghost">Book discovery meeting</a></div>
+        </div>
+        <ul class="home_filing_list" role="list">
+          <li class="home_filing_item"><span class="component_icon is-tint" aria-hidden="true"><svg class="icon-stroke" width="22" height="22" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span><div class="home_filing_item_body"><h3 class="home_filing_item_title">Lorem ipsum dolor sit</h3><p class="home_filing_item_description">Consectetur adipiscing elit sed do eiusmod.</p></div></li>
+          <li class="home_filing_item"><span class="component_icon is-tint" aria-hidden="true"><svg class="icon-stroke" width="22" height="22" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M4 6h6l2 2h8v10H4z"/></svg></span><div class="home_filing_item_body"><h3 class="home_filing_item_title">Lorem ipsum dolor sit</h3><p class="home_filing_item_description">Consectetur adipiscing elit sed do eiusmod.</p></div></li>
+          <li class="home_filing_item"><span class="component_icon is-tint" aria-hidden="true"><svg class="icon-stroke" width="22" height="22" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div class="home_filing_item_body"><h3 class="home_filing_item_title">Lorem ipsum dolor sit</h3><p class="home_filing_item_description">Consectetur adipiscing elit sed do eiusmod.</p></div></li>
+        </ul>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 8. DAWN: PAYG -->
+  <section class="section-home_payg background-stage-dawn">
+    <img class="home_payg_mark" src="assets/img/brand/atomate-mark-white.svg" alt="" aria-hidden="true" width="170" height="159" loading="lazy">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large">
+      <div class="home_payg_content">
+        <div class="component_section-header is-light" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <h2>Give clients more time to act</h2>
+          <p class="component_section-header_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+        </div>
+        <ul class="home_payg_list" role="list" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <li class="home_payg_item">
+            <div class="component_ui">
+              <div class="component_ui_header"><span>PAYG instalment notice</span><span class="component_chip is-done">Captured</span></div>
+              <div class="component_ui_row"><span class="text-color-muted">Client</span><span class="text-weight-semibold">Lorem Ipsum Pty Ltd</span></div>
+              <div class="component_ui_row"><span class="text-color-muted">Due</span><span class="text-weight-semibold">28 Oct 2026</span></div>
+              <div class="component_ui_row"><span class="text-color-muted">Sent to client</span><span class="component_chip">Same day</span></div>
+            </div>
+            <div class="home_payg_item_text"><h3>Lorem ipsum dolor sit amet</h3><p class="home_payg_item_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+          </li>
+          <li class="home_payg_item">
+            <div class="component_ui">
+              <div class="component_ui_header"><span>Client notified</span><span class="component_chip is-warn">Due in 21 days</span></div>
+              <div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 8l9 6 9-6"/></svg>Email</span><span class="component_chip is-done">Delivered</span></div>
+              <div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg>App</span><span class="component_chip is-done">Read</span></div>
+              <div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Reminder</span><span class="component_chip">Scheduled</span></div>
+            </div>
+            <div class="home_payg_item_text"><h3>Lorem ipsum dolor sit amet</h3><p class="home_payg_item_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+          </li>
+        </ul>
+        <div class="button-group margin-top margin-large"><a href="#" class="button is-white">Book discovery meeting</a></div>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 9. Better informed clients -->
+  <section class="section-home_informed">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large">
+      <div class="home_informed_content">
+        <div class="component_section-header" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1"><h2>Better informed clients, better experience</h2></div>
+        <div class="home_informed_grid">
+          <figure class="home_informed_quote"><blockquote><p class="text-style-quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore."</p></blockquote><figcaption class="text-size-small text-color-muted">Lorem Ipsum, Partner, Dolor Sit Amet Accounting</figcaption></figure>
+          <div class="component_ui"><div class="component_ui_header"><span>Client communication</span><span class="component_chip">Your firm's voice</span></div><div class="component_ui_body is-skeleton" aria-hidden="true"><span class="component_skeleton_bar is-highlight is-short"></span><span class="component_skeleton_bar"></span><span class="component_skeleton_bar"></span><span class="component_skeleton_bar is-short"></span></div></div>
+          <div class="component_ui"><div class="component_ui_header"><span>Approval &amp; tracking</span><span class="component_chip is-done">Filed</span></div><div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>Notice of assessment</span><span class="component_chip is-done">Approved</span></div><div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>Activity statement</span><span class="component_chip is-done">Approved</span></div><div class="component_ui_row"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>PAYG instalment notice</span><span class="component_chip">Awaiting approval</span></div></div>
+          <figure class="home_informed_quote is-right"><blockquote><p class="text-style-quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore."</p></blockquote><figcaption class="text-size-small text-color-muted">Lorem Ipsum, Partner, Dolor Sit Amet Accounting</figcaption></figure>
+        </div>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 10. DAY: messaging -->
+  <section class="section-home_messaging background-stage-day">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large">
+      <div class="home_messaging_content">
+        <div class="home_messaging_split" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.15">
+          <div class="home_messaging_copy">
+            <h2>Replace generic ATO messaging with clear guidance</h2>
+            <p class="home_messaging_description text-size-large">Swap generic ATO messaging with automated, client-ready communication in your firm's voice.</p>
+            <ul class="component_checklist" role="list">
+              <li class="component_checklist_item"><span class="component_tick is-tint" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Ready-made email templates for all ATO correspondence</span></li>
+              <li class="component_checklist_item"><span class="component_tick is-tint" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Clear next steps to enhance client experience</span></li>
+              <li class="component_checklist_item"><span class="component_tick is-tint" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span><span>Automated client communication, based on your rules</span></li>
+            </ul>
+            <div class="button-group"><a href="#" class="button is-ghost">Book discovery meeting</a></div>
+          </div>
+          <div class="home_messaging_panel">
+            <svg class="home_messaging_lines" viewBox="0 0 400 300" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path d="M-40 300 L480 0" stroke="rgba(255,255,255,.10)" stroke-width="1"/><path d="M60 300 L580 0" stroke="rgba(255,255,255,.10)" stroke-width="1"/><path d="M160 300 L680 0" stroke="rgba(255,255,255,.10)" stroke-width="1"/></svg>
+            <div class="home_messaging_email">
+              <div class="home_messaging_email_header">
+                <span class="component_icon is-blue is-medium" aria-hidden="true"><svg class="icon-stroke" width="16" height="16" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 8l9 6 9-6"/></svg></span>
+                <div class="home_messaging_email_meta"><span class="home_messaging_email_from">Lorem Ipsum Accounting</span><span class="text-size-tiny text-color-muted">to Sarah · 7:02 am</span></div>
+                <span class="component_chip is-done">Sent</span>
+              </div>
+              <div class="home_messaging_email_body">
+                <p class="home_messaging_email_greeting">Hi Sarah,</p>
+                <p class="home_messaging_email_text">Your PAYG instalment notice is ready. Here's what it means and what to do next.</p>
+                <div class="home_messaging_email_attachment"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg><span class="home_messaging_email_filename">PAYG-instalment-notice.pdf</span><span class="component_chip">PIN-protected</span></div>
+                <div class="button-group"><span class="button is-medium">Customise</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="home_messaging_channels">
+          <span class="home_messaging_channels_label">Send the way your clients prefer</span>
+          <ul class="home_messaging_channel-list" role="list">
+            <li class="home_messaging_channel"><span class="component_icon is-tint is-small" aria-hidden="true"><svg class="icon-stroke" width="16" height="16" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 8l9 6 9-6"/></svg></span>Email</li>
+            <li class="home_messaging_channel"><span class="component_icon is-tint is-small" aria-hidden="true"><svg class="icon-stroke" width="16" height="16" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="4" y="9" width="16" height="11" rx="1"/><path d="M8 9V6a4 4 0 0 1 8 0v3"/></svg></span>Post</li>
+            <li class="home_messaging_channel"><span class="component_icon is-tint is-small" aria-hidden="true"><svg class="icon-stroke" width="16" height="16" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>Portal</li>
+            <li class="home_messaging_channel"><span class="component_icon is-tint is-small" aria-hidden="true"><svg class="icon-stroke" width="16" height="16" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/><path d="M11 18h2"/></svg></span>App</li>
+            <li class="home_messaging_channel"><span class="component_icon is-tint is-small" aria-hidden="true"><svg class="icon-stroke" width="16" height="16" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>PIN-protected email</li>
+          </ul>
+        </div>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 11. Security -->
+  <section class="section-home_security">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large">
+      <div class="home_security_content">
+        <div class="component_section-header" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <h2>Built-in security your team never has to think about</h2>
+          <p class="component_section-header_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod tempor.</p>
+        </div>
+        <ul class="home_security_credentials" role="list" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.08">
+          <li class="home_security_credential"><span class="component_tick is-blue" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span>ATO-registered software product</li>
+          <li class="home_security_credential"><span class="component_tick is-blue" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span>Secure ATO integration</li>
+          <li class="home_security_credential"><span class="component_tick is-blue" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span>ISO 27001 certified</li>
+          <li class="home_security_credential"><span class="component_tick is-blue" aria-hidden="true"><svg class="icon-stroke" width="11" height="11" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span>Encrypted email communications</li>
+        </ul>
+        <ul class="home_security_list" role="list" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <li class="home_security_item">
+            <div class="component_ui">
+              <div class="component_ui_header"><span>Subject: Your Notice of Assessment</span><span class="component_chip is-done">TFN redacted</span></div>
+              <div class="component_ui_row is-start"><span class="home_security_to text-color-muted">To</span><span class="component_chip">Sarah Chen</span></div>
+              <div class="component_ui_body"><p>Hi Sarah,</p><p>Please find your document attached.</p><p>TFN <span class="home_security_redacted"><span class="hide-visually">redacted</span><span aria-hidden="true">123 456 789</span></span></p></div>
+              <div class="component_ui_row is-footer"><span class="component_ui_doc"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4"/></svg>Notice-of-assessment.pdf</span><span class="button is-small">Send</span></div>
+            </div>
+            <div class="home_security_item_text"><h3>Redact TFNs automatically</h3><p class="home_security_item_description">TFNs automatically redacted on capture to protect client data and reduce compliance risk.</p></div>
+          </li>
+          <li class="home_security_item">
+            <div class="component_ui">
+              <div class="component_ui_header"><span>Payment reference document</span><span class="component_chip">PIN-protected</span></div>
+              <div class="home_security_pin-body">
+                <span class="component_icon is-blue" aria-hidden="true"><svg class="icon-stroke" width="22" height="22" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></span>
+                <span class="home_security_pin-label">Enter PIN to open</span>
+                <div class="home_security_pin" aria-hidden="true"><span class="home_security_pin_box is-on"></span><span class="home_security_pin_box is-on"></span><span class="home_security_pin_box is-on"></span><span class="home_security_pin_box"></span></div>
+              </div>
+              <div class="component_ui_row is-footer"><span class="text-size-tiny text-color-muted">PIN sent to client via SMS</span><span class="button is-small">Open document</span></div>
+            </div>
+            <div class="home_security_item_text"><h3>Protect PRN data</h3><p class="home_security_item_description">Documents with TFN-based PRNs are automatically PIN-protected. Clients receive the PIN via SMS for secure access.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 12. DAY: testimonials -->
+  <section class="section-home_testimonials background-stage-day">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large">
+      <div class="home_testimonials_content">
+        <div class="component_section-header">
+          <h2>Why 2,000+ practices choose ATOmate</h2>
+          <div class="home_testimonials_controls">
+            <button class="home_testimonials_arrow" type="button" id="tPrev" aria-label="Previous testimonial"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 6l-6 6 6 6"/></svg></button>
+            <button class="home_testimonials_arrow is-next" type="button" id="tNext" aria-label="Next testimonial"><svg class="icon-stroke" width="18" height="18" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M9 6l6 6-6 6"/></svg></button>
+          </div>
+        </div>
+        <div class="home_testimonials_grid" id="tGrid" aria-live="polite" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
+          <figure class="home_testimonials_featured">
+            <blockquote><p class="text-style-quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."</p></blockquote>
+            <figcaption class="home_testimonials_author"><span class="home_testimonials_avatar" aria-hidden="true"></span><span class="home_testimonials_author_text"><span class="home_testimonials_name">Lorem Ipsum</span><span class="home_testimonials_firm">Bluebird Accounting</span></span></figcaption>
+          </figure>
+          <div class="home_testimonials_stack">
+            <figure class="home_testimonials_card">
+              <blockquote><p class="home_testimonials_quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore."</p></blockquote>
+              <figcaption class="home_testimonials_author"><span class="home_testimonials_avatar" aria-hidden="true"></span><span class="home_testimonials_author_text"><span class="home_testimonials_name">Lorem Ipsum</span><span class="home_testimonials_firm">Dolor Sit Amet Accounting</span></span></figcaption>
+            </figure>
+            <figure class="home_testimonials_card">
+              <blockquote><p class="home_testimonials_quote">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud."</p></blockquote>
+              <figcaption class="home_testimonials_author"><span class="home_testimonials_avatar" aria-hidden="true"></span><span class="home_testimonials_author_text"><span class="home_testimonials_name">Lorem Ipsum</span><span class="home_testimonials_firm">Kennedy King Chartered Accountants</span></span></figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div></div></div>
+  </section>
+
+  <!-- 13. MORNING: CTA -->
+  <section class="section-home_cta background-stage-morning">
+    <img class="home_cta_mark" src="assets/img/brand/atomate-mark.svg" alt="" aria-hidden="true" width="170" height="159" loading="lazy">
+    <div class="padding-global"><div class="container-large"><div class="padding-section-large is-tall">
+      <div class="home_cta_content">
+        <h2 class="home_cta_title">Ready to cut your ATO document processing time by 90%?</h2>
+        <p class="home_cta_description text-size-large">Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do eiusmod.</p>
+        <div class="button-group"><a href="#" class="button">Book discovery meeting</a></div>
+      </div>
+    </div></div></div>
+  </section>
+
+  </main>
+
+  <footer class="footer_component">
+    <div class="padding-global"><div class="container-large">
+      <div class="footer_grid">
+        <div class="footer_brand">
+          <img class="footer_logo" src="assets/img/brand/atomate-logo.svg" alt="ATOmate — Powered by BAW" width="833" height="233" loading="lazy">
+          <p class="footer_tagline">Fast | Simple | Secure ATO document automation for accounting practices.</p>
+        </div>
+        <nav class="footer_column" aria-labelledby="footer-product">
+          <h2 class="footer_heading" id="footer-product">Product</h2>
+          <ul class="footer_list" role="list"><li><a class="footer_link" href="#">Features</a></li><li><a class="footer_link" href="#">How it works</a></li><li><a class="footer_link" href="#">Integrations</a></li><li><a class="footer_link" href="#">Security</a></li></ul>
+        </nav>
+        <nav class="footer_column" aria-labelledby="footer-company">
+          <h2 class="footer_heading" id="footer-company">Company</h2>
+          <ul class="footer_list" role="list"><li><a class="footer_link" href="#">About BAW</a></li><li><a class="footer_link" href="#">Omble</a></li><li><a class="footer_link" href="#">Insights</a></li><li><a class="footer_link" href="#">Contact</a></li></ul>
+        </nav>
+        <div class="footer_column">
+          <h2 class="footer_heading">Contact</h2>
+          <ul class="footer_list" role="list"><li><a class="footer_link" href="tel:1300054466">1300 054 466</a></li><li class="footer_text">hello@lorem.ipsum</li><li class="footer_text">Lorem Ipsum Street, Dolor VIC 3000</li></ul>
+        </div>
+      </div>
+      <div class="footer_bottom"><span>© 2026 ATOmate. Powered by BAW.</span><span>Privacy · Terms</span></div>
+    </div></div>
+  </footer>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/motion.js" defer></script>
+</body>
+</html>
