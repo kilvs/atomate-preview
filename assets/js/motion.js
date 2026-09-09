@@ -11,13 +11,12 @@
 
   // ---- 1. Navbar: transparent over the navy hero → .is-solid after it; mobile menu button
   var nav = document.getElementById('siteNav');
-  var stage = document.querySelector('.home_hero_stage');
   var menuButton = nav ? nav.querySelector('.navbar_menu-button') : null;
   function navState() {
     if (!nav) return;
+    // Design QA (9 Sep): go solid as soon as the page scrolls, so the bar never sits transparent over hero copy.
     var y = window.scrollY || 0;
-    var limit = stage ? stage.getBoundingClientRect().bottom + y - 88 : 400;
-    nav.classList.toggle('is-solid', y > limit);
+    nav.classList.toggle('is-solid', y > 24);
   }
   window.addEventListener('scroll', navState, { passive: true });
   window.addEventListener('resize', navState);

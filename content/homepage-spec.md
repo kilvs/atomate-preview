@@ -1,10 +1,10 @@
 # ATOmate homepage — content and section spec
 
-The content of record for the homepage as accepted at Gate 03 (Eugene, 9 Sep 2026).
-Copy is the client's, from "ATOmate Updated Docs" (7 Sep 2026 PDF,
-`../Guide & References/ATOmate V2/`) and the brand guide. **Do not rewrite it.**
-Lorem ipsum and `00%` mark copy the client has not supplied yet; they stay until
-real text lands. Structure, wrapper names and design notes are the system's.
+The content of record for the homepage. Copy is the client's, supplied through the
+internal review of 9 Sep 2026 ("ATOmate Content QA" and "ATOmate Design QA" PDFs),
+which superseded the 7 Sep "ATOmate Updated Docs" extract and the lorem placeholders.
+**Do not rewrite it.** The remaining placeholders are sample names inside mock UI
+panels and the footer contact details. Structure, wrapper names and design notes are the system's.
 
 **Read `CLAUDE.md` first.** Everything here assumes the settled decisions.
 
@@ -31,138 +31,149 @@ in `style.css`.
 
 | # | Ground | Client-First wrapper (as built) | Purpose | CTA |
 |---|---|---|---|---|
-| 1 | night | `section-home_hero` | The claim + the arrow | Yes |
+| 1 | night | `section-home_hero` | Kicker, claim, sub-claim, the arrow | Yes |
 | 1b | night | `home_hero_stats` (inside `section-home_hero`, same gradient) | Giant numerals (belongs to the hero visually) | No |
-| 2 | day | `section-home_integrations` | Tabs: PMS / DMS / SMSF logos | No |
-| 3 | white | `section-home_comparison` | Without / With ATOmate | No |
-| 4 | day | `section-home_process` | How ATOmate works — 5 steps, click to reveal | No |
-| 5 | night | `section-home_overnight` | Overnight processing, queue UI | Yes |
-| 6 | day | `section-home_review` | Review less — three cards | No |
-| 7 | white | `section-home_filing` | Matched, filed and tracked | Yes |
+| 2 | day | `section-home_integrations` | Centred heading, underline tabs: PMS / DMS / SMSF logos | No |
+| 3 | white | `section-home_comparison` | Without (white) / With (navy) + closing lead | Yes |
+| 4 | day | `section-home_process` | How ATOmate works — 5 steps, click to reveal | Yes |
+| 5 | night | `section-home_overnight` | Overnight processing, "Every ATO document, captured" panel | Yes |
+| 6 | day | `section-home_review` | Review what matters — three cards | Yes |
+| 7 | white | `section-home_filing` | Matched, filed and tracked — three cards | Yes |
 | 8 | dawn | `section-home_payg` | Give clients more time to act | Yes |
-| 9 | white | `section-home_informed` | Pull quotes beside UI | No |
+| 9 | white | `section-home_informed` | Two copy blocks paired with two customer quotes | Yes |
 | 10 | day | `section-home_messaging` | Clear guidance, email card, channels | Yes |
 | 11 | white | `section-home_security` | Credentials line + two UI cards | No |
-| 12 | day | `section-home_testimonials` | Why 2,000+ practices choose ATOmate | No |
+| 12 | day | `section-home_testimonials` | Six quotes, three visible, rotation | No |
 | 13 | morning | `section-home_cta` | Closing CTA | Yes |
 | — | white | `footer_component` | Lockup, tagline, link columns | — |
 
 ---
 
-## 1. Hero (`.stage-night`)
+## 1. Hero (`.background-stage-night`)
 
-- H1 (two lines, `90%` in orange-300): **Reduce manual ATO document processing by 90%**
-- Lead: **Fast, simple, secure ATO document processing for accountants**
-- CTA: Book discovery meeting (white button)
+- Kicker: **Fast. Simple. Secure.**
+- H1: **Automate your firm's ATO document processing**
+- Sub-claim (heading font, `90%` in orange-300): **Reduce manual work by 90%**
+- Lead: **Automate every step from capture to archive without losing control.**
+- Note: **The ATO document automation software built for accounting firms.**
+- CTA: Book Discovery Meeting (white button)
 - Arrow labels: **Overnight** (bottom-left, white) · **Next-day approval** (top-right, orange)
-- Motion: copy fades up; the arrow draws (see `docs/Gate-04-Motion-Spec.md`)
+- *Client flag:* the source shows an **ISO 27001 certified logo** beside the CTA; no file supplied.
 
 ### 1b. Stats row (same navy)
 
-| Number | Label |
+- H2: **Trusted by 2,000+ firms of every size**
+
+| Cell | Label |
 |---|---|
-| **2,000+** | practices *(source: new headings; the brand guide eDM says 1,500 — client flag)* |
-| **90%** (orange) | less manual processing |
-| 00% ×3 | Lorem ipsum dolor — dimmed until real numbers exist |
+| **Australian-owned & operated** | text cell |
+| **90%** (orange, count-up) | less manual processing |
+| **500+** (count-up) | hours recovered · *annually for practices with 10+ team members* |
+| **100%** (count-up) | of ATO documents captured |
+| **ATO registered software** | text cell |
 
-Count-up runs on the two real numbers only.
+## 2. Integrations (`.background-stage-day`)
 
-## 2. Integrations (`.stage-day`)
-
-- H2: **ATOmate works with the tools your team already uses**
-- Lead: lorem
-- Tabs: **Practice management** (default) · **Document management** · **SMSF**
-- PMS shelf: MYOB, Xero, Wolters Kluwer CCH iFirm, LodgeiT, APS, Access Elite, Access HandiSoft, Access Practice, Kloud Connect, Class
-- DMS shelf: Box, Dropbox, FYI, Google Drive, HowNow, iManage, Network folders, Nimbus, OneDrive, SharePoint, SuiteFiles, Virtual Cabinet
+- H2 (centred, no description): **ATOmate works with the tools your team already uses**
+- Tabs (centred, icon + label, orange underline on the active tab): **Practice management** (default) · **Document management** · **SMSF**
+- PMS shelf (order confirmed): MYOB, Xero, Wolters Kluwer CCH iFirm, LodgeiT, APS, Access Elite, Access HandiSoft, Access Practice, Kloud Connect, Class
+- DMS shelf (order per Content QA): FYI, Virtual Cabinet, SuiteFiles, iManage, Nimbus, SharePoint, HowNow, Dropbox, Box, Google Drive, OneDrive, Network folders, **+ more!** (text tile). *Client flag:* the source also lists **HowNow X**; no logo supplied.
 - SMSF shelf: BGL, Class
-- Logos on white elevated cards, no grid border. The logo marquee from the brief is dropped (redundant with this section).
+- Logos on white elevated cards, centred rows.
 
 ## 3. Comparison (white)
 
-- H2: **Reduce ATO document processing time by 90%**
-- Lead: lorem
-- **Without ATOmate** (navy card, muted ✕): Time-consuming, error-prone manual processing · Missed PAYG instalment notices and other ATO correspondence · Manual TFN redaction and PRN protection · Manual filing with no audit trail · Admin team stretched thin · Delayed documents. Frustrated clients.
-- **With ATOmate** (white card, blue ✓): Automatic ATO document processing from capture to filing · All ATO documents captured automatically overnight · Automatic TFN redaction and PRN protection · Automatic filing with a complete audit trail · More capacity to improve client relationships · Timely delivery, better client experience
-- Orange arrow button between the cards. No bridge, no giant 90%.
+- H2: **Still processing ATO documents manually?**
+- Lead: **Manual processing overwhelms admin teams, creates errors and leads to endless client follow-up.**
+- **Without ATOmate** (white card with border, red ✕): Time-consuming, error-prone manual processing · Missed PAYG instalment notices and other ATO correspondence · Manual TFN redaction and PRN protection · Manual filing with no audit trail · Admin team stretched thin · Delayed documents. Frustrated clients.
+- **With ATOmate** (navy card, blue ✓): Automatic ATO document processing from capture to filing · All ATO documents captured automatically overnight · Automatic TFN redaction and PRN protection · Automatic filing with a complete audit trail · More capacity to improve client relationships · Timely delivery, better client experience
+- Orange arrow button between the cards.
+- Closing lead: **ATOmate enhances communication and delivers a consistent experience to keep clients ahead of their tax obligations.** · CTA: Book Discovery Meeting (blue)
 
-## 4. How ATOmate works (`.section_process .stage-day`)
+## 4. How ATOmate works (`.background-stage-day`)
 
-- H2: **How ATOmate works** · lead: lorem
-- Steps (clickable cells): **Capture & identify** · **Verify** · **Protect** · **Review & approve** · **Communicate & archive**
-- Reveal panel: step title + body (all five bodies lorem until supplied). Step 1 open by default. Panel keeps its height.
+- H2: **How ATOmate works** (no description)
+- Steps (clickable cells) and panel copy:
+  - **Capture & identify** — Every ATO document is captured overnight and matched to the right client using their ABN or TFN.
+  - **Verify** — ATO documents are cross-checked against ATO and practice management data.
+  - **Protect** — TFNs are automatically redacted. Documents with a TFN-based PRN are sent as PIN-protected PDFs.
+  - **Review & approve** — Documents that meet your rules are approved. Flagged items are sent for review.
+  - **Communicate & archive** — Send client-ready communications automatically or on your own terms. Get a full audit trail upon filing.
+- Step 1 open by default. No arrow in the panel (Design QA). CTA: Book Discovery Meeting (ghost)
 
-## 5. Overnight processing (`.stage-night`)
+## 5. Overnight processing (`.background-stage-night`)
 
-- H2: **Overnight processing. Next-day approval.** · lead: lorem
-- Three check items: lorem
-- CTA: Book discovery meeting (ghost, light)
-- UI card "Overnight queue" (chip **Overnight**): PAYG instalment notice — Captured · Notice of assessment — Verified · Activity statement — TFN redacted · Statement of account — Ready for approval · footer "Next morning" + button **Approve all**
+- H2: **Overnight processing. Next-day approval.**
+- Lead: **ATO documents can take days to reach your practice and your clients. ATOmate captures and processes them overnight, ready for review the next day.**
+- Checks: **Get documents to clients faster** · **No manual document processing**
+- CTA: Book Discovery Meeting (ghost, light)
+- UI card **Every ATO document, captured**: myGov · Agent Digital · ATO Online · Paper (each with a check)
+- *Not built:* the source's "FAST" label above the heading (eyebrows are a settled no).
 
-## 6. Review less (`.stage-day`)
+## 6. Review (`.background-stage-day`)
 
-- H2: **Review less. Approve faster. Your rules.** · lead: lorem
-- Three cards (two white, one navy): H3 lorem + small lorem, each with a mini UI strip.
+- H2: **Review what matters. Automate the rest.** (no description)
+- Three white cards, each with a mock preview:
+  - **Full control over your workflow** — Choose what's automated, what's reviewed, and what needs approval.
+  - **Escalate when needed** — Route documents to the right person for review or approval.
+  - **Set automatic approval rules** — Documents that meet your rules are approved. Flagged items are sent for review.
+- CTA: Book Discovery Meeting (ghost). *Not built:* the source's "SIMPLE" label.
 
 ## 7. Filing (white)
 
-- H2: **Automatically matched, filed and tracked** · lead: lorem
-- CTA: Book discovery meeting (ghost)
-- Three row cards: H3 lorem + "Consectetur adipiscing elit sed do eiusmod."
+- H2: **Automatically matched, filed and tracked** (no description)
+- Three white cards matching §6:
+  - **Every document matched to the right client** — Automatically matched using TFNs and ABNs, so three "John Smiths" never get mixed up.
+  - **Filed directly in your DMS** — Documents & communications automatically filed to your existing document management system
+  - **Full audit trail for every document** — Know when every document was received, reviewed, communicated and filed.
+- CTA: Book Discovery Meeting (ghost)
 
-## 8. PAYG (`.stage-dawn`)
+## 8. PAYG (`.background-stage-dawn`)
 
-- H2: **Give clients more time to act** · lead: lorem
-- Card A "PAYG instalment notice" (chip Captured / Same day): lorem line
-- Card B "Client notified" (chip Due in 21 days): Delivered · Read · Scheduled; lorem line
-- CTA: Book discovery meeting (white)
+- H2: **Give clients more time to act** (no description)
+- Card A (mock "PAYG instalment notice" UI): **Stop missed PAYG instalment notices** — Automatically capture and send every PAYG instalment notice. Give your clients more time to review and prepare for upcoming payments.
+- Card B (mock "Client notified" UI): **Help clients stay ahead of DPNs** — Deliver important ATO correspondence on time, communicate proactively, and prevent unexpected penalties.
+- CTA: Book Discovery Meeting (white)
+- Mock UI sample values ("Lorem Ipsum Pty Ltd", "28 Oct 2026") remain placeholders.
 
 ## 9. Better informed (white)
 
 - H2: **Better informed clients, better experience**
-- Two pull quotes (lorem) with attribution "Lorem Ipsum, Partner, Dolor Sit Amet Accounting", each beside a UI card: "Client communication" (chip Your firm's voice) and "Approval & tracking" (chip Filed; rows Approved · Approved · Awaiting approval)
+- Row 1: **Keep clients informed and prepared** — Stay proactive with timely correspondence. Keep clients informed about what's happening and what's coming next. · CTA · beside the quote: *"Since partnering with ATOmate, we have reduced ATO mail processing time significantly and increased proactive communications with our client base. ATOmate gives us peace of mind that our clients' data is protected with its ability to redact TFN sensitive information."* — Liz, Firm Owner
+- Row 2: quote *"ATOmate allows our admin staff to spend less time processing ATO documents and more time contacting and communicating directly with clients."* — Steve, Firm Owner · beside **Every client interaction, elevated** — Turn routine ATO correspondence into a trust-building experience with timely, consistent communication. · CTA
 
-## 10. Messaging (`.stage-day`)
+## 10. Messaging (`.background-stage-day`)
 
-- H2: **Replace generic ATO messaging with clear guidance**
-- Lead: **Swap generic ATO messaging with automated, client-ready communication in your firm's voice.**
-- Three check items: **Ready-made email templates for all ATO correspondence** · **Clear next steps to enhance client experience** · **Automated client communication, based on your rules**
-- CTA: Book discovery meeting (ghost)
-- Email card on a navy panel: from "Lorem Ipsum Accounting · to Sarah · 7:02 am", chip Sent; "Hi Sarah, / Your PAYG instalment notice is ready. Here's what it means and what to do next."; attachment PAYG-instalment-notice.pdf, chip PIN-protected; button **Customise**
-- Label **Send the way your clients prefer**, channel pills: **Email · Post · Portal · App · PIN-protected email**
+Unchanged by the QA. H2 **Replace generic ATO messaging with clear guidance**; lead, three checks, CTA, email card ("Lorem Ipsum Accounting", "Hi Sarah" are sample UI), channel pills **Email · Post · Portal · App · PIN-protected email**.
 
 ## 11. Security (white)
 
-- H2: **Built-in security your team never has to think about** · lead: lorem
-- Credentials line: **ATO-registered software product · Secure ATO integration · ISO 27001 certified · Encrypted email communications**
-- Card 1 — UI "Subject: Your Notice of Assessment" (chip TFN redacted; to Sarah Chen; "Hi Sarah, Please find your document attached."; TFN 123 456 789 redacted; button **Send**). H3 **Redact TFNs automatically**. Copy: **TFNs automatically redacted on capture to protect client data and reduce compliance risk.**
-- Card 2 — UI "Payment reference document" (chip PIN-protected; button **Open document**). H3 **Protect PRN data**. Copy: **Documents with TFN-based PRNs are automatically PIN-protected. Clients receive the PIN via SMS for secure access.**
+- H2: **Built-in security your team never has to think about** (description removed per QA)
+- Credentials line, two UI cards and their copy unchanged: **Redact TFNs automatically** / **Protect PRN data**.
 
-## 12. Testimonials (`.stage-day`)
+## 12. Testimonials (`.background-stage-day`)
 
 - H2: **Why 2,000+ practices choose ATOmate**
-- One featured navy quote card + two small cards; prev/next arrows rotate the queue (pending Eugene's confirmation).
-- All three quotes and attributions are lorem ("Bluebird Accounting", "Dolor Sit Amet Accounting", "Kennedy King Chartered Accountants" are placeholders). The current site has only two real testimonials — client flag.
+- Six quotes in the rotation queue (featured + two visible; the rest held in hidden cards):
+  1. Liz, Firm Owner — "Since partnering with ATOmate we have reduced ATO mail processing time significantly…"
+  2. Jenny, Practice Manager — "ATOmate surpassed our expectations, making everything so much easier and saving time."
+  3. Admin — "I was crying in my boss's office because it was so easy…"
+  4. Admin — "ATOmate has freed up 80–90% of our time. We're super impressed with it."
+  5. Practice Manager — "We've changed our entire app stack in the last 12 months…"
+  6. Admin — "We used to spend 2.5 hours just downloading ATO documents from the portal…"
+- Attribution shows the name where given, otherwise the role. *Client flag:* firms and full names.
 
-## 13. CTA (`.stage-morning`)
+## 13. CTA (`.background-stage-morning`)
 
-- H2: **Ready to cut your ATO document processing time by 90%?**
-- Lead: lorem
-- CTA: Book discovery meeting (blue)
-- Full-colour mark ghosted at the right.
+- H2: **Ready to make proactive accounting the standard?** (no description)
+- CTA: Book Discovery Meeting (blue)
 
 ## Footer
 
-- Lockup + **Fast | Simple | Secure ATO document automation for accounting practices.**
-- Product: Features · How it works · Integrations · Security
-- Company: About BAW · Omble · Insights · Contact
-- Contact: 1300 054 466 · hello@lorem.ipsum · Lorem Ipsum Street, Dolor VIC 3000 *(email and address are placeholders)*
-- © 2026 ATOmate. Powered by BAW. · Privacy · Terms
+Unchanged: lockup + **Fast | Simple | Secure ATO document automation for accounting practices.**; Product / Company / Contact columns; contact email and address are placeholders.
 
 ---
 
-## Flags carried from the Project (`docs/Approval-Status.md`)
+## Open flags
 
-BAW lockup size · Gilroy Bold missing · orange usage vs brand guide · CTA wording ·
-partner logos (APS / Wolters Kluwer PNGs from Omble; the supplied SVGs are broken
-wrappers) · lorem and `00%` content · sample UI names · 1,500 vs 2,000+ ·
-testimonials count/attribution · product screenshots · hero video.
+ISO 27001 logo (hero) · HowNow X logo · sample UI names and values · footer email and address · testimonial firms and full names · "FAST" / "SIMPLE" section labels in the source, not built (settled: no eyebrows) · 1,500 vs 2,000+ · product screenshots · hero video · Gilroy Bold + licences · Omble resemblance.

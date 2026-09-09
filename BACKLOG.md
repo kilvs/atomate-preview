@@ -6,13 +6,13 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 
 | Item | Where | Unblocked by |
 |---|---|---|
-| All lorem ipsum copy (leads, step bodies, review cards, quotes, footer contact) | every section | Client supplies body copy per section |
-| `00%` stat cells ×3 | §1b stats | Client supplies trust-bar numbers, or the cells are dropped |
+| Sample UI names and values (Sarah Chen, Lorem Ipsum Accounting / Pty Ltd, 28 Oct 2026) and footer email / address | §5, §8, §10, §11, footer | Client supplies (section copy landed 9 Sep via the internal QA) |
+| ISO 27001 certified logo beside the hero CTA | §1 | Client supplies the file |
+| HowNow X logo | §2 DMS shelf | Client supplies; HowNow shown once meanwhile |
 | 1,500 vs 2,000+ practices | §1b, §12 H2 | Client picks one |
-| Testimonials — three quotes with name, firm, role | §12 | Client supplies (only two exist today) |
+| Testimonials — firms and full names for the six quotes | §12 | Client supplies (quotes landed 9 Sep) |
 | Product screenshots for card previews and security UI | §5–§11 mock UI | Client supplies; mocks stay until then |
 | Gilroy Bold + web licences for Gilroy and Galano | headings | Client supplies the file and confirms licences |
-| "Book discovery meeting" vs "Book a discovery meeting" | all CTAs | Client confirms |
 | Orange as scarce accent vs guide's orange secondary buttons | system | Client nod |
 | BAW lockup size in the nav | nav | Client review |
 | APS and Wolters Kluwer marks — official SVGs | §2 PMS shelf | Client supplies; the folder's SVGs are broken wrappers linking a local PNG |

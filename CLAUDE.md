@@ -193,6 +193,36 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Internal QA applied (9 Sep 2026, "ATOmate Design QA" + "ATOmate Content QA")
+
+The internal review supplied the real copy for every section and a set of design
+changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
+they supersede a settled decision, the newer call wins and is noted here:
+
+- **CTA label is "Book Discovery Meeting"** (Content QA). Supersedes the shortened
+  "Book discovery meeting"; the flag is closed.
+- **Navbar goes solid after 24px of scroll** (Design QA: "adjust the navbar when
+  scrolling"). Supersedes Gate 04 §1's "after the hero" threshold; the transparent
+  state is now the at-rest state only.
+- **Partners tabs are underline tabs with an icon and an orange active state**,
+  centred, heading centred, no description (Design QA reference image). This is the
+  client's preferred style; it is a second sanctioned use of orange and the one
+  place icons sit inside a control.
+- **Comparison cards swapped:** Without = white card with a border and red ✕
+  (`--red-error`), With = navy with blue ✓. A closing lead and CTA follow the cards.
+- **Process panel arrow removed.** Review section: all three cards white (the navy
+  emphasis card is gone). Filing section rebuilt as three cards matching Review.
+- **Hero copy** is the kicker / H1 / sub-claim / lead / note stack from the Content
+  QA; the stats row is the five-cell "Trusted by 2,000+ firms" row (two text cells,
+  three count-ups). The 2,000+ figure moved into the row's H2.
+- **Informed section** pairs two copy blocks with the Liz and Steve quotes, with
+  more room between rows. **Testimonials** carry the six supplied quotes.
+- **Not built on purpose:** the source's "FAST" / "SIMPLE" section labels
+  (settled: no eyebrows). The hero kicker "Fast. Simple. Secure." is built because
+  it is the key line, not a section label.
+- **Still missing from the client:** ISO 27001 logo (hero), HowNow X logo, sample
+  UI names and values, footer contact, testimonial firms.
+
 ## Omble relationship
 
 Treat ATOmate and Omble as a BAW family. **Share:** Client-First structure, the
@@ -231,7 +261,7 @@ unconfirmed. Both are client flags — do not substitute a different typeface.
 
 BAW lockup size in the nav · Gilroy Bold + font licences · orange usage vs the
 brand guide (guide has orange as secondary buttons; the system uses it as a scarce
-outcome accent — needs the client's nod) · "Book discovery meeting" wording ·
+outcome accent — needs the client's nod) · ISO 27001 logo · HowNow X logo ·
 partner logos (APS and Wolters Kluwer are PNGs from Omble's assets because the
 supplied SVGs are broken wrappers) · all lorem / `00%` content · sample UI names ·
 1,500 vs 2,000+ practices · trust-bar numbers · testimonials (only 2 exist; need
