@@ -189,6 +189,11 @@ the rebuild fixed and what it deliberately changed, so it is not undone:
    logo | links | CTA layout gives. Intentional; the Webflow build cannot
    reproduce the zero-width quirk anyway.
 
+Asset caching: `vercel.json` serves CSS and JS with `must-revalidate` and fonts and
+images as immutable. The stylesheet and script links in `index.html` carry a `?v=`
+content hash; bump it whenever either file changes, or the preview shows stale CSS
+(it did on 9 Sep).
+
 Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
