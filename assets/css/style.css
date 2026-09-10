@@ -132,7 +132,6 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .component_section-header.is-light .component_section-header_description { color:rgba(255,255,255,.8); }
 .component_section-header.is-centre { grid-template-columns:minmax(0,1fr); justify-items:center; text-align:center; }
 .component_section-header.is-centre h2 { max-width:40rem; }
-.component_section-header.is-centre h2::after { content:""; display:block; width:3rem; height:3px; border-radius:var(--radius-round); background:var(--orange-500); margin:1.25rem auto 0; }
 .component_section-header.is-centre .component_section-header_description { max-width:40rem; }
 
 .component_ui { background:#fff; border:1px solid var(--line); border-radius:var(--radius-box); overflow:hidden; font-size:var(--text-small); color:var(--ink-900); box-shadow:var(--shadow-ui); }

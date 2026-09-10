@@ -201,7 +201,8 @@ any width; all interactions pass with and without reduced motion.
 - **Centre-align whenever necessary.** Section headers and the CTA under every
   grid section are centred (`component_section-header is-centre`,
   `button-group is-centre`); split sections (overnight, messaging) stay left, as
-  Omble does. Centred headings carry a short orange rule.
+  Omble does. (A short orange rule under centred headings was tried and removed
+  the same day at Eugene's request.)
 - **Use the warm orange more.** Supersedes "orange is scarce" and "no orange
   buttons": the primary CTA (`.button`, including `is-white` on navy and the nav
   CTA) is orange-500 with orange-600 hover; the hero kicker is orange-300; the
