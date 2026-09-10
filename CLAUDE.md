@@ -221,8 +221,9 @@ The hero arrow, its "Overnight" / "Next-day approval" labels and the sky glow ar
 removed at Eugene's request; the ground is the plain navy gradient and the copy
 stack is centred. This supersedes settled decision 2 (Hero C with the arrow inside
 the fold) and the Gate 04 hero draw; the 30° arrow remains the motif elsewhere
-(section gradients at 150°, the ghost lines behind the email card). Hero
-`min-height` is 34rem on desktop, content-driven on mobile.
+(section gradients at 150°, the ghost lines behind the email card). The hero
+stage fills the viewport (`100svh` minus the navbar) so the trust bar sits below
+the fold on every screen (Eugene, 10 Sep).
 
 ## Internal QA applied (9 Sep 2026, "ATOmate Design QA" + "ATOmate Content QA")
 

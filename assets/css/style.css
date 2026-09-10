@@ -179,8 +179,9 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 
 /* ---------- 1. Hero + 1b stats */
 .section-home_hero { padding-top:var(--navbar-height); }
-/* Hero simplified 10 Sep (Eugene): no arrow, no glow, copy centred on the plain navy ground */
-.home_hero_stage { min-height:34rem; display:flex; flex-direction:column; position:relative; }
+/* Hero simplified 10 Sep (Eugene): no arrow, no glow, copy centred on the plain navy ground.
+   The stage fills the viewport so the trust bar starts below the fold (Eugene, 10 Sep). */
+.home_hero_stage { min-height:calc(100vh - var(--navbar-height)); min-height:calc(100svh - var(--navbar-height)); display:flex; flex-direction:column; position:relative; }
 .home_hero_stage > .padding-global { flex:1; display:flex; flex-direction:column; position:relative; z-index:1; }
 .home_hero_stage .container-large { flex:1; display:flex; flex-direction:column; }
 .home_hero_layout { flex:1; display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; align-items:center; padding:4rem 0 5rem; }
@@ -431,7 +432,6 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_cta_title { font-size:2.1875rem; }
   .text-size-large { font-size:1.125rem; }
   .text-style-quote { font-size:1.5rem; }
-  .home_hero_stage { min-height:0; }
   .home_hero_layout { padding:3rem 0 3.5rem; }
   .home_hero_stats { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); }
   .home_hero_stat_number { font-size:2.25rem; min-height:2.25rem; }
