@@ -54,10 +54,8 @@ content of record.
 
 Two strings on the page are *not* verbatim from the source and are flagged for the
 client:
-- **"Book discovery meeting"** — every CTA. Eugene shortened the source's "Book a
-  discovery meeting" on 9 Sep to save characters. Confirm with the client before
-  Webflow. (Omble's law is "Book Discovery Meeting", title case — different product,
-  do not harmonise without being asked.)
+- **"Book Discovery Meeting"** — every CTA, title case, per the 9 Sep Content QA.
+  Supersedes the earlier shortened "Book discovery meeting". Matches Omble's label.
 - Sample UI content inside mock panels (Sarah Chen, "Lorem Ipsum Accounting",
   "Bluebird Accounting", "Kennedy King Chartered Accountants", PAYG figures) is
   placeholder and is listed as a client flag.

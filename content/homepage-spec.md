@@ -19,7 +19,7 @@ panels and the footer contact details. Structure, wrapper names and design notes
 | Meta description | Draft: the footer tagline, `Fast \| Simple \| Secure ATO document automation for accounting practices.` (confirm) |
 | Locale | `en-AU`, Australian spelling |
 | Nav | Lockup (white over the hero, colour when solid) · Features · How it works · Integrations · Security · Insights · CTA |
-| CTA label | **"Book discovery meeting"** everywhere. Eugene's shortening of the source "Book a discovery meeting" — flagged for the client. |
+| CTA label | **"Book Discovery Meeting"** everywhere (Content QA, 9 Sep). Resolves the earlier "Book discovery meeting" flag. |
 | Robots | `noindex, nofollow` while it is a review site |
 
 ---

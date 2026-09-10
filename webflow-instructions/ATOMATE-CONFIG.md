@@ -70,7 +70,7 @@ landscape, 479 mobile portrait. No 1440/1920 overrides — the layout caps at
 firms; the hero arrow layer caps at 114.75rem and centres so the whole arrow stays
 in the fold). **The navbar must fit at exactly 992px**: five items + the CTA. The
 page does it with a 1.5rem gap and the 3rem button below 1100px; do not add a
-breakpoint. Label stays "Book discovery meeting". Below 992 the navbar is a menu
+breakpoint. Label stays "Book Discovery Meeting". Below 992 the navbar is a menu
 button + dropdown (`navbar_menu-button`, `navbar_menu`).
 
 ## Spam protection standard
@@ -118,7 +118,7 @@ that still needs code or a decision.
 | `Theme/text-highlight` | `orange-300` on navy, `orange-500` on light | `blue-300` / `blue-500` if orange is pulled back further |
 | `Theme/button-primary` | `blue-500` fill, white label | — |
 | `Theme/button-on-dark` | white fill, `navy-700` label | `blue-500` fill |
-| CTA label | "Book discovery meeting" | "Book a discovery meeting" (source) |
+| CTA label | "Book Discovery Meeting" (Content QA, 9 Sep) | — |
 
 ### Reduced motion
 
