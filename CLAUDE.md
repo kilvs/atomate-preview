@@ -196,6 +196,24 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Direction notes from Eugene, 10 Sep 2026 (supersede earlier settled points)
+
+- **Centre-align whenever necessary.** Section headers and the CTA under every
+  grid section are centred (`component_section-header is-centre`,
+  `button-group is-centre`); split sections (overnight, messaging) stay left, as
+  Omble does. Centred headings carry a short orange rule.
+- **Use the warm orange more.** Supersedes "orange is scarce" and "no orange
+  buttons": the primary CTA (`.button`, including `is-white` on navy and the nav
+  CTA) is orange-500 with orange-600 hover; the hero kicker is orange-300; the
+  testimonials "next" arrow and the preview highlight bars are orange. Mock-UI
+  buttons (`is-small`, `is-medium`) stay blue because they depict product UI.
+  White text on orange-500 is 3.3:1, the same trade-off Omble accepted; flag it if
+  the client asks for AA on button labels.
+- **Emulate Omble's card practice, not invented panels.** PAYG cards are white,
+  bordered, with the mock flat on a light preview panel and the copy beneath.
+- **Security card 2** is the client's padlock reference (document sheet, orange
+  padlock, "4 8 2 1 · PIN via SMS" chip) instead of the PIN-entry mock.
+
 ## Hero simplified (Eugene, 10 Sep 2026)
 
 The hero arrow, its "Overnight" / "Next-day approval" labels and the sky glow are

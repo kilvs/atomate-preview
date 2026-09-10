@@ -131,6 +131,7 @@ in `style.css`.
 ## 8. PAYG (`.background-stage-dawn`)
 
 - H2: **Give clients more time to act** (no description)
+- Cards are white with a light preview panel holding the mock (Omble practice, 10 Sep).
 - Card A (mock "PAYG instalment notice" UI): **Stop missed PAYG instalment notices** — Automatically capture and send every PAYG instalment notice. Give your clients more time to review and prepare for upcoming payments.
 - Card B (mock "Client notified" UI): **Help clients stay ahead of DPNs** — Deliver important ATO correspondence on time, communicate proactively, and prevent unexpected penalties.
 - CTA: Book Discovery Meeting (white)
@@ -149,7 +150,8 @@ Unchanged by the QA. H2 **Replace generic ATO messaging with clear guidance**; l
 ## 11. Security (white)
 
 - H2: **Built-in security your team never has to think about** (description removed per QA)
-- Credentials line, two UI cards and their copy unchanged: **Redact TFNs automatically** / **Protect PRN data**.
+- Credentials line and card copy unchanged: **Redact TFNs automatically** / **Protect PRN data**.
+- Card 2 illustration (client reference, 10 Sep): a document sheet with the bar **You have an overdue tax debt** and a **View details** button, a large orange padlock over it, and a phone chip **4 8 2 1 · PIN via SMS**.
 
 ## 12. Testimonials (`.background-stage-day`)
 
