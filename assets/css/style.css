@@ -241,19 +241,19 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_comparison_footer { margin-top:3rem; display:flex; flex-direction:column; align-items:center; text-align:center; gap:1.5rem; }
 .home_comparison_lead { font-size:var(--text-large); line-height:1.45; font-weight:600; color:var(--navy-700); max-width:50rem; text-wrap:balance; }
 
-/* ---------- 4. How ATOmate works (original main-draft frame) */
-.home_process_frame { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:var(--radius-card); overflow:hidden; }
-.home_process_step { background:#fff; padding:1.5rem; display:flex; align-items:center; gap:1rem; min-width:0; cursor:pointer; transition:background .25s ease; }
-.home_process_step:focus-visible { outline-offset:-4px; }
-.home_process_step.is-tint { background:linear-gradient(150deg, #EEF6FB, #E5F3FA); }
-.home_process_step:not(.is-current):hover { background:var(--blue-50); }
-.home_process_step.is-current { background:linear-gradient(150deg, #03466B, #045A88); color:#fff; }
-.home_process_step_icon { width:3rem; height:3rem; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--blue-500); color:#fff; flex:none; }
-.home_process_step.is-current .home_process_step_icon { background:var(--orange-500); }
-.home_process_step_title { font-family:var(--font-heading); font-weight:800; font-size:var(--text-regular); line-height:1.3; color:var(--navy-700); }
-.home_process_step.is-current .home_process_step_title { color:#fff; }
-.home_process_panel { grid-column:1 / -1; background:linear-gradient(150deg, var(--blue-500), var(--navy-700)); color:#fff; padding:2rem 2.5rem; display:grid; grid-template-columns:14rem minmax(0,1fr); gap:2rem; align-items:center; position:relative; }
-.home_process_panel_title, .home_process_panel_description { color:#fff; }
+/* ---------- 4. How ATOmate works — flowchart, click a node to reveal its step (Eugene, 10 Sep) */
+.home_process_hint { text-align:center; color:var(--ink-500); font-size:var(--text-small); margin:-2rem 0 3rem; }
+.home_process_flow { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:0; align-items:start; }
+.home_process_step { position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 .75rem; min-height:15rem; }
+.home_process_step + .home_process_step::before { content:""; position:absolute; top:2.25rem; left:calc(-50% + 2.75rem); width:calc(100% - 5.5rem); height:2px; background:var(--line); }
+.home_process_step + .home_process_step::after { content:""; position:absolute; top:calc(2.25rem - 5px); left:calc(50% - 2.75rem - 6px); border-style:solid; border-width:6px 0 6px 8px; border-color:transparent transparent transparent var(--blue-300); }
+.home_process_step_button { display:flex; flex-direction:column; align-items:center; gap:1rem; cursor:pointer; color:var(--ink-500); border-radius:var(--radius-box); padding:.25rem .25rem .5rem; transition:color .25s ease; }
+.home_process_step_icon { width:4.5rem; height:4.5rem; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--blue-100); color:var(--navy-700); border:2px solid #fff; box-shadow:var(--shadow-card); transition:background .25s ease, color .25s ease, transform .25s ease; }
+.home_process_step_button:hover .home_process_step_icon { transform:translateY(-3px); }
+.home_process_step_title { font-family:var(--font-heading); font-weight:800; font-size:var(--text-regular); line-height:1.3; color:var(--ink-500); transition:color .25s ease; }
+.home_process_step.is-current .home_process_step_icon { background:var(--orange-500); color:#fff; }
+.home_process_step.is-current .home_process_step_title, .home_process_step_button:hover .home_process_step_title { color:var(--navy-700); }
+.home_process_step_description { margin-top:.75rem; font-size:var(--text-small); line-height:1.5; color:var(--ink-700); max-width:16rem; }
 
 /* ---------- 5. Overnight processing (night) */
 .home_overnight_mark { position:absolute; right:-6rem; top:-4rem; height:30rem; width:auto; opacity:.06; pointer-events:none; }
@@ -402,8 +402,6 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .component_section-header { gap:1.25rem; margin-bottom:2.5rem; }
   .home_comparison_card.is-day { border-radius:1.5rem 1.5rem 0 0; }
   .home_comparison_card.is-night { border-radius:0 0 1.5rem 1.5rem; }
-  /* Five step cells stay in one row on tablet; icon above title keeps the titles legible at ~180px */
-  .home_process_step { flex-direction:column; align-items:flex-start; padding:1.5rem 1.25rem; }
   .home_hero_stats { flex-wrap:wrap; }
   .home_hero_stat { flex:1 1 40%; }
   .footer_grid { grid-template-columns:repeat(2, minmax(0,1fr)); }
@@ -448,9 +446,14 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_integrations_logo { max-height:1.75rem; max-width:6.5rem; }
   .home_comparison_card { padding:2rem 1.5rem; }
   .home_comparison_arrow { display:none; }
-  .home_process_frame { grid-template-columns:repeat(1, minmax(0,1fr)); }
-  .home_process_step { flex-direction:row; align-items:center; padding:1.5rem; }
-  .home_process_panel { grid-template-columns:repeat(1, minmax(0,1fr)); gap:.75rem; padding:1.5rem; }
+  /* Flow runs vertically on mobile: node + title in a row, description beneath, connector down the left */
+  .home_process_flow { grid-template-columns:minmax(0,1fr); gap:1.5rem; }
+  .home_process_step { align-items:stretch; text-align:left; padding:0; min-height:0; }
+  .home_process_step + .home_process_step::before { top:-1.5rem; left:2.25rem; width:2px; height:1.5rem; }
+  .home_process_step + .home_process_step::after { top:-.75rem; left:calc(2.25rem - 5px); border-width:8px 6px 0 6px; border-color:var(--blue-300) transparent transparent transparent; }
+  .home_process_step_button { flex-direction:row; gap:1rem; padding:0; }
+  .home_process_step_description { margin:.5rem 0 0 5.5rem; max-width:none; }
+  .home_process_hint { margin:-1rem 0 2rem; }
   .home_overnight_content, .home_messaging_split { gap:2.5rem; }
   .home_review_list, .home_filing_list, .home_payg_list, .home_security_list, .home_testimonials_grid { gap:1rem; }
   .home_hero_stats_title { font-size:1.5rem; }

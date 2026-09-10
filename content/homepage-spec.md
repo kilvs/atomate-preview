@@ -99,7 +99,7 @@ in `style.css`.
   - **Protect** — TFNs are automatically redacted. Documents with a TFN-based PRN are sent as PIN-protected PDFs.
   - **Review & approve** — Documents that meet your rules are approved. Flagged items are sent for review.
   - **Communicate & archive** — Send client-ready communications automatically or on your own terms. Get a full audit trail upon filing.
-- Step 1 open by default. No arrow in the panel (Design QA). CTA: Book Discovery Meeting (ghost)
+- Built as a flowchart (Eugene, 10 Sep): five circular icon nodes on a connector line with arrows, titles beneath; the description shows only for the clicked node (step 1 by default). Hint line **Click a step to reveal details** is UI copy, not client copy. CTA: Book Discovery Meeting (ghost)
 
 ## 5. Overnight processing (`.background-stage-night`)
 

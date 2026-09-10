@@ -212,6 +212,10 @@ any width; all interactions pass with and without reduced motion.
   the client asks for AA on button labels.
 - **Emulate Omble's card practice, not invented panels.** PAYG cards are white,
   bordered, with the mock flat on a light preview panel and the copy beneath.
+- **How ATOmate works is a flowchart** (supersedes settled decision 9's frame):
+  five circular icon nodes joined by a connector line with arrows, titles beneath,
+  and the step copy revealed only for the clicked node; the current node is orange.
+  Vertical flow on mobile. The hint "Click a step to reveal details" is UI copy.
 - **Security card 2** is the client's padlock reference (document sheet, orange
   padlock, "4 8 2 1 · PIN via SMS" chip) instead of the PIN-entry mock.
 

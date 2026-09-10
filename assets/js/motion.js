@@ -99,33 +99,20 @@
     });
   }
 
-  // ---- 4. How ATOmate works: click a step, the panel cross-fades to that step's copy (no layout jump)
+  // ---- 4. How ATOmate works: click a node, its description appears (only the current step shows text)
   var steps = [].slice.call(document.querySelectorAll('.home_process_step'));
-  var stepTitle = document.getElementById('stepTitle');
-  var stepBodies = [].slice.call(document.querySelectorAll('[data-step-body]'));
   function pickStep(k) {
+    var incoming = null;
     steps.forEach(function (s, idx) {
-      s.classList.toggle('is-current', idx === k);
-      s.classList.toggle('is-tint', idx !== k && idx % 2 === 0 && idx !== 0);
-      s.setAttribute('aria-pressed', idx === k ? 'true' : 'false');
+      var on = idx === k;
+      var btn = s.querySelector('.home_process_step_button'), desc = s.querySelector('.home_process_step_description');
+      s.classList.toggle('is-current', on);
+      if (btn) btn.setAttribute('aria-expanded', on ? 'true' : 'false');
+      if (desc) { desc.hidden = !on; if (on) incoming = desc; }
     });
-    var incoming = stepBodies[k];
-    var outgoing = stepBodies.filter(function (b) { return !b.hidden; })[0];
-    function swap() {
-      if (stepTitle) stepTitle.textContent = steps[k].querySelector('.home_process_step_title').textContent;
-      stepBodies.forEach(function (b, i) { b.hidden = i !== k; });
-    }
-    if (reduce || !hasGsap || !outgoing || !incoming) { swap(); return; }
-    gsap.to([stepTitle, outgoing], {
-      opacity: 0, y: 6, duration: 0.18, ease: 'power1.in',
-      onComplete: function () {
-        gsap.set(outgoing, { clearProps: 'all' });
-        swap();
-        gsap.fromTo([stepTitle, incoming], { opacity: 0, y: -6 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out', stagger: 0.05, clearProps: 'all' });
-      }
-    });
+    if (incoming && hasGsap && !reduce) gsap.fromTo(incoming, { opacity: 0, y: -6 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out', clearProps: 'all' });
   }
-  steps.forEach(function (s, idx) { s.addEventListener('click', function () { pickStep(idx); }); });
+  steps.forEach(function (s, idx) { var btn = s.querySelector('.home_process_step_button'); if (btn) btn.addEventListener('click', function () { pickStep(idx); }); });
 
   // ---- 5. Integration tabs (WAI-ARIA tabs: roving tabindex, arrow keys)
   var tabs = [].slice.call(document.querySelectorAll('.home_integrations_tab'));
