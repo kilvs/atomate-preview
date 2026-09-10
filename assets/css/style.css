@@ -225,7 +225,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_comparison_arrow { position:absolute; left:50%; top:50%; transform:translate(-50%,-50%); width:3rem; height:3rem; border-radius:50%; background:var(--orange-500); color:#fff; display:flex; align-items:center; justify-content:center; box-shadow:0 10px 24px -8px rgba(235,100,5,.6); z-index:2; }
 .home_comparison_arrow .icon-stroke { stroke-width:2.25; }
 .home_comparison_card { border-radius:var(--radius-card); padding:3rem; display:flex; flex-direction:column; gap:1.75rem; }
-.home_comparison_card.is-night { background:linear-gradient(160deg, var(--navy-900), var(--navy-700)); color:#fff; }
+/* "With ATOmate" carries the richer brand blue (Eugene, 10 Sep), not the night navy */
+.home_comparison_card.is-night { background:linear-gradient(160deg, var(--navy-700) 0%, var(--blue-600) 50%, var(--blue-500) 100%); color:#fff; box-shadow:0 24px 60px -32px rgba(2,42,69,.45); }
 .home_comparison_card.is-day { background:#fff; border:1px solid var(--line); box-shadow:0 24px 60px -32px rgba(2,42,69,.35); }
 .home_comparison_title { font-size:var(--heading-h3); line-height:1.55; }
 .home_comparison_card.is-night .home_comparison_title { color:#fff; }
@@ -236,7 +237,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_comparison_card.is-day .home_comparison_item { color:var(--ink-700); }
 .home_comparison_card.is-day .component_tick { background:var(--red-error-bg); color:var(--red-error); }
 .home_comparison_card.is-night .home_comparison_item { color:#fff; font-weight:600; }
-.home_comparison_card.is-night .component_tick { background:var(--blue-500); color:#fff; }
+.home_comparison_card.is-night .component_tick { background:#fff; color:var(--blue-500); }
 .home_comparison_footer { margin-top:3rem; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr); gap:4rem; align-items:center; }
 .home_comparison_lead { font-size:var(--text-large); line-height:1.45; font-weight:600; color:var(--navy-700); max-width:36rem; }
 
