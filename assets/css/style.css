@@ -134,16 +134,16 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .component_section-header.is-centre h2 { max-width:40rem; }
 .component_section-header.is-centre .component_section-header_description { max-width:40rem; }
 
-.component_ui { background:#fff; border:1px solid var(--line); border-radius:var(--radius-box); overflow:hidden; font-size:var(--text-small); color:var(--ink-900); box-shadow:var(--shadow-ui); }
-.component_ui_header { display:flex; justify-content:space-between; align-items:center; padding:.9rem 1.25rem; border-bottom:1px solid var(--line); font-weight:600; color:var(--navy-700); background:var(--paper-100); }
-.component_ui_row { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:.9rem 1.25rem; border-bottom:1px solid var(--line-soft); }
-.component_ui_row:last-child { border-bottom:0; }
-.component_ui_row.is-footer { background:var(--paper-100); }
+/* Mock UI panels (Eugene, 10 Sep): no rules; white rows separated by gaps on a tinted tray;
+   initials instead of dots; one typeface, sentence case; status as a soft pill. */
+.component_ui { background:var(--blue-50); border-radius:var(--radius-box); padding:.625rem; display:flex; flex-direction:column; gap:.5rem; font-size:var(--text-small); color:var(--ink-900); }
+.component_ui_header { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:.5rem .625rem .375rem; font-weight:600; color:var(--navy-700); }
+.component_ui_row { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:.75rem 1rem; background:#fff; border-radius:.625rem; }
 .component_ui_row.is-start { justify-content:flex-start; gap:.75rem; }
-.component_ui_doc { display:flex; align-items:center; gap:.75rem; }
+.component_ui_doc { display:flex; align-items:center; gap:.75rem; min-width:0; }
 .component_ui_doc .icon-stroke { color:var(--ink-500); flex:none; }
-.component_ui_doc .component_tick .icon-stroke { color:inherit; }
-.component_ui_body { padding:1.25rem; display:flex; flex-direction:column; gap:.5rem; }
+.component_ui_initials { flex:none; width:2rem; height:2rem; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--blue-100); color:var(--navy-700); font-size:.6875rem; font-weight:700; letter-spacing:.02em; }
+.component_ui_body { padding:1rem; display:flex; flex-direction:column; gap:.5rem; background:#fff; border-radius:.625rem; }
 .component_ui_body.is-skeleton { gap:.75rem; }
 
 .component_skeleton { border:1px solid var(--line); border-radius:.75rem; background:#fff; padding:1rem; display:flex; flex-direction:column; gap:.5rem; }
@@ -278,8 +278,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_payg_list { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.5rem; }
 /* Omble card practice (Eugene, 10 Sep): white bordered card, mock flat on a light preview panel, copy beneath */
 .home_payg_item { background:#fff; border:1px solid var(--line); border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:1.25rem 1.25rem 1.75rem; display:flex; flex-direction:column; gap:1.25rem; }
-.home_payg_item_preview { background:var(--paper-100); border-radius:var(--radius-box); padding:1.25rem; }
-.home_payg_item_preview .component_ui { box-shadow:none; }
+.home_payg_item_preview { background:none; padding:0; }
 .home_payg_item_text { padding:0 .5rem; }
 .home_payg_item h3 { color:var(--navy-700); }
 .home_payg_item_description { font-size:var(--text-small); line-height:1.5; color:var(--ink-700); margin-top:.5rem; }
@@ -310,7 +309,6 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_messaging_email_greeting { font-family:var(--font-heading); font-weight:800; font-size:1.25rem; color:var(--navy-700); }
 .home_messaging_email_text { color:var(--ink-700); line-height:1.55; }
 .home_messaging_email_attachment { display:flex; align-items:center; gap:.625rem; padding:.75rem 1rem; border:1px solid var(--line); border-radius:.75rem; background:var(--paper-100); font-size:var(--text-small); }
-.home_messaging_email_attachment .icon-stroke { color:var(--blue-500); flex:none; }
 .home_messaging_email_attachment .component_chip { margin-left:auto; }
 .home_messaging_email_filename { font-weight:600; color:var(--navy-700); }
 /* Label centred above the channel pills (Eugene, 10 Sep) */
@@ -325,7 +323,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_security_credential .component_tick { width:1.25rem; height:1.25rem; }
 .home_security_list { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.5rem; }
 .home_security_item { background:var(--blue-50); border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; }
-.home_security_item .component_ui { display:flex; flex-direction:column; flex:1; }
+.home_security_item .component_ui { flex:1; background:#fff; }
+.home_security_item .component_ui_row, .home_security_item .component_ui_body { background:var(--blue-50); }
 .home_security_item .component_ui_body { flex:1; justify-content:center; }
 .home_security_to { width:3rem; }
 .home_security_redacted { display:inline-block; background:var(--ink-900); color:transparent; padding:0 .25rem; border-radius:.25rem; }
@@ -355,8 +354,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_testimonials_card { background:#fff; border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; flex:1; }
 .home_testimonials_quote { font-size:var(--text-regular); line-height:1.5; color:var(--ink-700); }
 .home_testimonials_author { display:flex; gap:.75rem; align-items:center; }
-.home_testimonials_avatar { width:2.5rem; height:2.5rem; border-radius:50%; background:var(--blue-100); flex:none; }
-.home_testimonials_featured .home_testimonials_avatar { background:rgba(255,255,255,.2); }
+.home_testimonials_avatar { width:2.5rem; height:2.5rem; border-radius:50%; background:var(--blue-100); flex:none; display:inline-flex; align-items:center; justify-content:center; font-size:.75rem; font-weight:700; color:var(--navy-700); letter-spacing:.02em; }
+.home_testimonials_featured .home_testimonials_avatar { background:rgba(255,255,255,.2); color:#fff; }
 .home_testimonials_author_text { display:flex; flex-direction:column; }
 .home_testimonials_name { font-weight:600; color:var(--navy-700); }
 .home_testimonials_featured .home_testimonials_name { color:#fff; }
@@ -473,7 +472,6 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_testimonials_card { padding:1.5rem; }
   .home_security_item { padding:1.5rem 1.25rem; }
   .home_payg_item { padding:1rem 1rem 1.5rem; }
-  .home_payg_item_preview { padding:.75rem; }
 }
 
 /* ---------- Motion states (Gate 04). Nothing is parked hidden in CSS: the script sets start states. */

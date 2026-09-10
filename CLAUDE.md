@@ -216,6 +216,10 @@ any width; all interactions pass with and without reduced motion.
   five circular icon nodes joined by a connector line with arrows, titles beneath,
   and the step copy revealed only for the clicked node; the current node is orange.
   Vertical flow on mobile. The hint "Click a step to reveal details" is UI copy.
+- **Mock UI panels follow four rules** (Eugene, 10 Sep): no rules or dividers, white
+  rows separated by gaps on a tinted tray; initials badges instead of dots or icons
+  (decoration becomes information); one typeface in sentence case; status is a soft
+  pill with the colour behind the label. Testimonial avatars carry initials.
 - **Security card 2** is the client's padlock reference (document sheet, orange
   padlock, "4 8 2 1 · PIN via SMS" chip) instead of the PIN-entry mock.
 

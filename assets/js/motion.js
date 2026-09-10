@@ -156,6 +156,7 @@
     function write(card, d) {
       card.querySelector('blockquote p').textContent = d.q;
       card.querySelector('.home_testimonials_name').textContent = d.n;
+      var av = card.querySelector('.home_testimonials_avatar'); if (av) av.textContent = d.n.split(/\s+/).slice(0, 2).map(function (w) { return w.charAt(0); }).join('').toUpperCase();
       card.querySelector('.home_testimonials_firm').textContent = d.f;
     }
     var items = cards.map(read);
