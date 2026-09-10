@@ -142,6 +142,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .component_ui_row.is-start { justify-content:flex-start; gap:.75rem; }
 .component_ui_doc { display:flex; align-items:center; gap:.75rem; }
 .component_ui_doc .icon-stroke { color:var(--ink-500); flex:none; }
+.component_ui_doc .component_tick .icon-stroke { color:inherit; }
 .component_ui_body { padding:1.25rem; display:flex; flex-direction:column; gap:.5rem; }
 .component_ui_body.is-skeleton { gap:.75rem; }
 
