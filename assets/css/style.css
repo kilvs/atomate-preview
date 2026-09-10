@@ -175,23 +175,17 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 
 /* ---------- 1. Hero + 1b stats */
 .section-home_hero { padding-top:var(--navbar-height); }
-.home_hero_sky { position:absolute; inset:0; background:radial-gradient(60% 70% at 92% 0%, rgba(255,255,255,.22), transparent 60%), radial-gradient(40% 50% at 80% 10%, rgba(0,120,186,.5), transparent 70%); pointer-events:none; }
-.home_hero_stage { min-height:51rem; display:flex; flex-direction:column; position:relative; }
+/* Hero simplified 10 Sep (Eugene): no arrow, no glow, copy centred on the plain navy ground */
+.home_hero_stage { min-height:34rem; display:flex; flex-direction:column; position:relative; }
 .home_hero_stage > .padding-global { flex:1; display:flex; flex-direction:column; position:relative; z-index:1; }
 .home_hero_stage .container-large { flex:1; display:flex; flex-direction:column; }
-.home_hero_layout { flex:1; display:grid; grid-template-columns:minmax(0,1.25fr) minmax(0,.75fr); gap:3rem; align-items:end; padding:4rem 0 5rem; }
-.home_hero_content { display:flex; flex-direction:column; gap:1.25rem; }
+.home_hero_layout { flex:1; display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; align-items:center; padding:4rem 0 5rem; }
+.home_hero_content { display:flex; flex-direction:column; align-items:center; text-align:center; gap:1.25rem; max-width:52rem; }
+.home_hero_content .button-group { justify-content:center; }
 .home_hero_kicker { font-family:var(--font-heading); font-weight:800; font-size:.8125rem; letter-spacing:.16em; text-transform:uppercase; color:rgba(255,255,255,.7); }
 .home_hero_subtitle { font-family:var(--font-heading); font-weight:800; font-size:1.75rem; line-height:1.2; letter-spacing:-0.02em; color:#fff; }
 .home_hero_note { font-size:var(--text-small); line-height:1.5; color:rgba(255,255,255,.65); }
-.home_hero_description { color:rgba(255,255,255,.78); max-width:32rem; }
-/* The arrow and its labels share one full-bleed layer. It caps at 114.75rem (the 1440×640 drawing
-   at the hero's 51rem height) and centres, so the whole arrow stays inside the fold on ultrawide. */
-.home_hero_arrow-wrap { position:absolute; inset:0; max-width:114.75rem; margin:0 auto; pointer-events:none; }
-.home_hero_arrow { position:absolute; left:0; right:0; bottom:0; width:100%; height:auto; }
-.home_hero_label { position:absolute; font-family:var(--font-heading); font-weight:800; font-size:.75rem; letter-spacing:.16em; text-transform:uppercase; z-index:1; }
-.home_hero_label.is-start { left:var(--padding-global); bottom:2.25rem; color:rgba(255,255,255,.55); }
-.home_hero_label.is-end { right:var(--padding-global); top:16%; color:var(--orange-300); }
+.home_hero_description { color:rgba(255,255,255,.78); max-width:36rem; }
 .home_hero_stats-wrap { position:relative; z-index:1; padding-bottom:5rem; }
 .home_hero_stats_title { font-size:1.75rem; line-height:1.2; margin-bottom:1.5rem; }
 .home_hero_stats { display:flex; align-items:stretch; border-top:1px solid var(--line-on-dark); }
@@ -421,10 +415,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_cta_title { font-size:2.1875rem; }
   .text-size-large { font-size:1.125rem; }
   .text-style-quote { font-size:1.5rem; }
-  .home_hero_stage { min-height:40rem; }
-  .home_hero_layout { padding:3rem 0 4rem; }
-  .home_hero_arrow { width:150%; left:-50%; }
-  .home_hero_label { display:none; }
+  .home_hero_stage { min-height:0; }
+  .home_hero_layout { padding:3rem 0 3.5rem; }
   .home_hero_stats { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); }
   .home_hero_stat_number { font-size:2.25rem; min-height:2.25rem; }
   .home_hero_stat.is-text .home_hero_stat_number { font-size:1.25rem; }

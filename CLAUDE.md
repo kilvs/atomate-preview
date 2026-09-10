@@ -196,6 +196,15 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Hero simplified (Eugene, 10 Sep 2026)
+
+The hero arrow, its "Overnight" / "Next-day approval" labels and the sky glow are
+removed at Eugene's request; the ground is the plain navy gradient and the copy
+stack is centred. This supersedes settled decision 2 (Hero C with the arrow inside
+the fold) and the Gate 04 hero draw; the 30° arrow remains the motif elsewhere
+(section gradients at 150°, the ghost lines behind the email card). Hero
+`min-height` is 34rem on desktop, content-driven on mobile.
+
 ## Internal QA applied (9 Sep 2026, "ATOmate Design QA" + "ATOmate Content QA")
 
 The internal review supplied the real copy for every section and a set of design

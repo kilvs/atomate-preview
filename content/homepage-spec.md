@@ -31,7 +31,7 @@ in `style.css`.
 
 | # | Ground | Client-First wrapper (as built) | Purpose | CTA |
 |---|---|---|---|---|
-| 1 | night | `section-home_hero` | Kicker, claim, sub-claim, the arrow | Yes |
+| 1 | night | `section-home_hero` | Kicker, claim, sub-claim, centred | Yes |
 | 1b | night | `home_hero_stats` (inside `section-home_hero`, same gradient) | Giant numerals (belongs to the hero visually) | No |
 | 2 | day | `section-home_integrations` | Centred heading, underline tabs: PMS / DMS / SMSF logos | No |
 | 3 | white | `section-home_comparison` | Without (white) / With (navy) + closing lead | Yes |
@@ -57,7 +57,7 @@ in `style.css`.
 - Lead: **Automate every step from capture to archive without losing control.**
 - Note: **The ATO document automation software built for accounting firms.**
 - CTA: Book Discovery Meeting (white button)
-- Arrow labels: **Overnight** (bottom-left, white) · **Next-day approval** (top-right, orange)
+- Centred copy on the plain navy ground; no arrow (removed 10 Sep).
 - *Client flag:* the source shows an **ISO 27001 certified logo** beside the CTA; no file supplied.
 
 ### 1b. Stats row (same navy)

@@ -1,7 +1,7 @@
 /* ATOmate homepage — Gate 04 motion + the bespoke interactions. Requires gsap + ScrollTrigger loaded before this file.
    Convention (webflow-instructions/webflow-skills/gsap-animation.md): declarative data-scroll-animate / data-load-animate
    attributes + one init; presets fade-up / fade-down / fade-left / fade-right / scale-in / stagger; countup preset.
-   Site default duration is 0.7s (Gate 04), distance 24px, ease power2.out, once.
+   Site default duration is 0.7s (Gate 04), distance 24px, ease power2.out, once. The hero arrow draw was removed 10 Sep with the arrow.
    Fails visible: the markup carries final states; this script sets the hidden start states, so without JS or under
    prefers-reduced-motion everything is simply shown. Spec: docs/Gate-04-Motion-Spec.md. */
 (function () {
@@ -80,22 +80,6 @@
       gsap.set(t, fromVars(el));
       gsap.to(t, toVars(el));
     });
-
-    // ---- 2. Hero arrow draws on load: flat run, then the 30° rise, head last, labels after (the one signature moment)
-    var line = document.getElementById('heroLine'), head = document.getElementById('heroHead'), dot = document.getElementById('heroDot');
-    var labelStart = document.querySelector('.home_hero_label.is-start'), labelEnd = document.querySelector('.home_hero_label.is-end');
-    var len = 0;
-    try { if (line) len = line.getTotalLength(); } catch (e) { len = 0; }
-    if (len) {
-      gsap.set(line, { strokeDasharray: len, strokeDashoffset: len });
-      gsap.set([dot, head, labelStart, labelEnd], { opacity: 0 });
-      gsap.timeline({ delay: 0.35 })
-        .to(dot, { opacity: 1, duration: 0.3 })
-        .to(labelStart, { opacity: 1, duration: 0.4 }, '<')
-        .to(line, { strokeDashoffset: 0, duration: 1.4, ease: 'power2.inOut' })
-        .to(head, { opacity: 1, duration: 0.3, ease: 'power1.out' }, '-=.05')
-        .to(labelEnd, { opacity: 1, duration: 0.4 }, '-=.1');
-    }
 
     // ---- 3. Stats count-up (2,000+ and 90%). The markup already shows the final value; it is overwritten only while animating.
     document.querySelectorAll('[data-countup]').forEach(function (el) {
