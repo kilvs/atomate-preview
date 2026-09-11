@@ -239,10 +239,11 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
-- **ISO 27001 badge beside the hero CTA** (client file `iso-27001-01.svg`, 11 Sep
-  2026, saved as `assets/img/brand/iso-27001.svg`). Sits in the hero button-group
-  to the right of the CTA at 5rem square (`.home_hero_iso`); smaller and the ring
-  text is illegible. Wraps under the button at narrow widths. The badge carries
+- **ISO 27001 badge beneath the hero CTA** (client file `iso-27001-01.svg`, 11 Sep
+  2026, saved as `assets/img/brand/iso-27001.svg`). Centred under the button as
+  the last child of the hero content, 5rem square (`.home_hero_iso`, .5rem extra
+  top margin); smaller and the ring text is illegible. Eugene moved it from
+  beside the button the same day. The badge carries
   its own white ring so it needs no plate on navy. The §security credential line
   stays text with a tick. Closes the hero ISO flag.
 - **CTA label is "Book Discovery Meeting"** (Content QA). Supersedes the shortened
