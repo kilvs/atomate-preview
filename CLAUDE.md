@@ -239,6 +239,11 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **Hero copy is full-contrast white** (Eugene, 11 Sep 2026: "proper or high
+  contrast"; the H1 was already white). Lead `.home_hero_description` is `#fff`
+  (was white at .78, 10.6:1) and the note `.home_hero_note` is white at .9 (was
+  .65, 7.7:1); now 16.8:1 and 14.3:1 on navy-900. The stats row's labels and
+  notes keep their dimmer tints; only the hero copy block changed.
 - **ISO 27001 badge beneath the hero CTA** (client file `iso-27001-01.svg`, 11 Sep
   2026, saved as `assets/img/brand/iso-27001.svg`). Centred under the button as
   the last child of the hero content, 5rem square (`.home_hero_iso`, .5rem extra

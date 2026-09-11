@@ -191,8 +191,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_hero_iso { width:5rem; height:5rem; flex:0 0 auto; margin-top:.5rem; }
 .home_hero_kicker { font-family:var(--font-heading); font-weight:800; font-size:.8125rem; letter-spacing:.16em; text-transform:uppercase; color:var(--orange-300); }
 .home_hero_subtitle { font-family:var(--font-heading); font-weight:800; font-size:1.75rem; line-height:1.2; letter-spacing:-0.02em; color:#fff; }
-.home_hero_note { font-size:var(--text-small); line-height:1.5; color:rgba(255,255,255,.65); }
-.home_hero_description { color:rgba(255,255,255,.78); max-width:36rem; }
+.home_hero_note { font-size:var(--text-small); line-height:1.5; color:rgba(255,255,255,.9); }
+.home_hero_description { color:#fff; max-width:36rem; }
 .home_hero_stats-wrap { position:relative; z-index:1; padding-bottom:5rem; }
 .home_hero_stats_title { font-size:1.75rem; line-height:1.2; margin-bottom:1.5rem; }
 .home_hero_stats { display:flex; align-items:stretch; border-top:1px solid var(--line-on-dark); }
