@@ -56,9 +56,8 @@ in `style.css`.
 - Sub-claim (heading font, `90%` in orange-300): **Reduce manual work by 90%**
 - Lead: **Automate every step from capture to archive without losing control.**
 - Note: **The ATO document automation software built for accounting firms.**
-- CTA: Book Discovery Meeting (white button)
+- CTA: Book Discovery Meeting (white button) with the ISO 27001 certified badge beside it (5rem, `assets/img/brand/iso-27001.svg`, client file 11 Sep)
 - Centred copy on the plain navy ground; no arrow (removed 10 Sep).
-- *Client flag:* the source shows an **ISO 27001 certified logo** beside the CTA; no file supplied.
 
 ### 1b. Stats row (same navy)
 
@@ -178,4 +177,4 @@ Unchanged: lockup + **Fast | Simple | Secure ATO document automation for account
 
 ## Open flags
 
-ISO 27001 logo (hero) · HowNow X logo · sample UI names and values · footer email and address · testimonial firms and full names · "FAST" / "SIMPLE" section labels in the source, not built (settled: no eyebrows) · 1,500 vs 2,000+ · product screenshots · hero video · Gilroy Bold + licences · Omble resemblance.
+HowNow X logo · sample UI names and values · footer email and address · testimonial firms and full names · "FAST" / "SIMPLE" section labels in the source, not built (settled: no eyebrows) · 1,500 vs 2,000+ · product screenshots · hero video · Gilroy Bold + licences · Omble resemblance.

@@ -239,6 +239,12 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **ISO 27001 badge beside the hero CTA** (client file `iso-27001-01.svg`, 11 Sep
+  2026, saved as `assets/img/brand/iso-27001.svg`). Sits in the hero button-group
+  to the right of the CTA at 5rem square (`.home_hero_iso`); smaller and the ring
+  text is illegible. Wraps under the button at narrow widths. The badge carries
+  its own white ring so it needs no plate on navy. The §security credential line
+  stays text with a tick. Closes the hero ISO flag.
 - **CTA label is "Book Discovery Meeting"** (Content QA). Supersedes the shortened
   "Book discovery meeting"; the flag is closed.
 - **Navbar goes solid after 24px of scroll** (Design QA: "adjust the navbar when
@@ -260,8 +266,8 @@ they supersede a settled decision, the newer call wins and is noted here:
 - **Not built on purpose:** the source's "FAST" / "SIMPLE" section labels
   (settled: no eyebrows). The hero kicker "Fast. Simple. Secure." is built because
   it is the key line, not a section label.
-- **Still missing from the client:** ISO 27001 logo (hero), HowNow X logo, sample
-  UI names and values, footer contact, testimonial firms.
+- **Still missing from the client:** HowNow X logo, sample UI names and values,
+  footer contact, testimonial firms. (ISO 27001 logo landed 11 Sep.)
 
 ## Omble relationship
 
@@ -301,7 +307,7 @@ unconfirmed. Both are client flags — do not substitute a different typeface.
 
 BAW lockup size in the nav · Gilroy Bold + font licences · orange usage vs the
 brand guide (guide has orange as secondary buttons; the system uses it as a scarce
-outcome accent — needs the client's nod) · ISO 27001 logo · HowNow X logo ·
+outcome accent — needs the client's nod) · HowNow X logo ·
 partner logos (APS and Wolters Kluwer are PNGs from Omble's assets because the
 supplied SVGs are broken wrappers) · all lorem / `00%` content · sample UI names ·
 1,500 vs 2,000+ practices · trust-bar numbers · testimonials (only 2 exist; need
@@ -315,7 +321,7 @@ index.html                       the homepage, accepted Hi-Fi + Gate 04 motion
 assets/css/style.css             tokens, system, components, responsive, motion states
 assets/js/motion.js              the one GSAP init + the bespoke interactions
 assets/fonts/                    Gilroy ExtraBold, Galano 400–700 (woff2)
-assets/img/brand/                lockups, marks, favicon, og-image, webclip
+assets/img/brand/                lockups, marks, ISO 27001 badge, favicon, og-image, webclip
 assets/img/partners/             PMS / DMS / SMSF logos
 content/homepage-spec.md         section order, wrappers, copy of record, flags
 docs/                            Gate 01 review, approval status, direction, motion spec

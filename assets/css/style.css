@@ -188,6 +188,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_hero_layout { flex:1; display:grid; grid-template-columns:minmax(0,1fr); justify-items:center; align-items:center; padding:4rem 0 5rem; }
 .home_hero_content { display:flex; flex-direction:column; align-items:center; text-align:center; gap:1.25rem; max-width:52rem; }
 .home_hero_content .button-group { justify-content:center; }
+.home_hero_iso { width:5rem; height:5rem; flex:0 0 auto; }
 .home_hero_kicker { font-family:var(--font-heading); font-weight:800; font-size:.8125rem; letter-spacing:.16em; text-transform:uppercase; color:var(--orange-300); }
 .home_hero_subtitle { font-family:var(--font-heading); font-weight:800; font-size:1.75rem; line-height:1.2; letter-spacing:-0.02em; color:#fff; }
 .home_hero_note { font-size:var(--text-small); line-height:1.5; color:rgba(255,255,255,.65); }
