@@ -220,6 +220,11 @@ any width; all interactions pass with and without reduced motion.
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft
   pill with the colour behind the label. Testimonial avatars carry initials.
+- **Review and filing card illustrations** (14 Sep) replace the skeleton bars: six
+  client placeholder images from `~/Downloads/placeholder`, exported to
+  `assets/img/features/` as 700×525 WebP (4:3, 2× the card width). Square sources
+  are centre-cropped; the landscape `fulll-control.jpg` is padded, not cropped, and
+  saved as `full-control.webp` (typo fixed). Alt text describes each illustration.
 - **Security card 2** is the client's padlock reference (document sheet, orange
   padlock, "4 8 2 1 · PIN via SMS" chip) instead of the PIN-entry mock.
 

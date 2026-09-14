@@ -10,7 +10,7 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 | HowNow X logo | §2 DMS shelf | Client supplies; HowNow shown once meanwhile |
 | 1,500 vs 2,000+ practices | §1b, §12 H2 | Client picks one |
 | Testimonials — firms and full names for the six quotes | §12 | Client supplies (quotes landed 9 Sep) |
-| Product screenshots for card previews and security UI | §5–§11 mock UI | Client supplies; mocks stay until then |
+| Final art for the review and filing illustrations; product screenshots for the remaining mock UI | §6, §7 (placeholder art in since 14 Sep); §5, §8, §10, §11 | Client supplies |
 | Gilroy Bold + web licences for Gilroy and Galano | headings | Client supplies the file and confirms licences |
 | Orange as scarce accent vs guide's orange secondary buttons | system | Client nod |
 | BAW lockup size in the nav | nav | Client review |

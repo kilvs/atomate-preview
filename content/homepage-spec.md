@@ -112,7 +112,7 @@ in `style.css`.
 ## 6. Review (`.background-stage-day`)
 
 - H2: **Review what matters. Automate the rest.** (no description)
-- Three white cards, each with a mock preview:
+- Three white cards, each with a client-supplied illustration (placeholder art, 14 Sep; `assets/img/features/`): `full-control`, `escalate-01`, `set-automatic-01`:
   - **Full control over your workflow** — Choose what's automated, what's reviewed, and what needs approval.
   - **Escalate when needed** — Route documents to the right person for review or approval.
   - **Set automatic approval rules** — Documents that meet your rules are approved. Flagged items are sent for review.
@@ -121,7 +121,7 @@ in `style.css`.
 ## 7. Filing (white)
 
 - H2: **Automatically matched, filed and tracked** (no description)
-- Three white cards matching §6:
+- Three white cards matching §6, illustrations `every-document-01`, `filed-directly-01`, `full-audit-01`:
   - **Every document matched to the right client** — Automatically matched using TFNs and ABNs, so three "John Smiths" never get mixed up.
   - **Filed directly in your DMS** — Documents & communications automatically filed to your existing document management system
   - **Full audit trail for every document** — Know when every document was received, reviewed, communicated and filed.
