@@ -291,19 +291,32 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_comparison_footer { margin-top:3rem; display:flex; justify-content:center; }
 .home_comparison_lead { margin-top:.75rem; font-size:1.25rem; line-height:1.55; font-weight:600; color:var(--navy-800); max-width:44rem; text-wrap:balance; }
 
-/* ---------- 4. How ATOmate works — flowchart, click a node to reveal its step (Eugene, 10 Sep) */
-.home_process_hint { text-align:center; color:var(--ink-500); font-size:var(--text-small); margin:-2rem 0 3rem; }
+/* ---------- 4. How ATOmate works — a flow of five large nodes; the halo behind each one
+   breathes so the row reads as clickable without a "click here" line (Eugene, 16 Sep).
+   The step's sentence sits under the row on one calm measure rather than in a narrow lane. */
 .home_process_flow { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:0; align-items:start; }
-.home_process_step { position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 .75rem; min-height:15rem; }
-.home_process_step + .home_process_step::before { content:""; position:absolute; top:2.25rem; left:calc(-50% + 2.75rem); width:calc(100% - 5.5rem); height:2px; background:var(--line); }
-.home_process_step + .home_process_step::after { content:""; position:absolute; top:calc(2.25rem - 5px); left:calc(50% - 2.75rem - 6px); border-style:solid; border-width:6px 0 6px 8px; border-color:transparent transparent transparent var(--blue-300); }
-.home_process_step_button { display:flex; flex-direction:column; align-items:center; gap:1rem; cursor:pointer; color:var(--ink-500); border-radius:var(--radius-box); padding:.25rem .25rem .5rem; transition:color .25s ease; }
-.home_process_step_icon { width:4.5rem; height:4.5rem; border-radius:50%; display:flex; align-items:center; justify-content:center; background:var(--blue-100); color:var(--navy-700); border:2px solid #fff; box-shadow:var(--shadow-card); transition:background .25s ease, color .25s ease, transform .25s ease; }
-.home_process_step_button:hover .home_process_step_icon { transform:translateY(-3px); }
-.home_process_step_title { font-family:var(--font-heading); font-weight:800; font-size:var(--text-regular); line-height:1.3; color:var(--ink-500); transition:color .25s ease; }
-.home_process_step.is-current .home_process_step_icon { background:var(--orange-500); color:#fff; }
-.home_process_step.is-current .home_process_step_title, .home_process_step_button:hover .home_process_step_title { color:var(--navy-700); }
-.home_process_step_description { margin-top:.75rem; font-size:var(--text-small); line-height:1.5; color:var(--ink-700); max-width:16rem; }
+.home_process_step { position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 .5rem; }
+/* the connector runs between node centres, behind them */
+.home_process_step + .home_process_step::before { content:""; position:absolute; top:2.75rem; left:calc(-50% + 3.25rem); width:calc(100% - 6.5rem); height:2px; background:linear-gradient(90deg, var(--blue-100), var(--blue-300), var(--blue-100)); }
+.home_process_step_button { display:flex; flex-direction:column; align-items:center; gap:1rem; cursor:pointer; border-radius:var(--radius-box); padding:.25rem .25rem .5rem; }
+.home_process_step_icon { position:relative; width:5.5rem; height:5.5rem; border-radius:50%; display:flex; align-items:center; justify-content:center; background:linear-gradient(160deg, #fff 0%, var(--blue-100) 100%); border:1px solid var(--blue-300); color:var(--navy-700); box-shadow:0 10px 24px -14px rgba(2,42,69,.35); transition:background .3s ease, color .3s ease, transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.home_process_step_icon svg { position:relative; z-index:1; }
+/* the halo: a ring behind the node that breathes, and grows on hover */
+.home_process_step_halo { position:absolute; inset:-.5rem; border-radius:50%; background:radial-gradient(circle, rgba(0,120,186,.20), rgba(0,120,186,0) 70%); opacity:.7; animation:process-halo 3.2s ease-in-out infinite; }
+@keyframes process-halo { 0%, 100% { transform:scale(.92); opacity:.45; } 50% { transform:scale(1.08); opacity:.85; } }
+.home_process_step:nth-child(2) .home_process_step_halo { animation-delay:.4s; }
+.home_process_step:nth-child(3) .home_process_step_halo { animation-delay:.8s; }
+.home_process_step:nth-child(4) .home_process_step_halo { animation-delay:1.2s; }
+.home_process_step:nth-child(5) .home_process_step_halo { animation-delay:1.6s; }
+.home_process_step_button:hover .home_process_step_icon { transform:translateY(-4px); border-color:var(--blue-500); color:var(--blue-500); box-shadow:0 16px 30px -16px rgba(2,42,69,.45); }
+.home_process_step_title { font-family:var(--font-heading); font-weight:800; font-size:1.0625rem; line-height:1.3; color:var(--navy-700); transition:color .25s ease; text-wrap:balance; }
+/* the open step: brand gradient, white mark, a stronger halo */
+.home_process_step.is-current .home_process_step_icon { background:linear-gradient(160deg, var(--blue-500), var(--navy-700)); border-color:transparent; color:#fff; box-shadow:0 18px 34px -16px rgba(0,120,186,.7); }
+.home_process_step.is-current .home_process_step_halo { background:radial-gradient(circle, rgba(0,120,186,.38), rgba(0,120,186,0) 70%); opacity:1; animation-duration:2.6s; }
+.home_process_step.is-current .home_process_step_title, .home_process_step_button:hover .home_process_step_title { color:var(--navy-800); }
+/* one shared line under the row; its height is reserved so nothing jumps between steps */
+.home_process_detail { margin:2.5rem auto 0; max-width:44rem; min-height:5.25rem; text-align:center; }
+.home_process_detail_item { font-size:1.125rem; line-height:1.6; color:var(--ink-900); text-wrap:balance; }
 
 /* ---------- 5. Overnight processing (night) */
 .home_overnight_mark { position:absolute; right:-6rem; top:-4rem; height:30rem; width:auto; opacity:.06; pointer-events:none; }
@@ -445,6 +458,9 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .navbar_actions .button { height:3rem; padding:0 1.25rem; font-size:1rem; }
 }
 @media (max-width: 991px) {
+  .home_process_step_icon { width:4.5rem; height:4.5rem; }
+  .home_process_step + .home_process_step::before { top:2.25rem; left:calc(-50% + 2.75rem); width:calc(100% - 5.5rem); }
+  .home_process_step_title { font-size:1rem; }
   :root { --padding-section-large:5rem; --padding-section-medium:4.5rem; --padding-section-xlarge:6rem; }
   h1 { font-size:3.5rem; } h2 { font-size:2.25rem; }
   .home_hero_title { font-size:3.25rem; }
@@ -482,6 +498,13 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .navbar_actions .button { width:100%; height:3.5rem; font-size:var(--text-regular); background:var(--blue-500); color:#fff; }
 }
 @media (max-width: 767px) {
+  /* the flow turns vertical: node and title side by side, the line running down the left */
+  .home_process_flow { grid-template-columns:minmax(0,1fr); gap:1.5rem; }
+  .home_process_step { align-items:stretch; text-align:left; padding:0; }
+  .home_process_step + .home_process_step::before { top:-1.5rem; left:2.25rem; width:2px; height:1.5rem; background:linear-gradient(180deg, var(--blue-100), var(--blue-300)); }
+  .home_process_step_button { flex-direction:row; align-items:center; gap:1rem; padding:0; }
+  .home_process_step_icon { width:4.5rem; height:4.5rem; flex:none; }
+  .home_process_detail { margin-top:1.75rem; min-height:0; text-align:left; }
   :root { --padding-global:1.25rem; --padding-section-small:1.5rem; --padding-section-medium:4rem; --padding-section-large:4rem; --padding-section-xlarge:4.5rem; }
   h1 { font-size:2.75rem; } h2 { font-size:1.875rem; }
   .home_hero_title { font-size:2.5rem; }
@@ -503,14 +526,6 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_integrations_logo { max-height:1.75rem; max-width:6.5rem; }
   .home_comparison_card { padding:2rem 1.5rem; }
   .home_comparison_arrow { display:none; }
-  /* Flow runs vertically on mobile: node + title in a row, description beneath, connector down the left */
-  .home_process_flow { grid-template-columns:minmax(0,1fr); gap:1.5rem; }
-  .home_process_step { align-items:stretch; text-align:left; padding:0; min-height:0; }
-  .home_process_step + .home_process_step::before { top:-1.5rem; left:2.25rem; width:2px; height:1.5rem; }
-  .home_process_step + .home_process_step::after { top:-.75rem; left:calc(2.25rem - 5px); border-width:8px 6px 0 6px; border-color:var(--blue-300) transparent transparent transparent; }
-  .home_process_step_button { flex-direction:row; gap:1rem; padding:0; }
-  .home_process_step_description { margin:.5rem 0 0 5.5rem; max-width:none; }
-  .home_process_hint { margin:-1rem 0 2rem; }
   .home_overnight_content, .home_messaging_split { gap:2.5rem; }
   .home_review_list, .home_filing_list, .home_payg_list, .home_security_list, .home_testimonials_grid { gap:1rem; }
   .home_messaging_channel-list { gap:.5rem; }
@@ -536,6 +551,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* ---------- Motion states (Gate 04). Nothing is parked hidden in CSS: the script sets start states. */
 .home_process_step, .home_integrations_tab, .home_review_item, .home_filing_item, .home_integrations_item, .button, .navbar_component, .navbar_link, .navbar_logo { will-change:auto; }
 @media (prefers-reduced-motion: reduce) {
+  .home_process_step_halo { animation:none; }
   html { scroll-behavior:auto; }
   *, *::before, *::after { transition:none !important; animation:none !important; }
 }

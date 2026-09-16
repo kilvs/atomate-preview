@@ -99,20 +99,32 @@
     });
   }
 
-  // ---- 4. How ATOmate works: click a node, its description appears (only the current step shows text)
+  // ---- 4. How ATOmate works: click a node, its sentence shows under the row.
+  //      Without JS every sentence is visible, so nothing is parked hidden in the markup.
   var steps = [].slice.call(document.querySelectorAll('.home_process_step'));
+  var details = [].slice.call(document.querySelectorAll('.home_process_detail_item'));
   function pickStep(k) {
     var incoming = null;
     steps.forEach(function (s, idx) {
       var on = idx === k;
-      var btn = s.querySelector('.home_process_step_button'), desc = s.querySelector('.home_process_step_description');
+      var btn = s.querySelector('.home_process_step_button');
       s.classList.toggle('is-current', on);
       if (btn) btn.setAttribute('aria-expanded', on ? 'true' : 'false');
-      if (desc) { desc.hidden = !on; if (on) incoming = desc; }
+    });
+    details.forEach(function (d, idx) {
+      var on = idx === k;
+      d.hidden = !on;
+      if (on) incoming = d;
     });
     if (incoming && hasGsap && !reduce) gsap.fromTo(incoming, { opacity: 0, y: -6 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out', clearProps: 'all' });
   }
-  steps.forEach(function (s, idx) { var btn = s.querySelector('.home_process_step_button'); if (btn) btn.addEventListener('click', function () { pickStep(idx); }); });
+  if (steps.length && details.length) {
+    pickStep(0);
+    steps.forEach(function (s, idx) {
+      var btn = s.querySelector('.home_process_step_button');
+      if (btn) btn.addEventListener('click', function () { pickStep(idx); });
+    });
+  }
 
   // ---- 5. Integration tabs (WAI-ARIA tabs: roving tabindex, arrow keys)
   var tabs = [].slice.call(document.querySelectorAll('.home_integrations_tab'));

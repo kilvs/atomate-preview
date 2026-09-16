@@ -212,10 +212,18 @@ any width; all interactions pass with and without reduced motion.
   the client asks for AA on button labels.
 - **Emulate Omble's card practice, not invented panels.** PAYG cards are white,
   bordered, with the mock flat on a light preview panel and the copy beneath.
-- **How ATOmate works is a flowchart** (supersedes settled decision 9's frame):
-  five circular icon nodes joined by a connector line with arrows, titles beneath,
-  and the step copy revealed only for the clicked node; the current node is orange.
-  Vertical flow on mobile. The hint "Click a step to reveal details" is UI copy.
+- **How ATOmate works is a flowchart** (supersedes settled decision 9's frame).
+  Reworked 16 Sep at Eugene's word ("too plain", "reads human"): five **5.5rem nodes**
+  on a blue connector, each with a **halo that breathes** (3.2s, staggered per node)
+  so the row reads as clickable - this replaces the "Click a step to reveal details"
+  line, which is gone. Resting nodes are a white-to-blue-100 disc with a blue-300 ring
+  and a navy mark; the open node is an Azure-to-navy gradient with a white mark and a
+  stronger halo. Icons were redrawn for legibility at 30px: document into a tray,
+  document with a tick, padlock, checklist with an approving tick, envelope leaving.
+  **The step's sentence sits under the row** on a 44rem centred measure with its height
+  reserved, not in a narrow lane under its node. All five sentences are in the markup
+  unhidden, so without JS the section reads in full; the script hides the four that are
+  not current. The halo stops under `prefers-reduced-motion`. Vertical on mobile.
 - **Mock UI panels follow four rules** (Eugene, 10 Sep): no rules or dividers, white
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft
