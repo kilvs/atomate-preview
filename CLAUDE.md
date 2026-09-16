@@ -252,9 +252,11 @@ any width; all interactions pass with and without reduced motion.
   "to Sarah · 7:02 am", the Sent chip) are gone; the sender and timestamp flags go with
   them. **"Send the way your clients prefer" is now a 1.5rem heading**, not a small-caps
   label - it shared a rule with `.footer_heading`, which has its own copy of the old
-  values, so check the footer if that rule is touched again. It sits at the **bottom of
-  the section**, a sibling of the split, full width and centred; a bad edit on 16 Sep
-  nested it inside the email card, which also put it outside the padding wrapper and ate
+  values, so check the footer if that rule is touched again. **The channels row is now its own section**, `section-home_channels`, sitting
+  **white** between the messaging mesh and the security split so the three read as
+  separate beats; its heading is a centred h2 at 2.25rem (Eugene, 16 Sep). Before that it
+  was a label inside the messaging section, and a bad edit had nested it inside the email
+  card, which also put it outside the padding wrapper and ate
   the section's 112px bottom padding.
 - **Better informed clients is two alternating rows** (Eugene, 16 Sep): the copy leads
   each row - h3 at 2rem, paragraph, CTA - and the testimonial sits on the visual at body
