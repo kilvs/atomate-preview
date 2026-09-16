@@ -252,7 +252,10 @@ any width; all interactions pass with and without reduced motion.
   "to Sarah · 7:02 am", the Sent chip) are gone; the sender and timestamp flags go with
   them. **"Send the way your clients prefer" is now a 1.5rem heading**, not a small-caps
   label - it shared a rule with `.footer_heading`, which has its own copy of the old
-  values, so check the footer if that rule is touched again.
+  values, so check the footer if that rule is touched again. It sits at the **bottom of
+  the section**, a sibling of the split, full width and centred; a bad edit on 16 Sep
+  nested it inside the email card, which also put it outside the padding wrapper and ate
+  the section's 112px bottom padding.
 - **Better informed clients is two alternating rows** (Eugene, 16 Sep): the copy leads
   each row - h3 at 2rem, paragraph, CTA - and the testimonial sits on the visual at body
   size, **unbolded**, so it supports rather than competes. Rows are 7rem apart (the old
