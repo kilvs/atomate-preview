@@ -71,7 +71,7 @@ in `style.css`.
 
 - H2 (centred, no description): **ATOmate works with the tools your team already uses**
 - Tabs (centred, icon + label, orange underline on the active tab): **Practice Management Systems** (default) · **Document Management Systems** · **SMSF** — labels per the client copy, 16 Sep
-- PMS shelf (order confirmed): MYOB, Xero, Wolters Kluwer CCH iFirm, LodgeiT, APS, Access Elite, Access HandiSoft, Access Practice, Kloud Connect, Class
+- PMS shelf (Xero first, Eugene 16 Sep): Xero, MYOB, Wolters Kluwer CCH iFirm, LodgeiT, APS, Access Elite, Access HandiSoft, Access Practice, Kloud Connect, Class
 - DMS shelf (order per Content QA): FYI, Virtual Cabinet, SuiteFiles, iManage, Nimbus, SharePoint, HowNow, Dropbox, Box, Google Drive, OneDrive, Network folders, **+ more!** (text tile). *Client flag:* the source also lists **HowNow X**; no logo supplied.
 - SMSF shelf: BGL, Class
 - Logos on white elevated cards, centred rows.
