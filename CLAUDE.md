@@ -233,14 +233,15 @@ any width; all interactions pass with and without reduced motion.
   unhidden, so without JS the section reads in full; the script hides the four that are
   not current. The halo stops under `prefers-reduced-motion`. Vertical on mobile.
 - **The overnight graphic** (client, 16 Sep; layout taken further at Eugene's word that
-  the column "feels off"): a white card carrying the centred title, the four sources as
-  ticked tiles in a 2x2 grid, a single arrow, then a navy result bar with the ATOmate
-  mark. The client's plain checklist left a small card floating on a tall navy band; the
+  the column "feels off"): a white card carrying the centred title and the four
+  sources as ticked tiles in a 2x2 grid. Nothing else - the arrow and the mark bar that
+  a first pass added were cut as decoration that invites the question "why is that
+  there?" (Eugene, 16 Sep). The client's plain checklist left a small card floating on a tall navy band; the
   tiles and the result bar fill the column and carry the section's own story - many
   sources in, one overnight result out. No initials badges, no status pills; ticks use
   Signal Orange from their reference. It is the one panel outside the four mock-UI rules
-  below. The result bar carries the ATOmate mark and **no text**: a first pass
-  put an invented line there and Eugene removed it (16 Sep).
+  below. A first pass also put an invented sentence on that bar; it was removed
+  with the bar (16 Sep).
 - **Mock UI panels follow four rules** (Eugene, 10 Sep): no rules or dividers, white
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft
