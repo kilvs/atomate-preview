@@ -92,7 +92,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 
 /* ---------- Buttons: blue primary; is-white / is-ghost / is-ghost-light; is-small / is-medium for mock UI. Label only, no icons. */
 /* Primary button is the warm brand orange (Eugene, 10 Sep: "utilise the warm orange more") */
-.button { display:inline-flex; align-items:center; justify-content:center; height:3.5rem; padding:0 1.75rem; border-radius:var(--radius-button); font-weight:600; font-size:var(--text-regular); line-height:1; text-decoration:none; border:1px solid transparent; white-space:nowrap; background:var(--orange-500); color:#fff; transition:background .2s ease, color .2s ease, transform .15s ease; }
+.button { display:inline-flex; align-items:center; justify-content:center; height:3.125rem; padding:0 1.375rem; border-radius:var(--radius-button); font-weight:500; font-size:1rem; line-height:1; text-decoration:none; border:1px solid transparent; white-space:nowrap; background:var(--orange-500); color:#fff; transition:background .2s ease, color .2s ease, transform .15s ease; }
 .button:hover { background:var(--orange-600); color:#fff; }
 .button.is-blue { background:var(--blue-500); } .button.is-blue:hover { background:var(--blue-600); }
 .button:active { transform:scale(.98); }
@@ -198,7 +198,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_hero_content { display:flex; flex-direction:column; align-items:center; text-align:center; gap:0; max-width:54rem; }
 .home_hero_content .button-group { justify-content:center; }
 /* hero H1 sits a step below the page scale so the stack reads calm and holds two lines */
-.home_hero_title { font-size:4rem; line-height:1.02; max-width:54rem; color:var(--navy-800); margin-bottom:.75rem; }
+/* balance keeps every line multi-word: no single word stranded at any width (Eugene, 16 Sep) */
+.home_hero_title { font-size:4rem; line-height:1.02; max-width:54rem; color:var(--navy-800); margin-bottom:.75rem; text-wrap:balance; }
 /* the ISO line sits well clear of the CTA, low in the hero (Eugene, 16 Sep) */
 .home_hero_trust { display:flex; align-items:center; justify-content:center; gap:.75rem; margin-top:6.5rem; text-align:left; }
 .home_hero_iso { width:3.25rem; height:3.25rem; flex:0 0 auto; }
@@ -206,7 +207,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_hero_kicker { font-weight:700; font-size:.8125rem; letter-spacing:.12em; text-transform:uppercase; color:var(--orange-600); margin-bottom:1rem; }
 .home_hero_subtitle { font-weight:600; font-size:1.25rem; line-height:1.35; color:var(--navy-700); margin-bottom:.75rem; text-wrap:balance; }
 .home_hero_subtitle .text-color-highlight { color:var(--orange-500); }
-.home_hero_note { font-size:var(--text-tiny); line-height:1.45; color:var(--ink-500); white-space:nowrap; }
+.home_hero_note { font-size:var(--text-tiny); line-height:1.45; color:var(--ink-500); white-space:nowrap; text-wrap:pretty; }
 /* width set so the line breaks after "archive": second line reads "without losing control." */
 .home_hero_description { font-size:1.125rem; line-height:1.55; color:var(--ink-700); max-width:26rem; margin-bottom:2rem; }
 .home_hero_stats-wrap { position:relative; z-index:1; padding-bottom:5rem; }
@@ -490,7 +491,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 }
 @media (max-width: 479px) {
   h1 { font-size:2.5rem; } h2 { font-size:1.75rem; }
-  .home_hero_title { font-size:2rem; }
+  .home_hero_title { font-size:1.75rem; }
   .home_cta_title { font-size:2rem; }
   .home_comparison_card { padding:1.75rem 1.25rem; }
   .home_messaging_panel { padding:1.25rem; }

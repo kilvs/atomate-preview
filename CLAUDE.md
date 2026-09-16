@@ -251,6 +251,17 @@ Warm mesh, Peach sheen, Split light) asks for more warmth; the hero uses **Warm 
   spacing is set per element instead of one flat gap.
 - **The lead's width is 26rem on purpose** so it breaks after "archive" and the second
   line reads "without losing control." (Eugene, 16 Sep). Do not widen it.
+- **Warm mesh is ~30% stronger than the first pass** (Eugene: too subtle) and eases
+  over the last few percent so the band meets the next section without a seam.
+- **No orphaned words anywhere in the hero, at any width** (Eugene, 16 Sep). Enforced,
+  not hoped for: the H1 carries `text-wrap:balance` and steps to **1.75rem at ≤479**
+  (2rem and 1.875rem both strand "Automate" on its own line at 360px); the ISO line
+  keeps a non-breaking space before "firms."; the lead's 26rem width fixes its break.
+  Verified at 360 / 390 / 430 / 520 / 768 / 991 / 1440 — every line holds two or more
+  words. Re-check with the orphan script if any hero copy changes.
+- **Buttons are lighter** (Eugene, 16 Sep): height 3.125rem, padding 0 1.375rem,
+  weight 500, 1rem label — was 3.5rem / 1.75rem / 600 / 1.0625rem. Still a 50px tap
+  target and the navbar still fits at 992.
 - **ISO badge is 3.25rem**, paired on one row with the automation line (which stays on
   one line; it wraps only when the row stacks at ≤991) and sits `6.5rem` below the CTA.
   Supersedes the 11 Sep "5rem, centred under the button" note.
