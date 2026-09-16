@@ -307,9 +307,11 @@ any width; all interactions pass with and without reduced motion.
   (overnight navy, PAYG dawn) the CTA is `.is-white`: white fill, navy label.
   **No outline buttons and no white buttons on light grounds** - both at Eugene's
   word, so `is-ghost` and `is-ghost-light` are gone. **Hovers are a full colour
-  change, never a tint**: Azure and Orange both land on Deep Navy, on dark grounds white lifts to
-  **Azure** instead - Deep Navy there is barely off the ground colour and the button
-  disappears (Eugene, 16 Sep).
+  change, never a tint**: Azure and Orange both land on Deep Navy, on dark grounds the white CTA hovers to
+  **Signal Orange** with a white label (Eugene, 16 Sep). Deep Navy there sat within a shade
+  of the ground and the button disappeared; Azure was the first fix, orange is the client's
+  call. White on orange is 3.3:1, the same trade-off the nav and hero CTAs carry - it is a
+  hover state over a 10:1 resting state, so flagged rather than changed.
   Contrast: Azure/white 4.78:1 and white/navy 10.04:1 both clear AA; **orange with a
   white label is 3.30:1 and does not** - navy label on orange would be 5.7:1 (Omble's
   choice). Flagged, not changed, because the client's reference shows white.
