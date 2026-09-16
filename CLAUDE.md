@@ -221,7 +221,8 @@ any width; all interactions pass with and without reduced motion.
   approve"**, then Azure-into-navy. The open node is marked by a white ring and a
   slight lift, not by a colour change, so the row keeps its rhythm. Halos take their
   node's colour. Orange appearing here is the client's own call from their reference
-  and sits alongside the nav CTA in the same viewport. Icons were redrawn for legibility and run at 42px in a 6rem disc: document into a tray,
+  and sits alongside the nav CTA in the same viewport. Icons were redrawn for legibility and run at 42px in a 6rem disc: a document with a
+  magnifying glass (capture & identify - the tray version read as a download),
   document with a tick, padlock, checklist with an approving tick, envelope leaving.
   **The step's sentence sits under the row** on a 44rem centred measure with its height
   reserved, not in a narrow lane under its node. All five sentences are in the markup
