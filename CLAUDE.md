@@ -464,6 +464,23 @@ they supersede a settled decision, the newer call wins and is noted here:
 - **Still missing from the client:** HowNow X logo, sample UI names and values,
   footer contact, testimonial firms. (ISO 27001 logo landed 11 Sep.)
 
+## Webflow handover pack (16 Sep 2026)
+
+Four documents, written so the conversion can be driven by an MCP agent and a browser agent
+without re-deciding anything. Generated from the build, so they cannot drift from it:
+
+| File | Carries |
+|---|---|
+| `webflow-instructions/WEBFLOW-VARIABLES.md` | Seven collections - Base Colour, Theme, Typography, Font Family, Spacing, Layout, Sizing - with every value and the ones that change at 991 / 767 / 479 |
+| `webflow-instructions/WEBFLOW-STYLE-GUIDE.md` | The Client-First class inventory (15 section wrappers, 5 grounds, 7 components, 14 utilities, 33 `is-` variants, 163 page blocks) and what the style guide page must show |
+| `webflow-instructions/WEBFLOW-AGENT-HANDOVER.md` | Eight ordered steps, who does each (MCP vs browser agent), the done-when for each, and the standing constraints |
+| `docs/Webflow-Animation-Spec.md` | All 25 entrances plus the four bespoke interactions |
+
+Regenerate the variable and class tables from `assets/css/style.css` and `index.html` if either
+changes. Webflow's own help pages (Variables, Interactions with GSAP) return 403 to automated
+fetches, so the docs state the numbers in CSS/GSAP terms and note that panel field names may
+differ slightly.
+
 ## Animation for the Webflow port (16 Sep 2026)
 
 Every entrance on the page is **declarative and uniform**, so the Webflow build can be driven

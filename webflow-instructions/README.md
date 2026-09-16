@@ -34,6 +34,15 @@ Nothing in `rules/` or `webflow-skills/` still contains a `{{` token. If you for
 this kit for another client, re-open those two tokens in `rules/seo-essentials.md`
 and `webflow-skills/pre-launch-checklist.md`.
 
+## 1b. Handover documents (written 16 Sep 2026, for the conversion)
+
+| File | What it carries |
+|---|---|
+| `WEBFLOW-VARIABLES.md` | The seven variable collections, every value, and which change per breakpoint |
+| `WEBFLOW-STYLE-GUIDE.md` | The Client-First class inventory and what the style guide page must show |
+| `WEBFLOW-AGENT-HANDOVER.md` | Who builds what, in what order: MCP agent vs browser agent |
+| `../docs/Webflow-Animation-Spec.md` | All 25 entrances plus the four bespoke interactions |
+
 ## 2. Per-site review — ATOmate decisions are recorded in `ATOMATE-CONFIG.md`
 
 The generic guidance below is kept for reference. The decisions actually made for
