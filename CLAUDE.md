@@ -257,7 +257,8 @@ any width; all interactions pass with and without reduced motion.
   security split. The pills invert to glass (white at 8%, a 22% border, a blur) with the
   mark ghosted at the band's right edge; its heading is a centred h2 at 2.25rem in white.
   The band runs `padding-section-medium`, not large - it carries one line and a row of
-  pills - and its icon discs are 2.75rem with 22px glyphs (Eugene, 16 Sep).
+  pills - and the pills are slim: 48px tall, the disc 2.25rem with a 19px glyph, so the row reads
+  as a line of channels rather than a stack of buttons (Eugene, 16 Sep).
   A first pass used plain white and read as an unstyled gap (Eugene, 16 Sep). Before that it
   was a label inside the messaging section, and a bad edit had nested it inside the email
   card, which also put it outside the padding wrapper and ate
