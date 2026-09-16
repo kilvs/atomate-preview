@@ -216,9 +216,12 @@ any width; all interactions pass with and without reduced motion.
   Reworked 16 Sep at Eugene's word ("too plain", "reads human"): five **5.5rem nodes**
   on a blue connector, each with a **halo that breathes** (3.2s, staggered per node)
   so the row reads as clickable - this replaces the "Click a step to reveal details"
-  line, which is gone. Resting nodes are a white-to-blue-100 disc with a blue-300 ring
-  and a navy mark; the open node is an Azure-to-navy gradient with a white mark and a
-  stronger halo. Icons were redrawn for legibility at 30px: document into a tray,
+  line, which is gone. **Every node is a strong filled disc** in a brand colour with a white mark
+  (Eugene, 16 Sep): Azure, Deep Navy, Azure-into-navy, **Signal Orange on "Review &
+  approve"**, then Azure-into-navy. The open node is marked by a white ring and a
+  slight lift, not by a colour change, so the row keeps its rhythm. Halos take their
+  node's colour. Orange appearing here is the client's own call from their reference
+  and sits alongside the nav CTA in the same viewport. Icons were redrawn for legibility and run at 42px in a 6rem disc: document into a tray,
   document with a tick, padlock, checklist with an approving tick, envelope leaving.
   **The step's sentence sits under the row** on a 44rem centred measure with its height
   reserved, not in a narrow lane under its node. All five sentences are in the markup
