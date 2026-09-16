@@ -293,6 +293,31 @@ any width; all interactions pass with and without reduced motion.
 - **Security card 2** is the client's padlock reference (document sheet, orange
   padlock, "4 8 2 1 · PIN via SMS" chip) instead of the PIN-entry mock.
 
+## Section grounds — the client's named gradients (16 Sep 2026)
+
+"Use contrasting backgrounds for each section for visual interest" and "warmth into the
+section dividers". The client's own set, applied so no two neighbours repeat:
+
+| Ground | Recipe | Used by |
+|---|---|---|
+| **Warm mesh** (`background-stage-light`) | white, peach bloom low-left, cool tint top-right | hero |
+| **Warm mesh, quiet** (`background-stage-mesh`) | the same at about a third strength, blue wash at the top | process, messaging, testimonials |
+| **Split light** (`background-stage-split`) | cool blue-50 on the left running warm to `#FFF4EA` on the right, at 100° | integrations, review, security |
+| **Azure depth, lit** (`background-stage-azure`) | `#005C90` → navy-800 → navy-900 with a sky-blue glow in the top-left corner | trust bar, overnight |
+| **Peach sheen** (`background-stage-peach`) | navy-700 → blue-600 → blue-500, lit warm from the bottom-right | PAYG, closing CTA |
+| **Plain white** | no class | comparison, filing, informed |
+
+Notes that matter:
+- **The CTA is now a dark band.** Its heading and description are white, its button is
+  `is-white`, and its ghost mark is the white one. It was a light morning gradient.
+- **Every tint layer is a `::before` at `z-index:0`, with the section's own children at
+  `z-index:1`.** Without that the wash paints over the content: the testimonials heading
+  and arrows went pale before it was caught.
+- **All sections carry the full `padding-section-large`** (7rem top and bottom; the CTA
+  keeps `is-tall`). The old `is-tight-top` / `is-short-top` variants were there because
+  neighbouring sections shared a ground; with a ground per section they read as missing
+  spacing (Eugene, 16 Sep).
+
 ## Hero on the light "warm mesh" ground (Eugene, 16 Sep 2026)
 
 Supersedes the navy hero. The client's palette reference (four gradients: Ember bay,
