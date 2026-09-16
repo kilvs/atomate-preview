@@ -228,6 +228,10 @@ any width; all interactions pass with and without reduced motion.
   reserved, not in a narrow lane under its node. All five sentences are in the markup
   unhidden, so without JS the section reads in full; the script hides the four that are
   not current. The halo stops under `prefers-reduced-motion`. Vertical on mobile.
+- **The overnight panel is a plain checklist** (client, 16 Sep): centred title, four
+  ticked lines, no initials badges and no status pills. It is the one panel that steps
+  outside the four mock-UI rules below, because the client asked for the simpler form;
+  its ticks use Signal Orange from their reference.
 - **Mock UI panels follow four rules** (Eugene, 10 Sep): no rules or dividers, white
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft
