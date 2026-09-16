@@ -228,10 +228,15 @@ any width; all interactions pass with and without reduced motion.
   reserved, not in a narrow lane under its node. All five sentences are in the markup
   unhidden, so without JS the section reads in full; the script hides the four that are
   not current. The halo stops under `prefers-reduced-motion`. Vertical on mobile.
-- **The overnight panel is a plain checklist** (client, 16 Sep): centred title, four
-  ticked lines, no initials badges and no status pills. It is the one panel that steps
-  outside the four mock-UI rules below, because the client asked for the simpler form;
-  its ticks use Signal Orange from their reference.
+- **The overnight graphic** (client, 16 Sep; layout taken further at Eugene's word that
+  the column "feels off"): a white card carrying the centred title, the four sources as
+  ticked tiles in a 2x2 grid, a single arrow, then a navy result bar with the ATOmate
+  mark. The client's plain checklist left a small card floating on a tall navy band; the
+  tiles and the result bar fill the column and carry the section's own story - many
+  sources in, one overnight result out. No initials badges, no status pills; ticks use
+  Signal Orange from their reference. It is the one panel outside the four mock-UI rules
+  below. **"Processed overnight, ready for next-day approval" is mock UI wording** taken
+  from the section heading, so it is a client flag like the other sample UI strings.
 - **Mock UI panels follow four rules** (Eugene, 10 Sep): no rules or dividers, white
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft

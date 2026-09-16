@@ -103,7 +103,7 @@ in `style.css`.
 - Lead: **ATO documents can take days to reach your practice and your clients. ATOmate captures and processes them overnight, ready for review the next day.**
 - Checks: **Get documents to clients faster** · **No manual document processing**
 - CTA: Book Discovery Meeting (ghost, light)
-- Panel **Every ATO document, captured** (centred title): a plain checklist — myGov · Agent Digital · ATO Online · Paper, each with an orange ticked box. No initials, no status pills (client, 16 Sep).
+- Graphic **Every ATO document, captured** (centred title): the four sources as ticked tiles (myGov · Agent Digital · ATO Online · Paper) in a 2×2 grid, an arrow beneath them, then a navy result bar with the ATOmate mark reading **Processed overnight, ready for next-day approval**. No initials, no status pills (client, 16 Sep). The result-bar wording is mock UI text drawn from the section heading — a client flag.
 - *Not built:* the source's "FAST" label above the heading (eyebrows are a settled no).
 
 ## 6. Review (`.background-stage-day`)
