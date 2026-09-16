@@ -246,6 +246,11 @@ any width; all interactions pass with and without reduced motion.
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft
   pill with the colour behind the label. Testimonial avatars carry initials.
+- **The PAYG graphics follow the copy document** (Eugene, 16 Sep): card A is a timeline
+  (blue dot, orange run, navy dot) under the label **More time to act**; card B is the
+  word **Penalties** struck through in orange. Both words come from the copy's own
+  artwork. The two mock UI panels are gone, and with them their sample values. The
+  copy's "SIMPLE" section label is still not built - eyebrows remain a settled no.
 - **Two filing cards are built in markup, not placeholder images** (Eugene, 16 Sep).
   The **audit trail** keeps the supplied artwork's five steps and times and drops the
   five sub-captions; its dots run blue-300 → blue-500 → orange-500 → blue-600 →
