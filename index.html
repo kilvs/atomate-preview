@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" href="assets/img/brand/webclip.jpg">
   <link rel="preload" href="assets/fonts/gilroy-extrabold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/GalanoGrotesqueRegular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=38a071c7">
+  <link rel="stylesheet" href="assets/css/style.css?v=21611b04">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -304,7 +304,22 @@
         <ul class="home_review_list" role="list" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
           <li class="home_review_item"><div class="home_review_item_image-wrap"><img class="home_review_item_image" src="assets/img/features/full-control.webp" alt="A document branching to three paths: automated, reviewed and approved" width="700" height="525" loading="lazy" decoding="async"></div><h3>Full control over your workflow</h3><p class="home_review_item_description">Choose what's automated, what's reviewed, and what needs approval.</p></li>
           <li class="home_review_item"><div class="home_review_item_image-wrap"><img class="home_review_item_image" src="assets/img/features/escalate-01.webp" alt="A flagged document with an arrow pointing to escalate" width="700" height="525" loading="lazy" decoding="async"></div><h3>Escalate when needed</h3><p class="home_review_item_description">Route documents to the right person for review or approval.</p></li>
-          <li class="home_review_item"><div class="home_review_item_image-wrap"><img class="home_review_item_image" src="assets/img/features/set-automatic-01.webp" alt="A list of documents marked approved, with a notice of assessment flagged for review" width="700" height="525" loading="lazy" decoding="async"></div><h3>Set automatic approval rules</h3><p class="home_review_item_description">Documents that meet your rules are approved. Flagged items are sent for review.</p></li>
+          <li class="home_review_item"><div class="home_review_item_image-wrap is-rules">
+            <ul class="home_review_rules" role="list">
+              <li class="home_review_rule is-approved">
+                <span class="home_review_rule_name">Statement of account</span>
+                <span class="home_review_rule_state">Approved</span>
+              </li>
+              <li class="home_review_rule is-review">
+                <span class="home_review_rule_name">Notice of assessment</span>
+                <span class="home_review_rule_state">Review</span>
+              </li>
+              <li class="home_review_rule is-approved">
+                <span class="home_review_rule_name">BAS lodgement</span>
+                <span class="home_review_rule_state">Approved</span>
+              </li>
+            </ul>
+          </div><h3>Set automatic approval rules</h3><p class="home_review_item_description">Documents that meet your rules are approved. Flagged items are sent for review.</p></li>
         </ul>
         <div class="button-group is-centre margin-top margin-large"><a href="#" class="button">Book Discovery Meeting</a></div>
       </div>

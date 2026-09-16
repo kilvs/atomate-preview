@@ -276,6 +276,11 @@ any width; all interactions pass with and without reduced motion.
   word **Penalties** struck through in orange. Both words come from the copy's own
   artwork. The two mock UI panels are gone, and with them their sample values. The
   copy's "SIMPLE" section label is still not built - eyebrows remain a settled no.
+- **The approval-rules card is built in markup too** (Eugene, 16 Sep): the supplied image
+  carried a pale blue box that sat as a rectangle on the white card. The three rows now
+  blend into the card - hairline separators, no tray - with the flagged row in
+  `orange-100` and a solid orange marker, and the approved rows on the green chip pair.
+  Labels are the artwork's own. `set-automatic-01.webp` is unused but kept.
 - **Two filing cards are built in markup, not placeholder images** (Eugene, 16 Sep).
   The **audit trail** keeps the supplied artwork's five steps and times and drops the
   five sub-captions; its dots run blue-300 → blue-500 → orange-500 → blue-600 →
