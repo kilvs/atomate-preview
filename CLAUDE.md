@@ -330,6 +330,11 @@ any width; all interactions pass with and without reduced motion.
   lanes need ~1320 for this copy, so the row drops to two earlier than Omble's 1200.
   Items are centred in their lanes and the heading is centred (Eugene, 16 Sep);
   Omble's are left-aligned. Verified orphan-free at 360-1440.
+- **Security card 1 is the redaction itself** (Eugene, 16 Sep): the TFN, an orange arrow,
+  then the same number blacked out. The email mock around it (subject, recipient, body,
+  attachment, Send) said nothing the heading did not, and carried four sample strings;
+  they are gone with it. The visible number is the page's existing sample, and screen
+  readers read "redacted" rather than the digits.
 - **Security card 2** is the client's padlock reference (document sheet, orange
   padlock, "4 8 2 1 · PIN via SMS" chip) instead of the PIN-entry mock.
 

@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" href="assets/img/brand/webclip.jpg">
   <link rel="preload" href="assets/fonts/gilroy-extrabold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/GalanoGrotesqueRegular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=964d373e">
+  <link rel="stylesheet" href="assets/css/style.css?v=38a071c7">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -535,11 +535,18 @@
         </ul>
         <ul class="home_security_list" role="list" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
           <li class="home_security_item">
-            <div class="component_ui">
-              <div class="component_ui_header"><span>Subject: Your notice of assessment</span><span class="component_chip is-done">TFN redacted</span></div>
-              <div class="component_ui_row is-start"><span class="home_security_to text-color-muted">To</span><span class="component_ui_doc"><span class="component_ui_initials" aria-hidden="true">SC</span>Sarah Chen</span></div>
-              <div class="component_ui_body"><p>Hi Sarah,</p><p>Please find your document attached.</p><p>TFN <span class="home_security_redacted"><span class="hide-visually">redacted</span><span aria-hidden="true">123 456 789</span></span></p></div>
-              <div class="component_ui_row is-footer"><span class="component_ui_doc"><span class="component_ui_initials" aria-hidden="true">NA</span>Notice-of-assessment.pdf</span><span class="button is-small">Send</span></div>
+            <div class="home_security_redact">
+              <div class="home_security_redact_tile">
+                <span class="home_security_redact_label">TFN</span>
+                <span class="home_security_redact_value" aria-hidden="true">123 456 789</span>
+              </div>
+              <span class="home_security_redact_arrow" aria-hidden="true">
+                <svg class="icon-stroke" width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M4 12h15"/><path d="M13.5 6.5 20 12l-6.5 5.5"/></svg>
+              </span>
+              <div class="home_security_redact_tile is-after">
+                <span class="home_security_redact_label">TFN</span>
+                <span class="home_security_redacted"><span class="hide-visually">redacted</span><span aria-hidden="true">123 456 789</span></span>
+              </div>
             </div>
             <div class="home_security_item_text"><h3>Redact TFNs automatically</h3><p class="home_security_item_description">TFNs automatically redacted on capture to protect client data and reduce compliance risk.</p></div>
           </li>
