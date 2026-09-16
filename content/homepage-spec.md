@@ -137,7 +137,7 @@ in `style.css`.
 ## 9. Better informed (white)
 
 - H2: **Better informed clients, better experience**
-- Two alternating rows (16 Sep): copy left / visual right, then visual left / copy right. Each visual is a wordless mock (three rows: dot plus skeleton lines, the third warm-tinted) with the quote card lapping its corner. The quote is set at body size, unbolded, with an orange rule before the attribution.
+- Two alternating rows (16 Sep): copy left / visual right, then visual left / copy right. Columns are 50/50. Each visual is a wordless mock: one real-looking row on top, two skeleton rows beneath with the quote card lapping its corner. The quote is set at body size, unbolded, with an orange rule before the attribution.
 - Row 1: **Keep clients informed and prepared** — Stay proactive with timely correspondence. Keep clients informed about what's happening and what's coming next. · CTA · beside the quote: *"Since partnering with ATOmate, we have reduced ATO mail processing time significantly and increased proactive communications with our client base. ATOmate gives us peace of mind that our clients' data is protected with its ability to redact TFN sensitive information."* — Liz, Firm Owner
 - Row 2: quote *"ATOmate allows our admin staff to spend less time processing ATO documents and more time contacting and communicating directly with clients."* — Steve, Firm Owner · beside **Every client interaction, elevated** — Turn routine ATO correspondence into a trust-building experience with timely, consistent communication. · CTA
 
