@@ -43,7 +43,11 @@ self-hosted fonts, SVG/PNG assets). It is the implementation of record.
 
 ## Content is law
 
-**Do not change, improve, rewrite or reinterpret the content.** Headings, copy,
+**Do not change, improve, rewrite or reinterpret the content. Do not WRITE any either.**
+No new sentence, label, caption or mock-UI string may be invented, not even one built from
+words already on the page: the copywriters own every word (Eugene, 16 Sep, after an
+invented line appeared in the overnight graphic). If a layout seems to need a line that
+was not supplied, design around the gap or ask. Headings, copy,
 CTA labels, chip labels, stats, section order — all of it comes from the client's
 "ATOmate Updated Docs" (7 Sep 2026 PDF, in `Guide & References/ATOmate V2/`) and
 the brand guide. Where copy is missing the page carries **lorem ipsum** and `00%`
@@ -235,8 +239,8 @@ any width; all interactions pass with and without reduced motion.
   tiles and the result bar fill the column and carry the section's own story - many
   sources in, one overnight result out. No initials badges, no status pills; ticks use
   Signal Orange from their reference. It is the one panel outside the four mock-UI rules
-  below. **"Processed overnight, ready for next-day approval" is mock UI wording** taken
-  from the section heading, so it is a client flag like the other sample UI strings.
+  below. The result bar carries the ATOmate mark and **no text**: a first pass
+  put an invented line there and Eugene removed it (16 Sep).
 - **Mock UI panels follow four rules** (Eugene, 10 Sep): no rules or dividers, white
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft

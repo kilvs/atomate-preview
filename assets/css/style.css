@@ -345,9 +345,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* one quiet arrow carries the four tiles into the result; a stretched funnel sheared */
 .home_overnight_funnel { display:block; margin:1.125rem 0 1rem; }
 .home_overnight_funnel svg { display:block; fill:none; stroke:var(--blue-300); stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; }
-.home_overnight_result { width:100%; display:flex; align-items:center; gap:1rem; padding:1.125rem 1.25rem; border-radius:var(--radius-box); background:linear-gradient(150deg, var(--navy-700), var(--blue-600)); color:#fff; }
-.home_overnight_result_mark { width:2.5rem; height:2.5rem; flex:none; }
-.home_overnight_result_text { font-family:var(--font-heading); font-weight:800; font-size:1rem; line-height:1.35; text-wrap:balance; }
+.home_overnight_result { width:100%; display:flex; align-items:center; justify-content:center; padding:1.25rem; border-radius:var(--radius-box); background:linear-gradient(150deg, var(--navy-700), var(--blue-600)); }
+.home_overnight_result_mark { width:2.75rem; height:2.75rem; flex:none; }
 
 /* ---------- 6. Review less (day) */
 .home_review_list { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1.5rem; }
