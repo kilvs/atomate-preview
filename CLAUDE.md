@@ -246,6 +246,12 @@ any width; all interactions pass with and without reduced motion.
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft
   pill with the colour behind the label. Testimonial avatars carry initials.
+- **The audit trail card is built in markup, not a placeholder image** (Eugene, 16 Sep:
+  "delete extra text on the graphics, also use brand colors"). It keeps the supplied
+  artwork's five steps and times and drops the five sub-captions; the dots run
+  blue-300 → blue-500 → orange-500 → blue-600 → navy-900 instead of the stock
+  blue/amber/green. `full-audit-01.webp` is now unused but kept with the other supplied
+  art. The other two cards in that row are still the client's images.
 - **Review and filing card illustrations** (14 Sep) replace the skeleton bars: six
   client placeholder images from `~/Downloads/placeholder`, exported to
   `assets/img/features/` as 700×525 WebP (4:3, 2× the card width). Square sources

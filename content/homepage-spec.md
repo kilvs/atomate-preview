@@ -118,7 +118,7 @@ in `style.css`.
 ## 7. Filing (white)
 
 - H2: **Automatically matched, filed and tracked** (no description)
-- Three white cards matching §6, illustrations `every-document-01`, `filed-directly-01`, `full-audit-01`:
+- Three white cards matching §6, illustrations `every-document-01`, `filed-directly-01`; the audit trail is built in markup (16 Sep) from the supplied artwork — steps and times kept, sub-captions dropped, dots in brand colours:
   - **Every document matched to the right client** — Automatically matched using TFNs and ABNs, so three "John Smiths" never get mixed up.
   - **Filed directly in your DMS** — Documents & communications automatically filed to your existing document management system
   - **Full audit trail for every document** — Know when every document was received, reviewed, communicated and filed.
