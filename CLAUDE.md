@@ -246,6 +246,13 @@ any width; all interactions pass with and without reduced motion.
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft
   pill with the colour behind the label. Testimonial avatars carry initials.
+- **The email card is minimal** (Eugene, 16 Sep): plain white, one 4px brand edge along
+  the top, and only what the copy says - "Hi Sarah," the line, the PIN-protected
+  attachment, Customise. The navy panel, its 30° ghost lines and the header row (sender,
+  "to Sarah · 7:02 am", the Sent chip) are gone; the sender and timestamp flags go with
+  them. **"Send the way your clients prefer" is now a 1.5rem heading**, not a small-caps
+  label - it shared a rule with `.footer_heading`, which has its own copy of the old
+  values, so check the footer if that rule is touched again.
 - **Better informed clients is two alternating rows** (Eugene, 16 Sep): the copy leads
   each row - h3 at 2rem, paragraph, CTA - and the testimonial sits on the visual at body
   size, **unbolded**, so it supports rather than competes. Rows are 7rem apart (the old
