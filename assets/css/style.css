@@ -160,11 +160,11 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
    and a cool tint top-right. Warmth without clutter; copy stays navy on near-white. */
 .background-stage-light { background:#FFFFFF; color:var(--ink-900); position:relative; overflow:hidden; }
 .background-stage-light::before { content:""; position:absolute; inset:0; pointer-events:none;
-  background:radial-gradient(70% 62% at 6% 80%, rgba(235,100,5,.30), transparent 70%),
-             radial-gradient(56% 52% at 52% 106%, rgba(255,178,128,.46), transparent 72%),
-             radial-gradient(38% 34% at 80% 74%, rgba(255,178,128,.24), transparent 74%),
-             radial-gradient(48% 44% at 97% -4%, rgba(0,120,186,.18), transparent 72%),
-             linear-gradient(180deg, rgba(255,255,255,0) 42%, rgba(255,243,234,.85) 100%); }
+  background:radial-gradient(70% 62% at 6% 80%, rgba(235,100,5,.39), transparent 70%),
+             radial-gradient(56% 52% at 52% 106%, rgba(255,178,128,.60), transparent 72%),
+             radial-gradient(38% 34% at 80% 74%, rgba(255,178,128,.31), transparent 74%),
+             radial-gradient(48% 44% at 97% -4%, rgba(0,120,186,.23), transparent 72%),
+             linear-gradient(180deg, rgba(255,255,255,0) 40%, rgba(255,238,225,.92) 88%, rgba(255,246,238,.55) 100%); }
 .background-stage-day { background:linear-gradient(180deg, var(--blue-50) 0%, #FFFFFF 100%); }
 .background-stage-morning { background:linear-gradient(160deg, #FFFFFF 0%, var(--blue-50) 50%, var(--blue-100) 100%); position:relative; overflow:hidden; }
 
