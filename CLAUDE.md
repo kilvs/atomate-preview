@@ -232,8 +232,9 @@ any width; all interactions pass with and without reduced motion.
   (overnight navy, PAYG dawn) the CTA is `.is-white`: white fill, navy label.
   **No outline buttons and no white buttons on light grounds** - both at Eugene's
   word, so `is-ghost` and `is-ghost-light` are gone. **Hovers are a full colour
-  change, never a tint**: Azure and Orange both land on Deep Navy, white lands on
-  Deep Navy with a white label.
+  change, never a tint**: Azure and Orange both land on Deep Navy, on dark grounds white lifts to
+  **Azure** instead - Deep Navy there is barely off the ground colour and the button
+  disappears (Eugene, 16 Sep).
   Contrast: Azure/white 4.78:1 and white/navy 10.04:1 both clear AA; **orange with a
   white label is 3.30:1 and does not** - navy label on orange would be 5.7:1 (Omble's
   choice). Flagged, not changed, because the client's reference shows white.
