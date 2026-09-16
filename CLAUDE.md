@@ -279,8 +279,9 @@ any width; all interactions pass with and without reduced motion.
 - **The approval-rules card is built in markup too** (Eugene, 16 Sep): the supplied image
   carried a pale blue box that sat as a rectangle on the white card. The rows keep the
   artwork's look - separate rounded rows, the flagged one solid red with a white REVIEW
-  marker - and the two white rows are defined against the white card by a `--line`
-  hairline and a soft shadow rather than by sitting in a tray. A first pass flattened the
+  marker - and the two approved rows are **navy with white type** rather than
+  white-on-white (Eugene, 16 Sep); their Approved chips keep the soft green pair, which
+  reads at 6.5:1 on navy. A first pass flattened the
   rows into hairline separators, which lost the design; Eugene asked only for the tray to
   go.
   Labels are the artwork's own. `set-automatic-01.webp` is unused but kept.
