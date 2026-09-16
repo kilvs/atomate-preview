@@ -201,7 +201,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* balance keeps every line multi-word: no single word stranded at any width (Eugene, 16 Sep) */
 .home_hero_title { font-size:4rem; line-height:1.02; max-width:54rem; color:var(--navy-800); margin-bottom:.75rem; text-wrap:balance; }
 /* the ISO line sits well clear of the CTA, low in the hero (Eugene, 16 Sep) */
-.home_hero_trust { display:flex; align-items:center; justify-content:center; gap:.75rem; margin-top:6.5rem; text-align:left; }
+.home_hero_trust { display:flex; align-items:center; justify-content:center; gap:.75rem; margin-top:7.75rem; text-align:left; }
 .home_hero_iso { width:3.25rem; height:3.25rem; flex:0 0 auto; }
 .home_hero_note { max-width:none; }
 .home_hero_kicker { font-weight:700; font-size:.8125rem; letter-spacing:.12em; text-transform:uppercase; color:var(--orange-600); margin-bottom:1rem; }
@@ -456,7 +456,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .text-size-large { font-size:1.125rem; }
   .text-style-quote { font-size:1.5rem; }
   .home_hero_layout { padding:3rem 0 3.5rem; }
-  .home_hero_trust { flex-direction:column; text-align:center; gap:.75rem; margin-top:4rem; }
+  .home_hero_trust { flex-direction:column; text-align:center; gap:.75rem; margin-top:4.75rem; }
   .home_hero_note { max-width:24rem; white-space:normal; }
   .home_hero_stats { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); }
   .home_hero_stat_number { font-size:2.25rem; min-height:2.25rem; }

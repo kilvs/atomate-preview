@@ -263,7 +263,7 @@ Warm mesh, Peach sheen, Split light) asks for more warmth; the hero uses **Warm 
   weight 500, 1rem label — was 3.5rem / 1.75rem / 600 / 1.0625rem. Still a 50px tap
   target and the navbar still fits at 992.
 - **ISO badge is 3.25rem**, paired on one row with the automation line (which stays on
-  one line; it wraps only when the row stacks at ≤991) and sits `6.5rem` below the CTA.
+  one line; it wraps only when the row stacks at ≤991) and sits `7.75rem` below the CTA (4.75rem when the row stacks at ≤991).
   Supersedes the 11 Sep "5rem, centred under the button" note.
 
 ## Hero simplified (Eugene, 10 Sep 2026)
