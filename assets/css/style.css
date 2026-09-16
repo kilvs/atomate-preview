@@ -483,13 +483,19 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_messaging_email_file { flex:none; width:2.25rem; height:2.25rem; border-radius:.625rem; background:#fff; color:var(--blue-500); display:inline-flex; align-items:center; justify-content:center; box-shadow:0 4px 10px -6px rgba(2,42,69,.5); }
 .home_messaging_email_filename { flex:1; min-width:0; font-size:var(--text-small); font-weight:600; color:var(--navy-800); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .home_messaging_email .button-group { margin-top:.25rem; }
-/* Channels — its own band (Eugene, 16 Sep), sitting white between the messaging mesh and
-   the security split so each section reads as a separate beat. */
-.section-home_channels { background:#fff; }
+/* Channels — its own band (Eugene, 16 Sep). A dark beat: the page runs light through
+   messaging, drops to Azure depth here, then lifts into the security split. The pills
+   invert to glass on the dark ground, with the mark ghosted behind them at the 30°. */
+.section-home_channels { position:relative; }
+.section-home_channels .container-large { position:relative; }
 .home_channels_content { display:flex; flex-direction:column; align-items:center; text-align:center; gap:2rem; }
-.home_channels_heading { font-size:2.25rem; line-height:1.2; color:var(--navy-800); text-wrap:balance; }
+.home_channels_heading { font-size:2.25rem; line-height:1.2; color:#fff; text-wrap:balance; }
 .home_channels_list { display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; }
-.home_channels_item { display:inline-flex; align-items:center; gap:.625rem; padding:.875rem 1.375rem .875rem .875rem; border-radius:var(--radius-round); background:#fff; border:1px solid var(--line); font-weight:600; color:var(--navy-700); box-shadow:0 8px 20px -14px rgba(2,42,69,.45); }
+.home_channels_item { display:inline-flex; align-items:center; gap:.75rem; padding:.875rem 1.5rem .875rem .875rem; border-radius:var(--radius-round); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.22); font-weight:600; color:#fff; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); transition:background .25s ease, border-color .25s ease, transform .25s ease; }
+.home_channels_item:hover { background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.38); transform:translateY(-2px); }
+.home_channels_item .component_icon { background:rgba(255,255,255,.14); color:#fff; }
+/* the brand mark, ghosted at the band's right edge */
+.home_channels_mark { position:absolute; right:-5rem; top:50%; transform:translateY(-50%); height:26rem; width:auto; opacity:.07; pointer-events:none; }
 
 /* ---------- 11. Security */
 .home_security_credentials { display:flex; flex-wrap:wrap; justify-content:center; gap:.75rem 2.5rem; margin:-1.5rem 0 2.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--line); }

@@ -252,9 +252,11 @@ any width; all interactions pass with and without reduced motion.
   "to Sarah · 7:02 am", the Sent chip) are gone; the sender and timestamp flags go with
   them. **"Send the way your clients prefer" is now a 1.5rem heading**, not a small-caps
   label - it shared a rule with `.footer_heading`, which has its own copy of the old
-  values, so check the footer if that rule is touched again. **The channels row is now its own section**, `section-home_channels`, sitting
-  **white** between the messaging mesh and the security split so the three read as
-  separate beats; its heading is a centred h2 at 2.25rem (Eugene, 16 Sep). Before that it
+  values, so check the footer if that rule is touched again. **The channels row is now its own section**, `section-home_channels`, on **Azure depth**:
+  the page runs light through messaging, drops to the dark band here, then lifts into the
+  security split. The pills invert to glass (white at 8%, a 22% border, a blur) with the
+  mark ghosted at the band's right edge; its heading is a centred h2 at 2.25rem in white.
+  A first pass used plain white and read as an unstyled gap (Eugene, 16 Sep). Before that it
   was a label inside the messaging section, and a bad edit had nested it inside the email
   card, which also put it outside the padding wrapper and ate
   the section's 112px bottom padding.
