@@ -246,6 +246,13 @@ any width; all interactions pass with and without reduced motion.
   rows separated by gaps on a tinted tray; initials badges instead of dots or icons
   (decoration becomes information); one typeface in sentence case; status is a soft
   pill with the colour behind the label. Testimonial avatars carry initials.
+- **Better informed clients is two alternating rows** (Eugene, 16 Sep): the copy leads
+  each row - h3 at 2rem, paragraph, CTA - and the testimonial sits on the visual at body
+  size, **unbolded**, so it supports rather than competes. Rows are 7rem apart (the old
+  grid had them "sardined"). The visual is a **wordless** mock - three rows of a dot and
+  skeleton lines, the third warm-tinted - with the navy quote card lapping its corner by
+  a fixed 2.5rem. The reference's mock carried labels like "Activity statement issued";
+  those are not in the copy, so the rows carry no words at all.
 - **The PAYG graphics follow the copy document** (Eugene, 16 Sep): card A is a timeline
   (blue dot, orange run, navy dot) under the label **More time to act**; card B is the
   word **Penalties** struck through in orange. Both words come from the copy's own

@@ -432,15 +432,38 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_payg_penalties::after { content:""; position:absolute; left:-.75rem; right:-.75rem; top:52%; height:.3125rem; border-radius:var(--radius-round); background:var(--orange-500); }
 
 /* ---------- 9. Better informed clients */
-.home_informed_grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:4.5rem 4rem; align-items:center; }
-.home_informed_text { display:flex; flex-direction:column; gap:1rem; align-items:flex-start; }
-.home_informed_description { color:var(--ink-700); max-width:30rem; }
+/* Better informed clients (Eugene, 16 Sep): two alternating rows. The copy leads - heading,
+   paragraph, CTA - and the quote sits on the visual, smaller and unbolded, so it supports
+   rather than shouts. The mock rows carry no words: the copy owns every word on the page. */
+.home_informed_rows { display:flex; flex-direction:column; gap:7rem; }
+.home_informed_row-block { display:grid; grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr); gap:4.5rem; align-items:center; }
+.home_informed_row-block.is-reversed .home_informed_text { order:2; }
+.home_informed_row-block.is-reversed .home_informed_visual { order:1; }
+.home_informed_text { display:flex; flex-direction:column; align-items:flex-start; gap:1.25rem; }
+.home_informed_text h3 { font-size:2rem; line-height:1.2; color:var(--navy-800); text-wrap:balance; }
+.home_informed_description { font-size:1.125rem; line-height:1.6; color:var(--ink-700); max-width:26rem; }
 .home_informed_text .button-group { margin-top:.5rem; }
-.home_informed_quote { display:flex; flex-direction:column; gap:1.5rem; }
-.home_informed_quote .text-style-quote { font-size:1.75rem; }
-.home_informed_author { display:flex; flex-direction:column; }
-.home_informed_author_name { font-weight:600; color:var(--navy-700); }
-.home_informed_author_role { font-size:var(--text-small); line-height:1.5; color:var(--ink-500); }
+/* the visual: a wordless mock with the quote card overlapping its lower corner */
+.home_informed_visual { display:flex; flex-direction:column; }
+.home_informed_mock { background:#fff; border-radius:var(--radius-card); box-shadow:0 30px 60px -34px rgba(2,42,69,.5); padding:1.5rem; display:flex; flex-direction:column; gap:.875rem; }
+.home_informed_row { display:flex; align-items:center; gap:1rem; padding:1rem 1.125rem; border-radius:var(--radius-box); background:var(--blue-50); }
+.home_informed_row.is-highlight { background:var(--orange-100); }
+.home_informed_row_dot { flex:none; width:2.25rem; height:2.25rem; border-radius:50%; background:linear-gradient(160deg, var(--blue-500), var(--navy-700)); }
+.home_informed_row:nth-child(2) .home_informed_row_dot { background:linear-gradient(160deg, var(--blue-300), var(--blue-500)); }
+.home_informed_row.is-highlight .home_informed_row_dot { background:linear-gradient(160deg, var(--orange-500), var(--orange-600)); }
+.home_informed_row_lines { flex:1; display:flex; flex-direction:column; gap:.5rem; min-width:0; }
+.home_informed_row_line { display:block; height:.5rem; border-radius:var(--radius-round); background:var(--line-soft); }
+.home_informed_row_line.is-short { width:58%; }
+.home_informed_row.is-highlight .home_informed_row_line { background:rgba(235,100,5,.22); }
+/* the quote card */
+/* a fixed 2.5rem overlap, so the quote laps the mock's corner instead of covering it */
+.home_informed_quote { position:relative; z-index:1; margin:-2.5rem -1.5rem 0 3rem; background:linear-gradient(150deg, var(--navy-800), var(--navy-700)); color:#fff; border-radius:var(--radius-card); padding:1.75rem 2rem; box-shadow:0 26px 50px -28px rgba(2,42,69,.75); display:flex; flex-direction:column; gap:1rem; }
+.home_informed_row-block.is-reversed .home_informed_quote { margin-left:-1.5rem; margin-right:3rem; }
+.home_informed_quote_text { font-size:1rem; line-height:1.6; font-weight:400; color:rgba(255,255,255,.92); }
+.home_informed_author { display:flex; align-items:center; gap:.625rem; font-size:var(--text-small); }
+.home_informed_author_rule { width:1.5rem; height:2px; border-radius:var(--radius-round); background:var(--orange-500); flex:none; }
+.home_informed_author_name { font-weight:700; color:#fff; }
+.home_informed_author_role { color:rgba(255,255,255,.7); }
 
 /* ---------- 10. Messaging (day) */
 .home_messaging_split { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:5rem; align-items:center; }
@@ -547,8 +570,14 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   h1 { font-size:3.5rem; } h2 { font-size:2.25rem; }
   .home_hero_title { font-size:3.25rem; }
   .home_cta_title { font-size:2.625rem; }
-  .home_hero_layout, .component_section-header, .home_overnight_content, .home_messaging_split, .home_review_list, .home_filing_list, .home_payg_list, .home_informed_grid, .home_security_list, .home_comparison_grid, .home_testimonials_grid { grid-template-columns:repeat(1, minmax(0,1fr)); }
-  .home_informed_grid { gap:2.5rem; }
+  .home_hero_layout, .component_section-header, .home_overnight_content, .home_messaging_split, .home_review_list, .home_filing_list, .home_payg_list, .home_informed_row-block, .home_security_list, .home_comparison_grid, .home_testimonials_grid { grid-template-columns:repeat(1, minmax(0,1fr)); }
+  .home_informed_rows { gap:4.5rem; }
+  .home_informed_row-block { gap:2.5rem; }
+  .home_informed_row-block.is-reversed .home_informed_text { order:1; }
+  .home_informed_row-block.is-reversed .home_informed_visual { order:2; }
+  .home_informed_visual { padding-bottom:0; }
+  .home_informed_quote, .home_informed_row-block.is-reversed .home_informed_quote { margin:-2rem 1rem 0; }
+  .home_informed_text h3 { font-size:1.75rem; }
   .home_integrations_item { flex-basis:calc((100% - 2rem) / 3); }
   .home_integrations_tabs { gap:1.25rem; }
   .home_integrations_tab { font-size:.9375rem; }
@@ -604,7 +633,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_integrations_tabs { flex-wrap:nowrap; justify-content:flex-start; gap:1.25rem; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
   .home_integrations_tabs::-webkit-scrollbar { display:none; }
   .home_integrations_tab { flex:none; white-space:nowrap; font-size:.9375rem; }
-  .home_informed_quote .text-style-quote { font-size:1.375rem; }
+  .home_informed_quote { padding:1.5rem; margin-inline:.5rem; }
   .home_integrations_item { height:5rem; padding:0 1rem; }
   .home_integrations_logo { max-height:1.75rem; max-width:6.5rem; }
   .home_comparison_card { padding:2rem 1.5rem; }
