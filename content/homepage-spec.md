@@ -49,13 +49,13 @@ in `style.css`.
 
 ---
 
-## 1. Hero (`.background-stage-night`)
+## 1. Hero (`.background-stage-light` — warm mesh, 16 Sep)
 
 - Kicker: **Fast. Simple. Secure.**
 - H1: **Automate your firm's ATO document processing**
 - Sub-claim (heading font, `90%` in orange-300): **Reduce manual work by 90%**
 - Lead: **Automate every step from capture to archive without losing control.**
-- Note: **The ATO document automation software built for accounting firms.**
+- Note: **The ATO document automation software built for accounting firms.** — sits beside the ISO 27001 badge as the hero's closing trust line.
 - CTA: Book Discovery Meeting (white button) with the ISO 27001 certified badge centred beneath it (5rem, `assets/img/brand/iso-27001.svg`, client file 11 Sep)
 - Centred copy on the plain navy ground; no arrow (removed 10 Sep).
 

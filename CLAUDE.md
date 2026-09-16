@@ -228,6 +228,33 @@ any width; all interactions pass with and without reduced motion.
 - **Security card 2** is the client's padlock reference (document sheet, orange
   padlock, "4 8 2 1 · PIN via SMS" chip) instead of the PIN-entry mock.
 
+## Hero on the light "warm mesh" ground (Eugene, 16 Sep 2026)
+
+Supersedes the navy hero. The client's palette reference (four gradients: Ember bay,
+Warm mesh, Peach sheen, Split light) asks for more warmth; the hero uses **Warm mesh**.
+
+- **`background-stage-light`** on `section-home_hero`: white base with a peach bloom
+  low-left rising through the centre, a small warm bloom right of centre, and a cool
+  blue tint at the top-right, over a faint warm wash at the foot. Copy sits on
+  near-white, so contrast is unaffected.
+- **Copy colours:** H1 `navy-800`, kicker `orange-600` (AA on white, unlike
+  `orange-500`), sub-claim `navy-700` with `90%` in `orange-500`, lead `ink-700`,
+  ISO line `ink-500`. The trust bar below shares the stage: numerals `navy-800`,
+  hairlines `--line`.
+- **Navbar at rest is now dark-on-light** (colour lockup, navy links and menu button,
+  dark focus ring); `.is-solid` on scroll is unchanged. This supersedes Gate 04 §1's
+  white-lockup-over-navy rest state.
+- **Typography decluttered** (Eugene: "less cluttered"): one heading voice. H1 steps
+  down to 4rem/1.02 (3.25 / 2.5 / 2rem down the breakpoints — the class needs its own
+  steps because it outranks the `h1` element rule), the sub-claim drops from the
+  heading face at 1.75rem to the body face at 1.25rem/600, the lead is 1.125rem, and
+  spacing is set per element instead of one flat gap.
+- **The lead's width is 26rem on purpose** so it breaks after "archive" and the second
+  line reads "without losing control." (Eugene, 16 Sep). Do not widen it.
+- **ISO badge is 3.25rem**, paired on one row with the automation line (which stays on
+  one line; it wraps only when the row stacks at ≤991) and sits `6.5rem` below the CTA.
+  Supersedes the 11 Sep "5rem, centred under the button" note.
+
 ## Hero simplified (Eugene, 10 Sep 2026)
 
 The hero arrow, its "Overnight" / "Next-day approval" labels and the sky glow are
