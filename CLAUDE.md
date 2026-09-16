@@ -464,6 +464,16 @@ they supersede a settled decision, the newer call wins and is noted here:
 - **Still missing from the client:** HowNow X logo, sample UI names and values,
   footer contact, testimonial firms. (ISO 27001 logo landed 11 Sep.)
 
+## Style guide page (16 Sep 2026)
+
+`styleguide.html` renders the system on one page from the same stylesheet the site uses:
+the seven colour groups with their variable names and hex values, the heading and text scale
+with the breakpoint step-downs, every button and its hover, the spacer scale, the components
+(chip, tick, icon disc, section header) and the five section grounds. It is the visual half of
+`webflow-instructions/WEBFLOW-STYLE-GUIDE.md`, and what the browser agent mirrors when it
+builds Webflow's own style guide page. Page-only styles live in `assets/css/styleguide.css`;
+nothing there is used by the site. It carries `noindex` like the rest of the preview.
+
 ## Webflow handover pack (16 Sep 2026)
 
 Four documents, written so the conversion can be driven by an MCP agent and a browser agent
