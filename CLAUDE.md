@@ -225,13 +225,15 @@ any width; all interactions pass with and without reduced motion.
   `assets/img/features/` as 700×525 WebP (4:3, 2× the card width). Square sources
   are centre-cropped; the landscape `fulll-control.jpg` is padded, not cropped, and
   saved as `full-control.webp` (typo fixed). Alt text describes each illustration.
-- **The navbar mirrors Omble's floating pill** (Eugene, 16 Sep). The header is
-  transparent with 1rem of top padding; `navbar_shell` carries a white pill: 2rem
-  inline padding, 1px `--line-soft` border, `border-radius:100vw`, and Omble's two-part
-  shadow. Scrolled (`.is-solid`) the shell goes to white at 82% with
+- **The navbar mirrors Omble's floating pill** (Eugene, 16 Sep). At rest there is no bar
+  at all: the header and the shell are transparent, square and shadowless, so the hero
+  runs unbroken under the links (Eugene, 16 Sep). The pill arrives on scroll. Constant
+  through both states: 1rem header padding and 2rem shell inline padding, so nothing
+  shifts. Scrolled (`.is-solid`) the shell takes a `--line-soft` border,
+  `border-radius:100vw`, and white at 82% with
   `saturate(180%) blur(14px)` and a deeper shadow, with an opaque fallback where
-  backdrop-filter is unsupported. At =<991 the pill eases to 1.25rem so the mobile menu
-  can open inside it. The hero's top padding and `min-height` both allow for the extra
+  backdrop-filter is unsupported. At =<991 the pill eases to 1.25rem, and the open mobile menu gives the shell an
+  opaque white ground of its own since the bar is otherwise transparent. The hero's top padding and `min-height` both allow for the extra
   1rem. **The nav CTA takes the pill shape with the bar**; page buttons keep ATOmate's
   0.5rem radius until the client asks for Omble's pills everywhere.
 - **The trust bar is an exact design replica of Omble's §2** (Eugene, 16 Sep), with

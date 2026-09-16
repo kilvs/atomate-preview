@@ -172,7 +172,9 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* Navbar geometry mirrors Omble's (Eugene, 16 Sep): the header stays transparent and
    the shell is a floating white pill; scrolled it goes translucent with a blur. */
 .navbar_component { position:fixed; top:0; left:0; right:0; z-index:50; padding-top:1rem; transition:padding-top .3s ease; }
-.navbar_shell { display:flex; align-items:center; justify-content:space-between; min-height:var(--navbar-height); gap:2rem; position:relative; z-index:2; padding-inline:2rem; background:#fff; border:1px solid var(--line-soft); border-radius:100vw; box-shadow:0 1px 2px rgba(2,42,69,.04), 0 8px 24px rgba(2,42,69,.06); transition:background-color .3s ease, box-shadow .3s ease, border-color .3s ease; }
+/* At rest the bar is nothing at all: the hero runs unbroken under it. The pill and its
+   glass only arrive on scroll (Eugene, 16 Sep) - Omble's own behaviour. */
+.navbar_shell { display:flex; align-items:center; justify-content:space-between; min-height:var(--navbar-height); gap:2rem; position:relative; z-index:2; padding-inline:2rem; background:transparent; border:1px solid transparent; border-radius:0; box-shadow:none; transition:background-color .3s ease, box-shadow .3s ease, border-color .3s ease, border-radius .3s ease, backdrop-filter .3s ease, -webkit-backdrop-filter .3s ease; }
 .navbar_logo-link { position:relative; display:block; height:2.75rem; width:9.85rem; flex:none; }
 .navbar_logo { position:absolute; left:0; top:0; height:2.75rem; width:auto; transition:opacity .35s ease; }
 .navbar_logo.is-white { opacity:0; }
@@ -185,7 +187,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* the navbar CTA takes the pill shape with the bar it sits in; page buttons keep
    ATOmate's 0.5rem radius until the client asks otherwise */
 .navbar_actions .button { border-radius:100vw; transition:background .35s ease, color .35s ease; }
-.navbar_component.is-solid .navbar_shell { background:rgba(255,255,255,.82); -webkit-backdrop-filter:saturate(180%) blur(14px); backdrop-filter:saturate(180%) blur(14px); box-shadow:0 1px 2px rgba(2,42,69,.06), 0 12px 34px rgba(2,42,69,.14); }
+.navbar_component.is-solid .navbar_shell { background:rgba(255,255,255,.82); border-color:var(--line-soft); border-radius:100vw; -webkit-backdrop-filter:saturate(180%) blur(14px); backdrop-filter:saturate(180%) blur(14px); box-shadow:0 1px 2px rgba(2,42,69,.06), 0 12px 34px rgba(2,42,69,.14); }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
   .navbar_component.is-solid .navbar_shell { background:rgba(255,255,255,.96); }
 }
@@ -466,9 +468,11 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .navbar_menu-button[aria-expanded="true"] .navbar_icon-open { display:none; }
   .navbar_menu-button[aria-expanded="true"] .navbar_icon-close { display:block; }
   .navbar_component.is-solid .navbar_menu-button, .navbar_component.is-open .navbar_menu-button { color:var(--navy-700); }
-  .navbar_shell { border-radius:1.25rem; padding-inline:1.25rem; }
+  .navbar_shell { padding-inline:1.25rem; }
+  .navbar_component.is-solid .navbar_shell, .navbar_component.is-open .navbar_shell { border-radius:1.25rem; }
   .navbar_menu { display:none; position:absolute; top:100%; left:0; right:0; flex-direction:column; align-items:stretch; gap:1.5rem; padding:1rem var(--padding-global) 2rem; background:#fff; border-top:1px solid var(--line); box-shadow:0 24px 40px -24px rgba(2,42,69,.4); }
   .navbar_component.is-open .navbar_menu { display:flex; }
+  .navbar_component.is-open .navbar_shell { background:#fff; border-color:var(--line-soft); box-shadow:0 1px 2px rgba(2,42,69,.06), 0 12px 34px rgba(2,42,69,.14); }
   .navbar_component.is-open { background:#fff; }
   .navbar_component.is-open .navbar_logo.is-white { opacity:0; }
   .navbar_component.is-open .navbar_logo.is-colour { opacity:1; }
