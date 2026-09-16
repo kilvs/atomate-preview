@@ -222,7 +222,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_trust_heading { font-size:1.5rem; line-height:1.3; color:#fff; text-align:center; text-wrap:balance; }
 .home_trust_list_wrap { min-width:0; }
 .home_trust_list { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:2rem; align-items:stretch; }
-.home_trust_item { min-width:0; display:flex; flex-direction:column; gap:.5rem; }
+.home_trust_item { min-width:0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:.5rem; }
 /* Omble measures 22px / 1.25 white; ATOmate's claims are longer, so 20px holds the
    same two-line rhythm without stranding a word */
 .home_trust_label { display:block; font-family:var(--font-heading); font-weight:800; font-size:1.25rem; line-height:1.25; letter-spacing:-0.02em; color:#fff; text-wrap:pretty; }
@@ -234,7 +234,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
      own measured width plus that padding */
   .home_trust_list { grid-template-columns:1.09fr 1fr 1.16fr 1.12fr 1.27fr; }
   .home_trust_label { text-wrap:balance; }
-  .home_trust_item { padding-left:1.5rem; border-left:1px solid var(--navy-700); }
+  .home_trust_item { padding-left:1.5rem; border-left:1px solid var(--navy-700); justify-content:center; }
   .home_trust_item:first-child { padding-left:0; border-left:0; }
 }
 @media (min-width:1320px) and (max-width:1439px) {

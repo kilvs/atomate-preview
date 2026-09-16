@@ -238,7 +238,8 @@ any width; all interactions pass with and without reduced motion.
   under the 500+ claim, both because the content has to stay.
   Lanes are sized from each label's measured width plus the hairline padding; five
   lanes need ~1320 for this copy, so the row drops to two earlier than Omble's 1200.
-  Verified orphan-free at 360-1440.
+  Items are centred in their lanes and the heading is centred (Eugene, 16 Sep);
+  Omble's are left-aligned. Verified orphan-free at 360-1440.
 - **Security card 2** is the client's padlock reference (document sheet, orange
   padlock, "4 8 2 1 · PIN via SMS" chip) instead of the PIN-entry mock.
 
