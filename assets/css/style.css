@@ -488,14 +488,14 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
    invert to glass on the dark ground, with the mark ghosted behind them at the 30°. */
 .section-home_channels { position:relative; }
 .section-home_channels .container-large { position:relative; }
-.home_channels_content { display:flex; flex-direction:column; align-items:center; text-align:center; gap:2rem; }
+.home_channels_content { display:flex; flex-direction:column; align-items:center; text-align:center; gap:1.5rem; }
 .home_channels_heading { font-size:2.25rem; line-height:1.2; color:#fff; text-wrap:balance; }
 .home_channels_list { display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; }
-.home_channels_item { display:inline-flex; align-items:center; gap:.75rem; padding:.875rem 1.5rem .875rem .875rem; border-radius:var(--radius-round); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.22); font-weight:600; color:#fff; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); transition:background .25s ease, border-color .25s ease, transform .25s ease; }
+.home_channels_item { display:inline-flex; align-items:center; gap:.875rem; padding:.75rem 1.5rem .75rem .75rem; border-radius:var(--radius-round); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.22); font-weight:600; color:#fff; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); transition:background .25s ease, border-color .25s ease, transform .25s ease; }
 .home_channels_item:hover { background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.38); transform:translateY(-2px); }
-.home_channels_item .component_icon { background:rgba(255,255,255,.14); color:#fff; }
+.home_channels_item .component_icon { width:2.75rem; height:2.75rem; background:rgba(255,255,255,.14); color:#fff; }
 /* the brand mark, ghosted at the band's right edge */
-.home_channels_mark { position:absolute; right:-5rem; top:50%; transform:translateY(-50%); height:26rem; width:auto; opacity:.07; pointer-events:none; }
+.home_channels_mark { position:absolute; right:-5rem; top:50%; transform:translateY(-50%); height:22rem; width:auto; opacity:.07; pointer-events:none; }
 
 /* ---------- 11. Security */
 .home_security_credentials { display:flex; flex-wrap:wrap; justify-content:center; gap:.75rem 2.5rem; margin:-1.5rem 0 2.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--line); }
