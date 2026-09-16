@@ -584,7 +584,9 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .footer_list { display:flex; flex-direction:column; gap:.5rem; font-size:var(--text-small); }
 .footer_link, .footer_text { color:var(--ink-700); }
 .footer_link:hover { color:var(--blue-600); }
-.footer_bottom { display:flex; justify-content:space-between; border-top:1px solid var(--line); padding:1.5rem 0 2rem; color:var(--ink-500); font-size:var(--text-tiny); }
+.footer_bottom { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:1rem; border-top:1px solid var(--line); padding:1.5rem 0 2rem; color:var(--ink-500); font-size:var(--text-tiny); }
+.footer_bottom > :last-child { justify-self:end; }
+.footer_credit { justify-self:center; text-align:center; }
 
 /* ---------- Responsive. Desktop base (1440) cascading down through 991 / 767 / 479. */
 @media (max-width: 1100px) {
@@ -682,7 +684,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_review_list, .home_filing_list, .home_payg_list, .home_security_list, .home_testimonials_grid { gap:1rem; }
   .home_security_credentials { margin-top:0; gap:.75rem; flex-direction:column; }
   .footer_grid { grid-template-columns:repeat(1, minmax(0,1fr)); gap:2rem; }
-  .footer_bottom { flex-direction:column; gap:.5rem; }
+  .footer_bottom { grid-template-columns:minmax(0,1fr); justify-items:center; text-align:center; gap:.5rem; }
+  .footer_bottom > :last-child { justify-self:center; }
   .home_overnight_mark, .home_payg_mark, .home_cta_mark { display:none; }
 }
 @media (max-width: 479px) {
