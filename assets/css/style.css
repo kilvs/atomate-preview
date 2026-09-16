@@ -445,7 +445,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_hero_layout, .component_section-header, .home_overnight_content, .home_messaging_split, .home_review_list, .home_filing_list, .home_payg_list, .home_informed_grid, .home_security_list, .home_comparison_grid, .home_testimonials_grid { grid-template-columns:repeat(1, minmax(0,1fr)); }
   .home_informed_grid { gap:2.5rem; }
   .home_integrations_item { flex-basis:calc((100% - 2rem) / 3); }
-  .home_integrations_tabs { gap:1.5rem; }
+  .home_integrations_tabs { gap:1.25rem; }
+  .home_integrations_tab { font-size:.9375rem; }
   .component_section-header { gap:1.25rem; margin-bottom:2.5rem; }
   .home_comparison_card.is-day { border-radius:1.5rem 1.5rem 0 0; }
   .home_comparison_card.is-night { border-radius:0 0 1.5rem 1.5rem; }
@@ -482,7 +483,11 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_hero_note { max-width:24rem; white-space:normal; }
   .home_integrations_tabs { flex-wrap:wrap; }
   .home_integrations_item { flex-basis:calc((100% - 1rem) / 2); }
-  .home_integrations_tabs { gap:1rem; }
+  /* longer labels (Practice Management Systems...) stack three deep at this width,
+     so the row scrolls sideways instead, keeping the tabs as one control */
+  .home_integrations_tabs { flex-wrap:nowrap; justify-content:flex-start; gap:1.25rem; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; }
+  .home_integrations_tabs::-webkit-scrollbar { display:none; }
+  .home_integrations_tab { flex:none; white-space:nowrap; font-size:.9375rem; }
   .home_informed_quote .text-style-quote { font-size:1.375rem; }
   .home_integrations_item { height:5rem; padding:0 1rem; }
   .home_integrations_logo { max-height:1.75rem; max-width:6.5rem; }
