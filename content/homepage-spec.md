@@ -59,17 +59,13 @@ in `style.css`.
 - CTA: Book Discovery Meeting (white button) with the ISO 27001 certified badge centred beneath it (5rem, `assets/img/brand/iso-27001.svg`, client file 11 Sep)
 - Centred copy on the plain navy ground; no arrow (removed 10 Sep).
 
-### 1b. Stats row (same navy)
+### 1b. Trust bar (`section-home_trust`, navy band - Omble's design, 16 Sep)
 
-- H2: **Trusted by 2,000+ firms of every size**
-
-| Cell | Label |
-|---|---|
-| **Australian-owned & operated** | text cell |
-| **90%** (orange, count-up) | less manual processing |
-| **500+** (count-up) | hours recovered · *annually for practices with 10+ team members* |
-| **100%** (count-up) | of ATO documents captured |
-| **ATO registered software** | text cell |
+- H2 (centred): **Trusted by 2,000+ firms of every size**
+- Five claims in one row, each a single label; count-up on the three figures:
+  **Australian-owned & operated** - **90% less manual processing** - **500+ hours
+  recovered** (caption: *annually for practices with 10+ team members*) - **100% of
+  ATO documents captured** - **ATO registered software**
 
 ## 2. Integrations (`.background-stage-day`)
 

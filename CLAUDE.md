@@ -225,6 +225,20 @@ any width; all interactions pass with and without reduced motion.
   `assets/img/features/` as 700×525 WebP (4:3, 2× the card width). Square sources
   are centre-cropped; the landscape `fulll-control.jpg` is padded, not cropped, and
   saved as `full-control.webp` (typo fixed). Alt text describes each illustration.
+- **The trust bar is an exact design replica of Omble's §2** (Eugene, 16 Sep), with
+  ATOmate's content unchanged. It left `section-home_hero` and is now
+  `section-home_trust`: flat `navy-900` band, 4.5rem top and bottom, one row of five
+  claims in the heading face at 1.25rem/1.25 white, a 1px `navy-700` hairline between
+  items from 1320 up, uneven lanes so each label balances onto two lines, two lanes
+  below 1320, one below 768. The figures are part of their label ("90% less manual
+  processing"), not separate numerals - that is Omble's pattern and it replaces the
+  4rem numeral row. Count-ups still run on 90 / 500 / 100. Two ATOmate-only additions:
+  the client's H2 "Trusted by 2,000+ firms of every size" above the row (centred,
+  Eugene 16 Sep; Omble has no heading) and the "annually for practices..." caption
+  under the 500+ claim, both because the content has to stay.
+  Lanes are sized from each label's measured width plus the hairline padding; five
+  lanes need ~1320 for this copy, so the row drops to two earlier than Omble's 1200.
+  Verified orphan-free at 360-1440.
 - **Security card 2** is the client's padlock reference (document sheet, orange
   padlock, "4 8 2 1 · PIN via SMS" chip) instead of the PIN-entry mock.
 
