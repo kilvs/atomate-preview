@@ -225,6 +225,18 @@ any width; all interactions pass with and without reduced motion.
   `assets/img/features/` as 700×525 WebP (4:3, 2× the card width). Square sources
   are centre-cropped; the landscape `fulll-control.jpg` is padded, not cropped, and
   saved as `full-control.webp` (typo fixed). Alt text describes each illustration.
+- **CTA colours follow the client's palette card** (16 Sep), superseding the 10 Sep
+  "orange primary": **Azure `#0078BA` fills every CTA, hover Deep Navy `#03466B`**
+  (the card's own pairing). **Signal Orange is the page's single accent moment and is
+  used on the nav and hero CTAs only** (`.button.is-accent`). On dark grounds
+  (overnight navy, PAYG dawn) the CTA is `.is-white`: white fill, navy label.
+  **No outline buttons and no white buttons on light grounds** - both at Eugene's
+  word, so `is-ghost` and `is-ghost-light` are gone. **Hovers are a full colour
+  change, never a tint**: Azure and Orange both land on Deep Navy, white lands on
+  Deep Navy with a white label.
+  Contrast: Azure/white 4.78:1 and white/navy 10.04:1 both clear AA; **orange with a
+  white label is 3.30:1 and does not** - navy label on orange would be 5.7:1 (Omble's
+  choice). Flagged, not changed, because the client's reference shows white.
 - **The navbar mirrors Omble's floating pill** (Eugene, 16 Sep). At rest there is no bar
   at all: the header and the shell are transparent, square and shadowless, so the hero
   runs unbroken under the links (Eugene, 16 Sep). The pill arrives on scroll. Constant

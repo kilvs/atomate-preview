@@ -90,15 +90,14 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .text-weight-semibold { font-weight:600; }
 .text-style-quote { font-family:var(--font-heading); font-weight:800; font-size:2.25rem; line-height:1.2; letter-spacing:-0.02em; color:var(--navy-700); }
 
-/* ---------- Buttons: blue primary; is-white / is-ghost / is-ghost-light; is-small / is-medium for mock UI. Label only, no icons. */
-/* Primary button is the warm brand orange (Eugene, 10 Sep: "utilise the warm orange more") */
-.button { display:inline-flex; align-items:center; justify-content:center; height:3.125rem; padding:0 1.375rem; border-radius:var(--radius-button); font-weight:500; font-size:1rem; line-height:1; text-decoration:none; border:1px solid transparent; white-space:nowrap; background:var(--orange-500); color:#fff; transition:background .2s ease, color .2s ease, transform .15s ease; }
-.button:hover { background:var(--orange-600); color:#fff; }
-.button.is-blue { background:var(--blue-500); } .button.is-blue:hover { background:var(--blue-600); }
+/* ---------- Buttons: Azure primary, Deep Navy hover (client palette card, 16 Sep); is-accent (nav + hero) / is-white on dark grounds; is-small / is-medium for mock UI. Label only, no icons. */
+.button { display:inline-flex; align-items:center; justify-content:center; height:3.125rem; padding:0 1.375rem; border-radius:var(--radius-button); font-weight:500; font-size:1rem; line-height:1; text-decoration:none; border:1px solid transparent; white-space:nowrap; background:var(--blue-500); color:#fff; transition:background .2s ease, color .2s ease, transform .15s ease; }
+.button:hover { background:var(--navy-700); color:#fff; }
+.button.is-blue { background:var(--blue-500); } .button.is-blue:hover { background:var(--navy-700); }
+/* Signal Orange is the page's one accent moment: the nav and hero CTAs only (Eugene, 16 Sep) */
+.button.is-accent { background:var(--orange-500); color:#fff; } .button.is-accent:hover { background:var(--navy-700); color:#fff; }
 .button:active { transform:scale(.98); }
-.button.is-white { background:var(--orange-500); color:#fff; } .button.is-white:hover { background:var(--orange-600); color:#fff; }
-.button.is-ghost { background:transparent; border-color:var(--navy-700); color:var(--navy-700); } .button.is-ghost:hover { background:var(--blue-100); color:var(--navy-700); }
-.button.is-ghost-light { background:transparent; border-color:rgba(255,255,255,.5); color:#fff; } .button.is-ghost-light:hover { background:rgba(255,255,255,.1); color:#fff; }
+.button.is-white { background:#fff; color:var(--navy-700); } .button.is-white:hover { background:var(--navy-700); color:#fff; }
 .button.is-small { height:2.25rem; padding:0 1rem; font-size:.875rem; background:var(--blue-500); }
 .button.is-medium { height:2.75rem; padding:0 1.25rem; font-size:var(--text-small); background:var(--blue-500); }
 
@@ -194,7 +193,6 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .navbar_component.is-solid .navbar_link { color:var(--navy-700); }
 .navbar_component.is-solid .navbar_logo.is-white { opacity:0; }
 .navbar_component.is-solid .navbar_logo.is-colour { opacity:1; }
-.navbar_component.is-solid .navbar_actions .button { background:var(--orange-500); color:#fff; }
 
 /* ---------- 1. Hero + 1b stats */
 .section-home_hero { padding-top:calc(var(--navbar-height) + 1rem); }
@@ -481,7 +479,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .navbar_link { display:block; padding:.75rem 0; color:var(--navy-700); font-size:1.125rem; }
   .navbar_link:hover { color:var(--blue-600); }
   .navbar_actions .button-group { display:flex; }
-  .navbar_actions .button { width:100%; height:3.5rem; font-size:var(--text-regular); background:var(--orange-500); color:#fff; }
+  .navbar_actions .button { width:100%; height:3.5rem; font-size:var(--text-regular); background:var(--blue-500); color:#fff; }
 }
 @media (max-width: 767px) {
   :root { --padding-global:1.25rem; --padding-section-small:1.5rem; --padding-section-medium:4rem; --padding-section-large:4rem; --padding-section-xlarge:4.5rem; }
