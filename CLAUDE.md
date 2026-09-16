@@ -462,6 +462,24 @@ they supersede a settled decision, the newer call wins and is noted here:
 - **Still missing from the client:** HowNow X logo, sample UI names and values,
   footer contact, testimonial firms. (ISO 27001 logo landed 11 Sep.)
 
+## Animation for the Webflow port (16 Sep 2026)
+
+Every entrance on the page is **declarative and uniform**, so the Webflow build can be driven
+from a spec rather than from custom GSAP. The contract lives in
+**`docs/Webflow-Animation-Spec.md`**, which is generated from the markup and lists all 25
+animated elements with their trigger, preset, stagger and delay, plus the four bespoke
+interactions (navbar state, step reveal, tab swap, testimonial rotation) and the count-ups.
+
+- One preset for content: **fade-up, 24px, 0.7s, `power2.out`, once, `top 85%`**. Above the
+  fold it is `data-load-animate`; below it is `data-scroll-animate`. Staggered blocks animate
+  their **children**, not the wrapper.
+- 25 elements carry the attributes; the closing CTA was the last one without an entrance and
+  was added 16 Sep. A new section gets the same attributes - never a bespoke tween.
+- No parallax, no pinning, no scrub, no ambient loops except the process halo (CSS, and it
+  stops under reduced motion).
+- Verified in-browser: 31 tweens and 27 ScrollTriggers register, the first at `top 85%`; under
+  `prefers-reduced-motion` all 25 elements sit visible at opacity 1.
+
 ## Omble relationship
 
 Treat ATOmate and Omble as a BAW family. **Share:** Client-First structure, the
