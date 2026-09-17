@@ -60,7 +60,8 @@ Grounds alternate light / dark / brand, and no two light sections touch (client 
 - H1: **Automate your firm's ATO document processing**
 - Sub-claim (heading font, `90%` in orange-300): **Reduce manual work by 90%**
 - Lead: **Automate every step from capture to archive without losing control.**
-- Note: **The ATO document automation software built for accounting firms.** — sits beside the ISO 27001 badge as the hero's closing trust line.
+- ~~Note: **The ATO document automation software built for accounting firms.** — sits beside the ISO 27001 badge as the hero's closing trust line.~~ Hidden 17 Sep (client: ISO to move to a different section; placement instruction to follow).
+- Sub-claim **Reduce manual work by 90%** is all orange (17 Sep).
 - CTA: Book Discovery Meeting (white button) with the ISO 27001 certified badge centred beneath it (5rem, `assets/img/brand/iso-27001.svg`, client file 11 Sep)
 - Centred copy on the plain navy ground; no arrow (removed 10 Sep).
 

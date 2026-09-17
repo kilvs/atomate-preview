@@ -200,6 +200,18 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Hero: linear blue gradient, orange sub-claim, ISO line off (client feedback, 17 Sep 2026)
+
+- Client: "Blue gradient to be more prominent (a small amount of orange). Reduce manual work line =
+  all orange. Remove ISO logo… to be placed in a different section (I've included instructions
+  further down)." Also: "I dont know why it created a circular shape, make sure it's a gradient."
+- `.background-stage-light::before` now uses two linear gradients: an azure wash rising to .30
+  on the right and a low warm band at the bottom-left. This supersedes the 16 Sep radial "warm
+  mesh" blobs, which read as circles.
+- `.home_hero_subtitle` is `orange-500` throughout (28px bold, large text, 3.30:1).
+- `.home_hero_trust` (ISO badge + note) is `hidden`, waiting for the client's placement
+  instruction. The ISO badge also appears on the Azure trust strip (§1d).
+
 ## Section grounds alternate (client general comment, 17 Sep 2026)
 
 - Client: "For the division of sections, make sure to alternate between light, dark, and other
