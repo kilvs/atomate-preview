@@ -200,6 +200,14 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## PAYG timeline: the client's graphic, label removed (client feedback, 17 Sep 2026)
+
+- Client: "Remove more time to act" plus a reference graphic. Card A's timeline is rebuilt in
+  CSS: a blue start dot, then an orange run to 45%. An orange check disc with a white ring sits
+  there. After it come orange-300 dots on a `line-soft` track, then a navy end dot with a 4px
+  navy pole and a pennant (`clip-path`). "More time to act" is `hidden`, not deleted. Both
+  PAYG cards stay level, and the graphic fits the card at 390.
+
 ## Escalate card: job title is "Accountant" (client feedback, 17 Sep 2026)
 
 - Client: "Change the job title to simply: Accountant." Rachel M.'s role line was
@@ -395,7 +403,7 @@ any width; all interactions pass with and without reduced motion.
   never a row. (Wordless skeleton rows on 16 Sep; labelled rows since 17 Sep, see
   "Internal QA applied".)
 - **The PAYG graphics follow the copy document** (Eugene, 16 Sep): card A is a timeline
-  (blue dot, orange run, navy dot) under the label **More time to act**; card B is the
+  (blue dot, orange run, navy dot) under the label **More time to act** *(superseded 17 Sep: rebuilt to the client's graphic, label hidden)*; card B is the
   word **Penalties** struck through in orange. Both words come from the copy's own
   artwork. The two mock UI panels are gone, and with them their sample values. The
   copy's "SIMPLE" section label is still not built - eyebrows remain a settled no.

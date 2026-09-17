@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon-180.png">
   <link rel="preload" href="assets/fonts/gilroy-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/GalanoGrotesqueRegular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=7777750d">
+  <link rel="stylesheet" href="assets/css/style.css?v=29d0162f">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -470,12 +470,18 @@
           <li class="home_payg_item">
             <div class="home_payg_item_preview">
               <div class="home_payg_graphic">
+                <!-- client graphic, 17 Sep: progress run with a check, dotted remainder, flag at the end -->
                 <span class="home_payg_timeline" aria-hidden="true">
-                  <span class="home_payg_timeline_dot is-start"></span>
+                  <span class="home_payg_timeline_track"></span>
                   <span class="home_payg_timeline_bar"></span>
+                  <span class="home_payg_timeline_dots"></span>
+                  <span class="home_payg_timeline_dot is-start"></span>
+                  <span class="home_payg_timeline_check"><svg class="icon-stroke" width="16" height="16" viewBox="0 0 12 12" focusable="false"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span>
+                  <span class="home_payg_timeline_flag"></span>
                   <span class="home_payg_timeline_dot is-end"></span>
                 </span>
-                <span class="home_payg_graphic_label">More time to act</span>
+                <!-- "More time to act" removed (client, 17 Sep); hidden, not deleted -->
+                <span class="home_payg_graphic_label" hidden>More time to act</span>
               </div>
             </div>
             <div class="home_payg_item_text"><h3>Stop missed PAYG instalment notices</h3><p class="home_payg_item_description">Automatically capture and send every PAYG instalment notice. Give your clients more time to review and prepare for upcoming payments.</p></div>
