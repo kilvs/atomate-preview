@@ -200,6 +200,13 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Approval rules: the Review row is orange (client feedback, 17 Sep 2026)
+
+- Client: "Change red to the brand color orange." `.home_review_rule.is-review` is filled
+  `orange-500` with an orange shadow (was `red-error`). Its white "REVIEW" pill label is
+  `orange-600` (4.39:1 on white). The white row name on orange is 3.30:1, the same accepted
+  trade-off as the buttons. Revert: `red-error` for all three.
+
 ## Overnight: tick list removed (client feedback, 17 Sep 2026)
 
 - Client: "Delete the two items below with the tick marks." The overnight checklist ("Get

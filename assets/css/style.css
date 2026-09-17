@@ -426,9 +426,10 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_review_rule_name { font-size:var(--text-small); font-family:var(--font-heading); font-weight:700; color:#fff; }
 .home_review_rule_state { flex:none; font-size:.6875rem; font-family:var(--font-heading); font-weight:700; letter-spacing:.06em; padding:.3125rem .625rem; border-radius:var(--radius-round); background:var(--green-success-bg); color:var(--green-success); }
 /* the one that needs a person */
-.home_review_rule.is-review { background:var(--red-error); border-color:var(--red-error); box-shadow:0 10px 22px -12px rgba(208,52,44,.65); }
+/* brand orange, not red (client, 17 Sep); the pill label takes orange-600 for contrast on white (4.39:1) */
+.home_review_rule.is-review { background:var(--orange-500); border-color:var(--orange-500); box-shadow:0 10px 22px -12px rgba(235,100,5,.65); }
 .home_review_rule.is-review .home_review_rule_name { color:#fff; }
-.home_review_rule.is-review .home_review_rule_state { background:#fff; color:var(--red-error); text-transform:uppercase; }
+.home_review_rule.is-review .home_review_rule_state { background:#fff; color:var(--orange-600); text-transform:uppercase; }
 /* Card illustrations (client placeholder art, 14 Sep): 4:3, reserved space, no layout shift */
 /* Full control (client reference, 17 Sep): a white panel of three choices, hairlines between */
 .home_review_item_image-wrap.is-control, .home_review_item_image-wrap.is-escalate { display:flex; align-items:center; justify-content:center; overflow:visible; }
