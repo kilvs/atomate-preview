@@ -285,6 +285,24 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
    five claims sit on one line, each label unbroken, hairlines between; each lane takes an
    equal share of the spare width so the dividers sit evenly. 18px fits all five in the
    1200px container at 1280. */
+/* ---------- 1d. Trust strip (client, 17 Sep): a slim Azure band, a shade lighter than the navy
+   trust bar, three centred claims with hairlines between. White on blue-500 is 4.78:1. */
+.section-home_trust-strip { background:var(--blue-500); color:#fff; }
+.home_trust-strip_list { display:flex; justify-content:center; align-items:center; flex-wrap:wrap; padding-block:1.5rem; }
+.home_trust-strip_item { display:flex; align-items:center; gap:.75rem; padding-inline:2.5rem; }
+.home_trust-strip_item + .home_trust-strip_item { border-left:1px solid rgba(255,255,255,.3); }
+.home_trust-strip_label { font-family:var(--font-heading); font-weight:700; font-size:1rem; line-height:1.3; white-space:nowrap; }
+.home_trust-strip_icon { flex:none; color:#fff; }
+/* the ISO badge is blue on white, so it sits on a white disc to stay legible on Azure */
+.home_trust-strip_badge { flex:none; width:2.25rem; height:2.25rem; border-radius:50%; background:#fff; display:flex; align-items:center; justify-content:center; }
+.home_trust-strip_iso { width:2rem; height:2rem; }
+/* three lanes need ~890px; below 992 the claims stack rather than wrap under a hairline */
+@media (max-width:991px) {
+  .home_trust-strip_list { flex-direction:column; align-items:flex-start; width:max-content; max-width:100%; margin-inline:auto; gap:1rem; }
+  .home_trust-strip_item { padding-inline:0; }
+  .home_trust-strip_item + .home_trust-strip_item { border-left:0; }
+}
+
 @media (min-width:1280px) {
   .home_trust_list { display:flex; gap:0; align-items:center; }
   .home_trust_item { flex:1 1 auto; align-items:center; text-align:center; padding-inline:1rem; border-left:1px solid var(--navy-700); }

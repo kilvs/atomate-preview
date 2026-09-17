@@ -200,6 +200,18 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Second trust strip in Azure (client feedback, 17 Sep 2026)
+
+- Client: "In between these, add another trust strip using another shade of blue. Include:
+  ISO, 200+ firms, Built for accounting…" plus a reference strip.
+- `section-home_trust-strip` sits between the video (1c) and the integrations (2), on
+  `blue-500` (white 4.78:1). It holds three centred claims with white hairlines between:
+  the ISO badge on a white disc (the badge is blue on white), plus people and document stroke
+  icons. Labels are the reference image's full strings. Below 992 the claims stack
+  left-aligned in a centred column instead of wrapping under a hairline.
+- The notes say "200+ firms" and the image says "Trusted by 2,000+ firms". The image string
+  is built; flagged in `BACKLOG.md`.
+
 ## SMSF tab icon: rising bars (client feedback, 17 Sep 2026)
 
 - Client: "Change SMSF logo into something similar to" a bar chart of four rising solid bars

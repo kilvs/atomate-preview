@@ -9,6 +9,7 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 | Sample UI names and values (Sarah Chen, Lorem Ipsum Accounting / Pty Ltd, 28 Oct 2026) and footer email / address | §5, §6, §8, §9, §10, §11, footer | Client supplies (section copy landed 9 Sep via the internal QA) |
 | HowNow X logo | §2 DMS shelf | Client supplies; HowNow shown once meanwhile |
 | 1,500 vs 2,000+ practices | §1b, §12 H2 | Client picks one |
+| "200+ firms" (note) vs "Trusted by 2,000+ firms" (reference image) on the new Azure strip; built as 2,000+ | §1d (17 Sep) | Client confirms the figure |
 | Testimonials — firms and full names for the six quotes | §12 | Client supplies (quotes landed 9 Sep) |
 | Final art for the filing illustrations; product screenshots for the remaining mock UI | §7 (placeholder art in since 14 Sep); §5, §6 (built from the client's reference, 17 Sep), §8, §10, §11 | Client supplies |
 | Web licences for Gilroy and Galano (commercial foundry fonts, Tinkov and René Bieder; Gilroy Bold arrived 17 Sep as a MyFonts web kit, Galano is complete) | all type | Client sends the licences (Eugene: coming shortly) |

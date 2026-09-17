@@ -77,6 +77,12 @@ in `style.css`.
 - YouTube film: https://www.youtube.com/watch?v=GEByUp25DSg ("ATOmate - ATO Document Processing Automation"). Poster is the film's frame at exactly 0:20 (client, 17 Sep; was a navy gradient), `assets/img/video/atomate-film-poster-0m20s.webp`, with the orange play button over it; click loads the player.
 - The integrations section below now sits on `.background-stage-morning` (cool) so the two bands read apart.
 
+
+## 1d. Trust strip (`section-home_trust-strip`, Azure band) — added 17 Sep
+
+- Three claims (client reference strip, 17 Sep): **ISO 27001 Certified** (ISO badge) | **Trusted by 2,000+ firms** | **Built for accounting firms**
+- Flag: the client's note reads "200+ firms"; the reference image reads "2,000+". Built as the image.
+
 ## 2. Integrations (`.background-stage-morning`, 17 Sep)
 
 - H2 (centred, no description): **ATOmate works with the tools your team already uses**
