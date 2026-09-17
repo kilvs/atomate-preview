@@ -200,6 +200,20 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## How ATOmate works: 5.5s auto-advance, larger copy (client feedback, 17 Sep 2026)
+
+- Client: "Can we animate this in a way that it moves to the next step and shows the equivalent
+  copy after 5.5 seconds? However, maintain clickability. We can also increase the font width
+  of the copy text."
+- `motion.js` §4: every 5.5s the next step and its sentence show, looping. A click picks any step
+  and restarts the count. The cycle runs only while the row is 40% on screen and the tab is
+  visible, holds on hover or focus (this is the pause WCAG 2.2.2 needs), and is off under
+  reduced motion. Measured intervals: 5529ms and 5503ms. Hover held for 7s, and the next step
+  came 5.5s after the mouse left.
+- "Font width" was read as size: `.home_process_detail_item` is `text-large` (22px, was 18px),
+  still two lines for every step inside the 5.25rem reserved height. If the client meant
+  weight or column width, it is one rule.
+
 ## Comparison checks: green discs with a soft glow (client feedback, 17 Sep 2026)
 
 - Client: "Use: [solid green disc, bold white check] And add soft green glow."

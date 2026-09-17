@@ -99,7 +99,7 @@
     });
   }
 
-  // ---- 4. How ATOmate works: click a node, its sentence shows under the row.
+  // ---- 4. How ATOmate works: click a node (or wait 5.5s), its sentence shows under the row.
   //      Without JS every sentence is visible, so nothing is parked hidden in the markup.
   var steps = [].slice.call(document.querySelectorAll('.home_process_step'));
   var details = [].slice.call(document.querySelectorAll('.home_process_detail_item'));
@@ -119,11 +119,36 @@
     if (incoming && hasGsap && !reduce) gsap.fromTo(incoming, { opacity: 0, y: -6 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out', clearProps: 'all' });
   }
   if (steps.length && details.length) {
-    pickStep(0);
+    // Auto-advance (client, 17 Sep): every 5.5s the next step and its sentence show, looping.
+    // A click still picks any step and restarts the 5.5s count. The cycle runs only while the
+    // row is on screen and the tab is visible, holds while the row is hovered or focused, and
+    // stays off under reduced motion.
+    var STEP_MS = 5500, current = 0, timer = null, inView = false, held = false;
+    var flow = document.querySelector('.home_process_flow');
+    function go(k) { current = k; pickStep(k); }
+    function stop() { clearTimeout(timer); timer = null; }
+    function arm() {
+      stop();
+      if (reduce || !inView || held || document.hidden) return;
+      timer = setTimeout(function () { go((current + 1) % steps.length); arm(); }, STEP_MS);
+    }
+    go(0);
     steps.forEach(function (s, idx) {
       var btn = s.querySelector('.home_process_step_button');
-      if (btn) btn.addEventListener('click', function () { pickStep(idx); });
+      if (btn) btn.addEventListener('click', function () { go(idx); arm(); });
     });
+    if (flow) {
+      flow.addEventListener('mouseenter', function () { held = true; stop(); });
+      flow.addEventListener('mouseleave', function () { held = false; arm(); });
+      flow.addEventListener('focusin', function () { held = true; stop(); });
+      flow.addEventListener('focusout', function (e) { if (!flow.contains(e.relatedTarget)) { held = false; arm(); } });
+    }
+    document.addEventListener('visibilitychange', arm);
+    if ('IntersectionObserver' in window && flow) {
+      new IntersectionObserver(function (entries) {
+        inView = entries[0].isIntersecting; arm();
+      }, { threshold: 0.4 }).observe(flow);
+    } else { inView = true; arm(); }
   }
 
   // ---- 4b. Video: the poster links to YouTube; on click it becomes the embed and plays.

@@ -392,7 +392,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_process_step.is-current .home_process_step_title, .home_process_step_button:hover .home_process_step_title { color:var(--navy-800); }
 /* one shared line under the row; its height is reserved so nothing jumps between steps */
 .home_process_detail { margin:2.5rem auto 0; max-width:44rem; min-height:5.25rem; text-align:center; }
-.home_process_detail_item { font-size:1.125rem; line-height:1.6; color:var(--ink-900); text-wrap:balance; }
+/* larger copy (client, 17 Sep: "increase the font width of the copy text"; was 1.125rem) */
+.home_process_detail_item { font-size:var(--text-large); line-height:1.6; color:var(--ink-900); text-wrap:balance; }
 
 /* ---------- 5. Overnight processing (night) */
 .home_overnight_mark { position:absolute; right:-6rem; top:-4rem; height:30rem; width:auto; opacity:.06; pointer-events:none; }
