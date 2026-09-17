@@ -428,6 +428,14 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **Trust bar claims are left-aligned and level** (client, 17 Sep 2026): the "Trusted
+  by..." heading stays centred; the five claims align left in their lanes and all start
+  on the same top line (they were centred and vertically centred).
+- **Hero type larger, ISO line tighter and more legible** (client, 17 Sep 2026):
+  sub-claim 1.25 → 1.75rem, lead 1.125 → 1.4375rem (measure 26 → 34rem); the ISO row
+  sits 3.5rem under the CTA (was 7.75rem), the badge is 4rem (was 3.25) and the note is
+  1.0625rem, weight 500, `ink-900` (was 0.75rem `ink-500`). Below 768px: sub-claim
+  1.375rem, lead 1.1875rem, note 1rem, row 2.5rem under the CTA.
 - **Video section under the trust bar** (Eugene, 17 Sep 2026): `section-home_video`,
   H2 **See how ATOmate cuts processing time by 90%** over a 16:9 frame (max 56rem,
   `--radius-card`, deep shadow) on **Warm mesh, quiet**. The film is YouTube

@@ -234,15 +234,16 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* balance keeps every line multi-word: no single word stranded at any width (Eugene, 16 Sep) */
 .home_hero_title { font-size:4rem; line-height:1.02; max-width:54rem; color:var(--navy-800); margin-bottom:.75rem; text-wrap:balance; }
 /* the ISO line sits well clear of the CTA, low in the hero (Eugene, 16 Sep) */
-.home_hero_trust { display:flex; align-items:center; justify-content:center; gap:.75rem; margin-top:7.75rem; text-align:left; }
-.home_hero_iso { width:3.25rem; height:3.25rem; flex:0 0 auto; }
-.home_hero_note { max-width:none; }
+/* client, 17 Sep: the ISO line sits closer to the CTA, larger and darker so it reads */
+.home_hero_trust { display:flex; align-items:center; justify-content:center; gap:1rem; margin-top:3.5rem; text-align:left; }
+.home_hero_iso { width:4rem; height:4rem; flex:0 0 auto; }
 .home_hero_kicker { font-weight:700; font-size:.8125rem; letter-spacing:.12em; text-transform:uppercase; color:var(--orange-600); margin-bottom:1rem; }
-.home_hero_subtitle { font-weight:600; font-size:1.25rem; line-height:1.35; color:var(--navy-700); margin-bottom:.75rem; text-wrap:balance; }
+/* subtitle and lead enlarged at the client's request (17 Sep) */
+.home_hero_subtitle { font-weight:600; font-size:1.75rem; line-height:1.3; color:var(--navy-700); margin-bottom:.75rem; text-wrap:balance; }
 .home_hero_subtitle .text-color-highlight { color:var(--orange-500); }
-.home_hero_note { font-size:var(--text-tiny); line-height:1.45; color:var(--ink-500); white-space:nowrap; text-wrap:pretty; }
+.home_hero_note { font-size:1.0625rem; line-height:1.45; font-weight:500; color:var(--ink-900); white-space:nowrap; text-wrap:pretty; }
 /* width set so the line breaks after "archive": second line reads "without losing control." */
-.home_hero_description { font-size:1.125rem; line-height:1.55; color:var(--ink-700); max-width:26rem; margin-bottom:2rem; }
+.home_hero_description { font-size:1.4375rem; line-height:1.5; color:var(--ink-700); max-width:34rem; margin-bottom:2.25rem; }
 /* ---------- 1b. Trust bar — an exact design replica of Omble's (Eugene, 16 Sep), with
    ATOmate's content. Omble's rules, verbatim in intent: navy band, one row of five
    single-line claims in the heading face, uniform size, hairline between items from
@@ -267,7 +268,9 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_trust_heading { font-size:1.5rem; line-height:1.3; color:#fff; text-align:center; text-wrap:balance; }
 .home_trust_list_wrap { min-width:0; }
 .home_trust_list { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:2rem; align-items:stretch; }
-.home_trust_item { min-width:0; display:flex; flex-direction:column; align-items:center; text-align:center; gap:.5rem; }
+/* client, 17 Sep: the heading stays centred; the five claims are left-aligned and level,
+   every claim starting on the same top line */
+.home_trust_item { min-width:0; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; text-align:left; gap:.5rem; }
 /* Omble measures 22px / 1.25 white; ATOmate's claims are longer, so 20px holds the
    same two-line rhythm without stranding a word */
 .home_trust_label { display:block; font-family:var(--font-heading); font-weight:800; font-size:1.25rem; line-height:1.25; letter-spacing:-0.02em; color:#fff; text-wrap:pretty; }
@@ -279,7 +282,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
      own measured width plus that padding */
   .home_trust_list { grid-template-columns:1.09fr 1fr 1.16fr 1.12fr 1.27fr; }
   .home_trust_label { text-wrap:balance; }
-  .home_trust_item { padding-left:1.5rem; border-left:1px solid var(--navy-700); justify-content:center; }
+  .home_trust_item { padding-left:1.5rem; border-left:1px solid var(--navy-700); }
   .home_trust_item:first-child { padding-left:0; border-left:0; }
 }
 @media (min-width:1320px) and (max-width:1439px) {
@@ -720,11 +723,14 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   h1 { font-size:2.75rem; } h2 { font-size:1.875rem; }
   .home_channels_heading { font-size:1.75rem; }
   .home_hero_title { font-size:2.5rem; }
+  .home_hero_subtitle { font-size:1.375rem; }
+  .home_hero_description { font-size:1.1875rem; }
+  .home_hero_note { font-size:1rem; }
   .home_cta_title { font-size:2.1875rem; }
   .text-size-large { font-size:1.125rem; }
   .text-style-quote { font-size:1.5rem; }
   .home_hero_layout { padding:3rem 0 3.5rem; }
-  .home_hero_trust { flex-direction:column; text-align:center; gap:.75rem; margin-top:4.75rem; }
+  .home_hero_trust { flex-direction:column; text-align:center; gap:.75rem; margin-top:2.5rem; }
   .home_hero_note { max-width:24rem; white-space:normal; }
   .home_integrations_tabs { flex-wrap:wrap; }
   .home_integrations_item { flex-basis:calc((100% - 1rem) / 2); }
