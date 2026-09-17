@@ -99,6 +99,28 @@
     });
   }
 
+  // ---- 3b. Hero flow (Eugene, 17 Sep: "animate the hero section graphics to be like a block falling
+  //      down with each other"). Once, when the flow comes into view: the five correspondence cards drop in like stacking
+  //      blocks, bottom card first, each landing with a small bounce and settling from a slight tilt.
+  //      Then the arrow, the ATOmate card, the second arrow and the output card with its ticks follow.
+  //      The markup is the final state, so reduced motion or no GSAP shows the graphic still.
+  var flow = document.querySelector('.home_hero_flow');
+  if (flow && hasGsap && !reduce) {
+    var fDocs = [].slice.call(flow.querySelectorAll('.home_hero_flow_doc')).reverse();
+    var fArrows = flow.querySelectorAll('.home_hero_flow_arrow');
+    // plays when the flow is on screen: at once on desktop, on scroll where it sits below the fold (mobile)
+    var tl = gsap.timeline({ delay: 0.45, scrollTrigger: { trigger: flow, start: 'top 85%', once: true } });
+    tl.fromTo(flow.querySelector('.home_hero_flow_label'), { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.4, ease: 'power2.out' })
+      .fromTo(fDocs, { opacity: 0 }, { opacity: 1, duration: 0.18, ease: 'none', stagger: 0.17 }, 'drop')
+      .fromTo(fDocs, { y: -150, rotation: function (i) { return i % 2 ? 4 : -4; } },
+                     { y: 0, rotation: 0, duration: 0.85, ease: 'bounce.out', stagger: 0.17, clearProps: 'transform' }, 'drop')
+      .fromTo(fArrows[0], { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' }, '-=0.25')
+      .fromTo(flow.querySelector('.home_hero_flow_engine'), { opacity: 0, scale: 0.92 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.6)', clearProps: 'transform' })
+      .fromTo(fArrows[1], { opacity: 0, y: -8 }, { opacity: 1, y: 0, duration: 0.35, ease: 'power2.out' })
+      .fromTo(flow.querySelector('.home_hero_flow_output'), { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: 'power2.out', clearProps: 'transform' })
+      .fromTo(flow.querySelectorAll('.home_hero_flow_result'), { opacity: 0, x: -8 }, { opacity: 1, x: 0, duration: 0.3, ease: 'power2.out', stagger: 0.08, clearProps: 'transform' }, '-=0.2');
+  }
+
   // ---- 4. How ATOmate works: click a node (or wait 5.5s), its sentence shows under the row.
   //      Without JS every sentence is visible, so nothing is parked hidden in the markup.
   var steps = [].slice.call(document.querySelectorAll('.home_process_step'));

@@ -226,6 +226,13 @@ any width; all interactions pass with and without reduced motion.
     green and peach, with green ticks and no heading). The strings come from the client's
     reference.
   - The nav takes `is-on-dark`: white links and the white logo until it turns solid or opens.
+- Eugene, 17 Sep: "animate the hero section graphics to be like a block falling down with each
+  other". `motion.js` §3b is a one-time GSAP timeline, triggered on view. The correspondence pills
+  drop from −150px, bottom card first, landing with `bounce.out` from a ±4° tilt. Then the arrow,
+  the ATOmate card (pop), the second arrow, and the output card with its ticks follow (about
+  4.5s). The visual lost its `data-load-animate`. Reduced motion shows it still. It was checked
+  frame by frame at 0.4–4.5s. **QA note:** the headless profile had been serving a cached
+  `index.html` (0 bytes transferred), so check scripts now disable the cache and clear it first.
 - The trust bar is a 120° gradient (#DC5A1E → orange-500 → #EE8A3C) with white hairlines.
   White text is 3.80, 3.30 and 2.52:1 along it (client preference, logged in the backlog).
   The ground sequence is now D O L D L D ….
