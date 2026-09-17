@@ -200,6 +200,16 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Video thumbnail at 0:20 (client feedback, 17 Sep 2026)
+
+- Client: "Make this the thumbnail (Exactly 0:20)." The frame at exactly 20.000s was taken from
+  the 1080p YouTube stream (yt-dlp, then a canvas seek in Chrome). It matches the client's
+  screenshot, including the burned-in caption.
+- `assets/img/video/atomate-film-poster-0m20s.webp` is 1792×1008 (2× the 56rem frame), 31 KB,
+  `alt=""` because the link carries the label. The 1920px PNG source is in `Guide & References/`.
+  `.home_video_thumbnail` covers the poster and the play button sits above it. Click still swaps in the
+  nocookie embed. The navy gradient stays underneath as the loading ground.
+
 ## Trust bar: new copy in one straight line (client feedback, 17 Sep 2026)
 
 - Client: "Copy changes. Remove the trusted by heading. Follow this (straight line)." The new

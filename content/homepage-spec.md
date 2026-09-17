@@ -74,7 +74,7 @@ in `style.css`.
 ## 1c. Video (`.background-stage-mesh`) — added 17 Sep
 
 - H2: **See how ATOmate cuts processing time by 90%**
-- YouTube film: https://www.youtube.com/watch?v=GEByUp25DSg ("ATOmate - ATO Document Processing Automation"). Navy poster with an orange play button; click loads the player.
+- YouTube film: https://www.youtube.com/watch?v=GEByUp25DSg ("ATOmate - ATO Document Processing Automation"). Poster is the film's frame at exactly 0:20 (client, 17 Sep; was a navy gradient), `assets/img/video/atomate-film-poster-0m20s.webp`, with the orange play button over it; click loads the player.
 - The integrations section below now sits on `.background-stage-morning` (cool) so the two bands read apart.
 
 ## 2. Integrations (`.background-stage-morning`, 17 Sep)
