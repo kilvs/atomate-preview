@@ -165,6 +165,7 @@ Unchanged by the QA. H2 **Replace generic ATO messaging with clear guidance**; l
 
 - H2: **Built-in security your team never has to think about** (description removed per QA)
 - Credentials line and card copy unchanged: **Redact TFNs automatically** / **Protect PRN data**.
+- Card 1 graphic (client, 17 Sep): one TFN tile (**TFN** / **123 456 789**, sample) redacted by a sweeping black bar on a loop; the earlier before → after pair is hidden. The credentials line has no rule under it (17 Sep). Both cards are smaller (capped at 56rem, 17 Sep).
 - Card 2 illustration (client reference, 10 Sep): a document sheet with the bar **You have an overdue tax debt** and a **View details** button, a large orange padlock over it, and a phone chip **4 8 2 1 · PIN via SMS**.
 - CTA below both cards, centred: Book Discovery Meeting (16 Sep)
 

@@ -146,6 +146,7 @@ on the tween; in Webflow it is a stagger applied to the children of the targeted
 | Navbar solid | Page scrolled past 24px | `.navbar_component` gains `is-solid`: the shell fills white at 82 per cent, takes a hairline, pill radius and a blur |
 | Steps reveal | Click on `.home_process_step_button` | The clicked node takes `is-current`; its `.home_process_detail_item` shows and the others hide; the incoming line fades up 6px over 0.3s |
 | Steps auto-advance (client, 17 Sep) | Every 5.5s while `.home_process_flow` is at least 40% on screen and the tab is visible | The next step takes `is-current` (looping 5 → 1), exactly as a click would. A click picks any step and restarts the 5.5s count. Hover or focus inside the row holds the cycle; leaving restarts the count. Off under reduced motion. This is custom JS in the page script (`motion.js` §4), not IX2 |
+| TFN sweep (client, 17 Sep) | Always, on a 5s loop | `.home_security_redact_bar` scales 0 → 1 from the left (0.6s–2s, `cubic-bezier(.65,0,.35,1)`), holds redacted, then fades out over the last 0.7s and restarts. Pure CSS keyframes (`tfn-sweep`), so in Webflow it is a custom-code style block. Under reduced motion it rests fully redacted |
 | Process pulse | Hover or keyboard focus on `.home_process_step_button`, and always on the `is-current` node | `.home_process_step_halo` is a 2px ring in the node's colour (`--step-ring`) that scales 1 → 1.55 while fading .7 → 0, 2.4s, looping. Idle nodes are still. The current node also wears a solid ring: a 5px white gap, then 3px of its colour |
 | Integration tabs | Click on a `[role="tab"]` | Panel swap; incoming logos fade up 10px with a 0.04s stagger |
 | Testimonial rotation | Click on `#tNext` / `#tPrev` | The queue rotates; cards fade out 8px over 0.2s, then in from -8px over 0.35s with a 0.06s stagger |
@@ -167,7 +168,7 @@ final value is already in the markup, so a failed script leaves the real number 
 3. **Once, not on every pass.** Entrances play once; nothing replays when scrolling back up.
 4. **One system.** A new section gets `data-scroll-animate` with the defaults above. Do not
    invent a new entrance for one block.
-5. **No ambient motion.** The only looping animations on the page are the process pulse and the 5.5s step cycle (client, 17 Sep), which
+5. **No ambient motion.** The only looping animations on the page are the process pulse, the 5.5s step cycle and the TFN sweep (client, 17 Sep), which
    runs only on the hovered and current nodes, is CSS, and stops under reduced motion.
 
 ---

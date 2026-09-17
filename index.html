@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon-180.png">
   <link rel="preload" href="assets/fonts/gilroy-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/GalanoGrotesqueRegular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=18ca8bef">
+  <link rel="stylesheet" href="assets/css/style.css?v=0f59f698">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -634,14 +634,19 @@
         <ul class="home_security_list" role="list" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
           <li class="home_security_item">
             <div class="home_security_redact">
-              <div class="home_security_redact_tile">
+              <!-- client, 17 Sep: one TFN, redacted by a sweeping black bar. The before/after pair and arrow are hidden, not deleted. -->
+              <div class="home_security_redact_tile is-sweep" role="img" aria-label="A TFN being redacted">
+                <span class="home_security_redact_label">TFN</span>
+                <span class="home_security_redact_value is-sweep"><span aria-hidden="true">123 456 789</span><span class="home_security_redact_bar" aria-hidden="true"></span></span>
+              </div>
+              <div class="home_security_redact_tile" hidden>
                 <span class="home_security_redact_label">TFN</span>
                 <span class="home_security_redact_value" aria-hidden="true">123 456 789</span>
               </div>
-              <span class="home_security_redact_arrow" aria-hidden="true">
+              <span class="home_security_redact_arrow" aria-hidden="true" hidden>
                 <svg class="icon-stroke" width="24" height="24" viewBox="0 0 24 24" focusable="false"><path d="M4 12h15"/><path d="M13.5 6.5 20 12l-6.5 5.5"/></svg>
               </span>
-              <div class="home_security_redact_tile is-after">
+              <div class="home_security_redact_tile is-after" hidden>
                 <span class="home_security_redact_label">TFN</span>
                 <span class="home_security_redacted"><span class="hide-visually">redacted</span><span aria-hidden="true">123 456 789</span></span>
               </div>

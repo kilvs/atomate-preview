@@ -200,6 +200,18 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Security: no rule, smaller cards, TFN sweep (client feedback, 17 Sep 2026)
+
+- Client: "Remove the thin line in between" (under the credentials line). `border-bottom` is gone.
+- Client: "Make the cards and the accompanying graphics smaller. Also for TFN design, can we just
+  do an animation of the TFN getting redacted in a sweeping motion of the black rectangle."
+  - The card pair is capped at 56rem and centred, so the cards are 436×435 (were 628×492).
+    Padding, the doc stage, the sheet (14rem) and the lock (6.25rem) are all reduced.
+  - Card 1 is one TFN tile with a black bar (`.home_security_redact_bar`) that sweeps left to
+    right, holds, fades and repeats every 5s. The tile has `role="img"` and a label. The old
+    before/after tiles and arrow are `hidden`. Under reduced motion the global rule stops the
+    animation and the bar rests fully drawn. Frames were checked at 0, 1.2, 1.6, 2, 3 and 4.7s.
+
 ## Messaging checklist: orange ticks (client feedback, 17 Sep 2026)
 
 - Client: "Use orange. Orange bg, white ticks." There is a new `.component_tick.is-orange`
