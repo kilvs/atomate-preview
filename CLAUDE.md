@@ -200,6 +200,11 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Escalate card: job title is "Accountant" (client feedback, 17 Sep 2026)
+
+- Client: "Change the job title to simply: Accountant." Rachel M.'s role line was
+  "Approver · Finance".
+
 ## Approval rules: the Review row is orange (client feedback, 17 Sep 2026)
 
 - Client: "Change red to the brand color orange." `.home_review_rule.is-review` is filled
@@ -597,7 +602,7 @@ they supersede a settled decision, the newer call wins and is noted here:
     tile, orange label). The hairlines break the mock-UI "no rules" rule because the
     reference has them. *Escalate*: a white document (navy title bar, two grey lines, an
     orange-tinted EXCEPTION row) with an orange "!" badge on its corner, an orange arrow
-    down to the approver card (RM, **Rachel M.**, Approver · Finance), then a pill
+    down to the approver card (RM, **Rachel M.**, Accountant since 17 Sep, was Approver · Finance), then a pill
     "Escalated in one click". Rachel M. is sample UI. Each wrap is `role="img"` with an
     aria-label. Desktop keeps the 4:3 wrap so the three card titles align; below 992px
     the three built graphics take their own height and cap at 24rem, centred.

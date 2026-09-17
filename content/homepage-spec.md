@@ -127,7 +127,7 @@ in `style.css`.
 - H2: **Review what matters. Automate the rest.** (no description)
 - Three Split light cards, each with a graphic built in markup (17 Sep, after the client's reference): workflow choices, escalation, approval rules:
   - **Full control over your workflow** — Choose what's automated, what's reviewed, and what needs approval. (Graphic: Automate / Review (magnifying glass) / Approve.)
-  - **Escalate when needed** — Route documents to the right person for review or approval. (Graphic: Exception document → Rachel M., Approver · Finance → "Escalated in one click"; the name is sample UI.)
+  - **Escalate when needed** — Route documents to the right person for review or approval. (Graphic: Exception document → Rachel M., Accountant (client, 17 Sep; was "Approver · Finance") → "Escalated in one click"; the name is sample UI.)
   - **Set automatic approval rules** — Documents that meet your rules are approved. Flagged items are sent for review.
 - CTA: Book Discovery Meeting (ghost). *Not built:* the source's "SIMPLE" label.
 
