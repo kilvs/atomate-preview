@@ -200,6 +200,12 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Messaging checklist: orange ticks (client feedback, 17 Sep 2026)
+
+- Client: "Use orange. Orange bg, white ticks." There is a new `.component_tick.is-orange`
+  (`orange-500` fill, white check) on the three messaging ticks (was `is-tint`). White on
+  orange is 3.30:1, above the 3:1 needed for a graphic.
+
 ## Informed graphics scaled down (client feedback, 17 Sep 2026)
 
 - Client: "The graphics above the testimonials are too big, almost bigger than the heading.

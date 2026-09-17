@@ -118,6 +118,7 @@ icon disc, section header). Keep the rest as plain classes.
 - `is-medium`
 - `is-next`
 - `is-night`
+- `is-orange`
 - `is-reversed`
 - `is-review`
 - `is-rules`
