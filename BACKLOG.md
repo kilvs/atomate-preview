@@ -6,7 +6,7 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 
 | Item | Where | Unblocked by |
 |---|---|---|
-| Sample UI names and values (Sarah Chen, Lorem Ipsum Accounting / Pty Ltd, 28 Oct 2026) and footer email / address | §5, §8, §10, §11, footer | Client supplies (section copy landed 9 Sep via the internal QA) |
+| Sample UI names and values (Sarah Chen, Lorem Ipsum Accounting / Pty Ltd, 28 Oct 2026) and footer email / address | §5, §8, §9, §10, §11, footer | Client supplies (section copy landed 9 Sep via the internal QA) |
 | HowNow X logo | §2 DMS shelf | Client supplies; HowNow shown once meanwhile |
 | 1,500 vs 2,000+ practices | §1b, §12 H2 | Client picks one |
 | Testimonials — firms and full names for the six quotes | §12 | Client supplies (quotes landed 9 Sep) |

@@ -266,11 +266,10 @@ any width; all interactions pass with and without reduced motion.
 - **Better informed clients is two alternating rows** (Eugene, 16 Sep): the copy leads
   each row - h3 at 2rem, paragraph, CTA - and the testimonial sits on the visual at body
   size, **unbolded**, so it supports rather than competes. Rows are 7rem apart (the old
-  grid had them "sardined"). Columns are 50/50. The visual is a **wordless** mock:
-  the first row reads as one real item (white card, brand dot, an orange line) and the
-  two below it are plain skeleton rows, with the navy quote card lapping the corner by a
-  fixed 2.5rem - so the quote covers only skeleton, never the real row (Eugene, 16 Sep). The reference's mock carried labels like "Activity statement issued";
-  those are not in the copy, so the rows carry no words at all.
+  grid had them "sardined"). Columns are 50/50. The visual is a mock with the
+  navy quote card lapping its corner by a fixed 2.5rem, covering only the mock's padding,
+  never a row. (Wordless skeleton rows on 16 Sep; labelled rows since 17 Sep, see
+  "Internal QA applied".)
 - **The PAYG graphics follow the copy document** (Eugene, 16 Sep): card A is a timeline
   (blue dot, orange run, navy dot) under the label **More time to act**; card B is the
   word **Penalties** struck through in orange. Both words come from the copy's own
@@ -428,6 +427,14 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **Better informed mocks carry words again** (client feedback, 17 Sep 2026: "there is
+  no need to anonymise the UI screenshots"; the shadows stay as built). Row 1 is three
+  labelled rows, each with initials, a label, a short line and a status chip:
+  *Activity statement issued* (AK, Sent), *Instalment notice* (TN, Sent), *Payment due
+  in 7 days* (DP, Heads up, warm). Row 2 is a timeline: a dot per step on a rail,
+  *Document received*, *Reviewed & approved*, *Client notified* (warm). Labels come from
+  the client's reference, which is a reference only (it "looks AI-generated"). The mock
+  gains 3.75rem of bottom padding so the quote card laps only padding, not a row.
 - **No Customise button on the email card** (client feedback, 17 Sep 2026: "Let's
   remove 'Customise' altogether"). The card ends on the PIN-protected attachment.
   `.button.is-medium` had no other use, so its rule, style-guide swatch and
