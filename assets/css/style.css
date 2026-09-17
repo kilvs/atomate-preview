@@ -270,29 +270,26 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_trust_heading { font-size:1.5rem; line-height:1.3; color:#fff; text-align:center; text-wrap:balance; }
 .home_trust_list_wrap { min-width:0; }
 .home_trust_list { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:2rem; align-items:stretch; }
-/* client, 17 Sep: the heading stays centred; the five claims are left-aligned and level,
-   every claim starting on the same top line */
+/* client, 17 Sep: the heading is hidden ("Remove the trusted by heading"); below 1280 the
+   claims are left-aligned and level, every claim starting on the same top line */
 .home_trust_item { min-width:0; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; text-align:left; gap:.5rem; }
 /* Omble measures 22px / 1.25 white; ATOmate's claims are longer, so 20px holds the
    same two-line rhythm without stranding a word */
 .home_trust_label { display:block; font-family:var(--font-heading); font-weight:700; font-size:1.25rem; line-height:1.25; letter-spacing:-0.02em; color:#fff; text-wrap:pretty; }
 .home_trust_caption { display:block; font-size:var(--text-small); line-height:1.5; color:rgba(255,255,255,.7); text-wrap:pretty; }
 
-@media (min-width:1200px) {
-  /* lanes sized to ATOmate's labels, as Omble sized its own: widest copy, widest lane */
-  /* lanes carry the 1.5rem hairline padding too, so they are sized from each label's
-     own measured width plus that padding */
-  .home_trust_list { grid-template-columns:1.09fr 1fr 1.16fr 1.12fr 1.27fr; }
-  .home_trust_label { text-wrap:balance; }
-  .home_trust_item { padding-left:1.5rem; border-left:1px solid var(--navy-700); }
-  .home_trust_item:first-child { padding-left:0; border-left:0; }
+/* client, 17 Sep: "Follow this (straight line)". From 1280 (Webflow's large breakpoint) the
+   five claims sit on one line, each label unbroken, hairlines between; each lane takes an
+   equal share of the spare width so the dividers sit evenly. 18px fits all five in the
+   1200px container at 1280. */
+@media (min-width:1280px) {
+  .home_trust_list { display:flex; gap:0; align-items:center; }
+  .home_trust_item { flex:1 1 auto; align-items:center; text-align:center; padding-inline:1rem; border-left:1px solid var(--navy-700); }
+  .home_trust_item:first-child { border-left:0; }
+  .home_trust_label { font-size:1.125rem; white-space:nowrap; }
 }
-@media (min-width:1320px) and (max-width:1439px) {
-  .home_trust_label { font-size:1.1875rem; }
-}
-/* five lanes need ~1320 for ATOmate's longer claims; below that the row is two lanes,
-   as Omble drops its own row early rather than shrink the type (its §2 note) */
-@media (max-width:1319px) {
+/* below 1280 the row is two lanes, as Omble drops its own row early rather than shrink the type */
+@media (max-width:1279px) {
   .home_trust_list { grid-template-columns:repeat(2, minmax(0,1fr)); gap:2rem 2.5rem; }
 }
 /* one lane from 767 down: at ~600 and ~480 a two-lane cell strands a word */

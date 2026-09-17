@@ -200,6 +200,17 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Trust bar: new copy in one straight line (client feedback, 17 Sep 2026)
+
+- Client: "Copy changes. Remove the trusted by heading. Follow this (straight line)." The new
+  copy is in `content/homepage-spec.md` §1b. The heading is `hidden`, not deleted. The old
+  "10+ team members" caption is gone because the new label carries "annually".
+- From 1280 up the list is a flex row: each label unbroken at 18px (20px would not fit five
+  in 1200px), with navy-700 hairlines between and each lane taking an equal share of the
+  spare width. Below 1280 it keeps the two-lane grid, and one lane from 767.
+- Count-up stays on 100% and 500+. The 90% and "100% of ATO documents" figures are no longer
+  in the bar. 90% is still in the video heading.
+
 ## Nav bar matched to Omble (client feedback, 17 Sep 2026)
 
 - Client: "We need a narrower Nav Bar. Keep the font size of ATOmate, but emulate the width
