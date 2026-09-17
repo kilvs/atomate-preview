@@ -201,3 +201,7 @@ both faces are an open client flag.
 Five backgrounds, built as classes rather than variables because each is a multi-stop gradient.
 Recipes are in `CLAUDE.md` under "Section grounds". Assign one per section so no two neighbours
 repeat: Warm mesh, Split light, Azure depth (lit), Peach sheen, plain white.
+
+Split light is also the fill for content cards (Without ATOmate, overnight panel, review,
+filing, PAYG, testimonials; 17 Sep). The stylesheet keeps it as `--gradient-split-light`;
+in Webflow, save it once as a style on a shared card combo rather than retyping the stops.

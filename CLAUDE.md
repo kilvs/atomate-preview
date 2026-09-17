@@ -218,20 +218,20 @@ any width; all interactions pass with and without reduced motion.
   bordered, with the mock flat on a light preview panel and the copy beneath.
 - **How ATOmate works is a flowchart** (supersedes settled decision 9's frame).
   Reworked 16 Sep at Eugene's word ("too plain", "reads human"): five **5.5rem nodes**
-  on a blue connector, each with a **halo that breathes** (3.2s, staggered per node)
-  so the row reads as clickable - this replaces the "Click a step to reveal details"
+  on a blue connector, each with a ring that **pulses** on the current and hovered node
+  (17 Sep; it was an always-on breathing halo) so the row reads as clickable - this replaces the "Click a step to reveal details"
   line, which is gone. **Every node is a strong filled disc** in a brand colour with a white mark
   (Eugene, 16 Sep): Azure, Deep Navy, Azure-into-navy, **Signal Orange on "Review &
-  approve"**, then Azure-into-navy. The open node is marked by a white ring and a
-  slight lift, not by a colour change, so the row keeps its rhythm. Halos take their
-  node's colour. Orange appearing here is the client's own call from their reference
+  approve"**, then Azure-into-navy. The open node is marked by a white gap and a ring in its
+  own colour plus a slight lift, not by a colour change, so the row keeps its rhythm. The
+  pulse takes the node's colour. Orange appearing here is the client's own call from their reference
   and sits alongside the nav CTA in the same viewport. Icons were redrawn for legibility and run at 42px in a 6rem disc: a document with a
   magnifying glass (capture & identify - the tray version read as a download),
   document with a tick, padlock, checklist with an approving tick, envelope leaving.
   **The step's sentence sits under the row** on a 44rem centred measure with its height
   reserved, not in a narrow lane under its node. All five sentences are in the markup
   unhidden, so without JS the section reads in full; the script hides the four that are
-  not current. The halo stops under `prefers-reduced-motion`. Vertical on mobile.
+  not current. The pulse stops under `prefers-reduced-motion`. Vertical on mobile.
 - **The overnight graphic** (client, 16 Sep; layout taken further at Eugene's word that
   the column "feels off"): a white card carrying the centred title and the four
   sources as ticked tiles in a 2x2 grid. Nothing else - the arrow and the mark bar that
@@ -357,9 +357,9 @@ section dividers". The client's own set, applied so no two neighbours repeat:
 |---|---|---|
 | **Warm mesh** (`background-stage-light`) | white, peach bloom low-left, cool tint top-right | hero |
 | **Warm mesh, quiet** (`background-stage-mesh`) | the same at about a third strength, blue wash at the top | process, messaging, testimonials |
-| **Split light** (`background-stage-split`) | cool blue-50 on the left running warm to `#FFF4EA` on the right, at 100° | integrations, review, security |
+| **Split light** (`background-stage-split`) | cool blue-50 on the left running warm to `#FFF4EA` on the right, at 100° (`--gradient-split-light`) | integrations, review, security; also the content cards (17 Sep) |
 | **Azure depth, lit** (`background-stage-azure`) | `#005C90` → navy-800 → navy-900 with a sky-blue glow in the top-left corner | trust bar, overnight |
-| **Peach sheen** (`background-stage-peach`) | navy-700 → blue-600 → blue-500, lit warm from the bottom-right | PAYG, closing CTA |
+| **Peach sheen** (`background-stage-peach`) | navy-700 → blue-600 → blue-500, a subtle Signal Orange bloom from below the bottom-right (17 Sep) | PAYG, closing CTA |
 | **Plain white** | no class | comparison, filing, informed |
 
 Notes that matter:
@@ -427,6 +427,23 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **Client feedback round, 17 Sep 2026** (four more items):
+  - **Review icon is a magnifying glass**, not an eye, in the Full control illustration.
+    The client's raster was repainted (eye cleared to the disc's `#E5F3FE`, a 2x-drawn
+    glass in the eye's `#0C73D4`) and saved as `full-control-02.webp`; images are served
+    immutable, so edited art takes a new name. `full-control.webp` is kept, unused.
+  - **Azure grounds carry Ember bay's warmth, held back** ("too defined"). Peach sheen
+    (PAYG, closing CTA) and the With ATOmate card get a Signal Orange bloom rising from
+    below the bottom-right corner at 34-42% that fades by half its radius. Azure depth
+    (trust bar, overnight, channels) is unchanged: it was not in the examples.
+  - **Content cards use Split light instead of plain white** (`--gradient-split-light`,
+    shared with `background-stage-split`): Without ATOmate, the overnight panel, review,
+    filing, PAYG and testimonial cards. Mock UI stays white (it stands in for product
+    screens), as do logo tiles. The review and filing illustrations are drawn on white,
+    so they take `mix-blend-mode:multiply` and the gradient shows through.
+  - **Process nodes: a prominent ring and a pulse** (supersedes the breathing halo). The
+    current node wears a 5px white gap then 3px of its own colour (`--step-ring`); a ring
+    pulses out of the current node and any hovered or focused node. Idle nodes are still.
 - **Better informed mocks carry words again** (client feedback, 17 Sep 2026: "there is
   no need to anonymise the UI screenshots"; the shadows stay as built). Row 1 is three
   labelled rows, each with initials, a label, a short line and a status chip:
@@ -515,8 +532,8 @@ interactions (navbar state, step reveal, tab swap, testimonial rotation) and the
   their **children**, not the wrapper.
 - 25 elements carry the attributes; the closing CTA was the last one without an entrance and
   was added 16 Sep. A new section gets the same attributes - never a bespoke tween.
-- No parallax, no pinning, no scrub, no ambient loops except the process halo (CSS, and it
-  stops under reduced motion).
+- No parallax, no pinning, no scrub, no ambient loops except the process pulse (CSS, on the
+  current and hovered node only, and it stops under reduced motion).
 - Verified in-browser: 31 tweens and 27 ScrollTriggers register, the first at `top 85%`; under
   `prefers-reduced-motion` all 25 elements sit visible at opacity 1.
 

@@ -145,6 +145,7 @@ on the tween; in Webflow it is a stagger applied to the children of the targeted
 |---|---|---|
 | Navbar solid | Page scrolled past 24px | `.navbar_component` gains `is-solid`: the shell fills white at 82 per cent, takes a hairline, pill radius and a blur |
 | Steps reveal | Click on `.home_process_step_button` | The clicked node takes `is-current`; its `.home_process_detail_item` shows and the others hide; the incoming line fades up 6px over 0.3s |
+| Process pulse | Hover or keyboard focus on `.home_process_step_button`, and always on the `is-current` node | `.home_process_step_halo` is a 2px ring in the node's colour (`--step-ring`) that scales 1 → 1.55 while fading .7 → 0, 1.8s, looping. Idle nodes are still. The current node also wears a solid ring: a 5px white gap, then 3px of its colour |
 | Integration tabs | Click on a `[role="tab"]` | Panel swap; incoming logos fade up 10px with a 0.04s stagger |
 | Testimonial rotation | Click on `#tNext` / `#tPrev` | The queue rotates; cards fade out 8px over 0.2s, then in from -8px over 0.35s with a 0.06s stagger |
 
@@ -160,13 +161,13 @@ final value is already in the markup, so a failed script leaves the real number 
    state, so if the script never runs the page is simply readable. Do not author the Webflow
    version as "hidden, then reveal" without an initial-state fallback.
 2. **Reduced motion.** Under `prefers-reduced-motion: reduce` everything shows in its final
-   state, counters sit at their final values and the process halo stops. The Webflow build
+   state, counters sit at their final values and the process pulse stops. The Webflow build
    needs the same guard.
 3. **Once, not on every pass.** Entrances play once; nothing replays when scrolling back up.
 4. **One system.** A new section gets `data-scroll-animate` with the defaults above. Do not
    invent a new entrance for one block.
-5. **No ambient motion.** The only looping animation on the page is the process halo, which is
-   CSS and stops under reduced motion.
+5. **No ambient motion.** The only looping animation on the page is the process pulse, which
+   runs only on the hovered and current nodes, is CSS, and stops under reduced motion.
 
 ---
 

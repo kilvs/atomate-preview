@@ -22,6 +22,7 @@
   /* Theme (light-on-dark text) */
   --text-on-dark:#FFFFFF; --text-on-dark-soft:rgba(255,255,255,.78); --text-on-dark-muted:rgba(255,255,255,.55);
   --line-on-dark:rgba(255,255,255,.14);
+  --gradient-split-light:linear-gradient(100deg, var(--blue-50) 0%, #FBFDFE 46%, #FFF4EA 100%);
   --shadow-card:0 24px 60px -32px rgba(2,42,69,.35), 0 1px 0 rgba(2,42,69,.06);
   --shadow-card-hover:0 30px 60px -30px rgba(2,42,69,.45);
   --shadow-ui:0 30px 60px -36px rgba(2,42,69,.6);
@@ -167,7 +168,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* ---------- The client's named grounds (16 Sep): Split light, Azure depth (lit), Peach
    sheen and a quieter Warm mesh, so consecutive sections contrast instead of repeating. */
 /* Split light — cool on the left, warm on the right, across the band's own width */
-.background-stage-split { background:linear-gradient(100deg, var(--blue-50) 0%, #FBFDFE 46%, #FFF4EA 100%); color:var(--ink-900); position:relative; overflow:hidden; }
+.background-stage-split { background:var(--gradient-split-light); color:var(--ink-900); position:relative; overflow:hidden; }
 /* Warm mesh, quieter, for long sections carrying cards and copy */
 .background-stage-mesh { background:#FFFFFF; color:var(--ink-900); position:relative; overflow:hidden; }
 .background-stage-mesh::before { content:""; position:absolute; inset:0; pointer-events:none;
@@ -179,10 +180,12 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .background-stage-azure::before { content:""; position:absolute; inset:0; pointer-events:none;
   background:radial-gradient(50% 54% at 4% 0%, rgba(95,176,222,.32), transparent 68%); }
 .background-stage-azure h2, .background-stage-azure h3 { color:#fff; }
-/* Peach sheen — Azure lit warm from the bottom-right */
+/* Peach sheen — Azure lit warm from the bottom-right: Ember bay's orange, held back
+   (Eugene, 17 Sep: "integrate the warmth subtler") */
 .background-stage-peach { background:linear-gradient(155deg, var(--navy-700) 0%, var(--blue-600) 42%, var(--blue-500) 100%); color:#fff; position:relative; overflow:hidden; }
 .background-stage-peach::before { content:""; position:absolute; inset:0; pointer-events:none;
-  background:radial-gradient(62% 62% at 97% 106%, rgba(255,178,128,.36), transparent 70%); }
+  background:radial-gradient(48% 70% at 80% 112%, rgba(235,100,5,.34), rgba(235,100,5,.1) 48%, transparent 74%),
+             radial-gradient(70% 60% at 100% 100%, rgba(255,178,128,.16), transparent 70%); }
 .background-stage-peach h2, .background-stage-peach h3 { color:#fff; }
 /* the tint layers are decoration: they sit under the section's own content, never over it */
 .background-stage-light::before, .background-stage-mesh::before, .background-stage-azure::before, .background-stage-peach::before { z-index:0; }
@@ -298,8 +301,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_comparison_arrow .icon-stroke { stroke-width:2.25; }
 .home_comparison_card { border-radius:var(--radius-card); padding:3rem; display:flex; flex-direction:column; gap:1.75rem; }
 /* "With ATOmate" carries the richer brand blue (Eugene, 10 Sep), not the night navy */
-.home_comparison_card.is-night { background:linear-gradient(160deg, var(--blue-600) 0%, var(--blue-500) 70%, #1487C8 100%); color:#fff; box-shadow:0 24px 60px -32px rgba(0,120,186,.55); }
-.home_comparison_card.is-day { background:#fff; border:1px solid var(--line); box-shadow:0 24px 60px -32px rgba(2,42,69,.35); }
+.home_comparison_card.is-night { background:radial-gradient(56% 62% at 84% 112%, rgba(235,100,5,.42), rgba(235,100,5,.12) 50%, transparent 78%), linear-gradient(160deg, var(--blue-600) 0%, var(--blue-500) 70%, #1487C8 100%); color:#fff; box-shadow:0 24px 60px -32px rgba(0,120,186,.55); }
+.home_comparison_card.is-day { background:var(--gradient-split-light); border:1px solid var(--line); box-shadow:0 24px 60px -32px rgba(2,42,69,.35); }
 .home_comparison_title { font-size:var(--heading-h3); line-height:1.55; }
 .home_comparison_card.is-night .home_comparison_title { color:#fff; }
 .home_comparison_card.is-day .home_comparison_title { color:var(--ink-500); }
@@ -313,8 +316,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_comparison_footer { margin-top:3rem; display:flex; justify-content:center; }
 .home_comparison_lead { margin-top:.75rem; font-size:1.25rem; line-height:1.55; font-weight:600; color:var(--navy-800); max-width:44rem; text-wrap:balance; }
 
-/* ---------- 4. How ATOmate works — a flow of five large nodes; the halo behind each one
-   breathes so the row reads as clickable without a "click here" line (Eugene, 16 Sep).
+/* ---------- 4. How ATOmate works — a flow of five large nodes; the current one wears a
+   ring and pulses, and a hovered one pulses too, so the row reads as clickable.
    The step's sentence sits under the row on one calm measure rather than in a narrow lane. */
 .home_process_flow { display:grid; grid-template-columns:repeat(5, minmax(0,1fr)); gap:0; align-items:start; }
 .home_process_step { position:relative; display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 .5rem; }
@@ -329,20 +332,21 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_process_step:nth-child(4) .home_process_step_icon { background:linear-gradient(160deg, var(--orange-500), var(--orange-600)); }
 .home_process_step:nth-child(5) .home_process_step_icon { background:linear-gradient(160deg, var(--blue-500), var(--navy-700)); }
 .home_process_step_icon svg { position:relative; z-index:1; stroke-width:1.6; }
-/* the halo: a ring behind the node that breathes, and grows on hover */
-.home_process_step_halo { position:absolute; inset:-.75rem; border-radius:50%; background:radial-gradient(circle, rgba(0,120,186,.28), rgba(0,120,186,0) 70%); opacity:.7; animation:process-halo 3.2s ease-in-out infinite; }
-.home_process_step:nth-child(2) .home_process_step_halo, .home_process_step:nth-child(5) .home_process_step_halo { background:radial-gradient(circle, rgba(3,70,107,.30), rgba(3,70,107,0) 70%); }
-.home_process_step:nth-child(4) .home_process_step_halo { background:radial-gradient(circle, rgba(235,100,5,.30), rgba(235,100,5,0) 70%); }
-@keyframes process-halo { 0%, 100% { transform:scale(.92); opacity:.45; } 50% { transform:scale(1.08); opacity:.85; } }
-.home_process_step:nth-child(2) .home_process_step_halo { animation-delay:.4s; }
-.home_process_step:nth-child(3) .home_process_step_halo { animation-delay:.8s; }
-.home_process_step:nth-child(4) .home_process_step_halo { animation-delay:1.2s; }
-.home_process_step:nth-child(5) .home_process_step_halo { animation-delay:1.6s; }
+/* each node's own colour drives its ring and its pulse */
+.home_process_step { --step-ring:var(--blue-500); }
+.home_process_step:nth-child(2) { --step-ring:var(--navy-700); }
+.home_process_step:nth-child(3) { --step-ring:var(--blue-600); }
+.home_process_step:nth-child(4) { --step-ring:var(--orange-500); }
+/* the pulse (Eugene, 17 Sep): a ring that swells out of the node and fades, only on the
+   hovered node and the current one; idle nodes are still */
+.home_process_step_halo { position:absolute; inset:0; border-radius:50%; border:2px solid var(--step-ring); opacity:0; pointer-events:none; }
+.home_process_step_button:hover .home_process_step_halo, .home_process_step_button:focus-visible .home_process_step_halo, .home_process_step.is-current .home_process_step_halo { animation:process-pulse 1.8s cubic-bezier(.2,.6,.3,1) infinite; }
+@keyframes process-pulse { 0% { transform:scale(1); opacity:.7; } 80%, 100% { transform:scale(1.55); opacity:0; } }
 .home_process_step_button:hover .home_process_step_icon { transform:translateY(-4px) scale(1.03); box-shadow:0 20px 34px -16px rgba(2,42,69,.55); }
 .home_process_step_title { font-family:var(--font-heading); font-weight:800; font-size:1.0625rem; line-height:1.3; color:var(--navy-700); transition:color .25s ease; text-wrap:balance; }
-/* the open step: brand gradient, white mark, a stronger halo */
-.home_process_step.is-current .home_process_step_icon { transform:scale(1.08); box-shadow:0 0 0 .3125rem #fff, 0 0 0 .4375rem rgba(2,42,69,.10), 0 20px 36px -16px rgba(2,42,69,.6); }
-.home_process_step.is-current .home_process_step_halo { opacity:1; animation-duration:2.6s; filter:saturate(1.15); }
+/* the open step: lifted, ringed and pulsing */
+/* the current node wears a prominent ring: a white gap, then its own colour */
+.home_process_step.is-current .home_process_step_icon { transform:scale(1.08); box-shadow:0 0 0 .3125rem #fff, 0 0 0 .5rem var(--step-ring), 0 20px 36px -16px rgba(2,42,69,.6); }
 .home_process_step.is-current .home_process_step_button:hover .home_process_step_icon { transform:scale(1.08) translateY(-2px); }
 .home_process_step.is-current .home_process_step_title, .home_process_step_button:hover .home_process_step_title { color:var(--navy-800); }
 /* one shared line under the row; its height is reserved so nothing jumps between steps */
@@ -357,7 +361,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 
 /* The overnight graphic (Eugene, 16 Sep): the four sources as tiles, funnelling into one
    overnight result. A small centred list left the column looking empty against the band. */
-.home_overnight_panel { background:#fff; border-radius:var(--radius-card); box-shadow:0 30px 60px -30px rgba(2,42,69,.55); padding:3rem 2.5rem; display:flex; flex-direction:column; align-items:center; }
+.home_overnight_panel { background:var(--gradient-split-light); border-radius:var(--radius-card); box-shadow:0 30px 60px -30px rgba(2,42,69,.55); padding:3rem 2.5rem; display:flex; flex-direction:column; align-items:center; }
 .home_overnight_panel_title { font-family:var(--font-heading); font-weight:800; font-size:1.375rem; line-height:1.3; color:var(--navy-700); text-align:center; margin-bottom:2rem; }
 .home_overnight_sources { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1rem; width:100%; }
 .home_overnight_source { display:flex; align-items:center; gap:.875rem; padding:1.25rem 1.125rem; border-radius:var(--radius-box); background:var(--blue-50); font-size:1.0625rem; line-height:1.4; color:var(--ink-900); }
@@ -367,7 +371,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 
 /* ---------- 6. Review less (day) */
 .home_review_list { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1.5rem; }
-.home_review_item { background:#fff; border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; transition:transform .3s ease, box-shadow .3s ease; }
+.home_review_item { background:var(--gradient-split-light); border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; transition:transform .3s ease, box-shadow .3s ease; }
 .home_review_item:hover { transform:translateY(-3px); box-shadow:var(--shadow-card-hover); }
 .home_review_item_description { font-size:var(--text-small); line-height:1.5; color:var(--ink-700); }
 /* Approval rules, rebuilt from the supplied artwork (Eugene, 16 Sep). The blue tray is
@@ -384,8 +388,9 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_review_rule.is-review .home_review_rule_name { color:#fff; }
 .home_review_rule.is-review .home_review_rule_state { background:#fff; color:var(--red-error); text-transform:uppercase; }
 /* Card illustrations (client placeholder art, 14 Sep): 4:3, reserved space, no layout shift */
-.home_review_item_image-wrap, .home_filing_item_image-wrap { aspect-ratio:4 / 3; border-radius:var(--radius-box); overflow:hidden; background:#fff; }
-.home_review_item_image, .home_filing_item_image { display:block; width:100%; height:100%; object-fit:cover; }
+.home_review_item_image-wrap, .home_filing_item_image-wrap { aspect-ratio:4 / 3; border-radius:var(--radius-box); overflow:hidden; }
+/* the illustrations are drawn on white: multiply lets the card's Split light show through */
+.home_review_item_image, .home_filing_item_image { display:block; width:100%; height:100%; object-fit:cover; mix-blend-mode:multiply; }
 /* Audit trail, rebuilt from the supplied artwork (Eugene, 16 Sep): same steps and times,
    sub-captions dropped, dots running down the brand ramp instead of stock blue/amber/green */
 .home_filing_item_image-wrap.is-trail { display:flex; align-items:center; justify-content:center; background:none; }
@@ -417,7 +422,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 
 /* ---------- 7. Filing */
 .home_filing_list { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1.5rem; }
-.home_filing_item { background:#fff; border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; transition:transform .3s ease, box-shadow .3s ease; }
+.home_filing_item { background:var(--gradient-split-light); border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; transition:transform .3s ease, box-shadow .3s ease; }
 .home_filing_item:hover { transform:translateY(-3px); box-shadow:var(--shadow-card-hover); }
 .home_filing_item_description { font-size:var(--text-small); line-height:1.5; color:var(--ink-700); }
 
@@ -425,7 +430,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_payg_mark { position:absolute; left:-8rem; bottom:-8rem; height:32rem; width:auto; opacity:.07; pointer-events:none; }
 .home_payg_list { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.5rem; }
 /* Omble card practice (Eugene, 10 Sep): white bordered card, mock flat on a light preview panel, copy beneath */
-.home_payg_item { background:#fff; border:1px solid var(--line); border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:1.25rem 1.25rem 1.75rem; display:flex; flex-direction:column; gap:1.25rem; }
+.home_payg_item { background:var(--gradient-split-light); border:1px solid var(--line); border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:1.25rem 1.25rem 1.75rem; display:flex; flex-direction:column; gap:1.25rem; }
 .home_payg_item_preview { background:none; padding:0; flex:1; display:flex; flex-direction:column; }
 .home_payg_item_preview .component_ui { flex:1; }
 .home_payg_item_text { padding:0 .5rem; }
@@ -557,7 +562,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_testimonials_featured { background:linear-gradient(160deg, var(--navy-700), var(--blue-600)); color:#fff; border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:3rem; display:flex; flex-direction:column; gap:2rem; justify-content:space-between; }
 .home_testimonials_featured .text-style-quote { color:#fff; }
 .home_testimonials_stack { display:flex; flex-direction:column; gap:1.5rem; }
-.home_testimonials_card { background:#fff; border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; flex:1; }
+.home_testimonials_card { background:var(--gradient-split-light); border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; flex:1; }
 .home_testimonials_quote { font-size:var(--text-regular); line-height:1.5; color:var(--ink-700); }
 .home_testimonials_author { display:flex; gap:.75rem; align-items:center; }
 .home_testimonials_avatar { width:2.5rem; height:2.5rem; border-radius:50%; background:var(--blue-100); flex:none; display:inline-flex; align-items:center; justify-content:center; font-size:.75rem; font-weight:700; color:var(--navy-700); letter-spacing:.02em; }
@@ -705,7 +710,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* ---------- Motion states (Gate 04). Nothing is parked hidden in CSS: the script sets start states. */
 .home_process_step, .home_integrations_tab, .home_review_item, .home_filing_item, .home_integrations_item, .button, .navbar_component, .navbar_link, .navbar_logo { will-change:auto; }
 @media (prefers-reduced-motion: reduce) {
-  .home_process_step_halo { animation:none; }
+  .home_process_step_halo { animation:none !important; }
   html { scroll-behavior:auto; }
   *, *::before, *::after { transition:none !important; animation:none !important; }
 }
