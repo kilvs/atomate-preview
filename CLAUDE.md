@@ -293,7 +293,7 @@ any width; all interactions pass with and without reduced motion.
   chips on the card's own white, an orange arrow, an Azure-to-navy folder tile. Both
   graphics sit on the card ground with no tray, so the row reads as one family.
   `filed-directly-01.webp` and `full-audit-01.webp` are now unused but kept with the
-  other supplied art. The first card in that row is still the client's image.
+  other supplied art. The first card in that row is still the client's image. (Review row: cards 1 and 2 became markup on 17 Sep.)
 - **Review and filing card illustrations** (14 Sep) replace the skeleton bars: six
   client placeholder images from `~/Downloads/placeholder`, exported to
   `assets/img/features/` as 700×525 WebP (4:3, 2× the card width). Square sources
@@ -428,10 +428,19 @@ changes. Both are applied; `content/homepage-spec.md` is the copy of record. Whe
 they supersede a settled decision, the newer call wins and is noted here:
 
 - **Client feedback round, 17 Sep 2026** (four more items):
-  - **Review icon is a magnifying glass**, not an eye, in the Full control illustration.
-    The client's raster was repainted (eye cleared to the disc's `#E5F3FE`, a 2x-drawn
-    glass in the eye's `#0C73D4`) and saved as `full-control-02.webp`; images are served
-    immutable, so edited art takes a new name. `full-control.webp` is kept, unused.
+  - **Full control and Escalate graphics are built in markup, following the client's
+    reference exactly** (supersedes the raster art and its repainted `full-control-02.webp`;
+    both that and `full-control.webp` / `escalate-01.webp` are kept, unused).
+    *Full control*: a white panel of three rows split by hairlines - AUTOMATE (double
+    chevron on a blue-100 tile, blue label), REVIEW (**magnifying glass**, not the
+    reference's eye, on a pale tile, navy label), APPROVE (white tick on a solid orange
+    tile, orange label). The hairlines break the mock-UI "no rules" rule because the
+    reference has them. *Escalate*: a white document (navy title bar, two grey lines, an
+    orange-tinted EXCEPTION row) with an orange "!" badge on its corner, an orange arrow
+    down to the approver card (RM, **Rachel M.**, Approver · Finance), then a pill
+    "Escalated in one click". Rachel M. is sample UI. Each wrap is `role="img"` with an
+    aria-label. Desktop keeps the 4:3 wrap so the three card titles align; below 992px
+    the three built graphics take their own height and cap at 24rem, centred.
   - **Azure grounds carry Ember bay's warmth, held back** ("too defined"). Peach sheen
     (PAYG, closing CTA) and the With ATOmate card get a Signal Orange bloom rising from
     below the bottom-right corner at 34-42% that fades by half its radius. Azure depth

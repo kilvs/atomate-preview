@@ -16,7 +16,7 @@
   <link rel="apple-touch-icon" href="assets/img/brand/webclip.jpg">
   <link rel="preload" href="assets/fonts/gilroy-extrabold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/GalanoGrotesqueRegular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=22bd8d3d">
+  <link rel="stylesheet" href="assets/css/style.css?v=fecd685d">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -302,8 +302,39 @@
           <h2>Review what matters. Automate the rest.</h2>
         </div>
         <ul class="home_review_list" role="list" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
-          <li class="home_review_item"><div class="home_review_item_image-wrap"><img class="home_review_item_image" src="assets/img/features/full-control-02.webp" alt="A document branching to three paths: automated (a gear), reviewed (a magnifying glass) and approved (a tick)" width="700" height="525" loading="lazy" decoding="async"></div><h3>Full control over your workflow</h3><p class="home_review_item_description">Choose what's automated, what's reviewed, and what needs approval.</p></li>
-          <li class="home_review_item"><div class="home_review_item_image-wrap"><img class="home_review_item_image" src="assets/img/features/escalate-01.webp" alt="A flagged document with an arrow pointing to escalate" width="700" height="525" loading="lazy" decoding="async"></div><h3>Escalate when needed</h3><p class="home_review_item_description">Route documents to the right person for review or approval.</p></li>
+          <li class="home_review_item"><div class="home_review_item_image-wrap is-control" role="img" aria-label="Three workflow choices: automate, review and approve">
+            <ul class="home_review_control" role="list">
+              <li class="home_review_control_row is-automate">
+                <span class="home_review_control_icon"><svg class="icon-stroke" width="20" height="20" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M5 7l5 5-5 5"/><path d="M12 7l5 5-5 5"/></svg></span>
+                <span class="home_review_control_label">Automate</span>
+              </li>
+              <li class="home_review_control_row is-review">
+                <span class="home_review_control_icon"><svg class="icon-stroke" width="20" height="20" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><circle cx="10.5" cy="10.5" r="5.5"/><path d="M14.6 14.6 19.5 19.5"/></svg></span>
+                <span class="home_review_control_label">Review</span>
+              </li>
+              <li class="home_review_control_row is-approve">
+                <span class="home_review_control_icon"><svg class="icon-stroke" width="20" height="20" viewBox="0 0 24 24" focusable="false" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+                <span class="home_review_control_label">Approve</span>
+              </li>
+            </ul>
+          </div><h3>Full control over your workflow</h3><p class="home_review_item_description">Choose what's automated, what's reviewed, and what needs approval.</p></li>
+          <li class="home_review_item"><div class="home_review_item_image-wrap is-escalate" role="img" aria-label="A document flagged as an exception, escalated in one click to an approver in finance">
+            <div class="home_review_escalate">
+              <div class="home_review_escalate_doc">
+                <span class="home_review_escalate_flag">!</span>
+                <span class="home_review_escalate_bar is-title"></span>
+                <span class="home_review_escalate_bar"></span>
+                <span class="home_review_escalate_bar is-short"></span>
+                <span class="home_review_escalate_exception"><span class="home_review_escalate_exception_label">Exception</span><span class="home_review_escalate_exception_bar"></span></span>
+              </div>
+              <svg class="home_review_escalate_arrow" width="12" height="28" viewBox="0 0 12 28" focusable="false" aria-hidden="true"><path d="M6 1v24M1.5 20.5 6 25l4.5-4.5"/></svg>
+              <div class="home_review_escalate_person">
+                <span class="home_review_escalate_avatar">RM</span>
+                <span class="home_review_escalate_who"><span class="home_review_escalate_name">Rachel M.</span><span class="home_review_escalate_role">Approver · Finance</span></span>
+              </div>
+              <span class="home_review_escalate_pill"><span class="home_review_escalate_tick"><svg class="icon-stroke" width="10" height="10" viewBox="0 0 12 12" focusable="false" aria-hidden="true"><path d="M2.5 6.5l2.5 2.5 4.5-5"/></svg></span>Escalated in one click</span>
+            </div>
+          </div><h3>Escalate when needed</h3><p class="home_review_item_description">Route documents to the right person for review or approval.</p></li>
           <li class="home_review_item"><div class="home_review_item_image-wrap is-rules">
             <ul class="home_review_rules" role="list">
               <li class="home_review_rule is-approved">

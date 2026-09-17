@@ -109,9 +109,9 @@ in `style.css`.
 ## 6. Review (`.background-stage-day`)
 
 - H2: **Review what matters. Automate the rest.** (no description)
-- Three white cards, each with a client-supplied illustration (placeholder art, 14 Sep; `assets/img/features/`): `full-control`, `escalate-01`, `set-automatic-01`:
-  - **Full control over your workflow** — Choose what's automated, what's reviewed, and what needs approval. (Illustration: gear, magnifying glass, tick; 17 Sep.)
-  - **Escalate when needed** — Route documents to the right person for review or approval.
+- Three Split light cards, each with a graphic built in markup (17 Sep, after the client's reference): workflow choices, escalation, approval rules:
+  - **Full control over your workflow** — Choose what's automated, what's reviewed, and what needs approval. (Graphic: Automate / Review (magnifying glass) / Approve.)
+  - **Escalate when needed** — Route documents to the right person for review or approval. (Graphic: Exception document → Rachel M., Approver · Finance → "Escalated in one click"; the name is sample UI.)
   - **Set automatic approval rules** — Documents that meet your rules are approved. Flagged items are sent for review.
 - CTA: Book Discovery Meeting (ghost). *Not built:* the source's "SIMPLE" label.
 

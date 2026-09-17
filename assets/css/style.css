@@ -388,6 +388,38 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_review_rule.is-review .home_review_rule_name { color:#fff; }
 .home_review_rule.is-review .home_review_rule_state { background:#fff; color:var(--red-error); text-transform:uppercase; }
 /* Card illustrations (client placeholder art, 14 Sep): 4:3, reserved space, no layout shift */
+/* Full control (client reference, 17 Sep): a white panel of three choices, hairlines between */
+.home_review_item_image-wrap.is-control, .home_review_item_image-wrap.is-escalate { display:flex; align-items:center; justify-content:center; overflow:visible; }
+.home_review_control { width:100%; background:#fff; border-radius:var(--radius-box); box-shadow:0 18px 36px -22px rgba(2,42,69,.45); padding:.375rem 1.25rem; display:flex; flex-direction:column; }
+.home_review_control_row { display:flex; align-items:center; gap:1rem; padding:.875rem 0; }
+.home_review_control_row + .home_review_control_row { border-top:1px solid var(--line-soft); }
+.home_review_control_icon { flex:none; width:2.5rem; height:2.5rem; border-radius:.625rem; display:inline-flex; align-items:center; justify-content:center; }
+.home_review_control_label { font-size:var(--text-small); font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.home_review_control_row.is-automate .home_review_control_icon { background:var(--blue-100); color:var(--blue-500); }
+.home_review_control_row.is-automate .home_review_control_label { color:var(--blue-500); }
+.home_review_control_row.is-review .home_review_control_icon { background:var(--paper-100); border:1px solid var(--line-soft); color:var(--navy-700); }
+.home_review_control_row.is-review .home_review_control_label { color:var(--navy-700); }
+.home_review_control_row.is-approve .home_review_control_icon { background:var(--orange-500); color:#fff; box-shadow:0 8px 16px -8px rgba(235,100,5,.8); }
+.home_review_control_row.is-approve .home_review_control_icon .icon-stroke { stroke-width:2.2; }
+.home_review_control_row.is-approve .home_review_control_label { color:var(--orange-600); }
+/* Escalate (client reference, 17 Sep): a flagged document, an arrow, the approver, a receipt */
+.home_review_escalate { width:100%; display:flex; flex-direction:column; align-items:center; gap:.5rem; }
+.home_review_escalate_doc { position:relative; align-self:stretch; background:#fff; border-radius:var(--radius-box); box-shadow:0 18px 36px -22px rgba(2,42,69,.45); padding:1rem 1.125rem; display:flex; flex-direction:column; gap:.4375rem; }
+.home_review_escalate_flag { position:absolute; top:-.75rem; right:-.625rem; width:2.25rem; height:2.25rem; border-radius:50%; background:var(--orange-500); border:3px solid #fff; color:#fff; font-weight:800; font-size:1rem; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 16px -8px rgba(235,100,5,.8); }
+.home_review_escalate_bar { display:block; height:.3125rem; width:92%; border-radius:var(--radius-round); background:var(--line-soft); }
+.home_review_escalate_bar.is-title { width:62%; height:.375rem; background:var(--navy-700); margin-bottom:.125rem; }
+.home_review_escalate_bar.is-short { width:48%; }
+.home_review_escalate_exception { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:.3125rem; padding:.5rem .75rem; border-radius:.5rem; background:var(--orange-100); }
+.home_review_escalate_exception_label { font-size:.6875rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--amber-warning); }
+.home_review_escalate_exception_bar { width:2.5rem; height:.3125rem; border-radius:var(--radius-round); background:var(--orange-300); }
+.home_review_escalate_arrow { flex:none; fill:none; stroke:var(--orange-500); stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; }
+.home_review_escalate_person { display:flex; align-items:center; gap:.75rem; background:#fff; border-radius:.75rem; box-shadow:0 14px 28px -18px rgba(2,42,69,.45); padding:.625rem 1.125rem .625rem .625rem; }
+.home_review_escalate_avatar { flex:none; width:2.25rem; height:2.25rem; border-radius:50%; background:var(--navy-700); color:#fff; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.home_review_escalate_who { display:flex; flex-direction:column; gap:.125rem; text-align:left; }
+.home_review_escalate_name { font-size:var(--text-small); font-weight:700; line-height:1.2; color:var(--navy-800); }
+.home_review_escalate_role { font-size:.75rem; line-height:1.2; color:var(--blue-500); }
+.home_review_escalate_pill { display:inline-flex; align-items:center; gap:.5rem; margin-top:.25rem; padding:.375rem .875rem .375rem .5rem; border-radius:var(--radius-round); background:#fff; box-shadow:0 8px 18px -12px rgba(2,42,69,.4); font-size:.75rem; font-weight:600; color:var(--navy-800); }
+.home_review_escalate_tick { width:1.125rem; height:1.125rem; border-radius:50%; background:var(--blue-100); color:var(--blue-500); display:inline-flex; align-items:center; justify-content:center; }
 .home_review_item_image-wrap, .home_filing_item_image-wrap { aspect-ratio:4 / 3; border-radius:var(--radius-box); overflow:hidden; }
 /* the illustrations are drawn on white: multiply lets the card's Split light show through */
 .home_review_item_image, .home_filing_item_image { display:block; width:100%; height:100%; object-fit:cover; mix-blend-mode:multiply; }
@@ -604,6 +636,9 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .navbar_actions .button { height:3rem; padding:0 1.25rem; font-size:1rem; }
 }
 @media (max-width: 991px) {
+  /* single column: the built graphics keep their own height and a readable width */
+  .home_review_item_image-wrap.is-control, .home_review_item_image-wrap.is-escalate, .home_review_item_image-wrap.is-rules { aspect-ratio:auto; justify-content:center; }
+  .home_review_control, .home_review_escalate, .home_review_rules { max-width:24rem; }
   .home_process_step_icon { width:5rem; height:5rem; }
   .home_process_step_icon svg { width:32px; height:32px; }
   .home_process_step + .home_process_step::before { top:2.5rem; left:calc(-50% + 3rem); width:calc(100% - 6rem); }
