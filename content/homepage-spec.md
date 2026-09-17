@@ -117,7 +117,7 @@ in `style.css`.
 
 - H2: **Overnight processing. Next-day approval.**
 - Lead: **ATO documents can take days to reach your practice and your clients. ATOmate captures and processes them overnight, ready for review the next day.**
-- Checks: **Get documents to clients faster** · **No manual document processing**
+- ~~Checks: **Get documents to clients faster** · **No manual document processing**~~ Removed 17 Sep (client: "Delete the two items below with the tick marks"); hidden in the markup.
 - CTA: Book Discovery Meeting (ghost, light)
 - Graphic **Every ATO document, captured** (centred title): the four sources as ticked tiles (myGov · Agent Digital · ATO Online · Paper) in a 2×2 grid. No initials, no status pills, no arrow or mark, and **no words beyond the supplied copy** (client, 16 Sep).
 - *Not built:* the source's "FAST" label above the heading (eyebrows are a settled no).

@@ -200,6 +200,12 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Overnight: tick list removed (client feedback, 17 Sep 2026)
+
+- Client: "Delete the two items below with the tick marks." The overnight checklist ("Get
+  documents to clients faster", "No manual document processing") is `hidden` in the markup,
+  not deleted. The description now sits 24px above the CTA.
+
 ## How ATOmate works: 5.5s auto-advance, larger copy (client feedback, 17 Sep 2026)
 
 - Client: "Can we animate this in a way that it moves to the next step and shows the equivalent
