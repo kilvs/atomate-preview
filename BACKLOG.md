@@ -10,6 +10,9 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 | HowNow X logo | §2 DMS shelf | Client supplies; HowNow shown once meanwhile |
 | 1,500 vs 2,000+ practices | §1b, §12 H2 | Client picks one |
 | Mock Calendly: sample month and times; the reference card sat on an orange band, but ATOmate's CTA band stays Azure (the ask was the calendar); the real Calendly embed | §13 (17 Sep) | Client confirms the band colour and supplies the booking link |
+| Hero kicker: note says "FAST. SIMPLE. SECURE.", reference image says "Fast, simple and secure by design"; note built | §1 (17 Sep) | Client picks one |
+| ISO badge placement: page 1 says "instructions further down", but the 17 Sep PDF has none; the badge is off the hero and on the Azure strip | §1, §1d | Client sends the placement |
+| White on the orange trust bar: 3.80:1 at the left, 3.30:1 mid, 2.52:1 at the light right end (client asked for white on ember); revert: navy ground | §1b (17 Sep) | Client accepts (logged as client preference) |
 | "200+ firms" (note) vs "Trusted by 2,000+ firms" (reference image) on the new Azure strip; built as 2,000+ | §1d (17 Sep) | Client confirms the figure |
 | Testimonials — firms and full names for the six quotes | §12 | Client supplies (quotes landed 9 Sep) |
 | Final art for the filing illustrations; product screenshots for the remaining mock UI | §7 (placeholder art in since 14 Sep); §5, §6 (built from the client's reference, 17 Sep), §8, §10, §11 | Client supplies |

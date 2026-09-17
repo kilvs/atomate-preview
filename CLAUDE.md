@@ -200,6 +200,36 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Dark hero with the flow graphic; orange trust bar (client "NEW" row, 17 Sep 2026)
+
+- From the 17 Sep additional PDF, page 2 "NEW!!!": a dark hero with an ATO correspondence →
+  ATOmate → client-ready flow on the right. The heading is set on two lines ("Automate your
+  firm's / ATO document processing"). Also "Remove 'client-ready output' heading on the last
+  colorful card" and "Make the trust strip orange since we're going for this dark color for the
+  hero. White text on ember heat (subtle orange gradient)." This supersedes the same-day light
+  hero (page 1).
+- Eugene: "Save the initial hero design." It is saved three ways:
+  - git tag `hero-light-2026-09-17`
+  - a frozen snapshot in `design-references/hero-light-2026-09-17/`, with its own `style.css`
+    copy and a 1440 screenshot
+  - `.background-stage-light` kept in the live stylesheet
+- Hero build:
+  - `background-stage-night`, with `home_hero_layout.is-split` (copy, then a 25rem visual
+    column; 22rem below 1280; stacked below 992) and `home_hero_content.is-left`.
+  - The title is two `home_hero_title_line` blocks, `nowrap`. It is sized so the longer line
+    (about 12.2× the font size) always fits: 56px from 1280, 48px, 40px at 992–1100, then
+    `min(3rem, (100vw − 2×gutter)/12.6)` when stacked. Checked for two lines at 360–3440.
+  - The kicker is `orange-500` and the description is white at .82.
+  - The flow (`home_hero_flow_*`, `role="img"` with a full label) is a cascade of five
+    staggered white pills with blue icon tiles. Below it sit a blue-300 arrow, a navy-blue
+    ATOmate card with the white logo, another arrow, and the output card (light blue into soft
+    green and peach, with green ticks and no heading). The strings come from the client's
+    reference.
+  - The nav takes `is-on-dark`: white links and the white logo until it turns solid or opens.
+- The trust bar is a 120° gradient (#DC5A1E → orange-500 → #EE8A3C) with white hairlines.
+  White text is 3.80, 3.30 and 2.52:1 along it (client preference, logged in the backlog).
+  The ground sequence is now D O L D L D ….
+
 ## Typefaces: the same as Omble (client statement, 17 Sep 2026)
 
 - Client: "As for the font, use the same as Omble." This supersedes the 17 Sep brand-guide ruling

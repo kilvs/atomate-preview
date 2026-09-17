@@ -33,8 +33,8 @@ Grounds alternate light / dark / brand, and no two light sections touch (client 
 
 | # | Ground (stage class) | Client-First wrapper (as built) | Purpose | CTA |
 |---|---|---|---|---|
-| 1 | L `light` | `section-home_hero` | Kicker, claim, sub-claim, centred | Yes |
-| 1b | D `azure` | `section-home_trust` | Five claims in a straight line | No |
+| 1 | D `night` (17 Sep "NEW"; the light hero is saved in `design-references/hero-light-2026-09-17/`) | `section-home_hero` | Kicker, two-line claim, sub-claim, CTA on the left; ATO correspondence → ATOmate → output flow on the right | Yes |
+| 1b | O `ember` (17 Sep; was navy) | `section-home_trust` | Five claims in a straight line, white on a subtle orange gradient | No |
 | 1c | L `mesh` | `section-home_video` | Centred heading, film behind the 0:20 poster | No |
 | 1d | D Azure (flat) | `section-home_trust-strip` | ISO / 2,000+ firms / built for accounting firms | No |
 | 2 | L `morning` | `section-home_integrations` | Underline tabs: PMS / DMS / SMSF logos | No |
@@ -62,6 +62,9 @@ Grounds alternate light / dark / brand, and no two light sections touch (client 
 - Lead: **Automate every step from capture to archive without losing control.**
 - ~~Note: **The ATO document automation software built for accounting firms.** — sits beside the ISO 27001 badge as the hero's closing trust line.~~ Hidden 17 Sep (client: ISO to move to a different section; placement instruction to follow).
 - Sub-claim **Reduce manual work by 90%** is all orange (17 Sep).
+- Dark hero (client "NEW" row, 17 Sep): kicker **FAST. SIMPLE. SECURE.**; H1 on two set lines, **Automate your firm's** / **ATO document processing**, left-aligned.
+- Hero flow graphic (client reference strings): label **ATO correspondence**; cards **Notices of assessment · PAYG instalment notices · BAS statements · Div 293 notices · Other ATO correspondence** → ATOmate → ticks **Client-ready communication · TFNs redacted · Ready for review & approval · Filed in your DMS · Nothing gets missed**. The "Client-ready output" heading is left off, per the client.
+- Flag: the reference image's kicker reads *Fast, simple and secure by design*; the client's note reads *FAST. SIMPLE. SECURE.* The note is built.
 - CTA: Book Discovery Meeting (white button) with the ISO 27001 certified badge centred beneath it (5rem, `assets/img/brand/iso-27001.svg`, client file 11 Sep)
 - Centred copy on the plain navy ground; no arrow (removed 10 Sep).
 

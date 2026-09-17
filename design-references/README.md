@@ -18,3 +18,10 @@ superseded), `../Guide & References/ATOmate V2/ATOmate Updated Docs.pdf` (Sep 7,
 current), `ATOmate brand guide - V1 pptx.pptx`, `Atomate Palette.jpg`. The
 research pass (Awwwards / Dribbble / Made in Webflow, what to learn and what not
 to copy) is in the Claude Project, `01_Planning/Research-Hi-Fi-References.md`.
+
+## Saved hero variants
+
+- `hero-light-2026-09-17/`: the light hero (linear azure wash, centred copy, orange sub-claim)
+  as built on 17 Sep 2026, saved before the client's dark flow-graphic hero replaced it.
+  Open `index.html` there through the local server. Git tag: `hero-light-2026-09-17`.
+  Its ground rules (`.background-stage-light`) are still in the live stylesheet.
