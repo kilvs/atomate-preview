@@ -29,9 +29,10 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 | Mobile navigation | Added at the Client-First rebuild (menu button + dropdown, ≤991). The export had no mobile nav. Confirm the styling |
 | Rebuild deviations | Nav link group 79px right of the export (real logo width); process frame rounded and 58px shorter (mangled-class fix); tablet step cells icon-over-title; CTA heading steps down on mobile. See CLAUDE.md "Build conventions" |
 
-## Repo housekeeping
+## Repo housekeeping — done 17 Sep 2026
 
-- `class-01.svg` is 98 KB (embedded raster); appears in both PMS (as `logo-class.png`) and SMSF. Confirm the duplication is intentional, then optimise.
-- `dropbox-01.svg` is 65 KB; optimise with svgo before Webflow upload.
-- Favicon / webclip / og-image are the client's JPGs; convert favicon to PNG/ICO at 32/180 before launch.
-- `og:image` is a relative path; set the absolute URL on the Webflow site once the domain is known.
+- Class: one optimised vector (`class-02.svg`, 60 KB, was 98 KB) now serves both the PMS and SMSF tabs; the client's integration list names Class in both, so the duplication stays. `logo-class.png` retired.
+- Dropbox: optimised to `dropbox-02.svg` (28 KB, was 65 KB). Both were checked side by side against the originals at 2x.
+- Favicon and webclip: `favicon.ico` (16/32/48), `favicon-32.png` and `apple-touch-icon-180.png`, drawn from the 192px webclip.
+- `og:image` is absolute, pointing at `https://atomate-preview.vercel.app`; the Webflow site sets its own domain's URL.
+- Every asset nothing references (supplied art replaced by markup, the old icons and logos, Galano 500/600/700, the colour mark) moved to `Guide & References/Unused site assets (moved 17 Sep 2026)/`, which git ignores. Nothing was deleted. `assets/` now holds only what the page uses, which is the Webflow upload set.

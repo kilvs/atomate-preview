@@ -428,6 +428,11 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **Housekeeping before Webflow** (Eugene, 17 Sep 2026): optimised `class-02.svg` and
+  `dropbox-02.svg` (svgo 4, precision 1; new names because images are served immutable),
+  PNG/ICO favicons plus a 180px touch icon, an absolute `og:image`, and every unused
+  asset moved to `Guide & References/Unused site assets (moved 17 Sep 2026)/`. Where the
+  notes below say a file is "unused but kept", that is where it now lives.
 - **Only the prescribed typefaces** (client, 17 Sep 2026, brand guide: Gilroy Bold,
   Galano Regular; Harabara is the logo's face and lives in the lockup artwork). Every
   heading and every emphasised word (buttons, nav links, chips, labels, names, the hero
@@ -608,9 +613,9 @@ the dawn/morning gradients are the design system's extension for the night-to-
 morning stages — keep them; they are tints of the brand navy, not new hues.
 
 **Fonts:** the brand guide asks for Gilroy *Bold*; only ExtraBold and Light were
-supplied, so headings run at 800. Web licences for Gilroy and Galano are
+supplied, so text asks for 700 and the ExtraBold face answers it (17 Sep). Web licences for Gilroy and Galano are
 unconfirmed. Both are client flags — do not substitute a different typeface.
-"Harabara" is named in the guide with no file and no role: ignore until told.
+"Harabara" is the logo's typeface (brand guide, "Logo Design style"); it lives in the lockup artwork only.
 
 ## Client flags — open, do not resolve unilaterally
 
@@ -619,9 +624,9 @@ brand guide (guide has orange as secondary buttons; the system uses it as a scar
 outcome accent — needs the client's nod) · HowNow X logo ·
 partner logos (APS and Wolters Kluwer are PNGs from Omble's assets because the
 supplied SVGs are broken wrappers) · all lorem / `00%` content · sample UI names ·
-1,500 vs 2,000+ practices · trust-bar numbers · testimonials (only 2 exist; need
-3–4 with name, firm, role) · product screenshots (none supplied) · hero video
-(dropped or relocated?) · Omble resemblance.
+1,500 vs 2,000+ practices · trust-bar numbers · testimonials (firms and full names for
+the six quotes) · product screenshots (none supplied) · video placement (the film sits
+under the trust bar since 17 Sep; the hero stays text-only) · Omble resemblance.
 
 ## Where things live
 
@@ -629,8 +634,8 @@ supplied SVGs are broken wrappers) · all lorem / `00%` content · sample UI nam
 index.html                       the homepage, accepted Hi-Fi + Gate 04 motion
 assets/css/style.css             tokens, system, components, responsive, motion states
 assets/js/motion.js              the one GSAP init + the bespoke interactions
-assets/fonts/                    Gilroy ExtraBold, Galano 400–700 (woff2; only 400 is loaded since 17 Sep)
-assets/img/brand/                lockups, marks, ISO 27001 badge, favicon, og-image, webclip
+assets/fonts/                    Gilroy ExtraBold, Galano Regular (woff2)
+assets/img/brand/                lockups, white mark, ISO 27001 badge, favicon (ico/png), touch icon, og-image
 assets/img/partners/             PMS / DMS / SMSF logos
 content/homepage-spec.md         section order, wrappers, copy of record, flags
 docs/                            Gate 01 review, approval status, direction, motion spec
