@@ -37,7 +37,7 @@
   /* Layout. Kit default 80rem: the accepted board's sections are 80rem wide at 1440 (the export's
      inline section padding had removed the gutter); padding-global now sits outside the container. */
   --container-large:80rem; --container-medium:64rem; --container-small:48rem;
-  --navbar-height:5.5rem;
+  --navbar-height:5rem; /* Omble's 80px bar (client, 17 Sep; was 5.5rem) */
   --radius-card:1.5rem; --radius-box:1rem; --radius-button:100vw; /* pill (Eugene, 17 Sep); revert: .5rem */ --radius-round:50px;
 }
 
@@ -214,7 +214,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* the navbar CTA takes the pill shape with the bar it sits in (every button is a pill
    since 17 Sep; this rule keeps the nav a pill if --radius-button is reverted) */
 .navbar_actions .button { border-radius:100vw; transition:background .35s ease, color .35s ease; }
-.navbar_component.is-solid .navbar_shell { background:rgba(255,255,255,.82); border-color:var(--line-soft); border-radius:100vw; -webkit-backdrop-filter:saturate(180%) blur(14px); backdrop-filter:saturate(180%) blur(14px); box-shadow:0 1px 2px rgba(2,42,69,.06), 0 12px 34px rgba(2,42,69,.14); }
+.navbar_component.is-solid .navbar_shell { background:rgba(255,255,255,.82); border-color:transparent; /* as Omble (17 Sep; was line-soft) */ border-radius:100vw; -webkit-backdrop-filter:saturate(180%) blur(14px); backdrop-filter:saturate(180%) blur(14px); box-shadow:0 1px 2px rgba(2,42,69,.06), 0 12px 34px rgba(2,42,69,.14); }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
   .navbar_component.is-solid .navbar_shell { background:rgba(255,255,255,.96); }
 }

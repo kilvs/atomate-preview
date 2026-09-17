@@ -176,7 +176,7 @@ both faces are an open client flag.
 | `Layout/radius-box` | `1rem` | Size | smaller boxes, trays, tiles |
 | `Layout/radius-button` | `100vw` | Size | buttons: pill, like Omble (Eugene, 17 Sep; was `.5rem`) |
 | `Layout/radius-round` | `50px` | Size | pills, circles, chips |
-| `Layout/navbar-height` | `5.5rem` | Size | the navbar shell |
+| `Layout/navbar-height` | `5rem` | Size | the navbar shell, 80px like Omble (17 Sep; was `5.5rem`) |
 
 ---
 

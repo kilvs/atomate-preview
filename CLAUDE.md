@@ -200,6 +200,16 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Nav bar matched to Omble (client feedback, 17 Sep 2026)
+
+- Client: "We need a narrower Nav Bar. Keep the font size of ATOmate, but emulate the width
+  of Omble's. As well as the opacity of Omble's."
+- Measured on both live sites at 1440: both shells are 1280 wide with white at .82 and the
+  same blur, so width and opacity already matched. The differences were height (ATOmate 88,
+  Omble 80) and ATOmate's line-soft hairline (Omble's is transparent).
+- `--navbar-height` is `5rem` (was `5.5rem`; the hero offset follows it), and the solid
+  shell's border is transparent (was `line-soft`). Link size is unchanged at 16px.
+
 ## Buttons: every button an orange pill (Eugene, 17 Sep 2026; supersedes the 16 Sep CTA colours and the 0.5rem radius)
 
 - Eugene, 17 Sep: "Apply to all: Make all buttons orange and pill-shaped."
