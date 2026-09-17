@@ -17,7 +17,7 @@
   <link rel="apple-touch-icon" href="assets/img/brand/apple-touch-icon-180.png">
   <link rel="preload" href="assets/fonts/gilroy-bold.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/GalanoGrotesqueRegular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/css/style.css?v=0f59f698">
+  <link rel="stylesheet" href="assets/css/style.css?v=72cb3f14">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -729,7 +729,38 @@
     <div class="padding-global"><div class="container-large"><div class="padding-section-large is-tall">
       <div class="home_cta_content is-centre" data-scroll-animate data-animate-type="fade-up" data-animate-stagger="0.1">
         <h2 class="home_cta_title">Ready to make proactive accounting the standard?</h2>
-        <div class="button-group"><a href="#" class="button is-white">Book Discovery Meeting</a></div>
+        <!-- client, 17 Sep: "Remove button on book discovery". Hidden, not deleted. -->
+        <div class="button-group" hidden><a href="#" class="button is-white">Book Discovery Meeting</a></div>
+        <!-- mock Calendly (client, 17 Sep: "Add mock calendly"), built from the client's reference:
+             September 2026 with Wednesday the 9th, five times. 9 Sep 2026 is a Wednesday (checked).
+             Sample UI; it states nothing about the meeting itself. -->
+        <div class="home_cta_booking">
+          <p class="home_cta_booking_title">Book Discovery Meeting</p>
+          <div class="home_cta_cal" role="img" aria-label="Booking calendar: September 2026 with Wednesday 9 September shown, and five times that day: 9:00am, 10:30am, 1:00pm, 2:30pm and 4:00pm. Sample dates and times.">
+            <div class="home_cta_cal_month" aria-hidden="true">
+              <div class="home_cta_cal_head">
+                <p class="home_cta_cal_monthname">September 2026</p>
+                <span class="home_cta_cal_nav"><svg class="icon-stroke" width="14" height="14" viewBox="0 0 24 24" focusable="false"><path d="M15 6l-6 6 6 6"/></svg><svg class="icon-stroke" width="14" height="14" viewBox="0 0 24 24" focusable="false"><path d="M9 6l6 6-6 6"/></svg></span>
+              </div>
+              <div class="home_cta_cal_dow"><span>Mon</span><span>Tue</span><span>Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span></div>
+              <div class="home_cta_cal_days">
+              <span class="is-blank"></span><span>1</span><span>2</span><span>3</span><span>4</span><span class="is-off">5</span><span class="is-off">6</span>
+              <span>7</span><span>8</span><span class="is-on">9</span><span>10</span><span>11</span><span class="is-off">12</span><span class="is-off">13</span>
+              <span>14</span><span>15</span><span>16</span><span>17</span><span>18</span><span class="is-off">19</span><span class="is-off">20</span>
+              <span>21</span><span>22</span><span>23</span><span>24</span><span>25</span><span class="is-off">26</span><span class="is-off">27</span>
+              <span>28</span><span>29</span><span>30</span><span class="is-blank"></span><span class="is-blank"></span><span class="is-blank"></span><span class="is-blank"></span>
+              </div>
+            </div>
+            <div class="home_cta_cal_slots" aria-hidden="true">
+              <p class="home_cta_cal_slotday">Wednesday 9 Sep</p>
+              <span class="home_cta_cal_slot">9:00am</span>
+              <span class="home_cta_cal_slot">10:30am</span>
+              <span class="home_cta_cal_slot">1:00pm</span>
+              <span class="home_cta_cal_slot">2:30pm</span>
+              <span class="home_cta_cal_slot">4:00pm</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div></div></div>
   </section>

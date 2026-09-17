@@ -184,7 +184,8 @@ Unchanged by the QA. H2 **Replace generic ATO messaging with clear guidance**; l
 ## 13. CTA (`.background-stage-peach`)
 
 - H2: **Ready to make proactive accounting the standard?** (no description)
-- CTA: Book Discovery Meeting (blue)
+- ~~CTA: Book Discovery Meeting (blue)~~ Button removed 17 Sep (client: "Remove button on book discovery"); hidden in the markup.
+- Mock Calendly (client, 17 Sep, from their reference): title **Book Discovery Meeting** over a card with **September 2026** (Mon-first, weekends muted, 9 bold), **Wednesday 9 Sep** and times **9:00am · 10:30am · 1:00pm · 2:30pm · 4:00pm**. Sample UI.
 
 ## Footer
 

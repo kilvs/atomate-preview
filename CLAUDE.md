@@ -200,6 +200,19 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## CTA: mock Calendly, button removed (client feedback, 17 Sep 2026)
+
+- Client: "Add mock calendly. Remove button on book discovery." Their reference is an orange band
+  with "Book Discovery Meeting" above a white calendar card.
+- The CTA button group is `hidden`. Under the H2 sits `.home_cta_booking`: the title "Book
+  Discovery Meeting" (white) over `.home_cta_cal`, a `role="img"` card. The left side has
+  September 2026 (Mon-first, weekends muted, the 9th bold, nothing filled). A hairline divides
+  it from "Wednesday 9 Sep" and five white time pills. 1 Sep 2026 is a Tuesday and the 9th a
+  Wednesday (checked). The card is 575px wide on desktop. Below 768 it stacks full width, with
+  the times under the month.
+- The band stays Azure (peach sheen). The reference's orange ground is flagged in `BACKLOG.md`
+  rather than changed.
+
 ## Testimonials: centred heading, no avatars, "crying" quote featured (client feedback, 17 Sep 2026)
 
 - Client: "Center-align heading. Remove the avatars with initials. Also, make the 'I was crying in

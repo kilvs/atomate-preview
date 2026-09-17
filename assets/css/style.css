@@ -702,6 +702,28 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_cta_content.is-centre { margin:0 auto; align-items:center; text-align:center; max-width:44rem; }
 .home_cta_title { font-size:3.5rem; }
 .home_cta_description { color:rgba(255,255,255,.85); }
+/* mock Calendly (client, 17 Sep), from the client's reference: a white card with the month on the
+   left and the day's times on the right, divided by a hairline. Nothing is selected; the 9th is bold. */
+.home_cta_booking { width:100%; display:flex; flex-direction:column; align-items:center; gap:1rem; margin-top:.5rem; }
+.home_cta_booking_title { font-family:var(--font-heading); font-weight:700; font-size:1.125rem; color:#fff; }
+.home_cta_cal { display:grid; grid-template-columns:auto auto; gap:2.5rem; text-align:left; background:linear-gradient(165deg, #fff 0%, var(--paper-100) 100%); color:var(--ink-900); border-radius:var(--radius-card); box-shadow:0 34px 70px -34px rgba(2,20,40,.7); padding:2.25rem 2.5rem; }
+.home_cta_cal_head { display:flex; align-items:center; justify-content:space-between; margin-bottom:1.25rem; }
+.home_cta_cal_monthname { font-family:var(--font-heading); font-weight:700; font-size:1.125rem; color:var(--navy-800); }
+.home_cta_cal_nav { display:flex; gap:.75rem; color:var(--ink-500); }
+.home_cta_cal_dow, .home_cta_cal_days { display:grid; grid-template-columns:repeat(7, 2.5rem); }
+.home_cta_cal_dow span { font-family:var(--font-heading); font-weight:700; font-size:.625rem; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-500); text-align:center; padding-bottom:.5rem; }
+.home_cta_cal_days span { height:2.5rem; display:flex; align-items:center; justify-content:center; font-size:1rem; color:var(--ink-900); font-variant-numeric:tabular-nums; }
+.home_cta_cal_days .is-off { color:var(--ink-500); }
+.home_cta_cal_days .is-on { font-family:var(--font-heading); font-weight:700; color:var(--navy-800); }
+.home_cta_cal_days .is-blank { visibility:hidden; }
+.home_cta_cal_slots { display:flex; flex-direction:column; gap:.625rem; min-width:10rem; padding-left:2.5rem; border-left:1px solid var(--line-soft); }
+.home_cta_cal_slotday { font-family:var(--font-heading); font-weight:700; font-size:1rem; color:var(--navy-800); text-align:center; margin-bottom:.625rem; }
+.home_cta_cal_slot { display:block; text-align:center; padding:.625rem 1.25rem; border-radius:var(--radius-round); background:#fff; border:1px solid var(--line-soft); box-shadow:0 6px 14px -10px rgba(2,42,69,.35); font-family:var(--font-heading); font-weight:700; font-size:.9375rem; color:var(--navy-800); }
+@media (max-width:767px) {
+  .home_cta_cal { width:100%; grid-template-columns:minmax(0,1fr); gap:1.5rem; padding:1.5rem 1.25rem; }
+  .home_cta_cal_dow, .home_cta_cal_days { grid-template-columns:repeat(7, minmax(0,1fr)); }
+  .home_cta_cal_slots { padding-left:0; border-left:0; padding-top:1.5rem; border-top:1px solid var(--line-soft); min-width:0; }
+}
 
 /* ---------- Footer */
 .footer_component { border-top:1px solid var(--line); background:#fff; }
