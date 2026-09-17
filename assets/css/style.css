@@ -20,6 +20,7 @@
   /* Theme (light-on-dark text) */
   --text-on-dark:#FFFFFF; --text-on-dark-soft:rgba(255,255,255,.78); --text-on-dark-muted:rgba(255,255,255,.55);
   --line-on-dark:rgba(255,255,255,.14);
+  --button-primary:var(--orange-500); /* Theme: every CTA fill (Eugene, 17 Sep); revert: var(--blue-500) */
   --gradient-split-light:linear-gradient(100deg, var(--blue-50) 0%, #FBFDFE 46%, #FFF4EA 100%);
   --shadow-card:0 24px 60px -32px rgba(2,42,69,.35), 0 1px 0 rgba(2,42,69,.06);
   --shadow-card-hover:0 30px 60px -30px rgba(2,42,69,.45);
@@ -37,7 +38,7 @@
      inline section padding had removed the gutter); padding-global now sits outside the container. */
   --container-large:80rem; --container-medium:64rem; --container-small:48rem;
   --navbar-height:5.5rem;
-  --radius-card:1.5rem; --radius-box:1rem; --radius-button:.5rem; --radius-round:50px;
+  --radius-card:1.5rem; --radius-box:1rem; --radius-button:100vw; /* pill (Eugene, 17 Sep); revert: .5rem */ --radius-round:50px;
 }
 
 /* ---------- Base / tag defaults (Client-First: text inherits from tags, classes only customise) */
@@ -90,15 +91,17 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .text-weight-semibold { font-family:var(--font-heading); font-weight:700; }
 .text-style-quote { font-family:var(--font-heading); font-weight:700; font-size:2.25rem; line-height:1.2; letter-spacing:-0.02em; color:var(--navy-700); }
 
-/* ---------- Buttons: Azure primary, Deep Navy hover (client palette card, 16 Sep); is-accent (nav + hero) / is-white on dark grounds; is-small for mock UI. Label only, no icons. */
-.button { display:inline-flex; align-items:center; justify-content:center; height:3.125rem; padding:0 1.375rem; border-radius:var(--radius-button); font-family:var(--font-heading); font-weight:700; font-size:1rem; line-height:1; text-decoration:none; border:1px solid transparent; white-space:nowrap; background:var(--blue-500); color:#fff; transition:background .2s ease, color .2s ease, transform .15s ease; }
+/* ---------- Buttons: orange pills, Deep Navy hover (Eugene, 17 Sep; supersedes the 16 Sep Azure primary); is-white on dark grounds; is-small for mock UI. Label only, no icons. */
+.button { display:inline-flex; align-items:center; justify-content:center; height:3.125rem; padding:0 1.375rem; border-radius:var(--radius-button); font-family:var(--font-heading); font-weight:700; font-size:1rem; line-height:1; text-decoration:none; border:1px solid transparent; white-space:nowrap; background:var(--button-primary); color:#fff; transition:background .2s ease, color .2s ease, transform .15s ease; }
 .button:hover { background:var(--navy-700); color:#fff; }
 .button.is-blue { background:var(--blue-500); } .button.is-blue:hover { background:var(--navy-700); }
-/* Signal Orange is the page's one accent moment: the nav and hero CTAs only (Eugene, 16 Sep) */
+/* Every button is Signal Orange (Eugene, 17 Sep: "apply to all"), superseding the 16 Sep
+   orange-on-nav-and-hero-only rule. is-accent now matches the base and is kept for the revert. */
 .button.is-accent { background:var(--orange-500); color:#fff; } .button.is-accent:hover { background:var(--navy-700); color:#fff; }
 .button:active { transform:scale(.98); }
-.button.is-white { background:#fff; color:var(--navy-700); } .button.is-white:hover { background:var(--orange-500); color:#fff; }
-.button.is-small { height:2.25rem; padding:0 1rem; font-size:.875rem; background:var(--blue-500); }
+/* on dark grounds: orange at rest, hovers to white with a navy label (navy would vanish on the band) */
+.button.is-white { background:var(--button-primary); color:#fff; } .button.is-white:hover { background:#fff; color:var(--navy-700); }
+.button.is-small { height:2.25rem; padding:0 1rem; font-size:.875rem; background:var(--button-primary); }
 
 /* ---------- Icons */
 .icon-stroke { stroke:currentColor; fill:none; stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; }
@@ -208,8 +211,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .navbar_nav { display:flex; gap:2.25rem; }
 .navbar_link { color:var(--navy-700); font-family:var(--font-heading); font-weight:700; font-size:1rem; white-space:nowrap; transition:color .35s ease; }
 .navbar_link:hover { color:var(--blue-500); }
-/* the navbar CTA takes the pill shape with the bar it sits in; page buttons keep
-   ATOmate's 0.5rem radius until the client asks otherwise */
+/* the navbar CTA takes the pill shape with the bar it sits in (every button is a pill
+   since 17 Sep; this rule keeps the nav a pill if --radius-button is reverted) */
 .navbar_actions .button { border-radius:100vw; transition:background .35s ease, color .35s ease; }
 .navbar_component.is-solid .navbar_shell { background:rgba(255,255,255,.82); border-color:var(--line-soft); border-radius:100vw; -webkit-backdrop-filter:saturate(180%) blur(14px); backdrop-filter:saturate(180%) blur(14px); box-shadow:0 1px 2px rgba(2,42,69,.06), 0 12px 34px rgba(2,42,69,.14); }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))) {
@@ -699,7 +702,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .navbar_link { display:block; padding:.75rem 0; color:var(--navy-700); font-size:1.125rem; }
   .navbar_link:hover { color:var(--blue-600); }
   .navbar_actions .button-group { display:flex; }
-  .navbar_actions .button { width:100%; height:3.5rem; font-size:var(--text-regular); background:var(--blue-500); color:#fff; }
+  .navbar_actions .button { width:100%; height:3.5rem; font-size:var(--text-regular); background:var(--button-primary); color:#fff; }
 }
 @media (max-width: 767px) {
   .home_video_content { gap:1.75rem; }

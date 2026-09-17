@@ -13,6 +13,7 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 | Final art for the filing illustrations; product screenshots for the remaining mock UI | §7 (placeholder art in since 14 Sep); §5, §6 (built from the client's reference, 17 Sep), §8, §10, §11 | Client supplies |
 | Web licences for Gilroy and Galano (commercial foundry fonts, Tinkov and René Bieder; Gilroy Bold arrived 17 Sep as a MyFonts web kit, Galano is complete) | all type | Client sends the licences (Eugene: coming shortly) |
 | Orange as scarce accent vs guide's orange secondary buttons | system | Client nod |
+| Every button orange with a white label, at 3.30:1 (fails AA for 16px); a navy label would be 5.7:1 | all CTAs (17 Sep) | Client accepts the trade-off or picks a navy label |
 | BAW lockup size in the nav | nav | Client review |
 | APS and Wolters Kluwer marks — official SVGs | §2 PMS shelf | Client supplies; the folder's SVGs are broken wrappers linking a local PNG |
 | Video — hero stays text-only; the film now has its own section under the trust bar (17 Sep) | §1c | Client confirms the placement |
@@ -22,6 +23,7 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 
 | Item | Note |
 |---|---|
+| Mock-UI `is-small` button went orange with "all buttons" (17 Sep) | It was kept blue on 10 Sep because it depicts product UI; style guide only. Keep it orange or return it to blue? |
 | Orange glow on the dark navy bands | Peach sheen grounds and the With ATOmate card got Ember bay's warmth (17 Sep); Azure depth (trust bar, overnight, channels) was left as is because the examples did not include it. Add it there too, or leave? |
 | Testimonial arrows = rotation (featured ↔ stack) | Prototyped in Gate 04; confirm or specify the alternative before Webflow |
 | System sheet / Hi-Fi-System doc rewrite for the merged direction | The Project's `02_Design-Artifact/Hi-Fi-System.md` still describes the earlier ledger-grid draft; `CLAUDE.md` here is the current record |

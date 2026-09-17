@@ -22,7 +22,7 @@ cool ramps, one warm ramp, an ink ramp and white. Values are the `:root` tokens 
 | Group | Steps | Notes |
 |---|---|---|
 | `Navy/` | `navy-700` `#03466B` · `navy-800` `#022A45` · `navy-900` `#021F35` | `navy-700` is the brand navy (headings, nav solid state, footer text). 800/900 are the night stages — tints of the brand navy, not new hues. |
-| `Blue/` | `blue-50` `#F1F8FC` · `blue-100` `#E5F3FA` · `blue-300` `#5FB0DE` · `blue-500` `#0078BA` · `blue-600` `#0A5A8A` | `blue-500` is the brand blue: primary buttons, links, icons, ✓ marks. `600` is hover. |
+| `Blue/` | `blue-50` `#F1F8FC` · `blue-100` `#E5F3FA` · `blue-300` `#5FB0DE` · `blue-500` `#0078BA` · `blue-600` `#0A5A8A` | `blue-500` is the brand blue: links, icons (buttons are orange since 17 Sep), ✓ marks. `600` is hover. |
 | `Orange/` | `orange-100` `#FFF0E6` · `orange-300` `#FFB280` · `orange-500` `#EB6405` | `orange-500` is the brand accent and is **scarce**: the hero arrowhead, the active step icon, the comparison arrow button, the "Next-day approval" label, the 90% stat. `orange-300` is the hero H1's `90%` on navy. **No orange buttons** — the guide's "secondary orange button" is a client flag, not a build instruction. |
 | `Ink/` | `ink-900` `#1F2A33` · `ink-700` `#3D4A55` · `ink-500` `#6B7A86` | Body, secondary, muted text on light grounds. |
 | `Line/` | `line` `#D5DDE3` · `line-soft` `#E6ECF0` | Hairlines and card borders. |
@@ -57,7 +57,7 @@ Kit defaults kept:
 - `max-width-text` 42rem
 
 Radii (build as `Layout/` variables): `radius-card` 1.5rem · `radius-box` 1rem ·
-`radius-button` **0.5rem** · `radius-round` 50% for `.dot` icon circles and pill
+`radius-button` **100vw, pill** (17 Sep; was 0.5rem) · `radius-round` 50% for `.dot` icon circles and pill
 chips. No chamfers, no notches.
 
 ## Breakpoints
@@ -114,10 +114,10 @@ that still needs code or a decision.
 
 | Variable | Live value | The revert, if the client changes their mind |
 |---|---|---|
-| `Layout/radius-button` | `0.5rem` | — (rejected: pill; chamfer) |
+| `Layout/radius-button` | `100vw` (pill, Eugene 17 Sep) | `0.5rem` |
 | `Theme/text-highlight` | `orange-300` on navy, `orange-500` on light | `blue-300` / `blue-500` if orange is pulled back further |
-| `Theme/button-primary` | `blue-500` fill, white label | — |
-| `Theme/button-on-dark` | white fill, `navy-700` label | `blue-500` fill |
+| `Theme/button-primary` | `orange-500` fill, white label (17 Sep) | `blue-500` |
+| `Theme/button-on-dark` | `orange-500` fill, white label; hover white fill, `navy-700` label (17 Sep) | white fill, `navy-700` label |
 | CTA label | "Book Discovery Meeting" (Content QA, 9 Sep) | — |
 
 ### Reduced motion

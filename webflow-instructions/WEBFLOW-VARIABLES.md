@@ -97,14 +97,14 @@ Never bind these to an element. Elements bind Theme tokens, which point here.
 | `Theme/border-primary` | `Line/line` | card borders, dividers |
 | `Theme/border-soft` | `Line/line-soft` | inner hairlines |
 | `Theme/border-on-dark` | `Line/line-on-dark` | dividers on dark bands |
-| `Theme/button-primary-background` | `Blue/blue-500` | every CTA except nav + hero |
+| `Theme/button-primary-background` | `Orange/orange-500` | every button (17 Sep; revert `Blue/blue-500`) |
 | `Theme/button-primary-background-hover` | `Navy/navy-700` | its hover |
 | `Theme/button-primary-text` | `Paper/paper` | label |
-| `Theme/button-accent-background` | `Orange/orange-500` | nav + hero CTA only |
+| `Theme/button-accent-background` | `Orange/orange-500` | nav + hero CTA; same as primary since 17 Sep |
 | `Theme/button-accent-background-hover` | `Navy/navy-700` | its hover |
-| `Theme/button-on-dark-background` | `Paper/paper` | CTAs on navy / peach |
-| `Theme/button-on-dark-background-hover` | `Orange/orange-500` | its hover |
-| `Theme/button-on-dark-text` | `Navy/navy-700` | its label |
+| `Theme/button-on-dark-background` | `Orange/orange-500` | CTAs on navy / peach (17 Sep; revert `Paper/paper`) |
+| `Theme/button-on-dark-background-hover` | `Paper/paper` | its hover (17 Sep; revert `Orange/orange-500`) |
+| `Theme/button-on-dark-text` | `Paper/paper` | its label; `Navy/navy-700` on hover (17 Sep) |
 
 **Hover is a state, not a mode.** Bind the base token on the default state and the `-hover`
 token inside the class's Hover state.
@@ -174,7 +174,7 @@ both faces are an open client flag.
 |---|---|---|---|
 | `Layout/radius-card` | `1.5rem` | Size | cards |
 | `Layout/radius-box` | `1rem` | Size | smaller boxes, trays, tiles |
-| `Layout/radius-button` | `.5rem` | Size | buttons — ATOmate is 0.5rem, not Omble's pill |
+| `Layout/radius-button` | `100vw` | Size | buttons: pill, like Omble (Eugene, 17 Sep; was `.5rem`) |
 | `Layout/radius-round` | `50px` | Size | pills, circles, chips |
 | `Layout/navbar-height` | `5.5rem` | Size | the navbar shell |
 

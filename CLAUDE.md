@@ -200,6 +200,24 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Buttons: every button an orange pill (Eugene, 17 Sep 2026; supersedes the 16 Sep CTA colours and the 0.5rem radius)
+
+- Eugene, 17 Sep: "Apply to all: Make all buttons orange and pill-shaped."
+- `--radius-button` is `100vw` (was `.5rem`). One token reverts it. The skip link and the
+  mobile menu button share the token, so they are pills and circles too.
+- New Theme token `--button-primary: var(--orange-500)` fills `.button`, `.is-small`,
+  `.is-white` and the mobile nav CTA. Revert: `var(--blue-500)`.
+- Hovers: light grounds go to Deep Navy, as before. On dark grounds, `.is-white` is orange at
+  rest and hovers to a white fill with a navy label, because Deep Navy would disappear
+  into the band.
+- `.is-accent` now matches the base and stays for the revert. `.is-blue` is unused and
+  left as is.
+- Contrast: white on orange-500 is **3.30:1**, which fails AA for 16px text. It now applies
+  to every CTA rather than only the nav and hero. A navy label would give 5.7:1. This is
+  flagged in `BACKLOG.md`, not changed.
+- The mock-UI `is-small` (style guide only) also went orange under the literal "all". It
+  was kept blue on 10 Sep because it depicts product UI.
+
 ## Direction notes from Eugene, 10 Sep 2026 (supersede earlier settled points)
 
 - **Centre-align whenever necessary.** Section headers and the CTA under every
@@ -299,7 +317,7 @@ any width; all interactions pass with and without reduced motion.
   `assets/img/features/` as 700×525 WebP (4:3, 2× the card width). Square sources
   are centre-cropped; the landscape `fulll-control.jpg` is padded, not cropped, and
   saved as `full-control.webp` (typo fixed). Alt text describes each illustration.
-- **CTA colours follow the client's palette card** (16 Sep), superseding the 10 Sep
+- *(Superseded 17 Sep: every button is an orange pill; see "Buttons" above.)* **CTA colours follow the client's palette card** (16 Sep), superseding the 10 Sep
   "orange primary": **Azure `#0078BA` fills every CTA, hover Deep Navy `#03466B`**
   (the card's own pairing). **Signal Orange is the page's single accent moment and is
   used on the nav and hero CTAs only** (`.button.is-accent`). On dark grounds
