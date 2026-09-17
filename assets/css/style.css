@@ -16,7 +16,7 @@
   --blue-600:#0A5A8A; --blue-500:#0078BA; --blue-300:#5FB0DE; --blue-100:#E5F3FA; --blue-50:#F1F8FC;
   --orange-600:#C9550A; --orange-500:#EB6405; --orange-300:#FFB280; --orange-100:#FFF0E6;
   --ink-900:#1F2A33; --ink-700:#3D4A55; --ink-500:#6B7A86; --line:#D5DDE3; --line-soft:#E6ECF0; --paper-100:#F4F7F9; --paper:#FFFFFF;
-  --green-success-bg:#E3F3E8; --green-success:#1E6B3A; --amber-warning:#9A3B00; --red-error:#D0342C; --red-error-bg:#FBEAE8;
+  --green-check:#5FA052; /* the client's tick green (17 Sep) */ --green-success-bg:#E3F3E8; --green-success:#1E6B3A; --amber-warning:#9A3B00; --red-error:#D0342C; --red-error-bg:#FBEAE8;
   /* Theme (light-on-dark text) */
   --text-on-dark:#FFFFFF; --text-on-dark-soft:rgba(255,255,255,.78); --text-on-dark-muted:rgba(255,255,255,.55);
   --line-on-dark:rgba(255,255,255,.14);
@@ -350,7 +350,10 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_comparison_card.is-day .component_tick { background:var(--red-error); color:#fff; }
 .home_comparison_card.is-day .component_tick .icon-stroke { stroke-width:2.75; }
 .home_comparison_card.is-night .home_comparison_item { color:#fff; font-family:var(--font-heading); font-weight:700; }
-.home_comparison_card.is-night .component_tick { background:#fff; color:var(--blue-500); }
+/* solid green disc, chunky white check, soft green glow (client, 17 Sep; was blue on white).
+   White on the green is 3.16:1, above the 3:1 needed for a graphic. */
+.home_comparison_card.is-night .component_tick { background:var(--green-check); color:#fff; box-shadow:0 0 0 .25rem rgba(95,160,82,.22), 0 0 1rem .125rem rgba(95,160,82,.55); }
+.home_comparison_card.is-night .component_tick .icon-stroke { width:.875rem; height:.875rem; stroke-width:2.75; }
 .home_comparison_footer { margin-top:3rem; display:flex; justify-content:center; }
 .home_comparison_lead { margin-top:.75rem; font-size:1.25rem; line-height:1.55; font-family:var(--font-heading); font-weight:700; color:var(--orange-500); max-width:44rem; text-wrap:balance; } /* orange + bold (client, 17 Sep; was navy-800). 20px bold is large text: 3.30:1 passes AA */
 

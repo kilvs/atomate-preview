@@ -200,6 +200,14 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Comparison checks: green discs with a soft glow (client feedback, 17 Sep 2026)
+
+- Client: "Use: [solid green disc, bold white check] And add soft green glow."
+- The With card's ticks use a new primitive, `--green-check: #5FA052` (sampled from the
+  reference), with a white check at 14px and stroke 2.75. The glow is a green .25rem halo plus a 1rem
+  green blur. It is static, so idle items stay still. White on green is 3.16:1, above the 3:1
+  needed for a graphic. Revert: white disc, `blue-500` check, no shadow.
+
 ## Comparison crosses: solid red discs (client feedback, 17 Sep 2026)
 
 - Client: "Replace the cross icon to the one mentioned", showing a solid red disc with a bold

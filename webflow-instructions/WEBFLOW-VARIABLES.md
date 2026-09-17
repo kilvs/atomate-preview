@@ -73,6 +73,7 @@ Never bind these to an element. Elements bind Theme tokens, which point here.
 |---|---|---|
 | `Signal/green-success` | `#1E6B3A` | Color |
 | `Signal/green-success-bg` | `#E3F3E8` | Color |
+| `Signal/green-check` | `#5FA052` | Color |
 | `Signal/red-error` | `#D0342C` | Color |
 | `Signal/red-error-bg` | `#FBEAE8` | Color |
 | `Signal/amber-warning` | `#9A3B00` | Color |
