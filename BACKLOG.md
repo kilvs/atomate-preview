@@ -11,11 +11,11 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 | 1,500 vs 2,000+ practices | §1b, §12 H2 | Client picks one |
 | Testimonials — firms and full names for the six quotes | §12 | Client supplies (quotes landed 9 Sep) |
 | Final art for the filing illustrations; product screenshots for the remaining mock UI | §7 (placeholder art in since 14 Sep); §5, §6 (built from the client's reference, 17 Sep), §8, §10, §11 | Client supplies |
-| Gilroy Bold + web licences for Gilroy and Galano | headings | Client supplies the file and confirms licences |
+| Gilroy Bold (700, woff2) + web licences for Gilroy and Galano | all headings and bold text (ExtraBold stands in, 17 Sep) | Client supplies the file and confirms licences |
 | Orange as scarce accent vs guide's orange secondary buttons | system | Client nod |
 | BAW lockup size in the nav | nav | Client review |
 | APS and Wolters Kluwer marks — official SVGs | §2 PMS shelf | Client supplies; the folder's SVGs are broken wrappers linking a local PNG |
-| Hero video — dropped or relocated | §1 | Client confirms V2's text-only hero |
+| Video — hero stays text-only; the film now has its own section under the trust bar (17 Sep) | §1c | Client confirms the placement |
 | Omble resemblance acceptable | whole site | Client confirms |
 
 ## Open with Eugene
