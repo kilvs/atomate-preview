@@ -144,7 +144,7 @@ in `style.css`.
 
 - H2: **Give clients more time to act** (no description)
 - Cards are white with a light preview panel holding the mock (Omble practice, 10 Sep).
-- Graphics follow the copy (16 Sep): card A is a timeline, rebuilt 17 Sep to the client's graphic: blue dot, orange run to an orange check, a dotted remainder, and a navy end dot with a flag. The label ~~**More time to act**~~ was removed 17 Sep (hidden); card B is **Penalties** struck through in orange. The mock UI panels are gone.
+- Graphics follow the copy (16 Sep): card A is a timeline, rebuilt 17 Sep to the client's graphic: blue dot, orange run to an orange check, a dotted remainder, and a navy end dot with a flag. The label ~~**More time to act**~~ was removed 17 Sep (hidden); card B is **Penalties** struck through in orange (full-strength navy since 17 Sep, "looks faded"). The mock UI panels are gone.
 - Card A: **Stop missed PAYG instalment notices** — Automatically capture and send every PAYG instalment notice. Give your clients more time to review and prepare for upcoming payments.
 - Card B: **Help clients stay ahead of DPNs** — Deliver important ATO correspondence on time, communicate proactively, and prevent unexpected penalties.
 - CTA: Book Discovery Meeting (white)

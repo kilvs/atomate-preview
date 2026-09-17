@@ -200,6 +200,12 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## PAYG "Penalties" graphic made more defined (client feedback, 17 Sep 2026)
+
+- Client: "More defined graphics. This looks faded." The word is now full-strength `navy-800`
+  at 2.5rem (was `ink-500` at .55 opacity and 2rem). The orange strike is 7px (was 5px), with a
+  soft orange shadow. The strike was faded too, because the opacity sat on the parent.
+
 ## PAYG timeline: the client's graphic, label removed (client feedback, 17 Sep 2026)
 
 - Client: "Remove more time to act" plus a reference graphic. Card A's timeline is rebuilt in
