@@ -195,6 +195,10 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .background-stage-light::before, .background-stage-mesh::before, .background-stage-azure::before, .background-stage-peach::before { z-index:0; }
 .background-stage-light > *, .background-stage-mesh > *, .background-stage-azure > *, .background-stage-peach > * { position:relative; z-index:1; }
 /* Cool morning — white into blue-100; sets the logo section apart from the warm video band above it (17 Sep) */
+/* Ember: the client's orange band (their Calendly reference, 17 Sep), for the closing CTA */
+.background-stage-ember { background:linear-gradient(155deg, var(--orange-600) 0%, var(--orange-500) 55%, #F2873A 100%); color:#fff; position:relative; overflow:hidden; }
+.background-stage-ember h2, .background-stage-ember h3 { color:#fff; }
+.background-stage-ember :focus-visible { outline-color:#fff; }
 .background-stage-morning { background:linear-gradient(170deg, #FFFFFF 0%, var(--blue-50) 30%, var(--blue-100) 100%); position:relative; overflow:hidden; }
 
 /* ---------- Navbar (Gate 04 §1: transparent over the hero → .is-solid after it) */
@@ -703,6 +707,14 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_cta_content.is-centre { margin:0 auto; align-items:center; text-align:center; max-width:44rem; }
 .home_cta_title { font-size:3.5rem; }
 .home_cta_description { color:rgba(255,255,255,.85); }
+/* grounds alternate (client general comment, 17 Sep): per-section text on the new dark grounds */
+.section-home_comparison .component_section-header.is-light .component_section-header_description { color:rgba(255,255,255,.8); }
+.section-home_filing .home_filing_item h3 { color:var(--navy-800); } /* light cards on the night ground keep navy titles */
+.section-home_informed .home_informed_text h3 { color:#fff; }
+.section-home_informed .home_informed_description { color:rgba(255,255,255,.85); }
+.section-home_informed .home_informed_quote { box-shadow:0 0 0 1px rgba(255,255,255,.14), 0 26px 50px -28px rgba(2,20,40,.85); }
+.section-home_testimonials .home_testimonials_featured { box-shadow:0 0 0 1px rgba(255,255,255,.14), var(--shadow-card); }
+.section-home_cta .home_cta_cal { box-shadow:0 -24px 60px -30px rgba(90,30,0,.55); }
 /* mock Calendly (client, 17 Sep), from the client's reference: a white card with the month on the
    left and the day's times on the right, divided by a hairline. Nothing is selected; the 9th is bold. */
 .home_cta_booking { width:100%; display:flex; flex-direction:column; align-items:center; gap:1rem; margin-top:.5rem; }

@@ -29,24 +29,28 @@ panels and the footer contact details. Structure, wrapper names and design notes
 Thirteen sections plus the footer, in the accepted order. Ground = the stage class
 in `style.css`.
 
-| # | Ground | Client-First wrapper (as built) | Purpose | CTA |
+Grounds alternate light / dark / brand, and no two light sections touch (client general comment, 17 Sep). The table was rewritten from the live page that day. L = light, D = dark, O = orange brand.
+
+| # | Ground (stage class) | Client-First wrapper (as built) | Purpose | CTA |
 |---|---|---|---|---|
-| 1 | night | `section-home_hero` | Kicker, claim, sub-claim, centred | Yes |
-| 1b | night | `home_hero_stats` (inside `section-home_hero`, same gradient) | Giant numerals (belongs to the hero visually) | No |
-| 1c | warm mesh | `section-home_video` | Centred heading, YouTube film behind a play poster | No |
-| 2 | cool morning | `section-home_integrations` | Centred heading, underline tabs: PMS / DMS / SMSF logos | No |
-| 3 | white | `section-home_comparison` | Without (white) / With (navy) + closing lead | Yes |
-| 4 | day | `section-home_process` | How ATOmate works — 5 steps, click to reveal | Yes |
-| 5 | night | `section-home_overnight` | Overnight processing, "Every ATO document, captured" panel | Yes |
-| 6 | day | `section-home_review` | Review what matters — three cards | Yes |
-| 7 | white | `section-home_filing` | Matched, filed and tracked — three cards | Yes |
-| 8 | dawn | `section-home_payg` | Give clients more time to act | Yes |
-| 9 | white | `section-home_informed` | Two copy blocks paired with two customer quotes | Yes |
-| 10 | day | `section-home_messaging` | Clear guidance, email card, channels | Yes |
-| 11 | white | `section-home_security` | Credentials line + two UI cards | No |
-| 12 | day | `section-home_testimonials` | Six quotes, three visible, rotation | No |
-| 13 | morning | `section-home_cta` | Closing CTA | Yes |
-| — | white | `footer_component` | Lockup, tagline, link columns | — |
+| 1 | L `light` | `section-home_hero` | Kicker, claim, sub-claim, centred | Yes |
+| 1b | D `azure` | `section-home_trust` | Five claims in a straight line | No |
+| 1c | L `mesh` | `section-home_video` | Centred heading, film behind the 0:20 poster | No |
+| 1d | D Azure (flat) | `section-home_trust-strip` | ISO / 2,000+ firms / built for accounting firms | No |
+| 2 | L `morning` | `section-home_integrations` | Underline tabs: PMS / DMS / SMSF logos | No |
+| 3 | D `night` (17 Sep; was white) | `section-home_comparison` | Without / With cards + orange lead | Yes |
+| 4 | L `mesh` | `section-home_process` | How ATOmate works, 5 steps, 5.5s auto-advance | Yes |
+| 5 | D `azure` | `section-home_overnight` | Overnight processing panel | Yes |
+| 6 | L `split` | `section-home_review` | Review what matters, three cards | Yes |
+| 7 | D `night` (17 Sep; was white) | `section-home_filing` | Matched, filed and tracked, three cards | Yes |
+| 8 | L `mesh` (17 Sep; was `peach`) | `section-home_payg` | Give clients more time to act | Yes |
+| 9 | D `peach` (17 Sep; was white) | `section-home_informed` | Two copy blocks with two quotes | Yes |
+| 10 | L `mesh` | `section-home_messaging` | Clear guidance, email card | Yes |
+| 10b | D `azure` | `section-home_channels` | Channels | — |
+| 11 | L `split` | `section-home_security` | Credentials line + two cards | No |
+| 12 | D `azure` (17 Sep; was `mesh`) | `section-home_testimonials` | Six quotes, rotation | No |
+| 13 | O `ember` (17 Sep; was `peach`) | `section-home_cta` | Closing heading + mock Calendly on the bottom edge | No (button hidden) |
+| — | L white | `footer_component` | Lockup, tagline, link columns | — |
 
 ---
 

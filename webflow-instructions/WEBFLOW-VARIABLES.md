@@ -203,6 +203,7 @@ both faces are an open client flag.
 Five backgrounds, built as classes rather than variables because each is a multi-stop gradient.
 Recipes are in `CLAUDE.md` under "Section grounds". Assign one per section so no two neighbours
 repeat: Warm mesh, Split light, Azure depth (lit), Peach sheen, Cool morning (integrations, 17 Sep), plain white.
+**Client rule (17 Sep): grounds alternate light / dark / brand, and no two light sections touch.** Night (navy) and a new **Ember** (orange-600 → orange-500 → #F2873A at 155°, closing CTA) join the set. The per-section order is the table in `content/homepage-spec.md`.
 
 Split light is also the fill for content cards (Without ATOmate, overnight panel, review,
 filing, PAYG, testimonials; 17 Sep). The stylesheet keeps it as `--gradient-split-light`;

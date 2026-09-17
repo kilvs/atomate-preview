@@ -200,6 +200,29 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Section grounds alternate (client general comment, 17 Sep 2026)
+
+- Client: "For the division of sections, make sure to alternate between light, dark, and other
+  brand colors/gradients. No 2 light sections should be next to each other." This supersedes
+  the house rule "never let two saturated grounds touch" for the one pair where it cannot hold.
+- The live sequence is L D L D L D L D L D L D L D L D O, then the white footer (table in
+  `content/homepage-spec.md`). Changes:
+  - comparison → `night`, filing → `night`
+  - payg → `mesh` (its ghost mark `hidden`)
+  - informed → `peach`
+  - testimonials → `azure`
+  - the CTA → a new `background-stage-ember` orange gradient (the ground of the client's
+    Calendly reference). Testimonials (dark) → CTA (orange) is the one saturated pair, and
+    the two hues differ.
+- Per-section fixes:
+  - The comparison header takes `is-light`. Its orange lead stays `orange-500` (5.09:1 on
+    navy-900).
+  - Filing card titles are held navy, because the stage rule whitened them inside light cards.
+  - Informed h3 and descriptions are white, and its quotes gain a faint white ring on the blue.
+  - The testimonials featured card gets the same ring.
+- White on the ember gradient: 4.39:1 at `orange-600` (the heading side). It falls to 2.53:1 at
+  the light corner, which sits behind the calendar card.
+
 ## CTA: mock Calendly, button removed (client feedback, 17 Sep 2026)
 
 - Client: "Add mock calendly. Remove button on book discovery." Their reference is an orange band
