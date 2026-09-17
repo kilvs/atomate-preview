@@ -72,6 +72,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .padding-section-large.is-short-bottom { padding-bottom:var(--padding-section-medium); }
 .padding-section-large.is-tight-top { padding-top:var(--padding-section-small); }
 .padding-section-large.is-tall { padding-top:var(--padding-section-xlarge); padding-bottom:var(--padding-section-xlarge); }
+.padding-section-large.is-flush-bottom { padding-bottom:0; } /* CTA: the calendar sits on the band's bottom edge (Eugene, 17 Sep) */
 .margin-large { margin:var(--spacer-large); } .margin-xlarge { margin:var(--spacer-xlarge); }
 .margin-top { margin-right:0; margin-bottom:0; margin-left:0; }
 .button-group { display:flex; gap:1rem; flex-wrap:wrap; align-items:center; }
@@ -719,6 +720,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_cta_cal_slots { display:flex; flex-direction:column; gap:.625rem; min-width:10rem; padding-left:2.5rem; border-left:1px solid var(--line-soft); }
 .home_cta_cal_slotday { font-family:var(--font-heading); font-weight:700; font-size:1rem; color:var(--navy-800); text-align:center; margin-bottom:.625rem; }
 .home_cta_cal_slot { display:block; text-align:center; padding:.625rem 1.25rem; border-radius:var(--radius-round); background:#fff; border:1px solid var(--line-soft); box-shadow:0 6px 14px -10px rgba(2,42,69,.35); font-family:var(--font-heading); font-weight:700; font-size:.9375rem; color:var(--navy-800); }
+/* anchored to the band's bottom edge: square bottom corners, shadow thrown upward only */
+.home_cta_cal { border-radius:var(--radius-card) var(--radius-card) 0 0; box-shadow:0 -24px 60px -30px rgba(2,20,40,.6); }
 @media (max-width:767px) {
   .home_cta_cal { width:100%; grid-template-columns:minmax(0,1fr); gap:1.5rem; padding:1.5rem 1.25rem; }
   .home_cta_cal_dow, .home_cta_cal_days { grid-template-columns:repeat(7, minmax(0,1fr)); }

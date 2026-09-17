@@ -212,6 +212,10 @@ any width; all interactions pass with and without reduced motion.
   the times under the month.
 - The band stays Azure (peach sheen). The reference's orange ground is flagged in `BACKLOG.md`
   rather than changed.
+- Eugene, 17 Sep: "Stick the calendar on the bottom... there should be no padding space bottom."
+  The padding div takes a new `is-flush-bottom` combo (`padding-bottom:0`). The card has square
+  bottom corners and an upward shadow, and sits exactly on the band's bottom edge (0px, measured
+  at 1440 and 390).
 
 ## Testimonials: centred heading, no avatars, "crying" quote featured (client feedback, 17 Sep 2026)
 
