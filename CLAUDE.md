@@ -210,6 +210,8 @@ any width; all interactions pass with and without reduced motion.
 - Hovers: light grounds go to Deep Navy, as before. On dark grounds, `.is-white` is orange at
   rest and hovers to a white fill with a navy label, because Deep Navy would disappear
   into the band.
+- Side padding is `2rem` (was `1.375rem`), matching the proportions of the client's pill
+  reference (17 Sep). The nav still fits on one row at 1101 and 992; the ≤1100 nav rule keeps its own `1.25rem`.
 - `.is-accent` now matches the base and stays for the revert. `.is-blue` is unused and
   left as is.
 - Contrast: white on orange-500 is **3.30:1**, which fails AA for 16px text. It now applies
