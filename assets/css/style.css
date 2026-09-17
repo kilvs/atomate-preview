@@ -346,7 +346,9 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_comparison_item { display:flex; gap:1rem; align-items:flex-start; }
 .home_comparison_item .component_tick { margin-top:.1rem; }
 .home_comparison_card.is-day .home_comparison_item { color:var(--ink-700); }
-.home_comparison_card.is-day .component_tick { background:var(--red-error-bg); color:var(--red-error); }
+/* solid red disc, chunky white cross (client, 17 Sep; was red on red-error-bg) */
+.home_comparison_card.is-day .component_tick { background:var(--red-error); color:#fff; }
+.home_comparison_card.is-day .component_tick .icon-stroke { stroke-width:2.75; }
 .home_comparison_card.is-night .home_comparison_item { color:#fff; font-family:var(--font-heading); font-weight:700; }
 .home_comparison_card.is-night .component_tick { background:#fff; color:var(--blue-500); }
 .home_comparison_footer { margin-top:3rem; display:flex; justify-content:center; }

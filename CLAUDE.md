@@ -200,6 +200,12 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Comparison crosses: solid red discs (client feedback, 17 Sep 2026)
+
+- Client: "Replace the cross icon to the one mentioned", showing a solid red disc with a bold
+  white ✕. The Without card's ticks are `red-error` with a white cross at stroke 2.75 (was a
+  red ✕ on `red-error-bg`). White on `red-error` is 4.99:1. Revert: the old two-token pair.
+
 ## Comparison lead: new copy in orange bold (client feedback, 17 Sep 2026)
 
 - Client: "Copy changes: Reduce manual work and errors. Keep clients ahead of tax obligations
