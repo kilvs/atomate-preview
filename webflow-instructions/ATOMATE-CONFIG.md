@@ -36,7 +36,7 @@ arrow angle): night `navy-900 → navy-700` with a soft blue glow top-right; daw
 
 | Role | Face | Weights loaded | Notes |
 |---|---|---|---|
-| Headings and every emphasised word (buttons, chips, labels, names, nav links) | Gilroy | **Bold (700)** per the brand guide (client, 17 Sep) | Only ExtraBold is supplied so far. Until the Bold file is uploaded, set these to 800 in the Designer (700 with no Bold face would synthesise); switch to 700 once Bold is in. Client flag. |
+| Headings and every emphasised word (buttons, chips, labels, names, nav links) | Gilroy | **Bold (700)** per the brand guide (client, 17 Sep) | Upload `gilroy-bold.woff2` as Gilroy 700 (supplied 17 Sep). Licence: client flag. |
 | Everything else | Galano Grotesque | **400 only** | No Galano Medium / SemiBold / Bold: anything heavier than regular is Gilroy Bold. |
 
 Both faces are self-hosted (`assets/fonts/`); upload the same woff2 files to

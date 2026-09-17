@@ -185,4 +185,4 @@ Unchanged: lockup + **Fast | Simple | Secure ATO document automation for account
 
 ## Open flags
 
-HowNow X logo · sample UI names and values · footer email and address · testimonial firms and full names · "FAST" / "SIMPLE" section labels in the source, not built (settled: no eyebrows) · 1,500 vs 2,000+ · product screenshots · hero video · Gilroy Bold + licences · Omble resemblance.
+HowNow X logo · sample UI names and values · footer email and address · testimonial firms and full names · "FAST" / "SIMPLE" section labels in the source, not built (settled: no eyebrows) · 1,500 vs 2,000+ · product screenshots · video placement · font licences · Omble resemblance.

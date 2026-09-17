@@ -428,6 +428,11 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **Gilroy Bold is in** (client file via Eugene, 17 Sep 2026; a MyFonts web kit export,
+  `Gilroy-Bold.woff2`, saved as `assets/fonts/gilroy-bold.woff2` and copied to
+  `Guide & References/Fonts/`). It is the only Gilroy face loaded, at weight 700, and
+  it is the one preloaded; ExtraBold is no longer requested. Galano stays Regular only.
+  Nav still fits at 992 (24px gap). Font licences remain a client flag.
 - **Housekeeping before Webflow** (Eugene, 17 Sep 2026): optimised `class-02.svg` and
   `dropbox-02.svg` (svgo 4, precision 1; new names because images are served immutable),
   PNG/ICO favicons plus a 180px touch icon, an absolute `og:image`, and every unused
@@ -602,7 +607,7 @@ an open question — do not copy Omble sections in.
 | Blue | `--blue-600 #0A5A8A` · `--blue-500 #0078BA` (brand blue: buttons, links, icons) · `--blue-300 #5FB0DE` · `--blue-100 #E5F3FA` · `--blue-50 #F1F8FC` |
 | Orange | `--orange-500 #EB6405` (brand accent) · `--orange-300 #FFB280` (the hero 90%) · `--orange-100 #FFF0E6` |
 | Ink / lines | `--ink-900 #1F2A33` · `--ink-700` · `--ink-500` · `--line #D5DDE3` · `--line-soft` · `--paper-100 #F4F7F9` · `--paper #FFF` |
-| Type | Headings and emphasis **Gilroy Bold (700)**, ExtraBold standing in until Bold is supplied, `letter-spacing -0.02em`, `text-wrap: balance`; body **Galano Regular 400** only, 1.0625rem/1.55 (17 Sep) |
+| Type | Headings and emphasis **Gilroy Bold (700)**, `letter-spacing -0.02em`, `text-wrap: balance`; body **Galano Regular 400** only, 1.0625rem/1.55 (17 Sep) |
 | Scale | `.h1` 4.5rem/.98 · `.h2` 3rem/1.05 · `.h3` 1.375rem · `.lead` 1.375rem · `.small` .9375rem · `.tiny` .75rem |
 | Layout | `--container 80rem` · `--gutter 2.5rem` · Webflow breakpoints 991 / 767 / 479, desktop base cascading down |
 
@@ -612,14 +617,13 @@ Charcoal #333333, White; neutrals Blue 100 #E5F3FA, Blue 700 #00649A, Orange 100
 the dawn/morning gradients are the design system's extension for the night-to-
 morning stages — keep them; they are tints of the brand navy, not new hues.
 
-**Fonts:** the brand guide asks for Gilroy *Bold*; only ExtraBold and Light were
-supplied, so text asks for 700 and the ExtraBold face answers it (17 Sep). Web licences for Gilroy and Galano are
+**Fonts:** Gilroy *Bold* (700) as the brand guide asks, supplied 17 Sep; Galano Regular. Web licences for Gilroy and Galano are
 unconfirmed. Both are client flags — do not substitute a different typeface.
 "Harabara" is the logo's typeface (brand guide, "Logo Design style"); it lives in the lockup artwork only.
 
 ## Client flags — open, do not resolve unilaterally
 
-BAW lockup size in the nav · Gilroy Bold + font licences · orange usage vs the
+BAW lockup size in the nav · font licences (Gilroy, Galano) · orange usage vs the
 brand guide (guide has orange as secondary buttons; the system uses it as a scarce
 outcome accent — needs the client's nod) · HowNow X logo ·
 partner logos (APS and Wolters Kluwer are PNGs from Omble's assets because the
@@ -634,7 +638,7 @@ under the trust bar since 17 Sep; the hero stays text-only) · Omble resemblance
 index.html                       the homepage, accepted Hi-Fi + Gate 04 motion
 assets/css/style.css             tokens, system, components, responsive, motion states
 assets/js/motion.js              the one GSAP init + the bespoke interactions
-assets/fonts/                    Gilroy ExtraBold, Galano Regular (woff2)
+assets/fonts/                    Gilroy Bold, Galano Regular (woff2; Gilroy ExtraBold kept, unloaded)
 assets/img/brand/                lockups, white mark, ISO 27001 badge, favicon (ico/png), touch icon, og-image
 assets/img/partners/             PMS / DMS / SMSF logos
 content/homepage-spec.md         section order, wrappers, copy of record, flags

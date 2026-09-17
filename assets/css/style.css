@@ -3,11 +3,9 @@
    Tokens in :root are the system; the Webflow build maps them to variables
    (webflow-instructions/ATOMATE-CONFIG.md). Design values are unchanged from the export. */
 
-/* ---------- Fonts — self-hosted. Only Gilroy Light and ExtraBold were supplied; Bold is missing (see CLAUDE.md). */
-@font-face{font-family:'Gilroy';font-weight:800;font-style:normal;font-display:swap;src:url(../fonts/gilroy-extrabold.woff2) format('woff2');}
-/* Brand guide (client, 17 Sep): Gilroy Bold for headings and every emphasised word, Galano Regular
-   for everything else. Text asks for weight 700; until the Bold file is supplied the ExtraBold face
-   above answers it. When it arrives, add: @font-face{font-family:'Gilroy';font-weight:700;...gilroy-bold.woff2} */
+/* ---------- Fonts — self-hosted. Brand guide (client, 17 Sep): Gilroy Bold for headings and every
+   emphasised word, Galano Regular for everything else. Gilroy Bold supplied by the client 17 Sep. */
+@font-face{font-family:'Gilroy';font-weight:700;font-style:normal;font-display:swap;src:url(../fonts/gilroy-bold.woff2) format('woff2');}
 @font-face{font-family:'Galano';font-weight:400;font-style:normal;font-display:swap;src:url(../fonts/GalanoGrotesqueRegular.woff2) format('woff2');}
 
 /* ---------- Tokens (Base Colour → Theme → Spacing → Typography → Layout) */
