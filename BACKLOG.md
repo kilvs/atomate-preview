@@ -11,7 +11,7 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 | 1,500 vs 2,000+ practices | §1b, §12 H2 | Client picks one |
 | Testimonials — firms and full names for the six quotes | §12 | Client supplies (quotes landed 9 Sep) |
 | Final art for the filing illustrations; product screenshots for the remaining mock UI | §7 (placeholder art in since 14 Sep); §5, §6 (built from the client's reference, 17 Sep), §8, §10, §11 | Client supplies |
-| Gilroy Bold (700, woff2) + web licences for Gilroy and Galano | all headings and bold text (ExtraBold stands in, 17 Sep) | Client supplies the file and confirms licences |
+| Gilroy Bold (700, woff2) + web licences for Gilroy and Galano (both are commercial foundry fonts, Tinkov and René Bieder; no licence came with the supplied files) | all headings and bold text (ExtraBold stands in, 17 Sep) | Client supplies the file and confirms licences |
 | Orange as scarce accent vs guide's orange secondary buttons | system | Client nod |
 | BAW lockup size in the nav | nav | Client review |
 | APS and Wolters Kluwer marks — official SVGs | §2 PMS shelf | Client supplies; the folder's SVGs are broken wrappers linking a local PNG |
@@ -22,10 +22,11 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 
 | Item | Note |
 |---|---|
+| Orange glow on the dark navy bands | Peach sheen grounds and the With ATOmate card got Ember bay's warmth (17 Sep); Azure depth (trust bar, overnight, channels) was left as is because the examples did not include it. Add it there too, or leave? |
 | Testimonial arrows = rotation (featured ↔ stack) | Prototyped in Gate 04; confirm or specify the alternative before Webflow |
 | System sheet / Hi-Fi-System doc rewrite for the merged direction | The Project's `02_Design-Artifact/Hi-Fi-System.md` still describes the earlier ledger-grid draft; `CLAUDE.md` here is the current record |
 | Nav links and footer link targets | All `href="#"`; page list beyond the homepage not yet defined |
-| Nav at exactly 992px | Fits in headless Chrome (gap 1.5rem + 3rem button below 1100px); confirm in a real browser before Webflow (Omble's known defect; do not repeat it) |
+| Nav at exactly 992px | Fits in Chrome with Gilroy Bold links (24px gap before the CTA, 17 Sep); confirm in a real browser before Webflow (Omble's known defect; do not repeat it) |
 | Mobile navigation | Added at the Client-First rebuild (menu button + dropdown, ≤991). The export had no mobile nav. Confirm the styling |
 | Rebuild deviations | Nav link group 79px right of the export (real logo width); process frame rounded and 58px shorter (mangled-class fix); tablet step cells icon-over-title; CTA heading steps down on mobile. See CLAUDE.md "Build conventions" |
 
