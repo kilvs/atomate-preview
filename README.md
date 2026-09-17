@@ -49,7 +49,7 @@ index.html                          the homepage — 13 sections + footer, Clien
 assets/
   css/style.css                     tokens, system, components, responsive, motion states
   js/motion.js                      one GSAP init + steps / tabs / testimonials / nav
-  fonts/                            Gilroy ExtraBold, Galano 400–700 (woff2, self-hosted)
+  fonts/                            Plus Jakarta Sans + Inter, the same variable files as Omble (woff2, self-hosted)
   img/brand/                        lockups, marks, favicon, og-image, webclip
   img/partners/                     PMS / DMS / SMSF logos
 content/homepage-spec.md            section-by-section content of record + flags

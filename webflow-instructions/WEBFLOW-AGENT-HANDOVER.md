@@ -31,8 +31,8 @@ Neither agent publishes. Stage everything, report, hand the publish decision to 
 
 ### Step 1 — Site settings (MCP)
 - Locale **English (Australia)** so the page renders `lang="en-AU"`.
-- Upload the four custom fonts: Gilroy ExtraBold, Galano Grotesque 400/500/600/700, from
-  `assets/fonts/`.
+- Upload the two custom fonts, the same files as Omble: Plus Jakarta Sans (variable 600–700) and
+  Inter (variable 400–700), from `assets/fonts/` (client, 17 Sep; they replace Gilroy/Galano).
 - Favicon and webclip from `assets/img/brand/`.
 - Turn on the **GSAP integration** in site settings; enable ScrollTrigger.
 
@@ -118,7 +118,7 @@ blocker.
 ## Open client flags — do not resolve these in Webflow
 
 HowNow X logo · sample UI names and values · footer email and address · testimonial firms and
-full names · Gilroy Bold and the web licences for both faces · 1,500 vs 2,000+ practices · the
+full names · 1,500 vs 2,000+ practices · the
 BAW lockup size in the nav · whether the Omble resemblance is acceptable · the hero video.
 
 If a step needs one of these, stop and ask rather than inventing a value.

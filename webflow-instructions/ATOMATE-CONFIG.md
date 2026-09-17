@@ -36,8 +36,8 @@ arrow angle): night `navy-900 → navy-700` with a soft blue glow top-right; daw
 
 | Role | Face | Weights loaded | Notes |
 |---|---|---|---|
-| Headings and every emphasised word (buttons, chips, labels, names, nav links) | Gilroy | **Bold (700)** per the brand guide (client, 17 Sep) | Upload `gilroy-bold.woff2` as Gilroy 700 (supplied 17 Sep). Licence: client flag. |
-| Everything else | Galano Grotesque | **400 only** | No Galano Medium / SemiBold / Bold: anything heavier than regular is Gilroy Bold. |
+| Headings and every emphasised word (buttons, chips, labels, names, nav links) | Plus Jakarta Sans | **Bold (700)**; the variable file covers 600–700 | The same as Omble (client, 17 Sep; was Gilroy Bold). Upload `plus-jakarta-sans-latin-var.woff2`. OFL 1.1, no licence needed. |
+| Everything else | Inter | **400**; the variable file covers 400–700 | The same as Omble (17 Sep; was Galano 400). Upload `inter-latin-var.woff2`. Anything heavier than regular is Plus Jakarta Sans Bold. |
 
 Both faces are self-hosted (`assets/fonts/`); upload the same woff2 files to
 Webflow as custom fonts. Web licences unconfirmed — client flag.

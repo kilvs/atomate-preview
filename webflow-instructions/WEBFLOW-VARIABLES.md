@@ -127,9 +127,9 @@ token inside the class's Hover state.
 | `Typography/text-small` | `.9375rem` | — | — | — | Size |
 | `Typography/text-tiny` | `.75rem` | — | — | — | Size |
 
-Weights and line heights (brand guide, 17 Sep): headings and all emphasised text are **Gilroy
-Bold 700** (`gilroy-bold.woff2`, supplied 17 Sep);
-everything else is **Galano 400**, with no heavier Galano weights. Heading line height
+Weights and line heights (brand guide, 17 Sep): headings and all emphasised text are **Plus Jakarta
+Sans 700** and everything else is **Inter 400**: the same as Omble (client, 17 Sep; supersedes
+Gilroy Bold / Galano 400). Heading line height
 0.98–1.3 tightening as size grows; body 1.55–1.65. Heading letter-spacing −0.02em, −0.03em on
 the h1.
 
@@ -139,8 +139,8 @@ the h1.
 
 | Variable | Value | Type | Notes |
 |---|---|---|---|
-| `Font/font-heading` | Gilroy | Font family | ExtraBold only. Upload the same woff2 as a custom font. |
-| `Font/font-body` | Galano Grotesque | Font family | 400 / 500 / 600 / 700. |
+| `Font/font-heading` | Plus Jakarta Sans | Font family | 700. Upload `plus-jakarta-sans-latin-var.woff2` (variable 600–700), as on Omble. |
+| `Font/font-body` | Inter | Font family | 400. Upload `inter-latin-var.woff2` (variable 400–700), as on Omble. |
 
 Fallback stack for both: `'Avenir Next', 'Helvetica Neue', Arial, sans-serif`. Web licences for
 both faces are an open client flag.

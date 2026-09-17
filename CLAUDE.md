@@ -200,6 +200,20 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Typefaces: the same as Omble (client statement, 17 Sep 2026)
+
+- Client: "As for the font, use the same as Omble." This supersedes the 17 Sep brand-guide ruling
+  (Gilroy Bold + Galano Regular).
+- `--font-heading` is Plus Jakarta Sans and `--font-body` is Inter. They load from Omble's own
+  latin-subset variable files (Jakarta 600–700, Inter 400–700, the same `unicode-range`), copied
+  into `assets/fonts/` and preloaded. Weights in use are unchanged: 700 for headings and emphasis,
+  400 for body.
+- The Gilroy/Galano woff2 files moved to `Guide & References/Unused site assets (moved 17 Sep
+  2026)/fonts (…)/`. Both new faces are OFL 1.1, so the font-licence client flag is closed.
+- Checked in the browser: both faces load, with no Gilroy/Galano requests. The nav stays on one
+  row (24px gap at 992). The trust bar stays one line from 1280 and the Azure strip fits from 992.
+  No overflow at 390.
+
 ## Hero: linear blue gradient, orange sub-claim, ISO line off (client feedback, 17 Sep 2026)
 
 - Client: "Blue gradient to be more prominent (a small amount of orange). Reduce manual work line =

@@ -13,7 +13,6 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 | "200+ firms" (note) vs "Trusted by 2,000+ firms" (reference image) on the new Azure strip; built as 2,000+ | §1d (17 Sep) | Client confirms the figure |
 | Testimonials — firms and full names for the six quotes | §12 | Client supplies (quotes landed 9 Sep) |
 | Final art for the filing illustrations; product screenshots for the remaining mock UI | §7 (placeholder art in since 14 Sep); §5, §6 (built from the client's reference, 17 Sep), §8, §10, §11 | Client supplies |
-| Web licences for Gilroy and Galano (commercial foundry fonts, Tinkov and René Bieder; Gilroy Bold arrived 17 Sep as a MyFonts web kit, Galano is complete) | all type | Client sends the licences (Eugene: coming shortly) |
 | Orange as scarce accent vs guide's orange secondary buttons | system | Client nod |
 | Every button orange with a white label, at 3.30:1 (fails AA for 16px); a navy label would be 5.7:1 | all CTAs (17 Sep) | Client accepts the trade-off or picks a navy label |
 | BAW lockup size in the nav | nav | Client review |
@@ -30,11 +29,13 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 | Testimonial arrows = rotation (featured ↔ stack) | Prototyped in Gate 04; confirm or specify the alternative before Webflow |
 | System sheet / Hi-Fi-System doc rewrite for the merged direction | The Project's `02_Design-Artifact/Hi-Fi-System.md` still describes the earlier ledger-grid draft; `CLAUDE.md` here is the current record |
 | Nav links and footer link targets | All `href="#"`; page list beyond the homepage not yet defined |
-| Nav at exactly 992px | Fits in Chrome with Gilroy Bold links (24px gap before the CTA, 17 Sep); confirm in a real browser before Webflow (Omble's known defect; do not repeat it) |
+| Nav at exactly 992px | Fits in Chrome with Plus Jakarta Sans links (24px gap before the CTA, 17 Sep); confirm in a real browser before Webflow (Omble's known defect; do not repeat it) |
 | Mobile navigation | Added at the Client-First rebuild (menu button + dropdown, ≤991). The export had no mobile nav. Confirm the styling |
 | Rebuild deviations | Nav link group 79px right of the export (real logo width); process frame rounded and 58px shorter (mangled-class fix); tablet step cells icon-over-title; CTA heading steps down on mobile. See CLAUDE.md "Build conventions" |
 
 ## Repo housekeeping — done 17 Sep 2026
+
+- Fonts: the client switched to Omble's typefaces (17 Sep). Plus Jakarta Sans and Inter (OFL 1.1) are self-hosted, so the Gilroy/Galano licence item is resolved. Those files moved to `Guide & References/Unused site assets (moved 17 Sep 2026)/fonts (…)/`.
 
 - Class: one optimised vector (`class-02.svg`, 60 KB, was 98 KB) now serves both the PMS and SMSF tabs; the client's integration list names Class in both, so the duplication stays. `logo-class.png` retired.
 - Dropbox: optimised to `dropbox-02.svg` (28 KB, was 65 KB). Both were checked side by side against the originals at 2x.
