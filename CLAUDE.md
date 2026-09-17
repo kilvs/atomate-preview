@@ -452,7 +452,8 @@ they supersede a settled decision, the newer call wins and is noted here:
     so they take `mix-blend-mode:multiply` and the gradient shows through.
   - **Process nodes: a prominent ring and a pulse** (supersedes the breathing halo). The
     current node wears a 5px white gap then 3px of its own colour (`--step-ring`); a ring
-    pulses out of the current node and any hovered or focused node. Idle nodes are still.
+    pulses out of the current node and any hovered or focused node, every 2.4s
+    (slowed from 1.8s at Eugene's word, 17 Sep). Idle nodes are still.
 - **Better informed mocks carry words again** (client feedback, 17 Sep 2026: "there is
   no need to anonymise the UI screenshots"; the shadows stay as built). Row 1 is three
   labelled rows, each with initials, a label, a short line and a status chip:
