@@ -573,6 +573,19 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_informed_author_rule { width:1.5rem; height:2px; border-radius:var(--radius-round); background:var(--orange-500); flex:none; }
 .home_informed_author_name { font-family:var(--font-heading); font-weight:700; color:#fff; }
 .home_informed_author_role { color:rgba(255,255,255,.7); }
+/* smaller graphics (client, 17 Sep: "too big, almost bigger than the heading... balanced along with
+   the testimonial"): the visual is capped at 27rem and centred in its column, the rows are tighter,
+   and the quote is scaled with it. It was the full 604px column and 450-500px tall. */
+@media (min-width:992px) {
+  .home_informed_visual { width:100%; max-width:27rem; justify-self:center; }
+  .home_informed_mock { padding:1.125rem 1.125rem 2.75rem; gap:.625rem; }
+  .home_informed_row { padding:.6875rem .875rem; gap:.75rem; }
+  .home_informed_row_text { gap:.375rem; }
+  .home_informed_row_line { height:.3125rem; }
+  .home_informed_quote { margin:-2rem -1rem 0 2rem; padding:1.375rem 1.5rem; gap:.75rem; }
+  .home_informed_row-block.is-reversed .home_informed_quote { margin-left:-1rem; margin-right:2rem; }
+  .home_informed_quote_text { font-size:.9375rem; line-height:1.55; }
+}
 
 /* ---------- 10. Messaging (day) */
 .home_messaging_split { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:5rem; align-items:center; }

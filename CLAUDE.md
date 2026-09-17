@@ -200,6 +200,15 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Informed graphics scaled down (client feedback, 17 Sep 2026)
+
+- Client: "The graphics above the testimonials are too big, almost bigger than the heading.
+  Decrease size, but make sure it looks balanced along with the testimonial."
+- From 992 up, `.home_informed_visual` is capped at 27rem and centred in its column (it was the
+  full 604px). Mock rows, the mock padding and the overlapping quote were tightened together,
+  and quote text is 15px. The visuals went from 604×498 and 604×447 to 432×437 and 432×386.
+  Below 992 the stacked layout is unchanged.
+
 ## PAYG "Penalties" graphic made more defined (client feedback, 17 Sep 2026)
 
 - Client: "More defined graphics. This looks faded." The word is now full-strength `navy-800`
