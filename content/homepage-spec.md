@@ -33,7 +33,8 @@ in `style.css`.
 |---|---|---|---|---|
 | 1 | night | `section-home_hero` | Kicker, claim, sub-claim, centred | Yes |
 | 1b | night | `home_hero_stats` (inside `section-home_hero`, same gradient) | Giant numerals (belongs to the hero visually) | No |
-| 2 | day | `section-home_integrations` | Centred heading, underline tabs: PMS / DMS / SMSF logos | No |
+| 1c | warm mesh | `section-home_video` | Centred heading, YouTube film behind a play poster | No |
+| 2 | cool morning | `section-home_integrations` | Centred heading, underline tabs: PMS / DMS / SMSF logos | No |
 | 3 | white | `section-home_comparison` | Without (white) / With (navy) + closing lead | Yes |
 | 4 | day | `section-home_process` | How ATOmate works — 5 steps, click to reveal | Yes |
 | 5 | night | `section-home_overnight` | Overnight processing, "Every ATO document, captured" panel | Yes |
@@ -67,7 +68,14 @@ in `style.css`.
   recovered** (caption: *annually for practices with 10+ team members*) - **100% of
   ATO documents captured** - **ATO registered software**
 
-## 2. Integrations (`.background-stage-day`)
+
+## 1c. Video (`.background-stage-mesh`) — added 17 Sep
+
+- H2: **See how ATOmate cuts processing time by 90%**
+- YouTube film: https://www.youtube.com/watch?v=GEByUp25DSg ("ATOmate - ATO Document Processing Automation"). Navy poster with an orange play button; click loads the player.
+- The integrations section below now sits on `.background-stage-morning` (cool) so the two bands read apart.
+
+## 2. Integrations (`.background-stage-morning`, 17 Sep)
 
 - H2 (centred, no description): **ATOmate works with the tools your team already uses**
 - Tabs (centred, icon + label, orange underline on the active tab): **Practice Management Systems** (default) · **Document Management Systems** · **SMSF** — labels per the client copy, 16 Sep
@@ -164,7 +172,7 @@ Unchanged by the QA. H2 **Replace generic ATO messaging with clear guidance**; l
   6. Admin — "We used to spend 2.5 hours just downloading ATO documents from the portal…"
 - Attribution shows the name where given, otherwise the role. *Client flag:* firms and full names.
 
-## 13. CTA (`.background-stage-morning`)
+## 13. CTA (`.background-stage-peach`)
 
 - H2: **Ready to make proactive accounting the standard?** (no description)
 - CTA: Book Discovery Meeting (blue)

@@ -126,6 +126,22 @@
     });
   }
 
+  // ---- 4b. Video: the poster links to YouTube; on click it becomes the embed and plays.
+  [].slice.call(document.querySelectorAll('.home_video_poster')).forEach(function (poster) {
+    poster.addEventListener('click', function (e) {
+      e.preventDefault();
+      var frame = document.createElement('iframe');
+      frame.className = 'home_video_embed';
+      frame.src = 'https://www.youtube-nocookie.com/embed/' + poster.dataset.videoId + '?autoplay=1&rel=0';
+      frame.title = poster.dataset.videoTitle;
+      frame.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      frame.referrerPolicy = 'strict-origin-when-cross-origin';
+      frame.allowFullscreen = true;
+      poster.replaceWith(frame);
+      frame.focus();
+    });
+  });
+
   // ---- 5. Integration tabs (WAI-ARIA tabs: roving tabindex, arrow keys)
   var tabs = [].slice.call(document.querySelectorAll('.home_integrations_tab'));
   var panels = tabs.map(function (t) { return document.getElementById(t.dataset.tab); });

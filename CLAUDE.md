@@ -356,8 +356,9 @@ section dividers". The client's own set, applied so no two neighbours repeat:
 | Ground | Recipe | Used by |
 |---|---|---|
 | **Warm mesh** (`background-stage-light`) | white, peach bloom low-left, cool tint top-right | hero |
-| **Warm mesh, quiet** (`background-stage-mesh`) | the same at about a third strength, blue wash at the top | process, messaging, testimonials |
-| **Split light** (`background-stage-split`) | cool blue-50 on the left running warm to `#FFF4EA` on the right, at 100° (`--gradient-split-light`) | integrations, review, security; also the content cards (17 Sep) |
+| **Warm mesh, quiet** (`background-stage-mesh`) | the same at about a third strength, blue wash at the top | video, process, messaging, testimonials |
+| **Cool morning** (`background-stage-morning`) | white into blue-50 into blue-100 at 170° | integrations (17 Sep) |
+| **Split light** (`background-stage-split`) | cool blue-50 on the left running warm to `#FFF4EA` on the right, at 100° (`--gradient-split-light`) | review, security; also the content cards (17 Sep) |
 | **Azure depth, lit** (`background-stage-azure`) | `#005C90` → navy-800 → navy-900 with a sky-blue glow in the top-left corner | trust bar, overnight |
 | **Peach sheen** (`background-stage-peach`) | navy-700 → blue-600 → blue-500, a subtle Signal Orange bloom from below the bottom-right (17 Sep) | PAYG, closing CTA |
 | **Plain white** | no class | comparison, filing, informed |
@@ -427,6 +428,19 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **Video section under the trust bar** (Eugene, 17 Sep 2026): `section-home_video`,
+  H2 **See how ATOmate cuts processing time by 90%** over a 16:9 frame (max 56rem,
+  `--radius-card`, deep shadow) on **Warm mesh, quiet**. The film is YouTube
+  `GEByUp25DSg` ("ATOmate - ATO Document Processing Automation"). The frame shows a
+  navy poster with an orange play disc (from the reference) that is a real link to
+  the YouTube page; `motion.js` swaps it for a `youtube-nocookie` embed with autoplay on
+  click, so no YouTube code loads until a visitor asks and the section still works
+  without JS. In Webflow: a link block for the poster plus the same click script, or a
+  Code Embed with the iframe if the facade is dropped. The play disc steps down to
+  3.5rem below 768px.
+- **The integrations (logo) section moves to a cool ground** so it reads apart from the
+  warm video band above: `background-stage-morning`, white at the top running through
+  blue-50 to blue-100 at 170°. Content and design unchanged.
 - **Client feedback round, 17 Sep 2026** (four more items):
   - **Full control and Escalate graphics are built in markup, following the client's
     reference exactly** (supersedes the raster art and its repainted `full-control-02.webp`;
