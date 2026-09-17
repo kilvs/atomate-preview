@@ -143,7 +143,7 @@ in `style.css`.
 
 ## 10. Messaging (`.background-stage-day`)
 
-Unchanged by the QA. H2 **Replace generic ATO messaging with clear guidance**; lead, three checks, CTA, email card ("Lorem Ipsum Accounting", "Hi Sarah" are sample UI), channel pills **Email · Post · Portal · App · PIN-protected email**.
+Unchanged by the QA. H2 **Replace generic ATO messaging with clear guidance**; lead, three checks, CTA, email card ("Hi Sarah" is sample UI; greeting, line and PIN-protected attachment only, no Customise button per client, 17 Sep), channel pills **Email · Post · Portal · App · PIN-protected email**.
 
 ## 11. Security (white)
 

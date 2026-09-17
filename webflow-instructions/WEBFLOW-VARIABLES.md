@@ -184,7 +184,6 @@ both faces are an open client flag.
 | Variable | Value | Type | Used by |
 |---|---|---|---|
 | `Sizing/button-height` | `3.125rem` | Size | `.button` |
-| `Sizing/button-height-medium` | `2.75rem` | Size | `.button.is-medium` |
 | `Sizing/button-height-small` | `2.25rem` | Size | `.button.is-small` |
 | `Sizing/icon-disc` | `3rem` | Size | `.component_icon` |
 | `Sizing/icon-disc-small` | `2.25rem` | Size | channel pills, mock rows |

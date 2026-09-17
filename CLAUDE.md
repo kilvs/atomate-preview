@@ -211,7 +211,7 @@ any width; all interactions pass with and without reduced motion.
   buttons": the primary CTA (`.button`, including `is-white` on navy and the nav
   CTA) is orange-500 with orange-600 hover; the hero kicker is orange-300; the
   testimonials "next" arrow and the preview highlight bars are orange. Mock-UI
-  buttons (`is-small`, `is-medium`) stay blue because they depict product UI.
+  buttons (`is-small`) stay blue because they depict product UI.
   White text on orange-500 is 3.3:1, the same trade-off Omble accepted; flag it if
   the client asks for AA on button labels.
 - **Emulate Omble's card practice, not invented panels.** PAYG cards are white,
@@ -248,7 +248,7 @@ any width; all interactions pass with and without reduced motion.
   pill with the colour behind the label. Testimonial avatars carry initials.
 - **The email card is minimal** (Eugene, 16 Sep): plain white, one 4px brand edge along
   the top, and only what the copy says - "Hi Sarah," the line, the PIN-protected
-  attachment, Customise. The navy panel, its 30° ghost lines and the header row (sender,
+  attachment. The navy panel, its 30° ghost lines and the header row (sender,
   "to Sarah · 7:02 am", the Sent chip) are gone; the sender and timestamp flags go with
   them. **"Send the way your clients prefer" is now a 1.5rem heading**, not a small-caps
   label - it shared a rule with `.footer_heading`, which has its own copy of the old
@@ -428,6 +428,10 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **No Customise button on the email card** (client feedback, 17 Sep 2026: "Let's
+  remove 'Customise' altogether"). The card ends on the PIN-protected attachment.
+  `.button.is-medium` had no other use, so its rule, style-guide swatch and
+  `Sizing/button-height-medium` variable went with it.
 - **Hero copy is full-contrast white** (Eugene, 11 Sep 2026: "proper or high
   contrast"; the H1 was already white). Lead `.home_hero_description` is `#fff`
   (was white at .78, 10.6:1) and the note `.home_hero_note` is white at .9 (was

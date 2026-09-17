@@ -33,7 +33,7 @@ plain white.
 2. **Typography** — h1 to h6 as tag defaults, then the text sizes, then the heading-style
    utilities. Show each at desktop and note the breakpoint step-downs.
 3. **Buttons** — `button`, `button.is-accent`, `button.is-white`, `button.is-small`,
-   `button.is-medium`, each with its hover state visible in the guide notes.
+   each with its hover state visible in the guide notes.
 4. **Spacing** — the `spacer-*` scale as stacked blocks, then `padding-section-*`.
 5. **Components** — chip, tick, icon disc, checklist row, section header, skeleton row.
 6. **Grounds** — five bands showing each gradient with a heading and body sample on it.
