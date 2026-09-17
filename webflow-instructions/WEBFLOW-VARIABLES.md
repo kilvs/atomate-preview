@@ -126,8 +126,9 @@ token inside the class's Hover state.
 | `Typography/text-small` | `.9375rem` | — | — | — | Size |
 | `Typography/text-tiny` | `.75rem` | — | — | — | Size |
 
-Weights and line heights: headings are **800** (Gilroy ships ExtraBold only — do not pick 700,
-Webflow would synthesise it); body runs 400, buttons and chips 500–600. Heading line height
+Weights and line heights (brand guide, 17 Sep): headings and all emphasised text are **Gilroy
+Bold 700** (use 800 in the Designer until the Bold file is uploaded, or Webflow synthesises it);
+everything else is **Galano 400**, with no heavier Galano weights. Heading line height
 0.98–1.3 tightening as size grows; body 1.55–1.65. Heading letter-spacing −0.02em, −0.03em on
 the h1.
 

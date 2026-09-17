@@ -3,12 +3,12 @@
    Tokens in :root are the system; the Webflow build maps them to variables
    (webflow-instructions/ATOMATE-CONFIG.md). Design values are unchanged from the export. */
 
-/* ---------- Fonts — self-hosted. Gilroy ExtraBold is the only Gilroy weight supplied (Bold missing, see CLAUDE.md). */
+/* ---------- Fonts — self-hosted. Only Gilroy Light and ExtraBold were supplied; Bold is missing (see CLAUDE.md). */
 @font-face{font-family:'Gilroy';font-weight:800;font-style:normal;font-display:swap;src:url(../fonts/gilroy-extrabold.woff2) format('woff2');}
+/* Brand guide (client, 17 Sep): Gilroy Bold for headings and every emphasised word, Galano Regular
+   for everything else. Text asks for weight 700; until the Bold file is supplied the ExtraBold face
+   above answers it. When it arrives, add: @font-face{font-family:'Gilroy';font-weight:700;...gilroy-bold.woff2} */
 @font-face{font-family:'Galano';font-weight:400;font-style:normal;font-display:swap;src:url(../fonts/GalanoGrotesqueRegular.woff2) format('woff2');}
-@font-face{font-family:'Galano';font-weight:500;font-style:normal;font-display:swap;src:url(../fonts/GalanoGrotesqueMedium.woff2) format('woff2');}
-@font-face{font-family:'Galano';font-weight:600;font-style:normal;font-display:swap;src:url(../fonts/GalanoGrotesqueSemiBold.woff2) format('woff2');}
-@font-face{font-family:'Galano';font-weight:700;font-style:normal;font-display:swap;src:url(../fonts/GalanoGrotesqueBold.woff2) format('woff2');}
 
 /* ---------- Tokens (Base Colour → Theme → Spacing → Typography → Layout) */
 :root {
@@ -47,7 +47,8 @@
 html { scroll-behavior:smooth; }
 body { margin:0; background:var(--paper); color:var(--ink-900); font-family:var(--font-body); font-size:var(--text-regular); line-height:1.55; -webkit-font-smoothing:antialiased; }
 a { color:var(--blue-500); text-decoration:none; } a:hover { color:var(--blue-600); }
-h1,h2,h3,h4 { font-family:var(--font-heading); font-weight:800; margin:0; color:var(--navy-700); text-wrap:balance; letter-spacing:-0.02em; }
+b, strong { font-family:var(--font-heading); font-weight:700; }
+h1,h2,h3,h4 { font-family:var(--font-heading); font-weight:700; margin:0; color:var(--navy-700); text-wrap:balance; letter-spacing:-0.02em; }
 h1 { font-size:var(--heading-h1); line-height:.98; letter-spacing:-0.03em; }
 h2 { font-size:var(--heading-h2); line-height:1.05; }
 h3 { font-size:var(--heading-h3); line-height:1.25; }
@@ -77,7 +78,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .button-group { display:flex; gap:1rem; flex-wrap:wrap; align-items:center; }
 .button-group.is-centre { justify-content:center; }
 .hide-visually { position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
-.skip-link { position:absolute; left:-9999px; top:0; z-index:100; background:var(--navy-700); color:#fff; padding:.75rem 1rem; border-radius:var(--radius-button); font-weight:600; }
+.skip-link { position:absolute; left:-9999px; top:0; z-index:100; background:var(--navy-700); color:#fff; padding:.75rem 1rem; border-radius:var(--radius-button); font-family:var(--font-heading); font-weight:700; }
 .skip-link:focus { left:var(--padding-global); top:.5rem; outline:2px solid var(--orange-500); outline-offset:3px; }
 
 /* ---------- Typography utilities */
@@ -88,11 +89,11 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .text-color-secondary { color:var(--ink-700); }
 .text-color-muted { color:var(--ink-500); }
 .text-color-highlight { color:var(--orange-300); }
-.text-weight-semibold { font-weight:600; }
-.text-style-quote { font-family:var(--font-heading); font-weight:800; font-size:2.25rem; line-height:1.2; letter-spacing:-0.02em; color:var(--navy-700); }
+.text-weight-semibold { font-family:var(--font-heading); font-weight:700; }
+.text-style-quote { font-family:var(--font-heading); font-weight:700; font-size:2.25rem; line-height:1.2; letter-spacing:-0.02em; color:var(--navy-700); }
 
 /* ---------- Buttons: Azure primary, Deep Navy hover (client palette card, 16 Sep); is-accent (nav + hero) / is-white on dark grounds; is-small for mock UI. Label only, no icons. */
-.button { display:inline-flex; align-items:center; justify-content:center; height:3.125rem; padding:0 1.375rem; border-radius:var(--radius-button); font-weight:500; font-size:1rem; line-height:1; text-decoration:none; border:1px solid transparent; white-space:nowrap; background:var(--blue-500); color:#fff; transition:background .2s ease, color .2s ease, transform .15s ease; }
+.button { display:inline-flex; align-items:center; justify-content:center; height:3.125rem; padding:0 1.375rem; border-radius:var(--radius-button); font-family:var(--font-heading); font-weight:700; font-size:1rem; line-height:1; text-decoration:none; border:1px solid transparent; white-space:nowrap; background:var(--blue-500); color:#fff; transition:background .2s ease, color .2s ease, transform .15s ease; }
 .button:hover { background:var(--navy-700); color:#fff; }
 .button.is-blue { background:var(--blue-500); } .button.is-blue:hover { background:var(--navy-700); }
 /* Signal Orange is the page's one accent moment: the nav and hero CTAs only (Eugene, 16 Sep) */
@@ -117,7 +118,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .component_tick.is-tint { background:var(--blue-100); color:var(--blue-500); }
 .component_tick.is-glass { background:rgba(255,255,255,.14); color:#fff; }
 
-.component_chip { display:inline-flex; align-items:center; font-size:var(--text-tiny); font-weight:600; padding:.3rem .75rem; border-radius:var(--radius-round); background:var(--blue-100); color:var(--navy-700); white-space:nowrap; }
+.component_chip { display:inline-flex; align-items:center; font-size:var(--text-tiny); font-family:var(--font-heading); font-weight:700; padding:.3rem .75rem; border-radius:var(--radius-round); background:var(--blue-100); color:var(--navy-700); white-space:nowrap; }
 .component_chip.is-done { background:var(--green-success-bg); color:var(--green-success); }
 .component_chip.is-warn { background:var(--orange-100); color:var(--amber-warning); }
 
@@ -136,12 +137,12 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* Mock UI panels (Eugene, 10 Sep): no rules; white rows separated by gaps on a tinted tray;
    initials instead of dots; one typeface, sentence case; status as a soft pill. */
 .component_ui { background:var(--blue-50); border-radius:var(--radius-box); padding:.625rem; display:flex; flex-direction:column; gap:.5rem; font-size:var(--text-small); color:var(--ink-900); }
-.component_ui_header { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:.5rem .625rem .375rem; font-weight:600; color:var(--navy-700); }
+.component_ui_header { display:flex; justify-content:space-between; align-items:center; gap:1rem; padding:.5rem .625rem .375rem; font-family:var(--font-heading); font-weight:700; color:var(--navy-700); }
 .component_ui_row { display:flex; justify-content:space-between; align-items:center; gap:1rem; min-height:3.5rem; padding:.75rem 1rem; background:#fff; border-radius:.625rem; }
 .component_ui_row.is-start { justify-content:flex-start; gap:.75rem; }
 .component_ui_doc { display:flex; align-items:center; gap:.75rem; min-width:0; }
 .component_ui_doc .icon-stroke { color:var(--ink-500); flex:none; }
-.component_ui_initials { flex:none; width:2rem; height:2rem; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--blue-100); color:var(--navy-700); font-size:.6875rem; font-weight:700; letter-spacing:.02em; }
+.component_ui_initials { flex:none; width:2rem; height:2rem; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; background:var(--blue-100); color:var(--navy-700); font-size:.6875rem; font-family:var(--font-heading); font-weight:700; letter-spacing:.02em; }
 .component_ui_body { padding:1rem; display:flex; flex-direction:column; gap:.5rem; background:#fff; border-radius:.625rem; }
 .component_ui_body.is-skeleton { gap:.75rem; }
 
@@ -207,7 +208,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .navbar_menu { display:flex; align-items:center; gap:2rem; flex:1; min-width:0; }
 .navbar_nav-wrap { flex:1; display:flex; justify-content:center; }
 .navbar_nav { display:flex; gap:2.25rem; }
-.navbar_link { color:var(--navy-700); font-weight:500; font-size:1rem; white-space:nowrap; transition:color .35s ease; }
+.navbar_link { color:var(--navy-700); font-family:var(--font-heading); font-weight:700; font-size:1rem; white-space:nowrap; transition:color .35s ease; }
 .navbar_link:hover { color:var(--blue-500); }
 /* the navbar CTA takes the pill shape with the bar it sits in; page buttons keep
    ATOmate's 0.5rem radius until the client asks otherwise */
@@ -237,11 +238,11 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* client, 17 Sep: the ISO line sits closer to the CTA, larger and darker so it reads */
 .home_hero_trust { display:flex; align-items:center; justify-content:center; gap:1rem; margin-top:3.5rem; text-align:left; }
 .home_hero_iso { width:4rem; height:4rem; flex:0 0 auto; }
-.home_hero_kicker { font-weight:700; font-size:.8125rem; letter-spacing:.12em; text-transform:uppercase; color:var(--orange-600); margin-bottom:1rem; }
+.home_hero_kicker { font-family:var(--font-heading); font-weight:700; font-size:.8125rem; letter-spacing:.12em; text-transform:uppercase; color:var(--orange-600); margin-bottom:1rem; }
 /* subtitle and lead enlarged at the client's request (17 Sep) */
-.home_hero_subtitle { font-weight:600; font-size:1.75rem; line-height:1.3; color:var(--navy-700); margin-bottom:.75rem; text-wrap:balance; }
+.home_hero_subtitle { font-family:var(--font-heading); font-weight:700; font-size:1.75rem; line-height:1.3; color:var(--navy-700); margin-bottom:.75rem; text-wrap:balance; }
 .home_hero_subtitle .text-color-highlight { color:var(--orange-500); }
-.home_hero_note { font-size:1.0625rem; line-height:1.45; font-weight:500; color:var(--ink-900); white-space:nowrap; text-wrap:pretty; }
+.home_hero_note { font-size:1.0625rem; line-height:1.45; color:var(--ink-900); white-space:nowrap; text-wrap:pretty; }
 /* width set so the line breaks after "archive": second line reads "without losing control." */
 .home_hero_description { font-size:1.4375rem; line-height:1.5; color:var(--ink-700); max-width:34rem; margin-bottom:2.25rem; }
 /* ---------- 1b. Trust bar — an exact design replica of Omble's (Eugene, 16 Sep), with
@@ -273,7 +274,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_trust_item { min-width:0; display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; text-align:left; gap:.5rem; }
 /* Omble measures 22px / 1.25 white; ATOmate's claims are longer, so 20px holds the
    same two-line rhythm without stranding a word */
-.home_trust_label { display:block; font-family:var(--font-heading); font-weight:800; font-size:1.25rem; line-height:1.25; letter-spacing:-0.02em; color:#fff; text-wrap:pretty; }
+.home_trust_label { display:block; font-family:var(--font-heading); font-weight:700; font-size:1.25rem; line-height:1.25; letter-spacing:-0.02em; color:#fff; text-wrap:pretty; }
 .home_trust_caption { display:block; font-size:var(--text-small); line-height:1.5; color:rgba(255,255,255,.7); text-wrap:pretty; }
 
 @media (min-width:1200px) {
@@ -300,7 +301,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 
 /* ---------- 2. Integrations */
 .home_integrations_tabs { display:flex; justify-content:center; gap:2.5rem; margin-bottom:2.5rem; border-bottom:1px solid var(--line); }
-.home_integrations_tab { display:inline-flex; align-items:center; gap:.5rem; padding:.75rem .25rem 1rem; margin-bottom:-1px; border-bottom:2px solid transparent; font-weight:600; line-height:1.55; color:var(--ink-700); background:transparent; cursor:pointer; transition:color .2s ease, border-color .2s ease; }
+.home_integrations_tab { display:inline-flex; align-items:center; gap:.5rem; padding:.75rem .25rem 1rem; margin-bottom:-1px; border-bottom:2px solid transparent; font-family:var(--font-heading); font-weight:700; line-height:1.55; color:var(--ink-700); background:transparent; cursor:pointer; transition:color .2s ease, border-color .2s ease; }
 .home_integrations_tab:hover { color:var(--navy-700); }
 .home_integrations_tab .icon-stroke { flex:none; }
 .home_integrations_tab.is-active { color:var(--orange-500); border-bottom-color:var(--orange-500); }
@@ -309,7 +310,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_integrations_item:hover { transform:translateY(-3px); box-shadow:var(--shadow-card-hover); }
 .home_integrations_logo { max-height:2.5rem; max-width:9rem; width:auto; height:auto; display:block; }
 .home_integrations_logo.is-large { max-height:3rem; }
-.home_integrations_item.is-text { font-family:var(--font-heading); font-weight:800; font-size:1.125rem; color:var(--navy-700); }
+.home_integrations_item.is-text { font-family:var(--font-heading); font-weight:700; font-size:1.125rem; color:var(--navy-700); }
 
 /* ---------- 3. Comparison: night beside day */
 .home_comparison_grid { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.5rem; align-items:stretch; position:relative; }
@@ -327,10 +328,10 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_comparison_item .component_tick { margin-top:.1rem; }
 .home_comparison_card.is-day .home_comparison_item { color:var(--ink-700); }
 .home_comparison_card.is-day .component_tick { background:var(--red-error-bg); color:var(--red-error); }
-.home_comparison_card.is-night .home_comparison_item { color:#fff; font-weight:600; }
+.home_comparison_card.is-night .home_comparison_item { color:#fff; font-family:var(--font-heading); font-weight:700; }
 .home_comparison_card.is-night .component_tick { background:#fff; color:var(--blue-500); }
 .home_comparison_footer { margin-top:3rem; display:flex; justify-content:center; }
-.home_comparison_lead { margin-top:.75rem; font-size:1.25rem; line-height:1.55; font-weight:600; color:var(--navy-800); max-width:44rem; text-wrap:balance; }
+.home_comparison_lead { margin-top:.75rem; font-size:1.25rem; line-height:1.55; font-family:var(--font-heading); font-weight:700; color:var(--navy-800); max-width:44rem; text-wrap:balance; }
 
 /* ---------- 4. How ATOmate works — a flow of five large nodes; the current one wears a
    ring and pulses, and a hovered one pulses too, so the row reads as clickable.
@@ -359,7 +360,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_process_step_button:hover .home_process_step_halo, .home_process_step_button:focus-visible .home_process_step_halo, .home_process_step.is-current .home_process_step_halo { animation:process-pulse 2.4s cubic-bezier(.2,.6,.3,1) infinite; }
 @keyframes process-pulse { 0% { transform:scale(1); opacity:.7; } 80%, 100% { transform:scale(1.55); opacity:0; } }
 .home_process_step_button:hover .home_process_step_icon { transform:translateY(-4px) scale(1.03); box-shadow:0 20px 34px -16px rgba(2,42,69,.55); }
-.home_process_step_title { font-family:var(--font-heading); font-weight:800; font-size:1.0625rem; line-height:1.3; color:var(--navy-700); transition:color .25s ease; text-wrap:balance; }
+.home_process_step_title { font-family:var(--font-heading); font-weight:700; font-size:1.0625rem; line-height:1.3; color:var(--navy-700); transition:color .25s ease; text-wrap:balance; }
 /* the open step: lifted, ringed and pulsing */
 /* the current node wears a prominent ring: a white gap, then its own colour */
 .home_process_step.is-current .home_process_step_icon { transform:scale(1.08); box-shadow:0 0 0 .3125rem #fff, 0 0 0 .5rem var(--step-ring), 0 20px 36px -16px rgba(2,42,69,.6); }
@@ -378,7 +379,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* The overnight graphic (Eugene, 16 Sep): the four sources as tiles, funnelling into one
    overnight result. A small centred list left the column looking empty against the band. */
 .home_overnight_panel { background:var(--gradient-split-light); border-radius:var(--radius-card); box-shadow:0 30px 60px -30px rgba(2,42,69,.55); padding:3rem 2.5rem; display:flex; flex-direction:column; align-items:center; }
-.home_overnight_panel_title { font-family:var(--font-heading); font-weight:800; font-size:1.375rem; line-height:1.3; color:var(--navy-700); text-align:center; margin-bottom:2rem; }
+.home_overnight_panel_title { font-family:var(--font-heading); font-weight:700; font-size:1.375rem; line-height:1.3; color:var(--navy-700); text-align:center; margin-bottom:2rem; }
 .home_overnight_sources { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1rem; width:100%; }
 .home_overnight_source { display:flex; align-items:center; gap:.875rem; padding:1.25rem 1.125rem; border-radius:var(--radius-box); background:var(--blue-50); font-size:1.0625rem; line-height:1.4; color:var(--ink-900); }
 .home_overnight_source_tick { flex:none; width:1.625rem; height:1.625rem; border-radius:.5rem; border:2px solid var(--orange-500); color:var(--orange-500); display:inline-flex; align-items:center; justify-content:center; }
@@ -397,8 +398,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_review_rules { width:100%; display:flex; flex-direction:column; gap:.75rem; }
 /* the approved rows are navy with white type, so they read on the white card (Eugene, 16 Sep) */
 .home_review_rule { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.875rem 1rem; border-radius:.75rem; background:var(--navy-700); border:1px solid var(--navy-700); box-shadow:0 8px 18px -12px rgba(2,42,69,.6); }
-.home_review_rule_name { font-size:var(--text-small); font-weight:600; color:#fff; }
-.home_review_rule_state { flex:none; font-size:.6875rem; font-weight:700; letter-spacing:.06em; padding:.3125rem .625rem; border-radius:var(--radius-round); background:var(--green-success-bg); color:var(--green-success); }
+.home_review_rule_name { font-size:var(--text-small); font-family:var(--font-heading); font-weight:700; color:#fff; }
+.home_review_rule_state { flex:none; font-size:.6875rem; font-family:var(--font-heading); font-weight:700; letter-spacing:.06em; padding:.3125rem .625rem; border-radius:var(--radius-round); background:var(--green-success-bg); color:var(--green-success); }
 /* the one that needs a person */
 .home_review_rule.is-review { background:var(--red-error); border-color:var(--red-error); box-shadow:0 10px 22px -12px rgba(208,52,44,.65); }
 .home_review_rule.is-review .home_review_rule_name { color:#fff; }
@@ -410,7 +411,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_review_control_row { display:flex; align-items:center; gap:1rem; padding:.875rem 0; }
 .home_review_control_row + .home_review_control_row { border-top:1px solid var(--line-soft); }
 .home_review_control_icon { flex:none; width:2.5rem; height:2.5rem; border-radius:.625rem; display:inline-flex; align-items:center; justify-content:center; }
-.home_review_control_label { font-size:var(--text-small); font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
+.home_review_control_label { font-size:var(--text-small); font-family:var(--font-heading); font-weight:700; letter-spacing:.12em; text-transform:uppercase; }
 .home_review_control_row.is-automate .home_review_control_icon { background:var(--blue-100); color:var(--blue-500); }
 .home_review_control_row.is-automate .home_review_control_label { color:var(--blue-500); }
 .home_review_control_row.is-review .home_review_control_icon { background:var(--paper-100); border:1px solid var(--line-soft); color:var(--navy-700); }
@@ -421,20 +422,20 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 /* Escalate (client reference, 17 Sep): a flagged document, an arrow, the approver, a receipt */
 .home_review_escalate { width:100%; display:flex; flex-direction:column; align-items:center; gap:.5rem; }
 .home_review_escalate_doc { position:relative; align-self:stretch; background:#fff; border-radius:var(--radius-box); box-shadow:0 18px 36px -22px rgba(2,42,69,.45); padding:1rem 1.125rem; display:flex; flex-direction:column; gap:.4375rem; }
-.home_review_escalate_flag { position:absolute; top:-.75rem; right:-.625rem; width:2.25rem; height:2.25rem; border-radius:50%; background:var(--orange-500); border:3px solid #fff; color:#fff; font-weight:800; font-size:1rem; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 16px -8px rgba(235,100,5,.8); }
+.home_review_escalate_flag { position:absolute; top:-.75rem; right:-.625rem; width:2.25rem; height:2.25rem; border-radius:50%; background:var(--orange-500); border:3px solid #fff; color:#fff; font-family:var(--font-heading); font-weight:700; font-size:1rem; display:flex; align-items:center; justify-content:center; box-shadow:0 8px 16px -8px rgba(235,100,5,.8); }
 .home_review_escalate_bar { display:block; height:.3125rem; width:92%; border-radius:var(--radius-round); background:var(--line-soft); }
 .home_review_escalate_bar.is-title { width:62%; height:.375rem; background:var(--navy-700); margin-bottom:.125rem; }
 .home_review_escalate_bar.is-short { width:48%; }
 .home_review_escalate_exception { display:flex; align-items:center; justify-content:space-between; gap:1rem; margin-top:.3125rem; padding:.5rem .75rem; border-radius:.5rem; background:var(--orange-100); }
-.home_review_escalate_exception_label { font-size:.6875rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--amber-warning); }
+.home_review_escalate_exception_label { font-size:.6875rem; font-family:var(--font-heading); font-weight:700; letter-spacing:.08em; text-transform:uppercase; color:var(--amber-warning); }
 .home_review_escalate_exception_bar { width:2.5rem; height:.3125rem; border-radius:var(--radius-round); background:var(--orange-300); }
 .home_review_escalate_arrow { flex:none; fill:none; stroke:var(--orange-500); stroke-width:1.75; stroke-linecap:round; stroke-linejoin:round; }
 .home_review_escalate_person { display:flex; align-items:center; gap:.75rem; background:#fff; border-radius:.75rem; box-shadow:0 14px 28px -18px rgba(2,42,69,.45); padding:.625rem 1.125rem .625rem .625rem; }
-.home_review_escalate_avatar { flex:none; width:2.25rem; height:2.25rem; border-radius:50%; background:var(--navy-700); color:#fff; font-size:.75rem; font-weight:700; display:flex; align-items:center; justify-content:center; }
+.home_review_escalate_avatar { flex:none; width:2.25rem; height:2.25rem; border-radius:50%; background:var(--navy-700); color:#fff; font-size:.75rem; font-family:var(--font-heading); font-weight:700; display:flex; align-items:center; justify-content:center; }
 .home_review_escalate_who { display:flex; flex-direction:column; gap:.125rem; text-align:left; }
-.home_review_escalate_name { font-size:var(--text-small); font-weight:700; line-height:1.2; color:var(--navy-800); }
+.home_review_escalate_name { font-size:var(--text-small); font-family:var(--font-heading); font-weight:700; line-height:1.2; color:var(--navy-800); }
 .home_review_escalate_role { font-size:.75rem; line-height:1.2; color:var(--blue-500); }
-.home_review_escalate_pill { display:inline-flex; align-items:center; gap:.5rem; margin-top:.25rem; padding:.375rem .875rem .375rem .5rem; border-radius:var(--radius-round); background:#fff; box-shadow:0 8px 18px -12px rgba(2,42,69,.4); font-size:.75rem; font-weight:600; color:var(--navy-800); }
+.home_review_escalate_pill { display:inline-flex; align-items:center; gap:.5rem; margin-top:.25rem; padding:.375rem .875rem .375rem .5rem; border-radius:var(--radius-round); background:#fff; box-shadow:0 8px 18px -12px rgba(2,42,69,.4); font-size:.75rem; font-family:var(--font-heading); font-weight:700; color:var(--navy-800); }
 .home_review_escalate_tick { width:1.125rem; height:1.125rem; border-radius:50%; background:var(--blue-100); color:var(--blue-500); display:inline-flex; align-items:center; justify-content:center; }
 .home_review_item_image-wrap, .home_filing_item_image-wrap { aspect-ratio:4 / 3; border-radius:var(--radius-box); overflow:hidden; }
 /* the illustrations are drawn on white: multiply lets the card's Split light show through */
@@ -452,7 +453,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_filing_trail_item.is-step-4::before { background:var(--blue-600); }
 .home_filing_trail_item.is-step-5::before { background:var(--navy-900); }
 .home_filing_trail_time { font-size:.625rem; line-height:1.3; letter-spacing:.04em; color:var(--ink-500); font-variant-numeric:tabular-nums; }
-.home_filing_trail_label { font-family:var(--font-heading); font-weight:800; font-size:.8125rem; line-height:1.3; color:var(--navy-800); }
+.home_filing_trail_label { font-family:var(--font-heading); font-weight:700; font-size:.8125rem; line-height:1.3; color:var(--navy-800); }
 /* Filed directly in your DMS, rebuilt from the supplied artwork (Eugene, 16 Sep): the
    image carried its own pale box, which sat as a rectangle on the card. Built on the
    card's own ground instead, in brand colours. */
@@ -466,7 +467,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_filing_dms_target { display:flex; flex-direction:column; align-items:center; gap:.5rem; flex:none; }
 .home_filing_dms_folder { width:4.25rem; height:4.25rem; border-radius:var(--radius-box); display:flex; align-items:center; justify-content:center; background:linear-gradient(160deg, var(--blue-500), var(--navy-700)); color:#fff; box-shadow:0 14px 26px -14px rgba(2,42,69,.6); }
 .home_filing_dms_folder .icon-stroke { fill:none; stroke-width:1.6; }
-.home_filing_dms_label { font-family:var(--font-heading); font-weight:800; font-size:.75rem; line-height:1.3; color:var(--navy-800); }
+.home_filing_dms_label { font-family:var(--font-heading); font-weight:700; font-size:.75rem; line-height:1.3; color:var(--navy-800); }
 
 /* ---------- 7. Filing */
 .home_filing_list { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); gap:1.5rem; }
@@ -492,8 +493,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_payg_timeline_dot { width:1.125rem; height:1.125rem; border-radius:50%; flex:none; }
 .home_payg_timeline_dot.is-start { background:var(--blue-500); }
 .home_payg_timeline_dot.is-end { background:var(--navy-800); }
-.home_payg_graphic_label { font-family:var(--font-heading); font-weight:800; font-size:1.25rem; line-height:1.3; color:var(--orange-500); text-align:center; }
-.home_payg_penalties { position:relative; font-family:var(--font-heading); font-weight:800; font-size:2rem; line-height:1.2; letter-spacing:-0.02em; color:var(--ink-500); opacity:.55; padding:0 .5rem; }
+.home_payg_graphic_label { font-family:var(--font-heading); font-weight:700; font-size:1.25rem; line-height:1.3; color:var(--orange-500); text-align:center; }
+.home_payg_penalties { position:relative; font-family:var(--font-heading); font-weight:700; font-size:2rem; line-height:1.2; letter-spacing:-0.02em; color:var(--ink-500); opacity:.55; padding:0 .5rem; }
 .home_payg_penalties::after { content:""; position:absolute; left:-.75rem; right:-.75rem; top:52%; height:.3125rem; border-radius:var(--radius-round); background:var(--orange-500); }
 
 /* ---------- 9. Better informed clients */
@@ -516,7 +517,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_informed_row.is-warn .component_ui_initials { background:var(--orange-500); color:#fff; }
 .home_informed_row.is-warn .component_chip { background:#fff; }
 .home_informed_row_text { flex:1; display:flex; flex-direction:column; gap:.5rem; min-width:0; }
-.home_informed_row_label { font-size:var(--text-small); font-weight:600; line-height:1.3; color:var(--navy-800); }
+.home_informed_row_label { font-size:var(--text-small); font-family:var(--font-heading); font-weight:700; line-height:1.3; color:var(--navy-800); }
 .home_informed_row_line { display:block; width:62%; height:.375rem; border-radius:var(--radius-round); background:var(--blue-100); }
 .home_informed_row.is-warn .home_informed_row_line { background:var(--orange-300); }
 /* timeline variant: a dot per step, joined by a rail to the next */
@@ -532,7 +533,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_informed_quote_text { font-size:1rem; line-height:1.6; font-weight:400; color:rgba(255,255,255,.92); }
 .home_informed_author { display:flex; align-items:center; gap:.625rem; font-size:var(--text-small); }
 .home_informed_author_rule { width:1.5rem; height:2px; border-radius:var(--radius-round); background:var(--orange-500); flex:none; }
-.home_informed_author_name { font-weight:700; color:#fff; }
+.home_informed_author_name { font-family:var(--font-heading); font-weight:700; color:#fff; }
 .home_informed_author_role { color:rgba(255,255,255,.7); }
 
 /* ---------- 10. Messaging (day) */
@@ -545,11 +546,11 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_messaging_email { position:relative; background:#fff; border-radius:var(--radius-card); box-shadow:0 30px 60px -32px rgba(2,42,69,.45); overflow:hidden; }
 .home_messaging_email::before { content:""; position:absolute; inset:0 0 auto; height:.25rem; background:linear-gradient(90deg, var(--blue-500), var(--navy-700) 65%, var(--orange-500)); }
 .home_messaging_email_body { padding:3rem 3rem 2.75rem; display:flex; flex-direction:column; gap:1.25rem; align-items:flex-start; }
-.home_messaging_email_greeting { font-family:var(--font-heading); font-weight:800; font-size:1.5rem; line-height:1.3; color:var(--navy-800); }
+.home_messaging_email_greeting { font-family:var(--font-heading); font-weight:700; font-size:1.5rem; line-height:1.3; color:var(--navy-800); }
 .home_messaging_email_text { font-size:1.0625rem; line-height:1.65; color:var(--ink-700); max-width:28rem; }
 .home_messaging_email_attachment { align-self:stretch; display:flex; align-items:center; gap:.875rem; padding:1rem 1.125rem; border-radius:var(--radius-box); background:var(--blue-50); }
 .home_messaging_email_file { flex:none; width:2.25rem; height:2.25rem; border-radius:.625rem; background:#fff; color:var(--blue-500); display:inline-flex; align-items:center; justify-content:center; box-shadow:0 4px 10px -6px rgba(2,42,69,.5); }
-.home_messaging_email_filename { flex:1; min-width:0; font-size:var(--text-small); font-weight:600; color:var(--navy-800); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.home_messaging_email_filename { flex:1; min-width:0; font-size:var(--text-small); font-family:var(--font-heading); font-weight:700; color:var(--navy-800); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 .home_messaging_email .button-group { margin-top:.25rem; }
 /* Channels — its own band (Eugene, 16 Sep). A dark beat: the page runs light through
    messaging, drops to Azure depth here, then lifts into the security split. The pills
@@ -559,7 +560,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_channels_content { display:flex; flex-direction:column; align-items:center; text-align:center; gap:1.5rem; }
 .home_channels_heading { font-size:2.25rem; line-height:1.2; color:#fff; text-wrap:balance; }
 .home_channels_list { display:flex; gap:.75rem; flex-wrap:wrap; justify-content:center; }
-.home_channels_item { display:inline-flex; align-items:center; gap:.625rem; padding:.3125rem 1.25rem .3125rem .3125rem; border-radius:var(--radius-round); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.22); font-weight:600; color:#fff; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); transition:background .25s ease, border-color .25s ease, transform .25s ease; }
+.home_channels_item { display:inline-flex; align-items:center; gap:.625rem; padding:.3125rem 1.25rem .3125rem .3125rem; border-radius:var(--radius-round); background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.22); font-family:var(--font-heading); font-weight:700; color:#fff; -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); transition:background .25s ease, border-color .25s ease, transform .25s ease; }
 .home_channels_item:hover { background:rgba(255,255,255,.14); border-color:rgba(255,255,255,.38); transform:translateY(-2px); }
 .home_channels_item .component_icon { width:2.25rem; height:2.25rem; background:rgba(255,255,255,.14); color:#fff; }
 /* the brand mark, ghosted at the band's right edge */
@@ -567,7 +568,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 
 /* ---------- 11. Security */
 .home_security_credentials { display:flex; flex-wrap:wrap; justify-content:center; gap:.75rem 2.5rem; margin:-1.5rem 0 2.5rem; padding-bottom:1.5rem; border-bottom:1px solid var(--line); }
-.home_security_credential { display:inline-flex; align-items:center; gap:.625rem; font-weight:600; color:var(--navy-700); font-size:var(--text-small); }
+.home_security_credential { display:inline-flex; align-items:center; gap:.625rem; font-family:var(--font-heading); font-weight:700; color:var(--navy-700); font-size:var(--text-small); }
 .home_security_credential .component_tick { width:1.25rem; height:1.25rem; }
 .home_security_list { display:grid; grid-template-columns:repeat(2, minmax(0,1fr)); gap:1.5rem; }
 .home_security_item { background:var(--blue-50); border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; }
@@ -583,22 +584,22 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_security_redact { flex:1; display:flex; align-items:center; justify-content:center; gap:1.25rem; padding:2rem 1rem; }
 .home_security_redact_tile { flex:1; min-width:0; display:flex; flex-direction:column; align-items:flex-start; gap:.625rem; padding:1.25rem 1.375rem; border-radius:var(--radius-box); background:#fff; border:1px solid var(--line-soft); box-shadow:0 10px 24px -18px rgba(2,42,69,.5); }
 .home_security_redact_tile.is-after { border-color:var(--blue-300); box-shadow:0 14px 28px -18px rgba(0,120,186,.55); }
-.home_security_redact_label { font-size:var(--text-tiny); letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:var(--ink-500); }
-.home_security_redact_value { font-family:var(--font-heading); font-weight:800; font-size:1.25rem; line-height:1.2; color:var(--navy-800); font-variant-numeric:tabular-nums; }
+.home_security_redact_label { font-size:var(--text-tiny); letter-spacing:.14em; text-transform:uppercase; font-family:var(--font-heading); font-weight:700; color:var(--ink-500); }
+.home_security_redact_value { font-family:var(--font-heading); font-weight:700; font-size:1.25rem; line-height:1.2; color:var(--navy-800); font-variant-numeric:tabular-nums; }
 .home_security_redact_arrow { flex:none; color:var(--orange-500); display:flex; }
 .home_security_redact_arrow .icon-stroke { fill:none; stroke-width:2; }
-.home_security_redact .home_security_redacted { font-family:var(--font-heading); font-weight:800; font-size:1.25rem; line-height:1.2; }
+.home_security_redact .home_security_redacted { font-family:var(--font-heading); font-weight:700; font-size:1.25rem; line-height:1.2; }
 /* PIN-protected document illustration (client reference, 10 Sep): sheet, padlock, PIN chip */
 .home_security_doc { position:relative; flex:1; min-height:20rem; display:flex; align-items:flex-start; justify-content:center; padding:1.25rem 1rem 3rem; }
 .home_security_doc_sheet { position:relative; width:17rem; background:#fff; border:1px solid var(--line-soft); border-radius:.5rem; box-shadow:var(--shadow-ui); padding:1rem 1rem 1.5rem; display:flex; flex-direction:column; gap:.75rem; }
-.home_security_doc_bar { background:var(--blue-500); color:#fff; font-weight:600; font-size:var(--text-tiny); line-height:1.3; padding:.5rem .75rem; border-radius:.25rem; }
+.home_security_doc_bar { background:var(--blue-500); color:#fff; font-family:var(--font-heading); font-weight:700; font-size:var(--text-tiny); line-height:1.3; padding:.5rem .75rem; border-radius:.25rem; }
 .home_security_doc_line { display:block; height:.375rem; border-radius:var(--radius-round); background:var(--line-soft); }
 .home_security_doc_line.is-short { width:60%; }
-.home_security_doc_button { align-self:flex-start; font-size:.6875rem; font-weight:600; color:var(--blue-500); background:var(--blue-100); padding:.3rem .6rem; border-radius:.25rem; }
+.home_security_doc_button { align-self:flex-start; font-size:.6875rem; font-family:var(--font-heading); font-weight:700; color:var(--blue-500); background:var(--blue-100); padding:.3rem .6rem; border-radius:.25rem; }
 .home_security_doc_lock { position:absolute; left:50%; bottom:-1.75rem; width:8rem; height:auto; transform:translateX(-50%); filter:drop-shadow(0 18px 24px rgba(2,42,69,.28)); }
 .home_security_doc_pin { position:absolute; right:-1.5rem; bottom:-.75rem; display:flex; align-items:center; gap:.5rem; background:#fff; border-radius:.5rem; box-shadow:var(--shadow-card); padding:.5rem .75rem; color:var(--ink-500); }
 .home_security_doc_pin_text { display:flex; flex-direction:column; }
-.home_security_doc_pin_code { font-family:var(--font-heading); font-weight:800; font-size:.875rem; letter-spacing:.2em; color:var(--navy-700); line-height:1.2; }
+.home_security_doc_pin_code { font-family:var(--font-heading); font-weight:700; font-size:.875rem; letter-spacing:.2em; color:var(--navy-700); line-height:1.2; }
 .home_security_doc_pin_label { font-size:.625rem; line-height:1.3; color:var(--ink-500); }
 .home_security_item_description { color:var(--ink-700); margin-top:.5rem; }
 
@@ -613,10 +614,10 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_testimonials_card { background:var(--gradient-split-light); border-radius:var(--radius-card); box-shadow:var(--shadow-card); padding:2rem; display:flex; flex-direction:column; gap:1.25rem; flex:1; }
 .home_testimonials_quote { font-size:var(--text-regular); line-height:1.5; color:var(--ink-700); }
 .home_testimonials_author { display:flex; gap:.75rem; align-items:center; }
-.home_testimonials_avatar { width:2.5rem; height:2.5rem; border-radius:50%; background:var(--blue-100); flex:none; display:inline-flex; align-items:center; justify-content:center; font-size:.75rem; font-weight:700; color:var(--navy-700); letter-spacing:.02em; }
+.home_testimonials_avatar { width:2.5rem; height:2.5rem; border-radius:50%; background:var(--blue-100); flex:none; display:inline-flex; align-items:center; justify-content:center; font-size:.75rem; font-family:var(--font-heading); font-weight:700; color:var(--navy-700); letter-spacing:.02em; }
 .home_testimonials_featured .home_testimonials_avatar { background:rgba(255,255,255,.2); color:#fff; }
 .home_testimonials_author_text { display:flex; flex-direction:column; }
-.home_testimonials_name { font-weight:600; color:var(--navy-700); }
+.home_testimonials_name { font-family:var(--font-heading); font-weight:700; color:var(--navy-700); }
 .home_testimonials_featured .home_testimonials_name { color:#fff; }
 .home_testimonials_firm { font-size:var(--text-small); line-height:1.5; color:var(--ink-500); }
 .home_testimonials_featured .home_testimonials_firm { color:rgba(255,255,255,.75); }
@@ -635,7 +636,7 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .footer_brand { display:flex; flex-direction:column; gap:1rem; }
 .footer_logo { height:2.75rem; width:auto; align-self:flex-start; }
 .footer_tagline { font-size:var(--text-small); line-height:1.5; color:var(--ink-700); max-width:20rem; }
-.footer_heading { font-family:var(--font-heading); font-weight:800; font-size:.75rem; line-height:1.55; letter-spacing:.16em; text-transform:uppercase; color:var(--navy-700); margin-bottom:.75rem; }
+.footer_heading { font-family:var(--font-heading); font-weight:700; font-size:.75rem; line-height:1.55; letter-spacing:.16em; text-transform:uppercase; color:var(--navy-700); margin-bottom:.75rem; }
 .footer_list { display:flex; flex-direction:column; gap:.5rem; font-size:var(--text-small); }
 .footer_link, .footer_text { color:var(--ink-700); }
 .footer_link:hover { color:var(--blue-600); }

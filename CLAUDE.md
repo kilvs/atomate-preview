@@ -428,13 +428,22 @@ The internal review supplied the real copy for every section and a set of design
 changes. Both are applied; `content/homepage-spec.md` is the copy of record. Where
 they supersede a settled decision, the newer call wins and is noted here:
 
+- **Only the prescribed typefaces** (client, 17 Sep 2026, brand guide: Gilroy Bold,
+  Galano Regular; Harabara is the logo's face and lives in the lockup artwork). Every
+  heading and every emphasised word (buttons, nav links, chips, labels, names, the hero
+  sub-claim and kicker) is now **Gilroy at weight 700**; everything else is **Galano
+  400**, and the Galano 500/600/700 faces are no longer loaded (files kept). `b, strong`
+  map to Gilroy Bold too. **Gilroy Bold is still not supplied** (only the free Light +
+  ExtraBold pair exists anywhere on this machine), so the ExtraBold face answers the
+  700 requests; dropping `gilroy-bold.woff2` in with a 700 `@font-face` finishes it.
+  It is a commercial font (Tinkov), so it was not fetched from free-font sites.
 - **Trust bar claims are left-aligned and level** (client, 17 Sep 2026): the "Trusted
   by..." heading stays centred; the five claims align left in their lanes and all start
   on the same top line (they were centred and vertically centred).
 - **Hero type larger, ISO line tighter and more legible** (client, 17 Sep 2026):
   sub-claim 1.25 → 1.75rem, lead 1.125 → 1.4375rem (measure 26 → 34rem); the ISO row
   sits 3.5rem under the CTA (was 7.75rem), the badge is 4rem (was 3.25) and the note is
-  1.0625rem, weight 500, `ink-900` (was 0.75rem `ink-500`). Below 768px: sub-claim
+  1.0625rem Galano Regular, `ink-900` (was 0.75rem `ink-500`). Below 768px: sub-claim
   1.375rem, lead 1.1875rem, note 1rem, row 2.5rem under the CTA.
 - **Video section under the trust bar** (Eugene, 17 Sep 2026): `section-home_video`,
   H2 **See how ATOmate cuts processing time by 90%** over a 16:9 frame (max 56rem,
@@ -588,7 +597,7 @@ an open question — do not copy Omble sections in.
 | Blue | `--blue-600 #0A5A8A` · `--blue-500 #0078BA` (brand blue: buttons, links, icons) · `--blue-300 #5FB0DE` · `--blue-100 #E5F3FA` · `--blue-50 #F1F8FC` |
 | Orange | `--orange-500 #EB6405` (brand accent) · `--orange-300 #FFB280` (the hero 90%) · `--orange-100 #FFF0E6` |
 | Ink / lines | `--ink-900 #1F2A33` · `--ink-700` · `--ink-500` · `--line #D5DDE3` · `--line-soft` · `--paper-100 #F4F7F9` · `--paper #FFF` |
-| Type | Headings **Gilroy ExtraBold (800)**, `letter-spacing -0.02em`, `text-wrap: balance`; body **Galano** 400/500/600/700, 1.0625rem/1.55 |
+| Type | Headings and emphasis **Gilroy Bold (700)**, ExtraBold standing in until Bold is supplied, `letter-spacing -0.02em`, `text-wrap: balance`; body **Galano Regular 400** only, 1.0625rem/1.55 (17 Sep) |
 | Scale | `.h1` 4.5rem/.98 · `.h2` 3rem/1.05 · `.h3` 1.375rem · `.lead` 1.375rem · `.small` .9375rem · `.tiny` .75rem |
 | Layout | `--container 80rem` · `--gutter 2.5rem` · Webflow breakpoints 991 / 767 / 479, desktop base cascading down |
 
@@ -620,7 +629,7 @@ supplied SVGs are broken wrappers) · all lorem / `00%` content · sample UI nam
 index.html                       the homepage, accepted Hi-Fi + Gate 04 motion
 assets/css/style.css             tokens, system, components, responsive, motion states
 assets/js/motion.js              the one GSAP init + the bespoke interactions
-assets/fonts/                    Gilroy ExtraBold, Galano 400–700 (woff2)
+assets/fonts/                    Gilroy ExtraBold, Galano 400–700 (woff2; only 400 is loaded since 17 Sep)
 assets/img/brand/                lockups, marks, ISO 27001 badge, favicon, og-image, webclip
 assets/img/partners/             PMS / DMS / SMSF logos
 content/homepage-spec.md         section order, wrappers, copy of record, flags
