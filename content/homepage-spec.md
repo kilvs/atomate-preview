@@ -96,7 +96,7 @@ in `style.css`.
 
 - H2: **Still processing ATO documents manually?**
 - Lead: **Manual processing overwhelms admin teams, creates errors and leads to endless client follow-up.**
-- Second lead, above the cards (moved up from below them, 16 Sep, to match the copy): **ATOmate enhances communication and delivers a consistent experience to keep clients ahead of their tax obligations.**
+- Second lead, above the cards (moved up from below them, 16 Sep), orange and bold (17 Sep): **Reduce manual work and errors. Keep clients ahead of tax obligations with timely, consistent communication.** (client copy, 17 Sep; was *ATOmate enhances communication and delivers a consistent experience to keep clients ahead of their tax obligations.*)
 - **Without ATOmate** (white card with border, red ✕): Time-consuming, error-prone manual processing · Missed PAYG instalment notices and other ATO correspondence · Manual TFN redaction and PRN protection · Manual filing with no audit trail · Admin team stretched thin · Delayed documents. Frustrated clients.
 - **With ATOmate** (navy card, blue ✓): Automatic ATO document processing from capture to filing · All ATO documents captured automatically overnight · Automatic TFN redaction and PRN protection · Automatic filing with a complete audit trail · More capacity to improve client relationships · Timely delivery, better client experience
 - Orange arrow button between the cards.

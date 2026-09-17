@@ -200,6 +200,13 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Comparison lead: new copy in orange bold (client feedback, 17 Sep 2026)
+
+- Client: "Copy changes: Reduce manual work and errors. Keep clients ahead of tax obligations
+  with timely, consistent communication. Use orange font + boldface."
+- `.home_comparison_lead` is `orange-500` (was `navy-800`) and stays Gilroy Bold at 20px.
+  That size counts as large text, so 3.30:1 passes AA. Revert: `navy-800`.
+
 ## Second trust strip in Azure (client feedback, 17 Sep 2026)
 
 - Client: "In between these, add another trust strip using another shade of blue. Include:
