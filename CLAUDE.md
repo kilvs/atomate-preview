@@ -200,6 +200,14 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## SMSF tab icon: rising bars (client feedback, 17 Sep 2026)
+
+- Client: "Change SMSF logo into something similar to" a bar chart of four rising solid bars
+  with a curved arrow sweeping up to the right. It replaces the clock icon.
+- Inline SVG in the tab: filled bars (`currentColor`) with the arrow in the tab set's
+  1.75 stroke, sized to fill the 24px box so it sits level with the briefcase and folder
+  icons. It turns orange with the label when the tab is active.
+
 ## Video thumbnail at 0:20 (client feedback, 17 Sep 2026)
 
 - Client: "Make this the thumbnail (Exactly 0:20)." The frame at exactly 20.000s was taken from
