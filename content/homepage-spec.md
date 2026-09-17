@@ -171,15 +171,15 @@ Unchanged by the QA. H2 **Replace generic ATO messaging with clear guidance**; l
 
 ## 12. Testimonials (`.background-stage-day`)
 
-- H2: **Why 2,000+ practices choose ATOmate**
-- Six quotes in the rotation queue (featured + two visible; the rest held in hidden cards):
-  1. Liz, Firm Owner — "Since partnering with ATOmate we have reduced ATO mail processing time significantly…"
+- H2 (centred since 17 Sep, arrows centred under it): **Why 2,000+ practices choose ATOmate**
+- Six quotes in the rotation queue (featured + two visible; the rest held in hidden cards). Order changed 17 Sep: the client made the "crying" quote the featured one, swapping it with Liz's:
+  1. Admin — "I was crying in my boss's office because it was so easy…" (featured)
   2. Jenny, Practice Manager — "ATOmate surpassed our expectations, making everything so much easier and saving time."
-  3. Admin — "I was crying in my boss's office because it was so easy…"
+  3. Liz, Firm Owner — "Since partnering with ATOmate we have reduced ATO mail processing time significantly…"
   4. Admin — "ATOmate has freed up 80–90% of our time. We're super impressed with it."
   5. Practice Manager — "We've changed our entire app stack in the last 12 months…"
   6. Admin — "We used to spend 2.5 hours just downloading ATO documents from the portal…"
-- Attribution shows the name where given, otherwise the role. *Client flag:* firms and full names.
+- Attribution shows the name where given, otherwise the role; no initials avatars (hidden 17 Sep). *Client flag:* firms and full names.
 
 ## 13. CTA (`.background-stage-peach`)
 

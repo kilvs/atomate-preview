@@ -200,6 +200,15 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Testimonials: centred heading, no avatars, "crying" quote featured (client feedback, 17 Sep 2026)
+
+- Client: "Center-align heading. Remove the avatars with initials. Also, make the 'I was crying in
+  my boss's office…' the bigger quote in this slide."
+- The header takes `is-centre`, so the arrows sit centred under it. All six initials avatars are
+  `hidden` (the rotation script still writes their text harmlessly). The Admin "crying" quote and
+  Liz's quote swapped places, so the featured slot opens on "crying" and Liz is the second small
+  card. The rotation still works: Next brings Jenny into the featured slot.
+
 ## Security: no rule, smaller cards, TFN sweep (client feedback, 17 Sep 2026)
 
 - Client: "Remove the thin line in between" (under the credentials line). `border-bottom` is gone.
