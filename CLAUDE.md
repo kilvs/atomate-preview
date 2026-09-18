@@ -212,8 +212,12 @@ any width; all interactions pass with and without reduced motion.
   - Arrows are solid filled blue-300 arrows at 24px (were 18px stroked chevrons).
   - The ATOmate card and the output card (the "last rectangle") are unchanged.
   - Motion: the 17 Sep "block falling" drop is off. `motion.js` §3b is gated behind
-    `HERO_FLOW_DROP = false`; set it to true to bring it back. The hero copy keeps its load
-    fade-up (see backlog question).
+    `HERO_FLOW_DROP = false`; set it to true to bring it back. Client, same day: "No need for
+    excessive animations for hero graphics but please make a subtle animation like fade in or
+    slide up." `home_hero_visual` takes the site preset as one piece: `data-load-animate`,
+    fade-up 24px, 0.7s, `power2.out`, delay 0.4s (after the headline starts). The sheets, arrows
+    and cards do not animate on their own. Reduced motion shows it still. Supersedes the
+    fully static state earlier on 18 Sep.
 - **Trust bar.** Client: "Follow the size & formatting" (reference: a navy bar with five claims in
   equal lanes, each on two lines, left-aligned, hairlines between). From 1280 the list is five
   equal grid lanes, labels at 20px capped at 11.5rem so each sets on two lines, a hairline before

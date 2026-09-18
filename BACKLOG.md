@@ -28,7 +28,6 @@ Nothing here is a design decision to be made in code. Each line names the owner.
 
 | Item | Note |
 |---|---|
-| Hero copy still fades up on load (18 Sep: the client asked for the flow graphic to be static, "no need for excessive animations up top") | The graphic is static now. Should the headline block appear at once too? One attribute each |
 | Mock-UI `is-small` button went orange with "all buttons" (17 Sep) | It was kept blue on 10 Sep because it depicts product UI; style guide only. Keep it orange or return it to blue? |
 | Orange glow on the dark navy bands | Peach sheen grounds and the With ATOmate card got Ember bay's warmth (17 Sep); Azure depth (trust bar, overnight, channels) was left as is because the examples did not include it. Add it there too, or leave? |
 | Testimonial arrows = rotation (featured ↔ stack) | Prototyped in Gate 04; confirm or specify the alternative before Webflow |
