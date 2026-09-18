@@ -268,19 +268,27 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_hero_visual { justify-self:end; width:100%; }
 .home_hero_flow { display:flex; flex-direction:column; align-items:stretch; font-family:var(--font-heading); font-weight:700; }
 .home_hero_flow_label { font-size:.75rem; color:rgba(255,255,255,.72); margin:0 0 .625rem .25rem; }
-/* the correspondence arrives as a loose cascade: staggered white pills, each overlapping the next */
-.home_hero_flow_docs { display:flex; flex-direction:column; }
-.home_hero_flow_doc { position:relative; display:flex; align-items:center; gap:.625rem; width:88%; padding:.5625rem .875rem .5625rem .625rem; border-radius:var(--radius-round); background:#fff; color:var(--navy-800); font-size:.875rem; line-height:1.2; box-shadow:0 10px 22px -12px rgba(0,0,0,.55); }
-.home_hero_flow_doc + .home_hero_flow_doc { margin-top:-.25rem; }
-.home_hero_flow_doc.is-step-1 { z-index:1; }
-.home_hero_flow_doc.is-step-2 { z-index:2; margin-left:9%; width:84%; }
-.home_hero_flow_doc.is-step-3 { z-index:3; margin-left:-2%; }
-.home_hero_flow_doc.is-step-4 { z-index:4; margin-left:7%; width:80%; }
-.home_hero_flow_doc.is-step-5 { z-index:5; margin-left:3%; width:94%; }
-.home_hero_flow_doc_icon { flex:none; width:1.5rem; height:1.5rem; border-radius:.4375rem; background:var(--blue-500); color:#fff; display:inline-flex; align-items:center; justify-content:center; }
-.home_hero_flow_doc_icon .icon-stroke { stroke-width:2; }
-.home_hero_flow_arrow { align-self:center; display:flex; color:var(--blue-300); margin:.5rem 0; }
-.home_hero_flow_arrow .icon-stroke { stroke-width:2.25; }
+/* the correspondence arrives as a stack of paper sheets (client reference, 18 Sep: "Replace with ->"):
+   cream letters, each with a folded top-right corner, a short blue rule above the label and a grey
+   text line under it, laid slightly askew. Was a cascade of white pills (17 Sep). */
+.home_hero_flow_docs { display:flex; flex-direction:column; padding:0 .25rem; }
+.home_hero_flow_doc { --fold:1rem; position:relative; display:flex; align-items:center; gap:.5rem; width:88%; padding:1.125rem 1.5rem 1.25rem 1rem; border-radius:2px; background:linear-gradient(rgba(2,42,69,.14), rgba(2,42,69,.14)) 1rem calc(100% - .625rem) / 55% 2px no-repeat, linear-gradient(180deg, #FCFAF4 0%, #F1EBDD 100%); color:var(--navy-800); font-size:.875rem; line-height:1.2; clip-path:polygon(0 0, calc(100% - var(--fold)) 0, 100% var(--fold), 100% 100%, 0 100%); filter:drop-shadow(0 10px 12px rgba(0,0,0,.45)); }
+/* the short blue rule above each label */
+.home_hero_flow_doc::before { content:""; position:absolute; top:.5rem; left:1rem; width:1.5rem; height:2px; border-radius:1px; background:var(--blue-500); }
+/* the folded corner: the underside of the page, a shade darker */
+.home_hero_flow_doc::after { content:""; position:absolute; top:0; right:0; width:var(--fold); height:var(--fold); background:linear-gradient(to bottom left, transparent 50%, #D8CDB6 50%); }
+/* each sheet overlaps the one above by its bottom padding only, never its label */
+.home_hero_flow_doc + .home_hero_flow_doc { margin-top:-.5rem; }
+.home_hero_flow_doc.is-step-1 { z-index:1; transform:rotate(-.8deg); }
+.home_hero_flow_doc.is-step-2 { z-index:2; margin-left:10%; width:84%; transform:rotate(1.2deg); }
+.home_hero_flow_doc.is-step-3 { z-index:3; margin-left:-1%; transform:rotate(-.5deg); }
+.home_hero_flow_doc.is-step-4 { z-index:4; margin-left:8%; width:84%; transform:rotate(1.4deg); }
+.home_hero_flow_doc.is-step-5 { z-index:5; margin-left:2%; width:90%; transform:rotate(-.9deg); }
+.home_hero_flow_doc_icon { flex:none; display:inline-flex; color:var(--navy-700); }
+.home_hero_flow_doc_icon .icon-stroke { width:.8125rem; height:.8125rem; stroke-width:2; }
+/* thicker, solid arrows (client, 18 Sep: "Thicker arrows, too") */
+.home_hero_flow_arrow { align-self:center; display:flex; color:var(--blue-300); margin:.75rem 0; }
+.home_hero_flow_arrow svg { width:1.5rem; height:1.5rem; }
 .home_hero_flow_engine { display:flex; align-items:center; justify-content:center; padding:1.5rem 1rem; border-radius:var(--radius-box); background:linear-gradient(160deg, var(--blue-600) 0%, var(--navy-700) 100%); box-shadow:0 0 0 1px rgba(255,255,255,.12), 0 18px 36px -18px rgba(0,0,0,.7); }
 .home_hero_flow_logo { width:10.5rem; height:auto; }
 /* the output card: no heading (client), a light gradient with a hint of green and warmth */
@@ -328,6 +336,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_video_thumbnail { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .home_video_play { position:relative; z-index:1; }
 .home_video_embed { display:block; width:100%; height:100%; border:0; }
+/* keeps a hyphenated compound on one line (trust bar, 18 Sep: "Australian-owned" broke at its hyphen) */
+.text-style-nowrap { white-space:nowrap; }
 .visually-hidden { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0; }
 /* orange trust bar under the dark hero (client, 17 Sep: "Make the trust strip orange... White text on ember heat"; was navy-900) */
 .section-home_trust { background:linear-gradient(120deg, #DC5A1E 0%, var(--orange-500) 50%, #EE8A3C 100%); }
@@ -366,12 +376,23 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_trust-strip_item + .home_trust-strip_item { border-left:0; }
 }
 
+/* client, 18 Sep: "Follow the size & formatting" (reference: five claims in equal lanes, each set
+   left on two lines at a larger size, a hairline before each lane). Supersedes the 17 Sep single
+   line of unbroken 18px labels, which is below for the record. */
+@media (min-width:1280px) {
+  .home_trust_list { grid-template-columns:repeat(5, minmax(0,1fr)); gap:0; align-items:stretch; }
+  .home_trust_item { padding-inline:1.5rem; border-left:1px solid rgba(255,255,255,.4); }
+  .home_trust_item:first-child { border-left:0; padding-left:0; }
+  .home_trust_label { font-size:1.25rem; max-width:11.5rem; text-wrap:balance; }
+}
+/* superseded 18 Sep, kept for the record:
 @media (min-width:1280px) {
   .home_trust_list { display:flex; gap:0; align-items:center; }
   .home_trust_item { flex:1 1 auto; align-items:center; text-align:center; padding-inline:1rem; border-left:1px solid rgba(255,255,255,.4); }
   .home_trust_item:first-child { border-left:0; }
   .home_trust_label { font-size:1.125rem; white-space:nowrap; }
 }
+*/
 /* below 1280 the row is two lanes, as Omble drops its own row early rather than shrink the type */
 @media (max-width:1279px) {
   .home_trust_list { grid-template-columns:repeat(2, minmax(0,1fr)); gap:2rem 2.5rem; }

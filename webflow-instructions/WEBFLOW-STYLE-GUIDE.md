@@ -97,6 +97,7 @@ icon disc, section header). Keep the rest as plain classes.
 - `text-color-highlight`
 - `text-size-large`
 - `text-style-quote`
+- `text-style-nowrap` (white-space: nowrap; keeps a hyphenated compound on one line, e.g. "Australian-owned" in the trust bar)
 
 ### Variants — `is-` combos, never stacked more than two deep
 

@@ -104,8 +104,11 @@
   //      blocks, bottom card first, each landing with a small bounce and settling from a slight tilt.
   //      Then the arrow, the ATOmate card, the second arrow and the output card with its ticks follow.
   //      The markup is the final state, so reduced motion or no GSAP shows the graphic still.
+  //      Switched off 18 Sep (client: "Static image only/everything to appear at once. No need for excessive
+  //      animations up top"). Kept, not deleted: set HERO_FLOW_DROP to true to bring it back.
+  var HERO_FLOW_DROP = false;
   var flow = document.querySelector('.home_hero_flow');
-  if (flow && hasGsap && !reduce) {
+  if (HERO_FLOW_DROP && flow && hasGsap && !reduce) {
     var fDocs = [].slice.call(flow.querySelectorAll('.home_hero_flow_doc')).reverse();
     var fArrows = flow.querySelectorAll('.home_hero_flow_arrow');
     // plays when the flow is on screen: at once on desktop, on scroll where it sits below the fold (mobile)

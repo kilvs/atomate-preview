@@ -63,7 +63,7 @@ Grounds alternate light / dark / brand, and no two light sections touch (client 
 - ~~Note: **The ATO document automation software built for accounting firms.** — sits beside the ISO 27001 badge as the hero's closing trust line.~~ Hidden 17 Sep (client: ISO to move to a different section; placement instruction to follow).
 - Sub-claim **Reduce manual work by 90%** is all orange (17 Sep).
 - Dark hero (client "NEW" row, 17 Sep): kicker **FAST. SIMPLE. SECURE.**; H1 on two set lines, **Automate your firm's** / **ATO document processing**, left-aligned.
-- Hero flow graphic (client reference strings): label **ATO correspondence**; cards **Notices of assessment · PAYG instalment notices · BAS statements · Div 293 notices · Other ATO correspondence** → ATOmate → ticks **Client-ready communication · TFNs redacted · Ready for review & approval · Filed in your DMS · Nothing gets missed**. The "Client-ready output" heading is left off, per the client.
+- Hero flow graphic, static paper sheets since 18 Sep (client reference strings): label **ATO correspondence**; cards **Notices of assessment · PAYG instalment notices · BAS statements · Div 293 notices · Other ATO correspondence** → ATOmate → ticks **Client-ready communication · TFNs redacted · Ready for review & approval · Filed in your DMS · Nothing gets missed**. The "Client-ready output" heading is left off, per the client.
 - Flag: the reference image's kicker reads *Fast, simple and secure by design*; the client's note reads *FAST. SIMPLE. SECURE.* The note is built.
 - CTA: Book Discovery Meeting (white button) with the ISO 27001 certified badge centred beneath it (5rem, `assets/img/brand/iso-27001.svg`, client file 11 Sep)
 - Centred copy on the plain navy ground; no arrow (removed 10 Sep).
@@ -71,7 +71,7 @@ Grounds alternate light / dark / brand, and no two light sections touch (client 
 ### 1b. Trust bar (`section-home_trust`, navy band - Omble's design, 16 Sep; copy replaced 17 Sep)
 
 - ~~H2 (centred): **Trusted by 2,000+ firms of every size**~~ Hidden 17 Sep (client: "Remove the trusted by heading").
-- Five claims in one straight line from 1280 up, each a single label; count-up on the two figures (client copy, 17 Sep):
+- Five claims in equal lanes from 1280 up, each label on two lines (18 Sep, client: "Follow the size & formatting"; was one straight line of single labels, 17 Sep); count-up on the two figures (client copy, 17 Sep):
   **Built for accounting firms** | **100% Australian-owned** | **Designed for every
   practice size** | **500+ hours recovered annually** | **ATO registered software**
 - Superseded 17 Sep: *Australian-owned & operated - 90% less manual processing - 500+ hours
@@ -103,7 +103,7 @@ Grounds alternate light / dark / brand, and no two light sections touch (client 
 ## 3. Comparison (white)
 
 - H2: **Still processing ATO documents manually?**
-- Lead: **Manual processing overwhelms admin teams, creates errors and leads to endless client follow-up.**
+- ~~Lead: **Manual processing overwhelms admin teams, creates errors and leads to endless client follow-up.**~~ Hidden 18 Sep (client: "Delete highlighted part").
 - Second lead, above the cards (moved up from below them, 16 Sep), orange and bold (17 Sep): **Reduce manual work and errors. Keep clients ahead of tax obligations with timely, consistent communication.** (client copy, 17 Sep; was *ATOmate enhances communication and delivers a consistent experience to keep clients ahead of their tax obligations.*)
 - **Without ATOmate** (white card with border; white ✕ on a solid red disc since 17 Sep, was a red ✕): Time-consuming, error-prone manual processing · Missed PAYG instalment notices and other ATO correspondence · Manual TFN redaction and PRN protection · Manual filing with no audit trail · Admin team stretched thin · Delayed documents. Frustrated clients.
 - **With ATOmate** (navy card; white ✓ on a green disc with a soft green glow since 17 Sep, was a blue ✓): Automatic ATO document processing from capture to filing · All ATO documents captured automatically overnight · Automatic TFN redaction and PRN protection · Automatic filing with a complete audit trail · More capacity to improve client relationships · Timely delivery, better client experience
@@ -144,6 +144,7 @@ Grounds alternate light / dark / brand, and no two light sections touch (client 
 - H2: **Automatically matched, filed and tracked** (no description)
 - Three white cards matching §6, illustration `every-document-01`; the DMS filing and audit trail graphics are built in markup (16 Sep) from the supplied artwork — labels, steps and times kept, sub-captions and pale boxes dropped, brand colours throughout:
   - **Every document matched to the right client** — Automatically matched using TFNs and ABNs, so three "John Smiths" never get mixed up.
+    Image rows (sample UI): **H. Smith - \*\*723** (rejected) and **H. Smith - \*\*987** (selected); the top row was **\*\*987** until 18 Sep (client: "change to → 723").
   - **Filed directly in your DMS** — Documents & communications automatically filed to your existing document management system
   - **Full audit trail for every document** — Know when every document was received, reviewed, communicated and filed.
 - CTA: Book Discovery Meeting (ghost)
@@ -197,10 +198,10 @@ Unchanged by the QA. H2 **Replace generic ATO messaging with clear guidance**; l
 
 ## Footer
 
-Unchanged: lockup + **Fast | Simple | Secure ATO document automation for accounting practices.**; Product / Company / Contact columns; contact email and address are placeholders.
+Lockup + **Fast | Simple | Secure ATO document automation for accounting practices.**; Product / Company / Contact columns. Contact (18 Sep, client: "Lorem ipsum to → actual text on https://atomate.com.au/"): **1300 054 466** · **info@teambaw.com.au** · **Hours: Mon – Fri 8.30am – 5pm AEDT**, verbatim from the live site. The live site lists no street address; the lorem address line is hidden.
 
 ---
 
 ## Open flags
 
-HowNow X logo · sample UI names and values · footer email and address · testimonial firms and full names · "FAST" / "SIMPLE" section labels in the source, not built (settled: no eyebrows) · 1,500 vs 2,000+ · product screenshots · video placement · font licences · Omble resemblance.
+HowNow X logo · sample UI names and values · footer street address · trust bar ground and fourth claim (18 Sep reference) · testimonial firms and full names · "FAST" / "SIMPLE" section labels in the source, not built (settled: no eyebrows) · 1,500 vs 2,000+ · product screenshots · video placement · font licences · Omble resemblance.

@@ -200,6 +200,41 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Hero sheets, trust bar lanes, comparison lead, **723, footer contact (client feedback, 18 Sep 2026)
+
+- **Hero flow.** Client: "Replace with → Static image only/everything to appear at once. No need
+  for excessive animations up top. Thicker arrows, too. Retain the last rectangle." The five
+  correspondence items are now cream paper sheets (`#FCFAF4` → `#F1EBDD`), each with a folded
+  top-right corner (`clip-path` plus a darker `::after` triangle), a short blue-500 rule above
+  the label, a grey text line under it and a slight tilt (−0.9° to 1.4°). The icons lost their
+  blue tiles and sit as small navy glyphs. This supersedes the 17 Sep white pills.
+  - The folded corner is the client's reference, not a chamfer; the "no chamfers" rule is unchanged.
+  - Arrows are solid filled blue-300 arrows at 24px (were 18px stroked chevrons).
+  - The ATOmate card and the output card (the "last rectangle") are unchanged.
+  - Motion: the 17 Sep "block falling" drop is off. `motion.js` §3b is gated behind
+    `HERO_FLOW_DROP = false`; set it to true to bring it back. The hero copy keeps its load
+    fade-up (see backlog question).
+- **Trust bar.** Client: "Follow the size & formatting" (reference: a navy bar with five claims in
+  equal lanes, each on two lines, left-aligned, hairlines between). From 1280 the list is five
+  equal grid lanes, labels at 20px capped at 11.5rem so each sets on two lines, a hairline before
+  lanes 2 to 5. The 17 Sep one-line 18px rule is kept commented out in the stylesheet. New
+  utility `text-style-nowrap` keeps "Australian-owned" from breaking at its hyphen. Below 1280 is
+  unchanged. The orange ground and the copy are unchanged (see backlog: the reference is navy and
+  its fourth claim reads "One solution, admin through to partner").
+- **Comparison.** Client: "Delete highlighted part". The lead *Manual processing overwhelms admin
+  teams…* is `hidden`, not deleted; the orange second lead now sits under the H2.
+- **Filing card 1 image.** Client: "The first last 3 digits, change to → 723". The top (rejected)
+  row now reads **H. Smith - \*\*723**; the selected row keeps **\*\*987**. The digits were
+  repainted in Plus Jakarta Sans Regular matched to the original. New file
+  `every-document-01-723.webp` (immutable caching); the old file moved to `Guide & References/
+  Unused site assets (moved 18 Sep 2026)/`.
+- **Footer.** Client: "Lorem ipsum to → actual text on https://atomate.com.au/". The Contact column
+  now reads **1300 054 466 · info@teambaw.com.au · Hours: Mon – Fri 8.30am – 5pm AEDT**, verbatim
+  from the live site (the email is in its header bar, the hours in its footer). The live site
+  has no street address, so the lorem address line is `hidden`, not replaced.
+- Checked in Chrome at 1440 and in same-origin iframes at 390 / 768 / 992 / 1100: the sheets stay
+  one line each, the trust labels are two lines each from 1280, no horizontal overflow.
+
 ## Dark hero with the flow graphic; orange trust bar (client "NEW" row, 17 Sep 2026)
 
 - From the 17 Sep additional PDF, page 2 "NEW!!!": a dark hero with an ATO correspondence →
