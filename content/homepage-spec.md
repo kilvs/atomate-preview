@@ -90,6 +90,7 @@ Grounds alternate light / dark / brand, and no two light sections touch (client 
 
 - Three claims (client reference strip, 17 Sep): **ISO 27001 Certified** (ISO badge) | **Trusted by 2,000+ firms** | **Built for accounting firms**
 - Flag: the client's note reads "200+ firms"; the reference image reads "2,000+". Built as the image.
+- 18 Sep: set in three equal left-aligned lanes, each label on two lines at 20px (client: "Follow the size & formatting"); only the ISO badge keeps an icon (client: "Remove the icons for trusted and built, retain only the ISO logo").
 
 ## 2. Integrations (`.background-stage-morning`, 17 Sep)
 

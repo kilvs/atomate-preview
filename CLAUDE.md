@@ -200,6 +200,18 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Azure trust strip: reference layout, line icons off (client feedback, 18 Sep 2026)
+
+- Client, on the Azure strip (§1d): "Follow the size & formatting" (the same navy reference as the
+  trust bar) and "Remove the icons for trusted and built, retain only the ISO logo". This row
+  arrived separately from the trust bar row; both are now applied.
+- From 992: three equal grid lanes, left-aligned, 3.5rem top and bottom, the existing hairline
+  before lanes 2 and 3. Labels are 20px (were 16px), capped at 10.75rem so all three set on two
+  lines. The ISO badge disc is 3rem (was 2.25rem). Below 992 the claims still stack, one line
+  each, now at 20px with 2.5rem padding.
+- `.home_trust-strip_icon { display:none; }` hides the two line icons; they stay in the markup.
+- Supersedes the 17 Sep centred single-line 16px row. The Azure ground and copy are unchanged.
+
 ## Hero sheets, trust bar lanes, comparison lead, **723, footer contact (client feedback, 18 Sep 2026)
 
 - **Hero flow.** Client: "Replace with → Static image only/everything to appear at once. No need

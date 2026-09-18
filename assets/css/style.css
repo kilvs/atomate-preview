@@ -375,6 +375,24 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
   .home_trust-strip_item { padding-inline:0; }
   .home_trust-strip_item + .home_trust-strip_item { border-left:0; }
 }
+/* client, 18 Sep: "Follow the size & formatting" (same reference as the trust bar: equal lanes,
+   each label set left on two lines at 20px, a hairline before each lane) and "Remove the icons
+   for trusted and built, retain only the ISO logo". Supersedes the 17 Sep centred single-line
+   16px row. The two line icons are hidden by the rule below, not deleted. */
+.home_trust-strip_icon { display:none; }
+.home_trust-strip_label { font-size:1.25rem; line-height:1.25; letter-spacing:-0.02em; }
+.home_trust-strip_badge { width:3rem; height:3rem; }
+.home_trust-strip_iso { width:2.625rem; height:2.625rem; }
+@media (min-width:992px) {
+  .home_trust-strip_list { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); padding-block:3.5rem; }
+  .home_trust-strip_item { padding-inline:1.5rem; }
+  .home_trust-strip_item:first-child { padding-left:0; }
+  /* 10.75rem sets all three on two lines: "ISO 27001 Certified" is ~186px on one */
+  .home_trust-strip_label { white-space:normal; max-width:10.75rem; text-wrap:balance; }
+}
+@media (max-width:991px) {
+  .home_trust-strip_list { padding-block:2.5rem; }
+}
 
 /* client, 18 Sep: "Follow the size & formatting" (reference: five claims in equal lanes, each set
    left on two lines at a larger size, a hairline before each lane). Supersedes the 17 Sep single
