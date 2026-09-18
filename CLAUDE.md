@@ -200,6 +200,13 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Azure trust strip: lane 3 copy (client feedback, 18 Sep 2026)
+
+- Andrea (Slack, on the Azure strip's third lane): "100% of ATO documents". Lane 3 now reads
+  **100% of ATO documents**, replacing "Built for accounting firms" (superseded). The label cap
+  sets it on two lines ("100% of ATO / documents"), as in her message. The hidden line icon stays
+  in the markup. The navy trust bar (§1b) keeps its own "Built for accounting firms"; not asked.
+
 ## Hero flow: "ATO correspondence" label off (client feedback, 18 Sep 2026)
 
 - Client: "In the hero section remove the ATO correspondence". The small label above the paper

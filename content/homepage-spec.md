@@ -88,7 +88,8 @@ Grounds alternate light / dark / brand, and no two light sections touch (client 
 
 ## 1d. Trust strip (`section-home_trust-strip`, Azure band) — added 17 Sep
 
-- Three claims (client reference strip, 17 Sep): **ISO 27001 Certified** (ISO badge) | **Trusted by 2,000+ firms** | **Built for accounting firms**
+- Three claims (client reference strip, 17 Sep): **ISO 27001 Certified** (ISO badge) | **Trusted by 2,000+ firms** | **100% of ATO documents**
+- 18 Sep: lane 3 was **Built for accounting firms** (superseded; Andrea: "100% of ATO documents"). The navy trust bar (§1b) still reads "Built for accounting firms"; unchanged.
 - Flag: the client's note reads "200+ firms"; the reference image reads "2,000+". Built as the image.
 - 18 Sep: set in three equal left-aligned lanes, each label on two lines at 20px (client: "Follow the size & formatting"); only the ISO badge keeps an icon (client: "Remove the icons for trusted and built, retain only the ISO logo").
 
