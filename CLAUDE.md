@@ -200,6 +200,12 @@ Verification tooling lives outside the repo (headless Chrome overflow, geometry
 and interaction checks at 1440 / 992 / 768 / 479 / 390). No horizontal overflow at
 any width; all interactions pass with and without reduced motion.
 
+## Hero flow: "ATO correspondence" label off (client feedback, 18 Sep 2026)
+
+- Client: "In the hero section remove the ATO correspondence". The small label above the paper
+  sheets is `hidden`, not deleted; the sheets now start the graphic. The graphic's `aria-label`
+  still opens with "ATO correspondence" because it describes what the sheets are.
+
 ## Azure trust strip: reference layout, line icons off (client feedback, 18 Sep 2026)
 
 - Client, on the Azure strip (§1d): "Follow the size & formatting" (the same navy reference as the
