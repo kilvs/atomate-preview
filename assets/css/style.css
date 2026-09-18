@@ -384,7 +384,8 @@ button { font:inherit; color:inherit; background:none; border:0; padding:0; marg
 .home_trust-strip_badge { width:3rem; height:3rem; }
 .home_trust-strip_iso { width:2.625rem; height:2.625rem; }
 @media (min-width:992px) {
-  .home_trust-strip_list { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); padding-block:3.5rem; }
+  /* compressed to 50rem and centred (Eugene, 18 Sep: "slightly compressed for the container because it looks super wide"); revert: drop max-width */
+  .home_trust-strip_list { display:grid; grid-template-columns:repeat(3, minmax(0,1fr)); padding-block:3.5rem; max-width:50rem; margin-inline:auto; }
   .home_trust-strip_item { padding-inline:1.5rem; }
   .home_trust-strip_item:first-child { padding-left:0; }
   /* 10.75rem sets all three on two lines: "ISO 27001 Certified" is ~186px on one */

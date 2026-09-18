@@ -211,6 +211,9 @@ any width; all interactions pass with and without reduced motion.
   each, now at 20px with 2.5rem padding.
 - `.home_trust-strip_icon { display:none; }` hides the two line icons; they stay in the markup.
 - Supersedes the 17 Sep centred single-line 16px row. The Azure ground and copy are unchanged.
+- Eugene, same day: "Can the one with ISO Section be slightly compressed for the container because
+  It looks super wide". From 992 the three lanes sit in a centred 50rem (800px) block instead of
+  the full 1200px container. Revert: drop `max-width` on `.home_trust-strip_list`.
 
 ## Hero sheets, trust bar lanes, comparison lead, **723, footer contact (client feedback, 18 Sep 2026)
 
